@@ -7,3 +7,4 @@
     * [Monitoring](dcos/turtorial/monitoring.md)
     * [FullStackAutomation](dcos/turtorial/fullstack-automation.md)
     * [Docker](dcos/turtorial/docer.md)
+    * [AutoScale](dcos/turtorial/autoscale.md)
