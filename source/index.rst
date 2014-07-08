@@ -12,6 +12,7 @@
    :maxdepth: 2
    
    introduction
+   faq.rst
    get_started
    add_data_volume.rst
    set_security_group.rst
@@ -20,6 +21,7 @@
    set_autoscale.rst
    execute_script.rst
    integrate.rst
+   
 
 查找与搜索
 ==================
