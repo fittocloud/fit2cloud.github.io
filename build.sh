@@ -2,4 +2,5 @@
 
 make html
 cp -R build/html/* .
-
+cp render.sh.bak render.sh
+bash render.sh
