@@ -3,17 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to fit2cloud's documentation!
+欢迎使用Fit2Cloud!
 =====================================
 
-Contents:
+内容:
 
 .. toctree::
    :maxdepth: 2
+   
+   introduction
+   get_started
+   add_data_volume.rst
+   set_security_group.rst
+   install_runtimes_app.rst
+   add_cluster_monitoring.rst
+   set_autoscale.rst
+   execute_script.rst
+   integrate.rst
 
-
-
-Indices and tables
+查找与搜索
 ==================
 
 * :ref:`genindex`
