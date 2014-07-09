@@ -4,7 +4,7 @@
  *
  * Various bits of javascript driving the moving parts behind various
  * parts of the cloud theme. Handles things such as toggleable sections,
- * collapsing the 菜单, etc.
+ * collapsing the sidebar, etc.
  *
  * :copyright: Copyright 2011-2012 by Assurance Technologies
  * :license: BSD
@@ -113,78 +113,78 @@ $(document).ready(function (){
   $(".html-toggle.section > h2, .html-toggle.section > h3, .html-toggle.section > h4, .html-toggle.section > h5, .html-toggle.section > h6").each(init);
 });
 /* ==========================================================================
- * collapsible 菜单
+ * collapsible sidebar
  * ==========================================================================
  *
- * Adds button for collapsing & expanding 菜单,
- * which toggles "document.collapsed-菜单" CSS class,
- * and relies on CSS for actual styling of visible & hidden 菜单s.
+ * Adds button for collapsing & expanding sidebar,
+ * which toggles "document.collapsed-sidebar" CSS class,
+ * and relies on CSS for actual styling of visible & hidden sidebars.
  */
 
 $(document).ready(function (){
-  if(!$('.sphinx菜单').length){
+  if(!$('.sphinxsidebar').length){
     return;
   }
   
     var close_arrow = '&laquo;';
-    var open_arrow = '菜单 &raquo;';
+    var open_arrow = 'sidebar &raquo;';
   
-  var holder = $('<div class="菜单toggle"><button id="菜单-hide" title="click to hide the 菜单">' +
-                 close_arrow + '</button><button id="菜单-show" style="display: none" title="click to show the 菜单">' +
+  var holder = $('<div class="sidebartoggle"><button id="sidebar-hide" title="click to hide the sidebar">' +
+                 close_arrow + '</button><button id="sidebar-show" style="display: none" title="click to show the sidebar">' +
                  open_arrow + '</button></div>');
   var doc = $('div.document');
 
-  var show_btn = $('#菜单-show', holder);
-  var hide_btn = $('#菜单-hide', holder);
+  var show_btn = $('#sidebar-show', holder);
+  var hide_btn = $('#sidebar-hide', holder);
   /* FIXME: when url_root is a relative path, this sets cookie in wrong spot.
      need to detect relative roots, and combine with document.location.path */
   var copts = { expires: 7, path: DOCUMENTATION_OPTIONS.url_root };
 
   show_btn.click(function (){
-    doc.removeClass("collapsed-菜单");
+    doc.removeClass("collapsed-sidebar");
     hide_btn.show();
     show_btn.hide();
-    $.cookie("菜单", "expanded", copts);
-    $(window).trigger("cloud-菜单-toggled", false);
+    $.cookie("sidebar", "expanded", copts);
+    $(window).trigger("cloud-sidebar-toggled", false);
   });
 
   hide_btn.click(function (){
-    doc.addClass("collapsed-菜单");
+    doc.addClass("collapsed-sidebar");
     show_btn.show();
     hide_btn.hide();
-    $.cookie("菜单", "collapsed", copts);
-    $(window).trigger("cloud-菜单-toggled", true);
+    $.cookie("sidebar", "collapsed", copts);
+    $(window).trigger("cloud-sidebar-toggled", true);
   });
 
-  var state = $.cookie("菜单");
+  var state = $.cookie("sidebar");
 
 
   doc.append(holder);
 
   if (state == "collapsed"){
-    doc.addClass("collapsed-菜单");
+    doc.addClass("collapsed-sidebar");
     show_btn.show();
     hide_btn.hide();
   }
 });
 /* ==========================================================================
- * sticky 菜单
+ * sticky sidebar
  * ==========================================================================
  *
- * Instrument 菜单 so that it sticks in place as page is scrolled.
+ * Instrument sidebar so that it sticks in place as page is scrolled.
  */
 $(document).ready(function (){
   // initialize references to relevant elements
-  var holder = $('.document'); // element that 菜单 sits within
-  var 菜单 = $('.sphinx菜单'); // element we're making "sticky"
+  var holder = $('.document'); // element that sidebar sits within
+  var sidebar = $('.sphinxsidebar'); // element we're making "sticky"
   var toc_header = $('.sphinxlocaltoc h3'); // toc header + list control position
       if(!toc_header.length) toc_header = null;
   var toc_list = toc_header ? toc_header.next("ul") : null;
-  var toggle = $('.菜单toggle'); // also make collapse button sticky
+  var toggle = $('.sidebartoggle'); // also make collapse button sticky
 
   // initialize internal state
   var sticky_disabled = false; // whether sticky is disabled for given window size
-  var 菜单_adjust = 0; // vertical offset within 菜单 when sticky
+  var sidebar_adjust = 0; // vertical offset within sidebar when sticky
 
   // offset() under jquery 1.4 is document-relative (sphinx 1.1), but
   // under jquery 1.5+ it's viewport-relative (sphinx 1.2 uses jquery 1.7).
@@ -208,28 +208,28 @@ $(document).ready(function (){
     }
   }
 
-  // func to update 菜单 position based on scrollbar & container positions
+  // func to update sidebar position based on scrollbar & container positions
   function update_sticky(){
-    // set 菜单 position
+    // set sidebar position
     var offset = -top_offset(holder);
-    set_style(菜单, offset, 菜单_adjust);
+    set_style(sidebar, offset, sidebar_adjust);
     // collapse button should follow along as well
     set_style(toggle, offset, 0);
   };
 
-  // func to update 菜单 measurements, and then call update_sticky()
+  // func to update sidebar measurements, and then call update_sticky()
   function update_measurements(){
     sticky_disabled = false;
-    菜单_adjust = 0;
+    sidebar_adjust = 0;
     if(toc_header){
-      // check how much room we have to display top of 菜单 -> end of toc list
-      var leftover = $(window).height() - (toc_list.height() + top_offset(toc_list) - top_offset(菜单));
+      // check how much room we have to display top of sidebar -> end of toc list
+      var leftover = $(window).height() - (toc_list.height() + top_offset(toc_list) - top_offset(sidebar));
       if(leftover < 0){
-        // not enough room if we align top of 菜单 to window,
+        // not enough room if we align top of sidebar to window,
         // try aligning to top of toc list instead
-        菜单_adjust = top_offset(toc_header) - top_offset(菜单) - 8;
-        if(leftover + 菜单_adjust < 0){
-          // still not enough room - disable sticky 菜单
+        sidebar_adjust = top_offset(toc_header) - top_offset(sidebar) - 8;
+        if(leftover + sidebar_adjust < 0){
+          // still not enough room - disable sticky sidebar
           sticky_disabled = true;
         }
       }
@@ -246,14 +246,14 @@ $(document).ready(function (){
 
 
 /* ==========================================================================
- * 菜单 toc highlighter
+ * sidebar toc highlighter
  * ==========================================================================
  *
  * highlights toc entry for current section being viewed.
  */
 $(document).ready(function (){
 
-  // locate and scan 菜单's localtoc,
+  // locate and scan sidebar's localtoc,
   // assembling metadata & relevant DOM nodes
   var records = [];
   var links = $(".sphinxlocaltoc > ul a");
@@ -269,7 +269,7 @@ $(document).ready(function (){
                   });
   }
 
-  // locate and scan 菜单's globaltoc,
+  // locate and scan sidebar's globaltoc,
   // expanded <records> to include global toc nodes as well.
   var global_links = $(".sphinxglobaltoc > ul > li.current a");
   var l = records.length;
@@ -356,13 +356,13 @@ _global_toc_loop:
   }
 
   // run function now, and every time window is resized
-  // TODO: disable when 菜单 isn't sticky (including when window is too small)
-  //       and when 菜单 is collapsed / invisible
+  // TODO: disable when sidebar isn't sticky (including when window is too small)
+  //       and when sidebar is collapsed / invisible
   update_collapsed_sections();
   $(window).scroll(update_visible_sections)
            .resize(update_visible_sections)
            .bind('cloud-section-toggled', update_collapsed_sections)
-           .bind('cloud-菜单-toggled', update_visible_sections);
+           .bind('cloud-sidebar-toggled', update_visible_sections);
 });
 
 
@@ -402,5 +402,5 @@ $(document).ready(function (){
   // run function now, and every time window is resized
   layout_header();
   $(window).resize(layout_header)
-           .bind('cloud-菜单-toggled', layout_header);
+           .bind('cloud-sidebar-toggled', layout_header);
 });
