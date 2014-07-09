@@ -64,10 +64,10 @@ div.related a {
     color: #ffffff;
 }
 
-div.sphinxsidebar {
+div.sphinx菜单 {
 }
 
-div.sphinxsidebar h3 {
+div.sphinx菜单 h3 {
     font-family: 'Trebuchet MS', sans-serif;
     color: #ffffff;
     font-size: 1.4em;
@@ -76,11 +76,11 @@ div.sphinxsidebar h3 {
     padding: 0;
 }
 
-div.sphinxsidebar h3 a {
+div.sphinx菜单 h3 a {
     color: #ffffff;
 }
 
-div.sphinxsidebar h4 {
+div.sphinx菜单 h4 {
     font-family: 'Trebuchet MS', sans-serif;
     color: #ffffff;
     font-size: 1.3em;
@@ -89,25 +89,25 @@ div.sphinxsidebar h4 {
     padding: 0;
 }
 
-div.sphinxsidebar p {
+div.sphinx菜单 p {
     color: #ffffff;
 }
 
-div.sphinxsidebar p.topless {
+div.sphinx菜单 p.topless {
     margin: 5px 10px 10px 10px;
 }
 
-div.sphinxsidebar ul {
+div.sphinx菜单 ul {
     margin: 10px;
     padding: 0;
     color: #ffffff;
 }
 
-div.sphinxsidebar a {
+div.sphinx菜单 a {
     color: #98dbcc;
 }
 
-div.sphinxsidebar input {
+div.sphinx菜单 input {
     border: 1px solid #98dbcc;
     font-family: sans-serif;
     font-size: 1em;

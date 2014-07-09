@@ -41,49 +41,49 @@ div.related li.right {
     margin-right: 5px;
 }
 
-/* -- sidebar --------------------------------------------------------------- */
+/* -- 菜单 --------------------------------------------------------------- */
 
-div.sphinxsidebarwrapper {
+div.sphinx菜单wrapper {
     padding: 10px 5px 0 10px;
 }
 
-div.sphinxsidebar {
+div.sphinx菜单 {
     float: left;
     width: 0px;
     margin-left: -100%;
     font-size: 90%;
 }
 
-div.sphinxsidebar ul {
+div.sphinx菜单 ul {
     list-style: none;
 }
 
-div.sphinxsidebar ul ul,
-div.sphinxsidebar ul.want-points {
+div.sphinx菜单 ul ul,
+div.sphinx菜单 ul.want-points {
     margin-left: 20px;
     list-style: square;
 }
 
-div.sphinxsidebar ul ul {
+div.sphinx菜单 ul ul {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-div.sphinxsidebar form {
+div.sphinx菜单 form {
     margin-top: 10px;
 }
 
-div.sphinxsidebar input {
+div.sphinx菜单 input {
     border: 1px solid #98dbcc;
     font-family: sans-serif;
     font-size: 1em;
 }
 
-div.sphinxsidebar #searchbox input[type="text"] {
+div.sphinx菜单 #searchbox input[type="text"] {
     width: 170px;
 }
 
-div.sphinxsidebar #searchbox input[type="submit"] {
+div.sphinx菜单 #searchbox input[type="submit"] {
     width: 30px;
 }
 
@@ -252,9 +252,9 @@ img.align-center, .figure.align-center, object.align-center {
     text-align: right;
 }
 
-/* -- sidebars -------------------------------------------------------------- */
+/* -- 菜单s -------------------------------------------------------------- */
 
-div.sidebar {
+div.菜单 {
     margin: 0 0 0.5em 1em;
     border: 1px solid #ddb;
     padding: 7px 7px 0 7px;
@@ -263,7 +263,7 @@ div.sidebar {
     float: right;
 }
 
-p.sidebar-title {
+p.菜单-title {
     font-weight: bold;
 }
 
@@ -528,7 +528,7 @@ span.eqno {
         width: 100%;
     }
 
-    div.sphinxsidebar,
+    div.sphinx菜单,
     div.related,
     div.footer,
     #top-link {

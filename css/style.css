@@ -133,7 +133,7 @@ div.related li.right a:hover
 
 div.document
 {
-    /* note: relative used by div.sidebartoggle */
+    /* note: relative used by div.菜单toggle */
     position: relative;
     margin: 0 auto;
     max-width: 11in;
@@ -153,13 +153,13 @@ div.bodywrapper
 }
 
 
-div.document.collapsed-sidebar div.bodywrapper { margin-left: 0; }
+div.document.collapsed-菜单 div.bodywrapper { margin-left: 0; }
 
 
 div.body
 {
     min-height: 6in;
-    /* note: this ^ is just a hack to prevent body from being shorter than sidebar */
+    /* note: this ^ is just a hack to prevent body from being shorter than 菜单 */
 
     background-color: #ffffff;
     border-left: 1px solid rgba(0,0,0,.12);
@@ -171,10 +171,10 @@ div.body
 }
 
 /*****************************************************
- * page layout - sidebar
+ * page layout - 菜单
  *****************************************************/
 
-div.sphinxsidebar
+div.sphinx菜单
 {
     /* it's nasty sometimes, but looks prettier than letting too-long module names break into document body*/
     overflow: hidden;
@@ -186,23 +186,23 @@ div.sphinxsidebar
 }
 
 
-  div.sphinxsidebar:hover
+  div.sphinx菜单:hover
   {
       overflow: visible;
   }
 
 
 
-  div.document.collapsed-sidebar div.sphinxsidebar { display: none; }
+  div.document.collapsed-菜单 div.sphinx菜单 { display: none; }
 
 
-div.sphinxsidebarwrapper
+div.sphinx菜单wrapper
 {
    padding: 1em 0 0 10px;
 }
 
-div.sphinxsidebar h3,
-div.sphinxsidebar h4
+div.sphinx菜单 h3,
+div.sphinx菜单 h4
 {
     padding: 0;
     margin: 24px 16px 0 0;
@@ -212,26 +212,26 @@ div.sphinxsidebar h4
     color: #777777;
 }
 
-div.sphinxsidebar h3 { font-size: 1.4em; }
-div.sphinxsidebar h4 { font-size: 1.3em; }
+div.sphinx菜单 h3 { font-size: 1.4em; }
+div.sphinx菜单 h4 { font-size: 1.3em; }
 
-div.sphinxsidebar h3 a,
-div.sphinxsidebar h4 a
+div.sphinx菜单 h3 a,
+div.sphinx菜单 h4 a
 {
     color: #777777;
 }
 
-div.sphinxsidebar p
+div.sphinx菜单 p
 {
     color: #777777;
 }
 
-div.sphinxsidebar p.topless
+div.sphinx菜单 p.topless
 {
     margin: 5px 10px 10px 10px;
 }
 
-div.sphinxsidebar ul
+div.sphinx菜单 ul
 {
     margin: 10px;
     margin-right: 0;
@@ -239,36 +239,36 @@ div.sphinxsidebar ul
     color: #777777;
 }
 
-div.sphinxsidebar a
+div.sphinx菜单 a
 {
     color: #003469;
     outline: none;
 }
 
-div.sphinxsidebar a:active
+div.sphinx菜单 a:active
 {
     color: #777777;
 }
 
-div.sphinxsidebar p.logo
+div.sphinx菜单 p.logo
 {
     margin: 1em 0 0 -10px;
     text-align: center;
 }
 
-/* fix margin if h3/h4 is at top of sidebar --
- * consequence of sidebar boxes not all being wrapped in divs.
+/* fix margin if h3/h4 is at top of 菜单 --
+ * consequence of 菜单 boxes not all being wrapped in divs.
  */
-div.sphinxsidebarwrapper > h3:first-child,
-div.sphinxsidebarwrapper > h4:first-child,
-div.sphinxsidebarwrapper > div:first-child > h3:first-child,
-div.sphinxsidebarwrapper > div:first-child > h4:first-child
+div.sphinx菜单wrapper > h3:first-child,
+div.sphinx菜单wrapper > h4:first-child,
+div.sphinx菜单wrapper > div:first-child > h3:first-child,
+div.sphinx菜单wrapper > div:first-child > h4:first-child
 {
   margin-top: .2em;
 }
 
 /*****************************************************
- * page layout - sidebar TOC sections
+ * page layout - 菜单 TOC sections
  *****************************************************/
 
 
@@ -321,10 +321,10 @@ div.sphinxglobaltoc ul a.visible
 }
 
 /*****************************************************
- * page layout - sidebar searchbox & search page
+ * page layout - 菜单 searchbox & search page
  *****************************************************/
 
-div.sphinxsidebar input,
+div.sphinx菜单 input,
 h1#search-documentation ~ form > input
 {
     border: 1px solid rgba(0,0,0,.15);
@@ -348,22 +348,22 @@ h1#search-documentation ~ form > input[type="submit"]
 
 div#searchbox input[type="submit"]:hover,
 h1#search-documentation ~ form > input[type="submit"]:hover,
-div.sidebartoggle button:hover
+div.菜单toggle button:hover
 {
    background: rgba(0,0,0,.2);
 }
 
-div.sphinxsidebar .searchtip
+div.sphinx菜单 .searchtip
 {
     color: #999999;
 }
 
 /*****************************************************
- * page layout - collapsible sidebar buttons
+ * page layout - collapsible 菜单 buttons
  *****************************************************/
 
 
-div.sidebartoggle
+div.菜单toggle
 {
    position: absolute;
    width: 230px;
@@ -372,12 +372,12 @@ div.sidebartoggle
    z-index: 1;
 }
 
-div.document.collapsed-sidebar div.sidebartoggle
+div.document.collapsed-菜单 div.菜单toggle
 {
  width: auto;
 }
 
-div.sidebartoggle button
+div.菜单toggle button
 {
    position: absolute;
    right: -1px;
@@ -403,7 +403,7 @@ div.sidebartoggle button
    white-space: nowrap;
 }
 
-div.document.collapsed-sidebar div.sidebartoggle button
+div.document.collapsed-菜单 div.菜单toggle button
 {
   left: 0;
   right: auto;
@@ -1119,7 +1119,7 @@ h1 tt.samp.literal > em
     font-weight: normal;
 }
 
-div.sphinxsidebar tt.literal,
+div.sphinx菜单 tt.literal,
 a.reference tt.literal,
 div.related a tt.literal,
 tt.literal.xref
@@ -1249,15 +1249,15 @@ table.indextable td > dl > dd > dl
 {
     body { font-size: 87.5%; }
 
-    /* hide the sidebar */
-    div.sphinxsidebar
+    /* hide the 菜单 */
+    div.sphinx菜单
     {
         display: none;
     }
 
     
      /* FIXME: would like to make this work some how, hiding it til it works */
-      div.sidebartoggle { display: none; }
+      div.菜单toggle { display: none; }
     
 
     div.bodywrapper
@@ -1301,7 +1301,7 @@ table.indextable td > dl > dd > dl
 
 @media print
 {
-    div.sidebartoggle { display: none; }
+    div.菜单toggle { display: none; }
     div.body { border: 0; }
 
     /* omit "hide section" label */

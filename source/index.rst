@@ -12,15 +12,15 @@
    :maxdepth: 2
    
    introduction
-   faq.rst
    get_started
-   add_data_volume.rst
-   set_security_group.rst
-   install_runtimes_app.rst
-   add_cluster_monitoring.rst
-   set_autoscale.rst
-   execute_script.rst
-   integrate.rst
+   add_data_volume
+   set_security_group
+   install_runtimes_app
+   add_cluster_monitoring
+   set_autoscale
+   execute_script
+   integrate
+   faq
    
 
 查找与搜索

@@ -120,7 +120,7 @@ html_theme_path = [csp.get_theme_dir()]
 #html_short_title = None
 
 # The name of an image file (relative to this directory) to place at the top
-# of the sidebar.
+# of the 菜单.
 #html_logo = None
 
 # The name of an image file (within the static path) to use as favicon of the
@@ -146,8 +146,8 @@ html_static_path = ['_static']
 # typographically correct entities.
 #html_use_smartypants = True
 
-# Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+# Custom 菜单 templates, maps document names to template names.
+#html_菜单s = {}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
