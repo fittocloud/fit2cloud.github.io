@@ -63,21 +63,76 @@
             
   <div class="section" id="fit2cloud">
 <h1>Fit2Cloud介绍<a class="headerlink" href="#fit2cloud" title="永久链接至标题">¶</a></h1>
-<p>Fit2Cloud是一个云环境DevOps协作平台， 可以帮助使用云基础设施开发和运行应用的开发和运维人员创建和管理应用及应用运行所需的环境。</p>
-<p>目前Fit2Cloud支持的云环境包括AWS和阿里云。</p>
-<p>以下是一些典型的使用场景及好处:</p>
-<p>场景1: 自动创建和管理环境</p>
-<blockquote>
-<div>我们需要建立一个wordpress应用网站, 为了运行这个网站我们首先需要一些机器，在云环境下就是一些</div></blockquote>
-<p>虚拟机, 通过Fit2Cloud,可以方便地创建并管理这些环境及里面的虚拟机，特别是在虚拟机很多，环境很多的时候， 因为在Fit2Cloud里，虚拟机管理的级别在集群一级，如果机器多，不会像阿里云中分页全部列出来，而是只列出属于集群的虚拟机。</p>
-<p>场景2: 自动部署</p>
-<p>场景3: 定时启动关闭虚拟机</p>
-<p>场景4: 登录虚拟机</p>
-<p>场景5: 同时在多个虚拟机执行脚本</p>
-<p>场景6: 查看应用集群虚拟机监控</p>
-<p>场景7: 自动备份恢复</p>
-<p>场景8: 与开发流程集成实现持续部署</p>
-<p>场景9: 与开发流程集成实现持续交付</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Fit2Cloud是一个云环境DevOps协作平台， 可以帮助使用云基础设施开发和运行应用的开发和运维人员</div>
+</div>
+<div class="line">创建和管理应用及应用运行所需的环境。</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">目前Fit2Cloud支持的云环境包括AWS和阿里云。</div>
+<div class="line"><br /></div>
+<div class="line">作为开发和运维人员，一直有个烦人的事，就是做项目的时候，总是不得不做很多重复的工作，装系统，</div>
+</div>
+<div class="line">挂存储，配IP，配防火墙，配负载均衡，装数据库，装依赖库，装Memcache各种中间件，安装各个组件，</div>
+<div class="line">配置各个组建的连接参数，然后建Nagios，Cacti， 添加Nagios，Cacti监控，一次又一次，</div>
+<div class="line">要演示，需要建立新的环境，搞，要内测，搞，要外测，搞, 要性能测试，搞，要可靠性测试，搞，某环境里</div>
+<div class="line">的机器挂了... ...</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">通过Fit2Cloud, 能减少我们很多重复的工作，并且提高我们的开发测试和运维的效率和质量，以下是使用</div>
+</div>
+<div class="line">Fit2Cloud的一些典型使用场景及好处:</div>
+</div>
+<div class="section" id="id1">
+<h2>场景1: 自动创建和管理环境<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">我们需要建立一个wordpress应用网站, 为了运行这个网站我们首先需要一些机器，在云环境下就是一些虚拟机,</div>
+</div>
+<div class="line">通过Fit2Cloud可以创建出这些虚拟机, 并且把这些虚拟机归到一个环境中，即集群。</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">由于Fit2Cloud通过集群管理虚拟机，那么在虚拟机很多，环境很多的时候， 不会像阿里云中分页全部列出来，</div>
+</div>
+<div class="line">而是只列出属于集群的虚拟机。我们找某台虚拟机时也比较好找，直接先找到集群，然后从集群虚拟机列表中找出</div>
+<div class="line">虚拟机，找到后，还可以直接从网页登录到虚拟机。</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>场景2: 自动部署<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">通过Fit2Cloud, 我们可以定义一个应用的环境模板，即集群，及集群里的虚拟机组，然后设置各虚拟机组的组件</div>
+</div>
+<div class="line">自动部署脚本，这样每次启动集群时，启动虚拟机的时候，可以将各个组件自动部署到虚拟机上，而不是每次手动</div>
+<div class="line">登陆或者手动运行脚本来部署。</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>场景3: 定时启动关闭虚拟机<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>场景4: 登录虚拟机<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id5">
+<h2>场景5: 设置安全组<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id6">
+<h2>场景6: 同时在多个虚拟机执行脚本<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id7">
+<h2>场景7: 查看应用集群虚拟机监控<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id8">
+<h2>场景8: 自动备份恢复<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id9">
+<h2>场景9: 与开发流程集成实现持续部署升级<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id10">
+<h2>场景10: 与开发流程集成实现持续交付<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+</div>
 </div>
 
 
@@ -85,7 +140,25 @@
         </div>
       </div>
       <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
+        <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Fit2Cloud介绍</a><ul>
+<li><a class="reference internal" href="#id1">场景1: 自动创建和管理环境</a></li>
+<li><a class="reference internal" href="#id2">场景2: 自动部署</a></li>
+<li><a class="reference internal" href="#id3">场景3: 定时启动关闭虚拟机</a></li>
+<li><a class="reference internal" href="#id4">场景4: 登录虚拟机</a></li>
+<li><a class="reference internal" href="#id5">场景5: 设置安全组</a></li>
+<li><a class="reference internal" href="#id6">场景6: 同时在多个虚拟机执行脚本</a></li>
+<li><a class="reference internal" href="#id7">场景7: 查看应用集群虚拟机监控</a></li>
+<li><a class="reference internal" href="#id8">场景8: 自动备份恢复</a></li>
+<li><a class="reference internal" href="#id9">场景9: 与开发流程集成实现持续部署升级</a></li>
+<li><a class="reference internal" href="#id10">场景10: 与开发流程集成实现持续交付</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div class="sphinxprev">
     <h4>Previous page</h4>
     <p class="topless"><a href="index.html"
