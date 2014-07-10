@@ -29,63 +29,86 @@ Fit2Cloud快速入门
 |   如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;
 |   如果没有阿里云Access  Key需要先创建一个;
 |
-| **> 阿里云首页, 选择"用户中心"**
+| **1) 阿里云首页, 选择"用户中心"**
 .. image:: _static/001-BindKey-1-AliyunHome.png
-| **> 用户中心页面选择"账户管理"**
+| **2) 用户中心页面选择"账户管理"**
 .. image:: _static/001-BindKey-1-AliyunUserHome.png
 |
-| **> 账户管理页面选择"管理控制台"**
+| **3) 账户管理页面选择"管理控制台"**
 .. image:: _static/001-BindKey-2-TopUp.png
 |
-| **> 管理控制台页面选择"Access Key"进入阿里云Access Key页面**
+| **4) 管理控制台页面选择"Access Key"进入阿里云Access Key页面**
 .. image:: _static/001-BindKey-3-ClickKey.png
 |
-| **> Access Key页面选择创建阿里云Access Key**
+| **5) Access Key页面选择创建阿里云Access Key**
 .. image:: _static/001-BindKey-4-RequestCreateAccessKey.png
 |
-| **> Access Key页面查看阿里云Access Key**
+| **6) Access Key页面查看阿里云Access Key**
 .. image:: _static/001-BindKey-5-ViewAccessKey.png
 |
+
 第三步: 绑定阿里云Access  Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **> Fit2Cloud开始页，选择"绑定阿里云Access Key"**
+| **1) Fit2Cloud开始页，选择"绑定阿里云Access Key"**
 .. image:: _static/001-BindKey-6-ClickBindKey.png
 
-| **> Fit2Cloud Key管理页，选择default key并点击"修改"按钮**
+| **2) Fit2Cloud Key管理页，选择default key并点击"修改"按钮**
 .. image:: _static/001-BindKey-7-EditDefaultKey.png
 
-| **> Access Key绑定页，填写阿里云Access Key ID and Secret并保存**
+| **3) Access Key绑定页，填写阿里云Access Key ID and Secret并保存**
 .. image:: _static/001-BindKey-8-FillKeyAndSave.png
 
 
 二: 创建虚拟机组
 -------------------------------------
 
-| **1. 创建wordpress-web虚拟机组**
+第一步: 创建wordpress-mysql虚拟机组
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 |
-| 1) 到"开始页"
-|             找到页面最上方一行，点击"开始页"
+| **1) 到"开始页", 选择"创建虚拟机组"**
+.. image:: _static/002-CreateVMGroup-1-SelectCreateVMGroupOnBeginPage.png
 |
-| 2) 选择"创建虚拟机组"
-|
-| 3) 填写虚拟机组配置信息并保存
+| **2) 填写虚拟机组配置信息并保存**
+.. image:: _static/002-CreateVMGroup-2-FillMySQLVMGroupNameAndSave.png
 |         
-| 4) 编辑wordpress-web虚拟机组事件处理脚本
+| **3) 编辑wordpress-web虚拟机组事件处理脚本**
 |
-| 5) 设置wordpress-web虚拟机组安全组
+| **> 选择编辑事件处理脚本**
+.. image:: _static/002-CreateVMGroup-3-SelectEditEventHandlers.png
+
+| **选择编辑本机install事件本机处理脚本**
+
+.. code:: python
+
+	#!/bin/bash
+	sudo su -
+	yum -y install mysql-server
+	
+	#chkconfig mysqld on
+	#configure:
+	/etc/rc.d/init.d/mysqld stop
+	/etc/rc.d/init.d/mysqld start
+	mysqladmin -u root password 'fit2cloud'
+	
+	mysql -u root -pfit2cloud -e "create database wordpress"
+	mysql -u root -pfit2cloud -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'fit2cloud' WITH GRANT OPTION;flush privileges;"
+	/etc/rc.d/init.d/mysqld restart
+
+| **> 将上面的mysql安装脚本填写到wordpress-mysql虚拟机组的install事件本机处理器中:**
+.. image:: _static/002-CreateVMGroup-4-EditMysqlInstallEventHandler.png
+
+第二步: 创建wordpress-web虚拟机组
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **2. 创建wordpress-mysql虚拟机组**
+| 1) "开始页"选择"创建虚拟机组"
 |
-| 1) 到"开始页"
-|             找到页面最上方一行，点击"开始页"
-|
-| 2) 选择"创建虚拟机组"
-|
-| 3) 填写虚拟机组配置信息并保存
+| 2) 填写虚拟机组配置信息并保存
 |         
-| 4) 编辑wordpress-mysql虚拟机组事件处理脚本
+| 3) 编辑wordpress-web虚拟机组事件处理脚本
 |
+| 4) 设置wordpress-web虚拟机组安全组
 
 三: 创建集群
 --------------------------------------------
