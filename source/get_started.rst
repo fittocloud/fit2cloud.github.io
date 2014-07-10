@@ -17,12 +17,14 @@ Fit2Cloud快速入门
 一: 绑定阿里云API Key
 -------------------------------------
 
-| **第一步: 登录阿里云(www.aliyun.com)并确保账户有至少10元的余额**
+第一步: 登录阿里云(www.aliyun.com)并确保账户有至少10元的余额
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 |    注1: 如果没有阿里云帐号需要先注册一个 
 |    注2: 如果余额为0先要用支付宝充值
 |
-| **第二步: 获取阿里云Access Key**
+第二步: 获取阿里云Access Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 |   如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;
 |   如果没有阿里云Access  Key需要先创建一个;
@@ -44,9 +46,10 @@ Fit2Cloud快速入门
 | **> Access Key页面查看阿里云Access Key**
 .. image:: _static/001-BindKey-5-ViewAccessKey.png
 |
-| **第三步: 绑定阿里云Access  Key**
+第三步: 绑定阿里云Access  Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **> Fit2Cloud开始页，选择"绑定阿里云API Key"**
+| **> Fit2Cloud开始页，选择"绑定阿里云Access Key"**
 .. image:: _static/001-BindKey-6-ClickBindKey.png
 
 | **> Fit2Cloud Key管理页，选择default key并点击"修改"按钮**
