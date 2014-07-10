@@ -71,8 +71,10 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 | **> 选择编辑事件处理脚本**
 .. image:: _static/002-CreateVMGroup-3-SelectEditEventHandlers.png
 
-| **选择编辑本机install事件本机处理脚本**
+| **> 选择编辑本机install事件本机处理脚本**
+| **> 将下面的mysql安装脚本填写到wordpress-mysql虚拟机组的install事件本机处理器中并保存:**
 
+| MySQL安装脚本
 .. code:: python
 
 	#!/bin/bash
@@ -89,40 +91,140 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 	mysql -u root -pfit2cloud -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'fit2cloud' WITH GRANT OPTION;flush privileges;"
 	/etc/rc.d/init.d/mysqld restart
 
-| **> 将上面的mysql安装脚本填写到wordpress-mysql虚拟机组的install事件本机处理器中:**
 .. image:: _static/002-CreateVMGroup-4-EditMysqlInstallEventHandler.png
 
 第二步: 创建wordpress-web虚拟机组
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| 1) "开始页"选择"创建虚拟机组"
+| **1) 到"开始页", 选择"创建虚拟机组"**
+.. image:: _static/002-CreateVMGroup-1-SelectCreateVMGroupOnBeginPage.png
 |
-| 2) 填写虚拟机组配置信息并保存
+| **2) 填写虚拟机组配置信息并保存**
+.. image:: _static/002-CreateVMGroup-5-FillWebVMGroupNameAndSave.png
 |         
-| 3) 编辑wordpress-web虚拟机组事件处理脚本
-|
-| 4) 设置wordpress-web虚拟机组安全组
+| **3) 编辑wordpress-web虚拟机组事件处理脚本**
+
+| **> 选择编辑wordpress-web虚拟机组事件处理脚本**
+.. image:: _static/002-CreateVMGroup-6-SelectEditWebVMGroupEventHandlers.png
+
+| **> 选择编辑本机initialize事件本机处理脚本, 编辑并保存**
+| wordpress-web初始化运行时环境安装脚本
+.. code:: python
+
+	#!/bin/bash
+	sudo su -
+	yum -y install httpd mysql-server php php-mysql wget
+	#chkconfig mysqld on
+	chkconfig httpd on
+
+.. image:: _static/002-CreateVMGroup-7-EditWebinitializeEventHandler.png
+
+| **> 选择编辑本机install事件本机处理脚本, 编辑并保存**
+| wordpress-web安装脚本
+.. code:: python
+
+	#!/bin/bash
+	sudo su -
+	cd /tmp
+	wget http://wordpress.org/latest.tar.gz
+	tar -xvzf latest.tar.gz -C /var/www/html
+	
+	#configure apache2 file for wordpress
+	cat << EOF >> /etc/httpd/conf/httpd.conf
+	<VirtualHost *:80>
+	ServerAdmin info@fit2cloud.com
+	ServerName wordpress.fit2cloud.net
+	DocumentRoot /var/www/html/wordpress
+	ErrorLog /var/log/httpd/wordpress-error.log
+	CustomLog /var/log/httpd/wordpress-common.log common
+	</VirtualHost>
+	EOF
+	
+	cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
+	sed -i "s/database_name_here/wordpress/g" /var/www/html/wordpress/wp-config.php
+	sed -i "s/username_here/root/g" /var/www/html/wordpress/wp-config.php
+	sed -i "s/password_here/fit2cloud/g" /var/www/html/wordpress/wp-config.php
+	
+	service httpd restart
+	
+	#get mysql role server ip address
+	waitOutput=`f2cadmin waitUntilServerUp wordpress-mysql 120`
+	output=`echo $waitOutput | grep "vm is up"`
+	if [ ${#output} -gt 0 ] ; then
+	    getIPoutput=`f2cadmin get clusterrole_servers_info wordpress-mysql localIP | head -1`
+	    
+	    checkErrorOutput=`echo $getIPoutput | grep "does not exist"`
+	    if [ ${#checkErrorOutput} -gt 0 ] ; then
+	        echo "exceptions happens when get role server ip"
+	        echo $output
+	    else
+	        echo $getIPoutput
+	        mysqlInternalIP=$getIPoutput
+	        sed -i "s/localhost/$mysqlInternalIP/g" /var/www/html/wordpress/wp-config.php
+	    fi
+	else
+	   echo exceptions happens when wait until mysql server up, can not get mysql ip, can not configure wp-config.php
+	   echo $waitOutput
+	fi
+
+.. image:: _static/002-CreateVMGroup-8-EditWebInstallEventHandler.png
+
+| **4) 设置wordpress-web虚拟机组安全组打开80端口**
+
+| **1) 到"虚拟机组"页面, 选择"操作"->"设置安全组规则"**
+.. image:: _static/002-CreateVMGroup-9-SelectToEditWebSecurityGroup.png
+
+| **2) 到"安全组规则"页面, 选择"新建" ; 新建安全规则页面，填写打开80端口并保存**
+.. image:: _static/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png
 
 三: 创建集群
 --------------------------------------------
 
-|         **1) 到"开始页"**
-|             找到页面最上方一行，点击"开始页"
+| **1) Fit2Cloud页面中选择"集群"**
+.. image:: _static/003-CreateCluster-1-SelectGoToClusterPage.png
 |
-|         **2) 选择"创建集群"**
+| **2) 集群列表页面，选择"新建"; 新建集群页面中，填写集群名称并保存**
+.. image:: _static/003-CreateCluster-2-CreateClusterAndSave.png
 |
-|         **3) 填写集群配置信息并保存**
-|         
+| **3) 添加wordpress-mysql虚拟机组**
+| **> 集群页面，选择 "wordpress"集群 -> "0个虚拟机组"**
+.. image:: _static/003-CreateCluster-3-SelectToAddVMGroup.png
+| **> 集群虚拟机组页面，选择 "新建" 虚拟机组**
+| **> 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存**
+.. image:: _static/003-CreateCluster-3-AddMysqlVMGroupToCluster.png
+|
+| **4) 添加wordpress-web虚拟机组**
+| **> 集群页面选择 "wordpress"集群 -> "1个虚拟机组"**
+.. image:: _static/003-CreateCluster-3-SelectToAddVMGroup.png
+| **> 集群虚拟机组页面选择 "新建" 虚拟机组**
+| **> 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存**
+.. image:: _static/003-CreateCluster-5-AddWebVMGroupToCluster.png
 
 四: 启动集群
 -------------------------------------
 
-.. line-block::
-    
-          1) 
+| **集群列表页面，选择"wordpress-qingdao" ->  选择"启动"**
+.. image:: _static/004-LaunchCluster-1-Launch.png
+
+| **集群列表页面，选择"启动"后，显示集群将会在几分钟内启动**
+.. image:: _static/004-LaunchCluster-2-LaunchedInfo.png
+
+| **集群列表页面，选择集群"wordpress-qingdao" -> 选择"x个虚拟机" 进入集群虚拟机列表页面**
+.. image:: _static/004-LaunchCluster-3-SelectGoToClusterVMListPage.png
+
+| **集群虚拟机列表页面，查看启动的虚拟机**
+.. image:: _static/004-LaunchCluster-4-ViewClusterVMList.png
+
+| **找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://<wordpress-web虚拟机公有IP>访问wordpress**
+.. image:: _static/004-LaunchCluster-4-ViewClusterVMList.png
+
+| **wordpress页面**
+
+
 五: 登录虚拟机
 -------------------------------------
 
+| **集群虚拟机列表页面，选择某个虚拟机所在行 -> 选择"操作" -> 选择登录虚机**
 
 
 

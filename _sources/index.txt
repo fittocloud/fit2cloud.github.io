@@ -13,15 +13,8 @@
    
    introduction
    get_started
-   add_data_volume
-   set_security_group
-   install_runtimes_app
-   add_cluster_monitoring
-   set_autoscale
-   execute_script
-   integrate
+   advance
    faq
-   
 
 查找与搜索
 ==================

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Fit2Cloud快速入门 &mdash; Fit2Cloud for 阿里云 1.0 文档</title>
+    <title>Fit2Cloud快速入门: 十分钟部署Wordpress应用 &mdash; Fit2Cloud for 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
     <link rel="top" title="Fit2Cloud for 阿里云 1.0 文档" href="index.html" />
-    <link rel="next" title="设置数据盘" href="add_data_volume.html" />
+    <link rel="next" title="Fit2Cloud高级功能" href="advance.html" />
     <link rel="prev" title="Fit2Cloud介绍" href="introduction.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -44,7 +44,7 @@
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="add_data_volume.html" title="设置数据盘"
+          <a href="advance.html" title="Fit2Cloud高级功能"
              accesskey="N">下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="introduction.html" title="Fit2Cloud介绍"
@@ -61,25 +61,13 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="fit2cloud">
-<h1>Fit2Cloud快速入门<a class="headerlink" href="#fit2cloud" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="fit2cloud-wordpress">
+<h1>Fit2Cloud快速入门: 十分钟部署Wordpress应用<a class="headerlink" href="#fit2cloud-wordpress" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
 <div class="line-block">
 <div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud方便快速地</div>
 </div>
 <div class="line">在阿里云上部署和建立一个应用。</div>
-</div>
-<div class="section" id="id1">
-<h2>登录Fit2Cloud<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<div class="line-block">
-<div class="line">1) 在非IE浏览器里打开aliyun.fit2cloud.com</div>
-<div class="line-block">
-<div class="line">注1: 目前只支持Firefox, Chrome, 不支持渣渣IEx</div>
-<div class="line"><br /></div>
-</div>
-<div class="line">2) 在页面右上角选择使用GitHub登录</div>
-</div>
-<img alt="_images/000-Fit2Cloud-Website.png" src="_images/000-Fit2Cloud-Website.png" />
 </div>
 <div class="section" id="api-key">
 <h2>一: 绑定阿里云API Key<a class="headerlink" href="#api-key" title="永久链接至标题">¶</a></h2>
@@ -88,8 +76,10 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">注1: 如果没有阿里云帐号需要先注册一个</div>
-<div class="line">注2: 如果余额为0先要用支付宝充值</div>
+<div class="line">注1: 用户需要有一个Github帐号</div>
+<div class="line">注2: 目前只支持Firefox, Chrome，不支持IE</div>
+<div class="line">注3: 如果需要有阿里云帐号</div>
+<div class="line">注4: 如果阿里云帐号的余额为0，需要先用支付宝充值</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -134,8 +124,8 @@
 <div class="line"><br /></div>
 </div>
 </div>
-<div class="section" id="id2">
-<h3>第三步: 绑定阿里云Access  Key<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id1">
+<h3>第三步: 绑定阿里云Access  Key<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>1) Fit2Cloud开始页，选择&#8221;绑定阿里云Access Key&#8221;</strong></div>
@@ -151,8 +141,8 @@
 <img alt="_images/001-BindKey-8-FillKeyAndSave.png" src="_images/001-BindKey-8-FillKeyAndSave.png" />
 </div>
 </div>
-<div class="section" id="id3">
-<h2>二: 创建虚拟机组<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h2>二: 创建虚拟机组<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="section" id="wordpress-mysql">
 <h3>第一步: 创建wordpress-mysql虚拟机组<a class="headerlink" href="#wordpress-mysql" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
@@ -173,7 +163,11 @@
 </div>
 <img alt="_images/002-CreateVMGroup-3-SelectEditEventHandlers.png" src="_images/002-CreateVMGroup-3-SelectEditEventHandlers.png" />
 <div class="line-block">
-<div class="line"><strong>选择编辑本机install事件本机处理脚本</strong></div>
+<div class="line"><strong>&gt; 选择编辑本机install事件本机处理脚本</strong></div>
+<div class="line"><strong>&gt; 将下面的mysql安装脚本填写到wordpress-mysql虚拟机组的install事件本机处理器中并保存:</strong></div>
+</div>
+<div class="line-block">
+<div class="line">MySQL安装脚本</div>
 </div>
 <div class="code python highlight-python"><div class="highlight"><pre>#!/bin/bash
 sudo su -
@@ -190,47 +184,168 @@ mysql -u root -pfit2cloud -e &quot;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;
 /etc/rc.d/init.d/mysqld restart
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line"><strong>&gt; 将上面的mysql安装脚本填写到wordpress-mysql虚拟机组的install事件本机处理器中:</strong></div>
-</div>
 <img alt="_images/002-CreateVMGroup-4-EditMysqlInstallEventHandler.png" src="_images/002-CreateVMGroup-4-EditMysqlInstallEventHandler.png" />
 </div>
 <div class="section" id="wordpress-web">
 <h3>第二步: 创建wordpress-web虚拟机组<a class="headerlink" href="#wordpress-web" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line">1) &#8220;开始页&#8221;选择&#8221;创建虚拟机组&#8221;</div>
+<div class="line"><strong>1) 到&#8221;开始页&#8221;, 选择&#8221;创建虚拟机组&#8221;</strong></div>
+</div>
+<img alt="_images/002-CreateVMGroup-1-SelectCreateVMGroupOnBeginPage.png" src="_images/002-CreateVMGroup-1-SelectCreateVMGroupOnBeginPage.png" />
+<div class="line-block">
 <div class="line"><br /></div>
-<div class="line">2) 填写虚拟机组配置信息并保存</div>
+<div class="line"><strong>2) 填写虚拟机组配置信息并保存</strong></div>
+</div>
+<img alt="_images/002-CreateVMGroup-5-FillWebVMGroupNameAndSave.png" src="_images/002-CreateVMGroup-5-FillWebVMGroupNameAndSave.png" />
+<div class="line-block">
 <div class="line"><br /></div>
-<div class="line">3) 编辑wordpress-web虚拟机组事件处理脚本</div>
-<div class="line"><br /></div>
-<div class="line">4) 设置wordpress-web虚拟机组安全组</div>
+<div class="line"><strong>3) 编辑wordpress-web虚拟机组事件处理脚本</strong></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>&gt; 选择编辑wordpress-web虚拟机组事件处理脚本</strong></div>
+</div>
+<img alt="_images/002-CreateVMGroup-6-SelectEditWebVMGroupEventHandlers.png" src="_images/002-CreateVMGroup-6-SelectEditWebVMGroupEventHandlers.png" />
+<div class="line-block">
+<div class="line"><strong>&gt; 选择编辑本机initialize事件本机处理脚本, 编辑并保存</strong></div>
+<div class="line">wordpress-web初始化运行时环境安装脚本</div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>#!/bin/bash
+sudo su -
+yum -y install httpd mysql-server php php-mysql wget
+#chkconfig mysqld on
+chkconfig httpd on
+</pre></div>
+</div>
+<img alt="_images/002-CreateVMGroup-7-EditWebinitializeEventHandler.png" src="_images/002-CreateVMGroup-7-EditWebinitializeEventHandler.png" />
+<div class="line-block">
+<div class="line"><strong>&gt; 选择编辑本机install事件本机处理脚本, 编辑并保存</strong></div>
+<div class="line">wordpress-web安装脚本</div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>#!/bin/bash
+sudo su -
+cd /tmp
+wget http://wordpress.org/latest.tar.gz
+tar -xvzf latest.tar.gz -C /var/www/html
+
+#configure apache2 file for wordpress
+cat &lt;&lt; EOF &gt;&gt; /etc/httpd/conf/httpd.conf
+&lt;VirtualHost *:80&gt;
+ServerAdmin info@fit2cloud.com
+ServerName wordpress.fit2cloud.net
+DocumentRoot /var/www/html/wordpress
+ErrorLog /var/log/httpd/wordpress-error.log
+CustomLog /var/log/httpd/wordpress-common.log common
+&lt;/VirtualHost&gt;
+EOF
+
+cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
+sed -i &quot;s/database_name_here/wordpress/g&quot; /var/www/html/wordpress/wp-config.php
+sed -i &quot;s/username_here/root/g&quot; /var/www/html/wordpress/wp-config.php
+sed -i &quot;s/password_here/fit2cloud/g&quot; /var/www/html/wordpress/wp-config.php
+
+service httpd restart
+
+#get mysql role server ip address
+waitOutput=`f2cadmin waitUntilServerUp wordpress-mysql 120`
+output=`echo $waitOutput | grep &quot;vm is up&quot;`
+if [ ${#output} -gt 0 ] ; then
+    getIPoutput=`f2cadmin get clusterrole_servers_info wordpress-mysql localIP | head -1`
+
+    checkErrorOutput=`echo $getIPoutput | grep &quot;does not exist&quot;`
+    if [ ${#checkErrorOutput} -gt 0 ] ; then
+        echo &quot;exceptions happens when get role server ip&quot;
+        echo $output
+    else
+        echo $getIPoutput
+        mysqlInternalIP=$getIPoutput
+        sed -i &quot;s/localhost/$mysqlInternalIP/g&quot; /var/www/html/wordpress/wp-config.php
+    fi
+else
+   echo exceptions happens when wait until mysql server up, can not get mysql ip, can not configure wp-config.php
+   echo $waitOutput
+fi
+</pre></div>
+</div>
+<img alt="_images/002-CreateVMGroup-8-EditWebInstallEventHandler.png" src="_images/002-CreateVMGroup-8-EditWebInstallEventHandler.png" />
+<div class="line-block">
+<div class="line"><strong>4) 设置wordpress-web虚拟机组安全组打开80端口</strong></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>1) 到&#8221;虚拟机组&#8221;页面, 选择&#8221;操作&#8221;-&gt;&#8221;设置安全组规则&#8221;</strong></div>
+</div>
+<img alt="_images/002-CreateVMGroup-9-SelectToEditWebSecurityGroup.png" src="_images/002-CreateVMGroup-9-SelectToEditWebSecurityGroup.png" />
+<div class="line-block">
+<div class="line"><strong>2) 到&#8221;安全组规则&#8221;页面, 选择&#8221;新建&#8221; ; 新建安全规则页面，填写打开80端口并保存</strong></div>
+</div>
+<img alt="_images/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png" src="_images/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png" />
 </div>
 </div>
+<div class="section" id="id3">
+<h2>三: 创建集群<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>1) Fit2Cloud页面中选择&#8221;集群&#8221;</strong></div>
+</div>
+<img alt="_images/003-CreateCluster-1-SelectGoToClusterPage.png" src="_images/003-CreateCluster-1-SelectGoToClusterPage.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>2) 集群列表页面，选择&#8221;新建&#8221;; 新建集群页面中，填写集群名称并保存</strong></div>
+</div>
+<img alt="_images/003-CreateCluster-2-CreateClusterAndSave.png" src="_images/003-CreateCluster-2-CreateClusterAndSave.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>3) 添加wordpress-mysql虚拟机组</strong></div>
+<div class="line"><strong>&gt; 集群页面，选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;0个虚拟机组&#8221;</strong></div>
+</div>
+<img alt="_images/003-CreateCluster-3-SelectToAddVMGroup.png" src="_images/003-CreateCluster-3-SelectToAddVMGroup.png" />
+<div class="line-block">
+<div class="line"><strong>&gt; 集群虚拟机组页面，选择 &#8220;新建&#8221; 虚拟机组</strong></div>
+<div class="line"><strong>&gt; 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存</strong></div>
+</div>
+<img alt="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" src="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>4) 添加wordpress-web虚拟机组</strong></div>
+<div class="line"><strong>&gt; 集群页面选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;1个虚拟机组&#8221;</strong></div>
+</div>
+<img alt="_images/003-CreateCluster-3-SelectToAddVMGroup.png" src="_images/003-CreateCluster-3-SelectToAddVMGroup.png" />
+<div class="line-block">
+<div class="line"><strong>&gt; 集群虚拟机组页面选择 &#8220;新建&#8221; 虚拟机组</strong></div>
+<div class="line"><strong>&gt; 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存</strong></div>
+</div>
+<img alt="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" src="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" />
 </div>
 <div class="section" id="id4">
-<h2>三: 创建集群<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2>四: 启动集群<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
-<div class="line"><strong>1) 到&#8221;开始页&#8221;</strong></div>
-<div class="line-block">
-<div class="line">找到页面最上方一行，点击&#8221;开始页&#8221;</div>
-<div class="line"><br /></div>
+<div class="line"><strong>集群列表页面，选择&#8221;wordpress-qingdao&#8221; -&gt;  选择&#8221;启动&#8221;</strong></div>
 </div>
-<div class="line"><strong>2) 选择&#8221;创建集群&#8221;</strong></div>
-<div class="line"><br /></div>
-<div class="line"><strong>3) 填写集群配置信息并保存</strong></div>
-<div class="line"><br /></div>
+<img alt="_images/004-LaunchCluster-1-Launch.png" src="_images/004-LaunchCluster-1-Launch.png" />
+<div class="line-block">
+<div class="line"><strong>集群列表页面，选择&#8221;启动&#8221;后，显示集群将会在几分钟内启动</strong></div>
+</div>
+<img alt="_images/004-LaunchCluster-2-LaunchedInfo.png" src="_images/004-LaunchCluster-2-LaunchedInfo.png" />
+<div class="line-block">
+<div class="line"><strong>集群列表页面，选择集群&#8221;wordpress-qingdao&#8221; -&gt; 选择&#8221;x个虚拟机&#8221; 进入集群虚拟机列表页面</strong></div>
+</div>
+<img alt="_images/004-LaunchCluster-3-SelectGoToClusterVMListPage.png" src="_images/004-LaunchCluster-3-SelectGoToClusterVMListPage.png" />
+<div class="line-block">
+<div class="line"><strong>集群虚拟机列表页面，查看启动的虚拟机</strong></div>
+</div>
+<img alt="_images/004-LaunchCluster-4-ViewClusterVMList.png" src="_images/004-LaunchCluster-4-ViewClusterVMList.png" />
+<div class="line-block">
+<div class="line"><strong>找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://&lt;wordpress-web虚拟机公有IP&gt;访问wordpress</strong></div>
+</div>
+<img alt="_images/004-LaunchCluster-4-ViewClusterVMList.png" src="_images/004-LaunchCluster-4-ViewClusterVMList.png" />
+<div class="line-block">
+<div class="line"><strong>wordpress页面</strong></div>
 </div>
 </div>
 <div class="section" id="id5">
-<h2>四: 启动集群<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2>五: 登录虚拟机<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
-<div class="line">1)</div>
+<div class="line"><strong>集群虚拟机列表页面，选择某个虚拟机所在行 -&gt; 选择&#8221;操作&#8221; -&gt; 选择登录虚机</strong></div>
 </div>
-</div>
-<div class="section" id="id6">
-<h2>五: 登录虚拟机<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 </div>
 </div>
 
@@ -242,22 +357,21 @@ mysql -u root -pfit2cloud -e &quot;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;
         <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
     <h3><a href="index.html">Page contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Fit2Cloud快速入门</a><ul>
-<li><a class="reference internal" href="#id1">登录Fit2Cloud</a></li>
+<li><a class="reference internal" href="#">Fit2Cloud快速入门: 十分钟部署Wordpress应用</a><ul>
 <li><a class="reference internal" href="#api-key">一: 绑定阿里云API Key</a><ul>
 <li><a class="reference internal" href="#www-aliyun-com-10">第一步: 登录阿里云(www.aliyun.com)并确保账户有至少10元的余额</a></li>
 <li><a class="reference internal" href="#access-key">第二步: 获取阿里云Access Key</a></li>
-<li><a class="reference internal" href="#id2">第三步: 绑定阿里云Access  Key</a></li>
+<li><a class="reference internal" href="#id1">第三步: 绑定阿里云Access  Key</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id3">二: 创建虚拟机组</a><ul>
+<li><a class="reference internal" href="#id2">二: 创建虚拟机组</a><ul>
 <li><a class="reference internal" href="#wordpress-mysql">第一步: 创建wordpress-mysql虚拟机组</a></li>
 <li><a class="reference internal" href="#wordpress-web">第二步: 创建wordpress-web虚拟机组</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id4">三: 创建集群</a></li>
-<li><a class="reference internal" href="#id5">四: 启动集群</a></li>
-<li><a class="reference internal" href="#id6">五: 登录虚拟机</a></li>
+<li><a class="reference internal" href="#id3">三: 创建集群</a></li>
+<li><a class="reference internal" href="#id4">四: 启动集群</a></li>
+<li><a class="reference internal" href="#id5">五: 登录虚拟机</a></li>
 </ul>
 </li>
 </ul>
@@ -270,8 +384,8 @@ mysql -u root -pfit2cloud -e &quot;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;
   </div>
   <div class="sphinxnext">
     <h4>Next page</h4>
-    <p class="topless"><a href="add_data_volume.html"
-                          title="Next page">&rarr; 设置数据盘</a></p>
+    <p class="topless"><a href="advance.html"
+                          title="Next page">&rarr; Fit2Cloud高级功能</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
@@ -304,7 +418,7 @@ mysql -u root -pfit2cloud -e &quot;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;
           <a href="genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
-          <a href="add_data_volume.html" title="设置数据盘"
+          <a href="advance.html" title="Fit2Cloud高级功能"
              >下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="introduction.html" title="Fit2Cloud介绍"
