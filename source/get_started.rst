@@ -4,7 +4,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |       这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud方便快速地
 | 在阿里云上部署和建立一个应用。
 |
-登录Fit2Cloud
+登录Fit2Cloud For 阿里云
 -------------------------------------
 | **1) 首先在非IE浏览器中输入或点击aliyun.fit2cloud.com进入Fit2Cloud首页**
 |
