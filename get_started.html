@@ -170,7 +170,6 @@
 <div class="line">MySQL安装脚本</div>
 </div>
 <div class="code python highlight-python"><div class="highlight"><pre>#!/bin/bash
-sudo su -
 yum -y install mysql-server
 
 #chkconfig mysqld on
@@ -211,7 +210,6 @@ mysql -u root -pfit2cloud -e &quot;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;
 <div class="line">wordpress-web初始化运行时环境安装脚本</div>
 </div>
 <div class="code python highlight-python"><div class="highlight"><pre>#!/bin/bash
-sudo su -
 yum -y install httpd mysql-server php php-mysql wget
 #chkconfig mysqld on
 chkconfig httpd on
@@ -223,9 +221,9 @@ chkconfig httpd on
 <div class="line">wordpress-web安装脚本</div>
 </div>
 <div class="code python highlight-python"><div class="highlight"><pre>#!/bin/bash
-sudo su -
 cd /tmp
 wget http://wordpress.org/latest.tar.gz
+mkdir -p /var/www/html
 tar -xvzf latest.tar.gz -C /var/www/html
 
 #configure apache2 file for wordpress
@@ -336,16 +334,18 @@ fi
 <div class="line-block">
 <div class="line"><strong>找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://&lt;wordpress-web虚拟机公有IP&gt;访问wordpress</strong></div>
 </div>
-<img alt="_images/004-LaunchCluster-4-ViewClusterVMList.png" src="_images/004-LaunchCluster-4-ViewClusterVMList.png" />
+<img alt="_images/004-LaunchCluster-5-GetWebIP.png" src="_images/004-LaunchCluster-5-GetWebIP.png" />
 <div class="line-block">
 <div class="line"><strong>wordpress页面</strong></div>
 </div>
+<img alt="_images/004-LaunchCluster-6-ViewWordpressWeb.png" src="_images/004-LaunchCluster-6-ViewWordpressWeb.png" />
 </div>
 <div class="section" id="id6">
 <h2>五: 登录虚拟机<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>集群虚拟机列表页面，选择某个虚拟机所在行 -&gt; 选择&#8221;操作&#8221; -&gt; 选择登录虚机</strong></div>
 </div>
+<img alt="_images/005-LoginVM-1-LogInVM.png" src="_images/005-LoginVM-1-LogInVM.png" />
 </div>
 </div>
 

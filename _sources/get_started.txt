@@ -78,7 +78,6 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 .. code:: python
 
 	#!/bin/bash
-	sudo su -
 	yum -y install mysql-server
 	
 	#chkconfig mysqld on
@@ -112,7 +111,6 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 .. code:: python
 
 	#!/bin/bash
-	sudo su -
 	yum -y install httpd mysql-server php php-mysql wget
 	#chkconfig mysqld on
 	chkconfig httpd on
@@ -124,9 +122,9 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 .. code:: python
 
 	#!/bin/bash
-	sudo su -
 	cd /tmp
 	wget http://wordpress.org/latest.tar.gz
+	mkdir -p /var/www/html
 	tar -xvzf latest.tar.gz -C /var/www/html
 	
 	#configure apache2 file for wordpress
@@ -216,16 +214,17 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 .. image:: _static/004-LaunchCluster-4-ViewClusterVMList.png
 
 | **找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://<wordpress-web虚拟机公有IP>访问wordpress**
-.. image:: _static/004-LaunchCluster-4-ViewClusterVMList.png
+.. image:: _static/004-LaunchCluster-5-GetWebIP.png
 
 | **wordpress页面**
+.. image:: _static/004-LaunchCluster-6-ViewWordpressWeb.png
 
 
 五: 登录虚拟机
 -------------------------------------
 
 | **集群虚拟机列表页面，选择某个虚拟机所在行 -> 选择"操作" -> 选择登录虚机**
-
+.. image:: _static/005-LoginVM-1-LogInVM.png
 
 
 
