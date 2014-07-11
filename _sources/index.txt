@@ -15,6 +15,7 @@
    get_started
    advance
    faq
+   problems
 
 查找与搜索
 ==================
