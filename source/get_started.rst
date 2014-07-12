@@ -41,7 +41,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |
 .. image:: _static/001-BindKey-1-AliyunHome.png
 |
-| **2) 在阿里云用户中心页面, 右上角，点击 "账户管理"**
+| **2) 在阿里云用户中心页面, 右上角, 点击 "账户管理"**
 |
 .. image:: _static/001-BindKey-1-AliyunUserHome.png
 |
