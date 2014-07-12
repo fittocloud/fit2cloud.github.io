@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="./" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -131,35 +131,103 @@
 <h2>场景3: 自动部署<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line-block">
-<div class="line">通过Fit2Cloud, 我们可以定义一个应用的环境模板，即集群，及集群里的虚拟机组，然后设置各虚拟机组的组件</div>
+<div class="line">当我们做开发测试和运维时, 都少不了部署升级, 通过Fit2Cloud, 我们可以定义一个应用的环境模板，即集群，</div>
 </div>
-<div class="line">自动部署脚本，这样每次启动集群时，启动虚拟机的时候，可以将各个组件自动部署到虚拟机上，而不是每次手动</div>
-<div class="line">登陆或者手动运行脚本来部署。</div>
+<div class="line">及集群里的虚拟机组，然后设置各虚拟机组的组件自动部署脚本，这样每次启动集群时，启动虚拟机的时候，可以将各个组件</div>
+<div class="line">自动部署到虚拟机上，而不是每次手动登陆或者手动运行脚本来部署。</div>
+<div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h2>场景4: 定时启动关闭虚拟机<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">我们平时有一些虚拟机，其实晚上没必要开，服务白天负载较大，那就早上多起一些虚拟机，</div>
+</div>
+<div class="line">晚上负载变小，就关闭一些虚拟机, 通过Fit2Cloud可以很方便的设置和实现这一点。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id5">
 <h2>场景5: 登录虚拟机<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">我们的项目有多个环境，平时开发测试运维都少不了登陆到虚拟机, 通过Fit2Cloud, 我们可以从Web页面上登陆到</div>
+</div>
+<div class="line">选定的虚拟机上, 比在命令行里每次登陆虚拟机要方便; 而且在云计算环境下，虚拟机在非生产环境中可能会经常启动关闭，IP</div>
+<div class="line">经常变，所以用Fit2Cloud要远远比在命令行里每次拷贝输入IP地址要方便很多。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id6">
 <h2>场景6: 设置安全组<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">我们建立环境时为了安全起间，需要配置各个虚拟机的防火墙，通过Fit2Cloud, 我们可以非常方便地从页面上设置。</div>
+<div class="line"><br /></div>
+</div>
+</div>
 </div>
 <div class="section" id="id7">
 <h2>场景7: 同时在多个虚拟机执行脚本<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">我们在平时的开发测试和运营维护支持过程中，经常需要在环境里的多个机器上执行同一个脚本，比如2014年发生的</div>
+</div>
+<div class="line">openssh漏洞事件，我们需要给所有的虚拟机打补丁，通过Fit2Cloud执行脚本功能可以很方便地做到。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id8">
 <h2>场景8: 查看应用集群虚拟机监控<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">我们在平时的开发测试和运营维护支持过程中，都少不了需要查看环境里机器的状态，比如CPU使用率，load average,</div>
+</div>
+<div class="line">内存，硬盘和网络的情况，特别是运营维护，测试和出问题时分析问题时，都需要，从前基本上是用Nagio,Cacti之类的，手动</div>
+<div class="line">在被监控端及监控页面上进行设置，通过Fit2Cloud不用这么麻烦了，什么都不需要做就可以看到各个虚拟机的这些基本的监控,</div>
+<div class="line">另外，做一些简单的设置就可以收到告警。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id9">
 <h2>场景9: 自动备份恢复<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">我们在平时的运营维护支持过程中，为了保证应用服务的可用性和灾难恢复，都少不了做备份和恢复，通过Fit2Cloud提供</div>
+</div>
+<div class="line">的执行脚本功能，只要实现脚本即可，不需要再做一台管理服务器专门运行这些脚本了，Fit2Cloud可以作为管理服务器，只需要</div>
+<div class="line">告诉Fit2Cloud什么时候在哪些虚拟机上执行哪些脚本即可。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id10">
 <h2>场景10: 与开发流程集成实现持续部署升级<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">现在开发和交付高效的研发团队都少不了持续部署升级和自动化测试，Fit2Cloud提供了Rest集成接口及SDK，可以方便与</div>
+</div>
+<div class="line">团队的持续集成服务集成，实现持续部署升级，减少部署的重复体力劳动，提高部署质量，及开发测试运营维护支持的效率，以及支持</div>
+<div class="line">自动化测试以及持续交付。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id11">
 <h2>场景11: 与开发流程集成实现持续交付<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">持续交付是很多研发团队的目标，Fit2Cloud提供了Rest集成接口及SDK，可以方便与团队的持续集成服务集成，通过实现对</div>
+</div>
+<div class="line">DTAP各个环境持续部署升级, 帮助团队实现持续交付。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 
