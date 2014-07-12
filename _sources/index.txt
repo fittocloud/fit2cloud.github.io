@@ -17,6 +17,8 @@
    advance
    faq
    problems
+   references
+   
 
 查找与搜索
 ==================

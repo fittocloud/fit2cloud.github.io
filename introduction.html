@@ -67,7 +67,7 @@
 <div class="line-block">
 <div class="line">Fit2Cloud是一个云环境DevOps协作平台， 可以帮助使用云基础设施开发和运行应用的开发和运维人员</div>
 </div>
-<div class="line">应用运行所需的环境和应用的生命周期。</div>
+<div class="line">管理应用运行所需的环境以及应用的生命周期, 从而提高开发测试运营维护支持的效率和质量，以及降低成本。</div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">目前Fit2Cloud支持的云环境包括AWS和阿里云。</div>
@@ -207,25 +207,31 @@
 </div>
 </div>
 <div class="section" id="id10">
-<h2>场景10: 与开发流程集成实现持续部署升级<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<h2>场景10: 与持续集成服务集成实现持续部署升级<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">现在开发和交付高效的研发团队都少不了持续部署升级和自动化测试，Fit2Cloud提供了Rest集成接口及SDK，可以方便与</div>
 </div>
-<div class="line">团队的持续集成服务集成，实现持续部署升级，减少部署的重复体力劳动，提高部署质量，及开发测试运营维护支持的效率，以及支持</div>
-<div class="line">自动化测试以及持续交付。</div>
+<div class="line">团队的持续集成服务(如Jenkins)集成，实现持续部署升级，减少部署的重复体力劳动，提高部署质量，及开发测试运营维护支持的效率，</div>
+<div class="line">以及支持自动化测试以及持续交付。</div>
+<div class="line-block">
+<div class="line">举个例子，我们有个项目，项目的组件的构建都由Jenkins管理，每个组件对应的代码库的分支都有个构建任务，每当组件代码</div>
+</div>
+<div class="line">有提交时，构建任务就会进行构建, 当构建任务结束后，就可以在任务中，通过集成调用Fit2Cloud的执行脚本Rest API, 把组件最</div>
+<div class="line">新的代码部署到指定的一个或多个环境中, 实现某些环境的持续部署和升级, 升级完后，构建任务触发自动化验收测试对指定的环境的应</div>
+<div class="line">用进行验收测试, 测试通过后，把环境中应用的Build标志为上线的候选版本。</div>
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="id11">
-<h2>场景11: 与开发流程集成实现持续交付<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<h2>场景11: 与持续集成服务集成实现持续交付<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">持续交付是很多研发团队的目标，Fit2Cloud提供了Rest集成接口及SDK，可以方便与团队的持续集成服务集成，通过实现对</div>
+<div class="line">持续交付是很多研发团队的目标，Fit2Cloud提供了Rest集成接口及SDK，可以方便地与团队的持续集成服务(如Jenkins)集成，</div>
 </div>
-<div class="line">DTAP各个环境持续部署升级, 帮助团队实现持续交付。</div>
+<div class="line">通过实现对DTAP各个环境持续部署升级, 帮助团队实现持续交付。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -249,8 +255,8 @@
 <li><a class="reference internal" href="#id7">场景7: 同时在多个虚拟机执行脚本</a></li>
 <li><a class="reference internal" href="#id8">场景8: 查看应用集群虚拟机监控</a></li>
 <li><a class="reference internal" href="#id9">场景9: 自动备份恢复</a></li>
-<li><a class="reference internal" href="#id10">场景10: 与开发流程集成实现持续部署升级</a></li>
-<li><a class="reference internal" href="#id11">场景11: 与开发流程集成实现持续交付</a></li>
+<li><a class="reference internal" href="#id10">场景10: 与持续集成服务集成实现持续部署升级</a></li>
+<li><a class="reference internal" href="#id11">场景11: 与持续集成服务集成实现持续交付</a></li>
 </ul>
 </li>
 </ul>
