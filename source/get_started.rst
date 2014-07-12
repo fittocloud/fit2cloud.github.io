@@ -74,7 +74,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |
 .. image:: _static/001-BindKey-7-EditDefaultKey.png
 |
-| **3) Access Key绑定页，将第二步阿里云Access页面的Access Key填写到相应输入框里并保存**
+| **3) Access Key绑定页，将第二步获得的阿里云Access Key填写到相应输入框里并保存**
 |
 .. image:: _static/001-BindKey-8-FillKeyAndSave.png
 |
