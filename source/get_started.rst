@@ -29,27 +29,27 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |   如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;
 |   如果没有阿里云Access  Key需要先创建一个;
 |
-| **1) 阿里云首页, 选择"用户中心"**
+| **1) 在阿里云首页, 选择进入 "用户中心"**
 |
 .. image:: _static/001-BindKey-1-AliyunHome.png
 |
-| **2) 用户中心页面选择"账户管理"**
+| **2) 在阿里云用户中心页面, 选择进入 "账户管理"**
 |
 .. image:: _static/001-BindKey-1-AliyunUserHome.png
 |
-| **3) 账户管理页面选择"管理控制台"**
+| **3) 在阿里云账户管理页面, 选择进入 "管理控制台"**
 |
 .. image:: _static/001-BindKey-2-TopUp.png
 |
-| **4) 管理控制台页面选择"Access Key"进入阿里云Access Key页面**
+| **4) 在阿里云管理控制台页面, 选择进入阿里云"Access Key"页面**
 |
 .. image:: _static/001-BindKey-3-ClickKey.png
 |
-| **5) Access Key页面选择创建阿里云Access Key**
+| **5) 在阿里云Access Key页面, 选择 "创建Access Key"**
 |
 .. image:: _static/001-BindKey-4-RequestCreateAccessKey.png
 |
-| **6) Access Key页面查看阿里云Access Key**
+| **6) 在阿里云Access Key页面, 选择 "显示" 查看阿里云Access Key**
 |
 .. image:: _static/001-BindKey-5-ViewAccessKey.png
 |

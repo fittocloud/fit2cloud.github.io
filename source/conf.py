@@ -47,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Fit2Cloud for 阿里云'
+project = u'Fit2Cloud For 阿里云'
 copyright = u'2014, Fit2Cloud'
 
 # The version info for the project you're documenting, acts as replacement for
