@@ -8,12 +8,15 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 -------------------------------------
 | **1) 打开Fit2Cloud For 阿里云首页**
 |  
-| a> 在FireFox火狐浏览器或Goolge Chrome浏览器中打开aliyun.fit2cloud.com
-| b> 在首页点击 "Github帐号登陆", 如下图示:
+| a> 打开 `Fit2Cloud For 阿里云 (aliyun.fit2cloud.com) <http://aliyun.fit2cloud.com/>`_ 
+|
+|    注1: 目前不支持IE,只支持FireFox和Goolge Chrome
+|
+| b> 在Fit2Cloud首页点击 "Github帐号登陆", 如下图示:
 |
 .. image:: _static/000-Fit2Cloud-Website.png
 |
-| **2) 点击"Github帐号登陆"后，会弹出Github登陆页面，要求输入用户名密码**
+| **2) 点击"Github帐号登陆"后，会弹出Github登陆页面，要求输入Github用户名密码**
 |
 | **3) 输完用户名密码，点击登陆后，会到授权页面，选择 "授权" 即可, 之后就进入Fit2Cloud的开始页面**
 |
@@ -22,6 +25,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 第一步: 登录阿里云(www.aliyun.com)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|    点击 `到阿里云(www.aliyun.com)点这里 <http://www.aliyun.com/>`_
 |
 |    注1: 目前只支持Firefox, Chrome，不支持IE 
 |    注2: 如果需要有阿里云帐号 
