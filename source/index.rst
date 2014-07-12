@@ -13,6 +13,7 @@
    
    introduction
    get_started
+   concepts
    advance
    faq
    problems
