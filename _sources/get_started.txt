@@ -1,27 +1,31 @@
 Fit2Cloud快速入门: 十分钟部署Wordpress应用
 =====================================
 
-|       这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud方便快速地
-| 在阿里云上部署和建立一个应用。
+|    这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud方便快速地
+| 在阿里云上部署和建立一个wordpress网站。
 |
 登录Fit2Cloud For 阿里云
 -------------------------------------
-| **1) 首先在非IE浏览器中输入或点击aliyun.fit2cloud.com进入Fit2Cloud首页**
+| **1) 打开Fit2Cloud For 阿里云首页**
+|  
+| a> 在FireFox火狐浏览器或Goolge Chrome浏览器中打开aliyun.fit2cloud.com
+| b> 在首页点击 "Github帐号登陆", 如下图示:
 |
 .. image:: _static/000-Fit2Cloud-Website.png
 |
-| **2) 输入Github帐号，使用GitHub帐号登录**
-
+| **2) 点击"Github帐号登陆"后，会弹出Github登陆页面，要求输入用户名密码**
+|
+| **3) 输完用户名密码，点击登陆后，会到授权页面，选择 "授权" 即可, 之后就进入Fit2Cloud的开始页面**
+|
 一: 绑定阿里云Access Key
 -------------------------------------
 
 第一步: 登录阿里云(www.aliyun.com)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-|    注1: 用户需要有一个Github帐号 
-|    注2: 目前只支持Firefox, Chrome，不支持IE 
-|    注3: 如果需要有阿里云帐号 
-|    注4: 如果阿里云帐号的余额为0，需要先用支付宝充值
+|    注1: 目前只支持Firefox, Chrome，不支持IE 
+|    注2: 如果需要有阿里云帐号 
+|    注3: 如果阿里云帐号的余额为0，需要先用支付宝充值
 |
 第二步: 获取阿里云Access Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -29,30 +33,31 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |   如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;
 |   如果没有阿里云Access  Key需要先创建一个;
 |
-| **1) 在阿里云首页, 选择进入 "用户中心"**
+| **1) 在阿里云首页, 右上角, 选择进入 "用户中心"**
 |
 .. image:: _static/001-BindKey-1-AliyunHome.png
 |
-| **2) 在阿里云用户中心页面, 选择进入 "账户管理"**
+| **2) 在阿里云用户中心页面, 右上角，点击 "账户管理"**
 |
 .. image:: _static/001-BindKey-1-AliyunUserHome.png
 |
-| **3) 在阿里云账户管理页面, 选择进入 "管理控制台"**
+| **3) 在阿里云账户管理页面, 页面最上方, 点击用户名后会出现一个下拉菜单，然后点击 "管理控制台"**
 |
 .. image:: _static/001-BindKey-2-TopUp.png
 |
-| **4) 在阿里云管理控制台页面, 选择进入阿里云"Access Key"页面**
+| **4) 在阿里云管理控制台页面, 点击页面右上角的钥匙图标以进入阿里云"Access Key"页面**
 |
 .. image:: _static/001-BindKey-3-ClickKey.png
 |
-| **5) 在阿里云Access Key页面, 选择 "创建Access Key"**
+| **5) 在阿里云Access Key页面, 点击 "创建Access Key" 按钮**
 |
 .. image:: _static/001-BindKey-4-RequestCreateAccessKey.png
 |
-| **6) 在阿里云Access Key页面, 选择 "显示" 查看阿里云Access Key**
+| **6) 在阿里云Access Key页面, 点击 "显示" 按钮查看阿里云Access Key**
 |
 .. image:: _static/001-BindKey-5-ViewAccessKey.png
 |
+| 将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，第三步在Fit2Cloud中绑定阿里云Access Key时会用到.
 
 第三步: 绑定阿里云Access  Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -261,19 +266,17 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |
 .. image:: _static/004-LaunchCluster-5-GetWebIP.png
 |
-|
-|
 .. image:: _static/004-LaunchCluster-6-ViewWordpressWeb.png
 |
 
 五: 登录虚拟机
 -------------------------------------
 
-| **集群虚拟机列表页面，选择某个虚拟机所在行 -> 选择"操作" -> 选择登录虚机**
+| **集群虚拟机列表页面，点击某个虚拟机所在行 -> 点击 "操作" -> 点击 "登录虚机"**
 |
 .. image:: _static/005-LoginVM-1-LogInVM.png
 |
-
+| 之后会弹出登陆页面，由于登陆需要浏览器支持Applet, 如果没安装java plugin, 请按提示操作安装，之后便可直接从网页登陆虚拟机。
 
 
 
