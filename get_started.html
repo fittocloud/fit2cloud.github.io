@@ -343,6 +343,8 @@ fi
 </div>
 <div class="section" id="id5">
 <h2>三: 创建集群<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id6">
+<h3>第一步: 新建集群<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><strong>1) Fit2Cloud页面中选择&#8221;集群&#8221;</strong></div>
 <div class="line"><br /></div>
@@ -356,31 +358,39 @@ fi
 <img alt="_images/003-CreateCluster-2-CreateClusterAndSave.png" src="_images/003-CreateCluster-2-CreateClusterAndSave.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>3) 添加wordpress-mysql虚拟机组</strong></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>第二步: 添加wordpress-mysql虚拟机组<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>a&gt; 集群页面，选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;0个虚拟机组&#8221;</strong></div>
+<div class="line"><strong>1) 集群页面，选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;0个虚拟机组&#8221;</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-3-SelectToAddVMGroup.png" src="_images/003-CreateCluster-3-SelectToAddVMGroup.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>b&gt; 集群虚拟机组页面，选择 &#8220;新建&#8221; 虚拟机组</strong></div>
-<div class="line"><strong>c&gt; 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存</strong></div>
+<div class="line"><strong>2) 集群虚拟机组页面，选择 &#8220;新建&#8221; 虚拟机组</strong></div>
+<div class="line"><strong>3) 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" src="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>4) 添加wordpress-web虚拟机组</strong></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>第三步: 添加wordpress-web虚拟机组<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>a&gt; 集群页面选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;1个虚拟机组&#8221;</strong></div>
+<div class="line"><strong>1) 集群页面选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;1个虚拟机组&#8221;</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-3-SelectToAddVMGroup.png" src="_images/003-CreateCluster-3-SelectToAddVMGroup.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>b&gt; 集群虚拟机组页面选择 &#8220;新建&#8221; 虚拟机组</strong></div>
-<div class="line"><strong>c&gt; 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存</strong></div>
+<div class="line"><strong>2) 集群虚拟机组页面选择 &#8220;新建&#8221; 虚拟机组</strong></div>
+<div class="line"><strong>3) 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" src="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" />
@@ -389,8 +399,9 @@ fi
 <div class="line"><br /></div>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>四: 启动集群<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id9">
+<h2>四: 启动集群<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>1) 集群列表页面，选择&#8221;wordpress-qingdao&#8221; -&gt;  选择&#8221;启动&#8221;</strong></div>
 <div class="line"><br /></div>
@@ -398,25 +409,25 @@ fi
 <img alt="_images/004-LaunchCluster-1-Launch.png" src="_images/004-LaunchCluster-1-Launch.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>2) 集群列表页面，选择&#8221;启动&#8221;后，显示集群将会在几分钟内启动</strong></div>
+<div class="line">选择&#8221;启动&#8221;后，会出现下面的页面，显示集群将会在几分钟内启动</div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/004-LaunchCluster-2-LaunchedInfo.png" src="_images/004-LaunchCluster-2-LaunchedInfo.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>3) 集群列表页面，选择集群&#8221;wordpress-qingdao&#8221; -&gt; 选择&#8221;x个虚拟机&#8221; 进入集群虚拟机列表页面</strong></div>
+<div class="line"><strong>2) 集群列表页面，选择集群&#8221;wordpress-qingdao&#8221; -&gt; 选择&#8221;x个虚拟机&#8221; 进入集群虚拟机列表页面</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/004-LaunchCluster-3-SelectGoToClusterVMListPage.png" src="_images/004-LaunchCluster-3-SelectGoToClusterVMListPage.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>4) 集群虚拟机列表页面，查看启动的虚拟机</strong></div>
+<div class="line"><strong>3) 集群虚拟机列表页面，查看启动的虚拟机</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/004-LaunchCluster-4-ViewClusterVMList.png" src="_images/004-LaunchCluster-4-ViewClusterVMList.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>5) 找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://&lt;wordpress-web虚拟机公有IP&gt;访问wordpress</strong></div>
+<div class="line"><strong>4) 找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://&lt;wordpress-web虚拟机公有IP&gt;访问wordpress</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/004-LaunchCluster-5-GetWebIP.png" src="_images/004-LaunchCluster-5-GetWebIP.png" />
@@ -428,8 +439,8 @@ fi
 <div class="line"><br /></div>
 </div>
 </div>
-<div class="section" id="id7">
-<h2>五: 登录虚拟机<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id10">
+<h2>五: 登录虚拟机<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>集群虚拟机列表页面，点击某个虚拟机所在行 -&gt; 点击 &#8220;操作&#8221; -&gt; 点击 &#8220;登录虚机&#8221;</strong></div>
 <div class="line"><br /></div>
@@ -449,6 +460,9 @@ fi
 <div class="line">对于这些功能，详细介绍请移步到相应的文档，您可以在文档首页找到各个文档的入口链接，如有需求或碰到问题，请联系</div>
 </div>
 <div class="line"><a class="reference external" href="mailto:support&#37;&#52;&#48;fit2cloud&#46;com">support<span>&#64;</span>fit2cloud<span>&#46;</span>com</a>。</div>
+<div class="line-block">
+<div class="line">到文档目录请点击页面左上角或左下角的目录链接: &#8220;Fit2Cloud For 阿里云 1.0 文档&#8221;</div>
+</div>
 </div>
 </div>
 </div>
@@ -474,9 +488,14 @@ fi
 <li><a class="reference internal" href="#wordpress-web">第二步: 创建wordpress-web虚拟机组</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">三: 创建集群</a></li>
-<li><a class="reference internal" href="#id6">四: 启动集群</a></li>
-<li><a class="reference internal" href="#id7">五: 登录虚拟机</a></li>
+<li><a class="reference internal" href="#id5">三: 创建集群</a><ul>
+<li><a class="reference internal" href="#id6">第一步: 新建集群</a></li>
+<li><a class="reference internal" href="#id7">第二步: 添加wordpress-mysql虚拟机组</a></li>
+<li><a class="reference internal" href="#id8">第三步: 添加wordpress-web虚拟机组</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">四: 启动集群</a></li>
+<li><a class="reference internal" href="#id10">五: 登录虚拟机</a></li>
 </ul>
 </li>
 </ul>

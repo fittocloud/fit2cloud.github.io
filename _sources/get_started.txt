@@ -217,6 +217,8 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 三: 创建集群
 --------------------------------------------
 
+第一步: 新建集群
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | **1) Fit2Cloud页面中选择"集群"**
 |
 .. image:: _static/003-CreateCluster-1-SelectGoToClusterPage.png
@@ -225,25 +227,27 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |
 .. image:: _static/003-CreateCluster-2-CreateClusterAndSave.png
 |
-| **3) 添加wordpress-mysql虚拟机组**
+第二步: 添加wordpress-mysql虚拟机组
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **a> 集群页面，选择 "wordpress"集群 -> "0个虚拟机组"**
+| **1) 集群页面，选择 "wordpress"集群 -> "0个虚拟机组"**
 |
 .. image:: _static/003-CreateCluster-3-SelectToAddVMGroup.png
 |
-| **b> 集群虚拟机组页面，选择 "新建" 虚拟机组**
-| **c> 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存**
+| **2) 集群虚拟机组页面，选择 "新建" 虚拟机组**
+| **3) 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存**
 |
 .. image:: _static/003-CreateCluster-3-AddMysqlVMGroupToCluster.png
 |
-| **4) 添加wordpress-web虚拟机组**
+第三步: 添加wordpress-web虚拟机组
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **a> 集群页面选择 "wordpress"集群 -> "1个虚拟机组"**
+| **1) 集群页面选择 "wordpress"集群 -> "1个虚拟机组"**
 |
 .. image:: _static/003-CreateCluster-3-SelectToAddVMGroup.png
 |
-| **b> 集群虚拟机组页面选择 "新建" 虚拟机组**
-| **c> 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存**
+| **2) 集群虚拟机组页面选择 "新建" 虚拟机组**
+| **3) 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存**
 |
 .. image:: _static/003-CreateCluster-5-AddWebVMGroupToCluster.png
 |
@@ -255,19 +259,19 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |
 .. image:: _static/004-LaunchCluster-1-Launch.png
 |
-| **2) 集群列表页面，选择"启动"后，显示集群将会在几分钟内启动**
+| 选择"启动"后，会出现下面的页面，显示集群将会在几分钟内启动
 |
 .. image:: _static/004-LaunchCluster-2-LaunchedInfo.png
 |
-| **3) 集群列表页面，选择集群"wordpress-qingdao" -> 选择"x个虚拟机" 进入集群虚拟机列表页面**
+| **2) 集群列表页面，选择集群"wordpress-qingdao" -> 选择"x个虚拟机" 进入集群虚拟机列表页面**
 |
 .. image:: _static/004-LaunchCluster-3-SelectGoToClusterVMListPage.png
 |
-| **4) 集群虚拟机列表页面，查看启动的虚拟机**
+| **3) 集群虚拟机列表页面，查看启动的虚拟机**
 |
 .. image:: _static/004-LaunchCluster-4-ViewClusterVMList.png
 |
-| **5) 找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://<wordpress-web虚拟机公有IP>访问wordpress**
+| **4) 找到wordpress-web虚拟机，公有IP，并在浏览器中输入http://<wordpress-web虚拟机公有IP>访问wordpress**
 |
 .. image:: _static/004-LaunchCluster-5-GetWebIP.png
 |
@@ -289,6 +293,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 | 与持续集成系统集成实现持续部署, 自动恢复, 自动伸缩等等，
 |    对于这些功能，详细介绍请移步到相应的文档，您可以在文档首页找到各个文档的入口链接，如有需求或碰到问题，请联系
 | support@fit2cloud.com。
+|    到文档目录请点击页面左上角或左下角的目录链接: "Fit2Cloud For 阿里云 1.0 文档"
 
 
 
