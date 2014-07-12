@@ -15,7 +15,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 一: 绑定阿里云Access Key
 -------------------------------------
 
-第一步: 登录阿里云(www.aliyun.com)并确保账户有至少10元的余额
+第一步: 登录阿里云(www.aliyun.com)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 |    注1: 用户需要有一个Github帐号 
@@ -195,11 +195,11 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 | **4) 设置wordpress-web虚拟机组安全组打开80端口**
 
-| **1) 到"虚拟机组"页面, 选择"操作"->"设置安全组规则"**
+| **a> 到"虚拟机组"页面, 选择"操作"->"设置安全组规则"**
 |
 .. image:: _static/002-CreateVMGroup-9-SelectToEditWebSecurityGroup.png
 |
-| **2) 到"安全组规则"页面, 选择"新建" ; 新建安全规则页面，填写打开80端口并保存**
+| **b> 到"安全组规则"页面, 选择"新建" ; 新建安全规则页面，填写打开80端口并保存**
 |
 .. image:: _static/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png
 |
@@ -216,22 +216,24 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 .. image:: _static/003-CreateCluster-2-CreateClusterAndSave.png
 |
 | **3) 添加wordpress-mysql虚拟机组**
-| **> 集群页面，选择 "wordpress"集群 -> "0个虚拟机组"**
+|
+| **a> 集群页面，选择 "wordpress"集群 -> "0个虚拟机组"**
 |
 .. image:: _static/003-CreateCluster-3-SelectToAddVMGroup.png
 |
-| **> 集群虚拟机组页面，选择 "新建" 虚拟机组**
-| **> 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存**
+| **b> 集群虚拟机组页面，选择 "新建" 虚拟机组**
+| **c> 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存**
 |
 .. image:: _static/003-CreateCluster-3-AddMysqlVMGroupToCluster.png
 |
 | **4) 添加wordpress-web虚拟机组**
-| **> 集群页面选择 "wordpress"集群 -> "1个虚拟机组"**
+|
+| **a> 集群页面选择 "wordpress"集群 -> "1个虚拟机组"**
 |
 .. image:: _static/003-CreateCluster-3-SelectToAddVMGroup.png
 |
-| **> 集群虚拟机组页面选择 "新建" 虚拟机组**
-| **> 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存**
+| **b> 集群虚拟机组页面选择 "新建" 虚拟机组**
+| **c> 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存**
 |
 .. image:: _static/003-CreateCluster-5-AddWebVMGroupToCluster.png
 |

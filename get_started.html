@@ -84,8 +84,8 @@
 </div>
 <div class="section" id="access-key">
 <h2>一: 绑定阿里云Access Key<a class="headerlink" href="#access-key" title="永久链接至标题">¶</a></h2>
-<div class="section" id="www-aliyun-com-10">
-<h3>第一步: 登录阿里云(www.aliyun.com)并确保账户有至少10元的余额<a class="headerlink" href="#www-aliyun-com-10" title="永久链接至标题">¶</a></h3>
+<div class="section" id="www-aliyun-com">
+<h3>第一步: 登录阿里云(www.aliyun.com)<a class="headerlink" href="#www-aliyun-com" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
@@ -312,13 +312,13 @@ fi
 <div class="line"><strong>4) 设置wordpress-web虚拟机组安全组打开80端口</strong></div>
 </div>
 <div class="line-block">
-<div class="line"><strong>1) 到&#8221;虚拟机组&#8221;页面, 选择&#8221;操作&#8221;-&gt;&#8221;设置安全组规则&#8221;</strong></div>
+<div class="line"><strong>a&gt; 到&#8221;虚拟机组&#8221;页面, 选择&#8221;操作&#8221;-&gt;&#8221;设置安全组规则&#8221;</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/002-CreateVMGroup-9-SelectToEditWebSecurityGroup.png" src="_images/002-CreateVMGroup-9-SelectToEditWebSecurityGroup.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>2) 到&#8221;安全组规则&#8221;页面, 选择&#8221;新建&#8221; ; 新建安全规则页面，填写打开80端口并保存</strong></div>
+<div class="line"><strong>b&gt; 到&#8221;安全组规则&#8221;页面, 选择&#8221;新建&#8221; ; 新建安全规则页面，填写打开80端口并保存</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png" src="_images/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png" />
@@ -344,28 +344,30 @@ fi
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>3) 添加wordpress-mysql虚拟机组</strong></div>
-<div class="line"><strong>&gt; 集群页面，选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;0个虚拟机组&#8221;</strong></div>
+<div class="line"><br /></div>
+<div class="line"><strong>a&gt; 集群页面，选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;0个虚拟机组&#8221;</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-3-SelectToAddVMGroup.png" src="_images/003-CreateCluster-3-SelectToAddVMGroup.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>&gt; 集群虚拟机组页面，选择 &#8220;新建&#8221; 虚拟机组</strong></div>
-<div class="line"><strong>&gt; 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存</strong></div>
+<div class="line"><strong>b&gt; 集群虚拟机组页面，选择 &#8220;新建&#8221; 虚拟机组</strong></div>
+<div class="line"><strong>c&gt; 新建虚拟机组页面，配置wordpress-mysql虚拟机组并保存</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" src="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>4) 添加wordpress-web虚拟机组</strong></div>
-<div class="line"><strong>&gt; 集群页面选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;1个虚拟机组&#8221;</strong></div>
+<div class="line"><br /></div>
+<div class="line"><strong>a&gt; 集群页面选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;1个虚拟机组&#8221;</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-3-SelectToAddVMGroup.png" src="_images/003-CreateCluster-3-SelectToAddVMGroup.png" />
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>&gt; 集群虚拟机组页面选择 &#8220;新建&#8221; 虚拟机组</strong></div>
-<div class="line"><strong>&gt; 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存</strong></div>
+<div class="line"><strong>b&gt; 集群虚拟机组页面选择 &#8220;新建&#8221; 虚拟机组</strong></div>
+<div class="line"><strong>c&gt; 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" src="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" />
@@ -439,7 +441,7 @@ fi
 <li><a class="reference internal" href="#">Fit2Cloud快速入门: 十分钟部署Wordpress应用</a><ul>
 <li><a class="reference internal" href="#fit2cloud-for">登录Fit2Cloud For 阿里云</a></li>
 <li><a class="reference internal" href="#access-key">一: 绑定阿里云Access Key</a><ul>
-<li><a class="reference internal" href="#www-aliyun-com-10">第一步: 登录阿里云(www.aliyun.com)并确保账户有至少10元的余额</a></li>
+<li><a class="reference internal" href="#www-aliyun-com">第一步: 登录阿里云(www.aliyun.com)</a></li>
 <li><a class="reference internal" href="#id1">第二步: 获取阿里云Access Key</a></li>
 <li><a class="reference internal" href="#id2">第三步: 绑定阿里云Access  Key</a></li>
 </ul>
