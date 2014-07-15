@@ -64,25 +64,100 @@
   <div class="section" id="fit2cloud">
 <h1>Fit2Cloud概念及术语<a class="headerlink" href="#fit2cloud" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
-<h2>一: Fit2Cloud云环境<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-</div>
+<h2>一: 概述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id2">
-<h2>二: 集群<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h3>1) Fit2Cloud用来做什么?<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Fit2Cloud用来在云基础设施中创建和管理运行应用所需的运行环境以及部署和管理应用, 并将这个过程自动化,</div>
+</div>
+<div class="line">帮助研发和运维团队实现持续部署，持续交付。</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">举个例子，假设我们想要建一个wordpress网站, 需要在阿里云里启动两台虚拟机，一台跑wordpress Web，</div>
+</div>
+<div class="line">一台跑wordpress mysql, 装web虚拟机对外开放80端口, 以便能从公网访问。 用通常的手工方式可以做到这一点，</div>
+<div class="line">就是:</div>
+<div class="line-block">
+<div class="line">第一步: 到阿里云管理控制台，启动2台虚拟机;</div>
+<div class="line">第二步: 登录到1台虚拟机, 在其上安装mysql, 并创建wordpress database;</div>
+<div class="line">第三步: 登录到另一台虚拟机, 在其上安装wordpress web及需要的各种运行时库和apache, 并配置数据库</div>
+</div>
+<div class="line">虚拟机的IP及数据库用户名密码到wordpress web虚拟机的数据库连接配置文件里;</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">但是放到项目中，环境是要根据需要创建的，也是要根据需要升级的，特别是当应用比较复杂有很多组件时，手工</div>
+</div>
+<div class="line">的方式就没法过了，这时我们就需要做到持续部署。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id3">
-<h2>三: 镜像组<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h3>2) Fit2Cloud的原理?<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Fit2Cloud的原理就是提供一个Web平台，使得可以定义集群的部署计划，通过集群的部署计划可以让Fit2Cloud</div>
+</div>
+<div class="line">知道该如何创建一个集群，创建几个虚拟机组，每组包含几个虚拟机，每台虚拟机启动在哪个数据中心，使用哪种硬件</div>
+<div class="line">配置，装什么操作系统。</div>
+</div>
+</div>
 </div>
 <div class="section" id="id4">
-<h2>四: 虚拟机组<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2>二: 集群<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line">集群就是我们通常所说的环境，我们把用于部署和运行某应用的一组虚拟机叫做一个集群。</div>
+<div class="line"><br /></div>
+<div class="line">1) 如果您用过AWS的Opsworks, 等同于Opswork的Stack.</div>
+<div class="line">2) 通常对于很多项目，一个应用有开发环境，测试环境，试运行环境以及产品环境，每一个环境就是一个集群，由一组</div>
+<div class="line">虚拟机组成。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id5">
-<h2>五: 安全组<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2>三: 虚拟机组<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line">把集群中相同类型的一组虚拟机叫做一个虚拟机组。</div>
+<div class="line">一个虚拟机组定义了虚拟组里的虚拟机</div>
+<div class="line">1) 在哪个数据中心启动 (北京 | 杭州 | 香港 | 青岛)</div>
+<div class="line">2) 硬件配置         (xsmall | ...)</div>
+<div class="line">3) 安装的操作系统版本 (Ubuntu1204 | CentOS5.8 | CentOS6.5)</div>
+<div class="line">4) 运行时环境安装配置脚本</div>
+<div class="line">5) 组件安装配置脚本</div>
+<div class="line"><br /></div>
+<div class="line">例子:</div>
+<div class="line-block">
+<div class="line">比如一个wordpress网站由两个虚拟机组组成，一组是wordpress-web虚拟机组，里面有一台虚拟机, 另一组</div>
+</div>
+<div class="line">是wordpress-mysql虚拟机组，里面有一台虚拟机, 不同类型的虚拟组里的虚拟机安装该组相应的运行时环境及组件。</div>
+<div class="line">对于一个特定的虚拟机组，我们可以定义组内包括几台虚拟机，启动在阿里云的哪个数据中心，北京杭州香港还是青岛，</div>
+<div class="line">每台虚拟机启动后装哪种操作系统，运行什么脚本, 装哪些软件，组件，如何配置数据库连接文件。这样，我们只要先定</div>
+<div class="line">义好集群的部署计划，剩下就是Fit2Cloud执行计划了, 执行完后就可以访问集群里部署的应用服务了。</div>
+</div>
 </div>
 <div class="section" id="id6">
-<h2>六: 虚拟机生命周期事件及处理<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<h2>四: 镜像组<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id7">
+<h2>五: 安全组<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line">就是防火墙端口规则设置, 用于设定虚拟机组中的虚拟机的防火墙，对外开放哪些端口。</div>
+<div class="line"><br /></div>
+<div class="line">例子:</div>
+<div class="line-block">
+<div class="line">为了使外部用户可以用浏览器访问wordpress网站, 我们设置集群里wordpress web类型虚拟机的安全组，对公网打开tcp 80端口。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>六: 虚拟机生命周期事件及处理<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="api">
 <h2>七: 阿里云API调用<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 
@@ -95,12 +170,16 @@
     <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Fit2Cloud概念及术语</a><ul>
-<li><a class="reference internal" href="#id1">一: Fit2Cloud云环境</a></li>
-<li><a class="reference internal" href="#id2">二: 集群</a></li>
-<li><a class="reference internal" href="#id3">三: 镜像组</a></li>
-<li><a class="reference internal" href="#id4">四: 虚拟机组</a></li>
-<li><a class="reference internal" href="#id5">五: 安全组</a></li>
-<li><a class="reference internal" href="#id6">六: 虚拟机生命周期事件及处理</a></li>
+<li><a class="reference internal" href="#id1">一: 概述</a><ul>
+<li><a class="reference internal" href="#id2">1) Fit2Cloud用来做什么?</a></li>
+<li><a class="reference internal" href="#id3">2) Fit2Cloud的原理?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">二: 集群</a></li>
+<li><a class="reference internal" href="#id5">三: 虚拟机组</a></li>
+<li><a class="reference internal" href="#id6">四: 镜像组</a></li>
+<li><a class="reference internal" href="#id7">五: 安全组</a></li>
+<li><a class="reference internal" href="#id8">六: 虚拟机生命周期事件及处理</a></li>
 <li><a class="reference internal" href="#api">七: 阿里云API调用</a></li>
 </ul>
 </li>
