@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="./" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -86,9 +86,9 @@
 <div class="line">虚拟机的IP及数据库用户名密码到wordpress web虚拟机的数据库连接配置文件里;</div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">但是放到项目中，环境是要根据需要创建的，也是要根据需要升级的，特别是当应用比较复杂有很多组件时，手工</div>
+<div class="line">但是放到项目中，要根据需要创建开发,测试,试运行,以及产品环境，也需要根据需要升级各个环境的，当应用比较</div>
 </div>
-<div class="line">的方式就没法过了，这时我们就需要做到持续部署。</div>
+<div class="line">复杂有很多组件时，组件分布在多个虚拟机上时，手工的方式就没法过了，这时我们就需要做到持续部署。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -96,10 +96,10 @@
 <h3>2) Fit2Cloud的原理?<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line-block">
-<div class="line">Fit2Cloud的原理就是提供一个Web平台，使得可以定义集群的部署计划，通过集群的部署计划可以让Fit2Cloud</div>
+<div class="line">Fit2Cloud的原理就是提供一个平台工具，使得可以定义集群环境的部署计划，通过集群的部署计划可以让Fit2Cloud</div>
 </div>
 <div class="line">知道该如何创建一个集群，创建几个虚拟机组，每组包含几个虚拟机，每台虚拟机启动在哪个数据中心，使用哪种硬件</div>
-<div class="line">配置，装什么操作系统。</div>
+<div class="line">配置，装什么操作系统, 以及启动后什么时候执行哪些脚本来安装运行时环境，配置部署启动组件。</div>
 </div>
 </div>
 </div>
@@ -124,6 +124,7 @@
 <div class="line">3) 安装的操作系统版本 (Ubuntu1204 | CentOS5.8 | CentOS6.5)</div>
 <div class="line">4) 运行时环境安装配置脚本</div>
 <div class="line">5) 组件安装配置脚本</div>
+<div class="line">6) 集群力虚拟机启动或关闭时执行哪些脚本</div>
 <div class="line"><br /></div>
 <div class="line">例子:</div>
 <div class="line-block">
