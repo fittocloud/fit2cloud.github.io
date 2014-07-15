@@ -2,7 +2,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 ========================================
 
 |    这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud
-| 在阿里云上部署和建立一个wordpress网站。
+| 在阿里云上部署和建立一个wordpress网站, 并且把创建虚拟机和安装运行时环境及组件的工作自动化。
 |
 |    我们将要创建的wordpress网站需要在阿里云里启动两台虚拟机，一台跑wordpress web，一台跑wordpress 
 | mysql, 装wordpress web的虚拟机需要对外开放80端口, 以便能从公网访问。 部署计划即:
@@ -330,6 +330,10 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 | 2) Linux下安装Java(TM)插件:    http://java.com/en/download/help/linux_install.xml
 | 3) Windows下安装Java(TM)插件: http://java.com/en/download/help/windows_manual_download.xml
 | 
+|    顺便提及使用Fit2Cloud方式建立集群有一个好处，就是可以将虚拟机和安装运行时环境及组件的工作全部自动化，
+| 真正实现一键创建集群和部署应用。您可以把集群关闭后，再启动起来，不需要手工到阿里云里启动虚拟机，也不需要
+| 手工登到虚拟机运行脚本，也不需要找到虚拟机的IP然后配置到某脚本中让脚本自动登陆安装，就可以自动创建一个
+| wordpress网站。
 |
 |    最后, 这篇入门文档，简单介绍了Fit2Cloud的一些基本功能，由于主题和篇幅的限制，还有很多非常有用的功能
 | 以及一些高级功能没有介绍，比如查看集群的监控，费用，同时在集群内的多个虚拟机上执行脚本，将应用的部署自
