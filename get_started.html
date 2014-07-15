@@ -65,11 +65,64 @@
 <h1>Fit2Cloud快速入门: 十分钟部署Wordpress应用<a class="headerlink" href="#fit2cloud-wordpress" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
 <div class="line-block">
-<div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud方便快速地</div>
+<div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud方</div>
 </div>
-<div class="line">在阿里云上部署和建立一个wordpress网站。</div>
+<div class="line">便快速地在阿里云上部署和建立一个wordpress网站。</div>
 <div class="line"><br /></div>
+<div class="line-block">
+<div class="line">我们将要创建的wordpress网站需要在阿里云里启动两台虚拟机，一台跑wordpress Web，一台跑wordpress</div>
+</div>
+<div class="line">mysql, 装web虚拟机需要对外开放80端口, 以便能从公网访问。 部署计划即:</div>
+<div class="line-block">
+<div class="line">1) 启动2台虚拟机;</div>
+<div class="line">2) 在1台虚拟机上安装mysql,创建wordpress database;</div>
+<div class="line">3) 在另一台虚拟机上安装wordpress web及需要的各种运行时库和apache, 并配置数据库虚拟机的IP及数据</div>
+</div>
+<div class="line">库用户名密码到wordpress web虚拟机的数据库连接配置文件里;</div>
 <div class="line"><br /></div>
+<div class="line-block">
+<div class="line">下面我们看在Fit2Cloud中如何做，在Fit2Cloud中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我</div>
+</div>
+<div class="line">们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让Fit2Cloud执行这个集群的部署计划，先调用</div>
+<div class="line">阿里云的API创建出集群部署计划定义的虚拟机，然后在虚拟机启动后根据计划部署配置和启动wordpress的各个组件。</div>
+<div class="line"><br /></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>  注1: 集群部署计划会定义在哪个数据中心启动哪种配置的虚拟机，安装哪种操作系统, 虚拟机启动后如何部署配置
+和启动wordpress的各个组件。
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>  注2: 基本概念及术语
+  1) 集群: 把用于部署和运行某应用的一组虚拟机叫做一个集群
+  2) 虚拟机组: 把集群中相同类型的一组虚拟机叫做一个虚拟机组
+  比如wordpress网站的虚拟机有两个虚拟机组，一组是wordpress-web虚拟机组，里面有一台虚拟机, 另一组
+是wordpress-mysql虚拟机组，里面有一台虚拟机, 不同类型的虚拟组里的虚拟机安装该组相应的运行时环境及组件。
+对于一个特定的虚拟机组，我们可以定义组内包括几台虚拟机，启动在阿里云的哪个数据中心，北京杭州香港还是青岛，
+每台虚拟机启动后装哪种操作系统，运行什么脚本, 装哪些软件，组件，如何配置数据库连接文件。这样，我们只要先定
+义好集群的部署计划，剩下就是Fit2Cloud执行计划了, 执行完后就可以访问集群里部署的应用服务了。
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">所以接下来我们具体要做的就是，定义一个集群部署计划，告诉Fit2Cloud如何创建一个集群, 然后让Fit2Cloud执</div>
+</div>
+<div class="line">行计划:</div>
+<div class="line-block">
+<div class="line">1) 创建一个集群，定义该集群包含两组虚拟机，一组为wordpress-mysql虚拟机, 一组为wordpress-web虚拟机</div>
+<div class="line">2) 定义wordpress-mysql虚拟机组，组里有一台虚拟机，启动在青岛，配置为xsmall, OS为CentOS6.5,启动后</div>
+</div>
+<div class="line">安装mysql,并设置root用户密码为fit2cloud</div>
+<div class="line-block">
+<div class="line">3) 定义wordpress-web虚拟机组，组里有一台虚拟机，启动在青岛，配置为xsmall, OS为CentOS6.5,启动后安装</div>
+</div>
+<div class="line">apache, php, php mysql库以及wordpress最新的build。</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">注3: 第一次用时需要绑定阿里云的Access Key，可能麻烦些，但是绑定后创建集群就不需要这一步了。</div>
+<div class="line"><br /></div>
+<div class="line">罗嗦了半天，现在，让我们开始Fit2Cloud的破冰之旅吧:)</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="fit2cloud-for">
 <h2>登录Fit2Cloud For 阿里云<a class="headerlink" href="#fit2cloud-for" title="永久链接至标题">¶</a></h2>
@@ -468,7 +521,7 @@ fi
 <div class="line"><a class="reference external" href="mailto:support&#37;&#52;&#48;fit2cloud&#46;com">support<span>&#64;</span>fit2cloud<span>&#46;</span>com</a>。</div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">到文档目录请点击页面左上角或左下角的目录链接: &#8220;Fit2Cloud For 阿里云 1.0 文档&#8221;。</div>
+<div class="line">注: 到文档目录请点击页面左上角或左下角的目录链接: &#8220;Fit2Cloud For 阿里云 1.0 文档&#8221;。</div>
 </div>
 </div>
 </div>
