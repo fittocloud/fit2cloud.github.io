@@ -1,4 +1,4 @@
-使用SDK集成Fit2Cloud
+使用Fit2Cloud SDK
 =====================================
 
 |    这里我们以在阿里云上建立一个wordpress网站为例, 了解如何使用SDK集成Fit2Cloud的服务，
