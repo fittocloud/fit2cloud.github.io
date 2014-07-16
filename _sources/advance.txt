@@ -16,5 +16,6 @@ Fit2Cloud高级功能
    use_customized_image
    integrate
    imp_continuous_deployment
+   f2cadmin
    
 
