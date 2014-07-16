@@ -32,7 +32,7 @@
     <link rel="top" title="Fit2Cloud For 阿里云 1.0 文档" href="index.html" />
     <link rel="up" title="Fit2Cloud高级功能" href="advance.html" />
     <link rel="next" title="设置自动伸缩" href="set_autoscale.html" />
-    <link rel="prev" title="设置集群监控" href="add_cluster_monitoring.html" /> 
+    <link rel="prev" title="设置集群监控和告警" href="add_cluster_monitoring.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -48,7 +48,7 @@
           <a href="set_autoscale.html" title="设置自动伸缩"
              accesskey="N">下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
-          <a href="add_cluster_monitoring.html" title="设置集群监控"
+          <a href="add_cluster_monitoring.html" title="设置集群监控和告警"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Fit2Cloud For 阿里云 1.0 文档</a> &raquo;</li>
 
@@ -97,11 +97,16 @@
 <img alt="_images/100-executeScript-SelectScriptMenu.png" src="_images/100-executeScript-SelectScriptMenu.png" />
 <div class="line-block">
 <div class="line">第二步: 在执行脚本页面,</div>
-<div class="line">1) 选择目标集群 &#8220;wordpress-dev&#8221;</div>
+<div class="line">1) 选择目标集群 &#8220;wordpress-qingdao&#8221;</div>
 <div class="line">2) 在脚本内容编辑器中编辑填写脚本内容 (或者 点击&#8221;从脚本列表中选择&#8221;的下拉列表，从中选择一个脚本)</div>
 <div class="line">3) 点击 &#8220;执行&#8221;, 之后会出现脚本输出显示页面</div>
+</div>
+<img alt="_images/100-executeScript-ExecuteScript.png" src="_images/100-executeScript-ExecuteScript.png" />
+<div class="line-block">
 <div class="line">4) 在脚本输出显示页面，查看脚本在各个虚拟机上的输出。</div>
-<div class="line"><br /></div>
+</div>
+<img alt="_images/100-executeScript-ViewScriptOutput.png" src="_images/100-executeScript-ViewScriptOutput.png" />
+<div class="line-block">
 <div class="line-block">
 <div class="line">注1: 脚本第一行要声明脚本解释器，默认的是Shell脚本，如果是python脚本，第一行声明为</div>
 </div>
@@ -123,11 +128,19 @@
 <img alt="_images/100-executeScript-SelectScriptMenu.png" src="_images/100-executeScript-SelectScriptMenu.png" />
 <div class="line-block">
 <div class="line">第二步: 在执行脚本页面,</div>
-<div class="line">1) 选择目标集群</div>
-<div class="line">2) 选择目标虚拟机组</div>
+<div class="line">1) 选择目标集群 &#8220;wordpress-qingdao&#8221;</div>
+<div class="line">2) 选择目标虚拟机组 &#8220;wordpress-mysql&#8221;</div>
 <div class="line">3) 在脚本内容编辑器中编辑填写脚本内容 (或者 点击&#8221;从脚本列表中选择&#8221;的下拉列表，从中选择一个脚本)</div>
 <div class="line">4) 点击 &#8220;执行&#8221;, 之后会出现脚本输出显示页面</div>
+</div>
+<img alt="_images/100-executeScript-ExecuteScriptOnVMGroup.png" src="_images/100-executeScript-ExecuteScriptOnVMGroup.png" />
+<div class="line-block">
 <div class="line">5) 在脚本输出显示页面，查看脚本在各个虚拟机上的输出。</div>
+</div>
+<img alt="_images/100-executeScript-ViewScriptOutputOfVMGroup.png" src="_images/100-executeScript-ViewScriptOutputOfVMGroup.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="id4">
@@ -138,8 +151,8 @@
 <img alt="_images/100-executeScript-SelectScriptMenu.png" src="_images/100-executeScript-SelectScriptMenu.png" />
 <div class="line-block">
 <div class="line">第二步: 在执行脚本页面,</div>
-<div class="line">1) 选择目标集群</div>
-<div class="line">2) 选择目标虚拟机组</div>
+<div class="line">1) 选择目标集群 &#8220;wordpress-qingdao&#8221;</div>
+<div class="line">2) 选择目标虚拟机组 &#8220;wordpress-mysql&#8221;</div>
 <div class="line">3) 选择目标虚拟机</div>
 <div class="line">4) 在脚本内容编辑器中编辑填写脚本内容 (或者 点击&#8221;从脚本列表中选择&#8221;的下拉列表，从中选择一个脚本)</div>
 <div class="line">5) 点击 &#8220;执行&#8221;, 之后会出现脚本输出显示页面</div>
@@ -190,7 +203,7 @@
   <div class="sphinxprev">
     <h4>Previous page</h4>
     <p class="topless"><a href="add_cluster_monitoring.html"
-                          title="Previous page">&larr; 设置集群监控</a></p>
+                          title="Previous page">&larr; 设置集群监控和告警</a></p>
   </div>
   <div class="sphinxnext">
     <h4>Next page</h4>
@@ -231,7 +244,7 @@
           <a href="set_autoscale.html" title="设置自动伸缩"
              >下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
-          <a href="add_cluster_monitoring.html" title="设置集群监控"
+          <a href="add_cluster_monitoring.html" title="设置集群监控和告警"
              >上一页</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Fit2Cloud For 阿里云 1.0 文档</a> &raquo;</li>
 

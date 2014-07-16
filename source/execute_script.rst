@@ -22,11 +22,16 @@
 .. image:: _static/100-executeScript-SelectScriptMenu.png
 
 | 第二步: 在执行脚本页面,
-| 1) 选择目标集群 "wordpress-dev"
+| 1) 选择目标集群 "wordpress-qingdao"
 | 2) 在脚本内容编辑器中编辑填写脚本内容 (或者 点击"从脚本列表中选择"的下拉列表，从中选择一个脚本)
 | 3) 点击 "执行", 之后会出现脚本输出显示页面  
+
+.. image:: _static/100-executeScript-ExecuteScript.png
+
 | 4) 在脚本输出显示页面，查看脚本在各个虚拟机上的输出。
-|
+
+.. image:: _static/100-executeScript-ViewScriptOutput.png
+
 |  注1: 脚本第一行要声明脚本解释器，默认的是Shell脚本，如果是python脚本，第一行声明为
 | #!/usr/bin/python
 .. code:: python
@@ -44,12 +49,18 @@
 .. image:: _static/100-executeScript-SelectScriptMenu.png
 
 | 第二步: 在执行脚本页面,
-| 1) 选择目标集群
-| 2) 选择目标虚拟机组
+| 1) 选择目标集群 "wordpress-qingdao"
+| 2) 选择目标虚拟机组 "wordpress-mysql"
 | 3) 在脚本内容编辑器中编辑填写脚本内容 (或者 点击"从脚本列表中选择"的下拉列表，从中选择一个脚本)
-| 4) 点击 "执行", 之后会出现脚本输出显示页面  
+| 4) 点击 "执行", 之后会出现脚本输出显示页面
+
+.. image:: _static/100-executeScript-ExecuteScriptOnVMGroup.png
+
 | 5) 在脚本输出显示页面，查看脚本在各个虚拟机上的输出。
 
+.. image:: _static/100-executeScript-ViewScriptOutputOfVMGroup.png
+|
+|
 三: 在集群中某虚拟机组内某个虚拟机上执行脚本
 -------------------------------------
 | 第一步: 在页面最上方点击 "脚本"，然后在下拉菜单中选择 “执行脚本” 进入执行脚本页面;
@@ -57,12 +68,13 @@
 .. image:: _static/100-executeScript-SelectScriptMenu.png
 
 | 第二步: 在执行脚本页面,
-| 1) 选择目标集群
-| 2) 选择目标虚拟机组
+| 1) 选择目标集群 "wordpress-qingdao"
+| 2) 选择目标虚拟机组 "wordpress-mysql"
 | 3) 选择目标虚拟机
 | 4) 在脚本内容编辑器中编辑填写脚本内容 (或者 点击"从脚本列表中选择"的下拉列表，从中选择一个脚本)
-| 5) 点击 "执行", 之后会出现脚本输出显示页面  
+| 5) 点击 "执行", 之后会出现脚本输出显示页面
 | 6) 在脚本输出显示页面，查看脚本在虚拟机上的输出。
+
 
 四: 执行脚本超时处理 
 -------------------------------------

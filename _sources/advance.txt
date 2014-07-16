@@ -9,10 +9,12 @@ Fit2Cloud高级功能
    add_data_volume
    set_security_group
    install_runtimes_app
+   imp_oneclick_create_env_app
    add_cluster_monitoring
    execute_script
    set_autoscale
    use_customized_image
    integrate
+   imp_continuous_deployment
    
 
