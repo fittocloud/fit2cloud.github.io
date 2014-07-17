@@ -65,16 +65,18 @@
             
   <div class="section" id="id1">
 <h1>设置数据盘<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>这里我们仍然以在阿里云上建立一个wordpress网站为例, 为wordpress mysql配置一块大小为100G的普通数据盘，
-Raid0, Raid1, Raid10数据盘。</p>
+<p>这里我们仍然以在阿里云上建立一个wordpress网站为例, 为wordpress mysql分别配置一块大小为100G的普通数据盘，
+Raid0，Raid1，Raid10数据盘。</p>
 <div class="section" id="id2">
 <h2>一: 设置普通盘<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<div class="line-block">
 <div class="line-block">
 <div class="line">这里，我们给wordpress mysql配置大小为100G的普通数据盘:</div>
 <div class="line"><br /></div>
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
-<div class="line"><br /></div>
+</div>
+<img alt="_images/010-volume-GoToClusterList.png" src="_images/010-volume-GoToClusterList.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
@@ -83,7 +85,8 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的</div>
 </div>
 <div class="line">所在行最右边一列的 &#8220;操作&#8221;, 在操作的下来菜单中点击 &#8220;数据盘设置&#8221; 进入数据盘设置页面;</div>
-<div class="line"><br /></div>
+</div>
+<img alt="_images/010-volume-SelectActionsAndSetVolume.png" src="_images/010-volume-SelectActionsAndSetVolume.png" />
 <div class="line-block">
 <div class="line">第四步: 在数据盘设置页面 (如下图示)</div>
 <div class="line">a) 数据盘状态选择 &#8220;有数据盘&#8221;</div>
@@ -91,7 +94,6 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">c) 单盘容量填写 &#8220;100&#8221;</div>
 <div class="line">d) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">e) 文件系统类型保持默认ext4,或者填写为ext3</div>
-</div>
 </div>
 <img alt="_images/010-volume-Common.png" src="_images/010-volume-Common.png" />
 <div class="line-block">
@@ -115,7 +117,11 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
-<div class="line"><br /></div>
+</div>
+</div>
+<img alt="_images/010-volume-GoToClusterList.png" src="_images/010-volume-GoToClusterList.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
@@ -124,7 +130,8 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的</div>
 </div>
 <div class="line">所在行最右边一列的 &#8220;操作&#8221;, 在操作的下来菜单中点击 &#8220;数据盘设置&#8221; 进入数据盘设置页面;</div>
-<div class="line"><br /></div>
+</div>
+<img alt="_images/010-volume-SelectActionsAndSetVolume.png" src="_images/010-volume-SelectActionsAndSetVolume.png" />
 <div class="line-block">
 <div class="line">第四步: 在数据盘设置页面 (如下图示)</div>
 <div class="line">a) 数据盘状态选择 &#8220;有数据盘&#8221;</div>
@@ -133,7 +140,6 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">d) 单盘容量填写 &#8220;50&#8221;</div>
 <div class="line">e) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">f) 文件系统类型保持默认ext4,或者填写为ext3</div>
-</div>
 </div>
 <img alt="_images/010-volume-raid0.png" src="_images/010-volume-raid0.png" />
 <div class="line-block">
@@ -157,7 +163,11 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
-<div class="line"><br /></div>
+</div>
+</div>
+<img alt="_images/010-volume-GoToClusterList.png" src="_images/010-volume-GoToClusterList.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
@@ -166,7 +176,8 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的</div>
 </div>
 <div class="line">所在行最右边一列的 &#8220;操作&#8221;, 在操作的下来菜单中点击 &#8220;数据盘设置&#8221; 进入数据盘设置页面;</div>
-<div class="line"><br /></div>
+</div>
+<img alt="_images/010-volume-SelectActionsAndSetVolume.png" src="_images/010-volume-SelectActionsAndSetVolume.png" />
 <div class="line-block">
 <div class="line">第四步: 在数据盘设置页面 (如下图示)</div>
 <div class="line">a) 数据盘状态选择 &#8220;有数据盘&#8221;</div>
@@ -175,7 +186,6 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">d) 单盘容量填写 &#8220;100&#8221;</div>
 <div class="line">e) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">f) 文件系统类型保持默认ext4,或者填写为ext3</div>
-</div>
 </div>
 <img alt="_images/010-volume-raid1.png" src="_images/010-volume-raid1.png" />
 <div class="line-block">
@@ -200,7 +210,11 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
-<div class="line"><br /></div>
+</div>
+</div>
+<img alt="_images/010-volume-GoToClusterList.png" src="_images/010-volume-GoToClusterList.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
@@ -209,7 +223,8 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的</div>
 </div>
 <div class="line">所在行最右边一列的 &#8220;操作&#8221;, 在操作的下来菜单中点击 &#8220;数据盘设置&#8221; 进入数据盘设置页面;</div>
-<div class="line"><br /></div>
+</div>
+<img alt="_images/010-volume-SelectActionsAndSetVolume.png" src="_images/010-volume-SelectActionsAndSetVolume.png" />
 <div class="line-block">
 <div class="line">第四步: 在数据盘设置页面 (如下图示)</div>
 <div class="line">a) 数据盘状态选择 &#8220;有数据盘&#8221;</div>
@@ -218,7 +233,6 @@ Raid0, Raid1, Raid10数据盘。</p>
 <div class="line">d) 单盘容量填写 &#8220;50&#8221;</div>
 <div class="line">e) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">f) 文件系统类型保持默认ext4,或者填写为ext3</div>
-</div>
 </div>
 <img alt="_images/010-volume-raid10.png" src="_images/010-volume-raid10.png" />
 <div class="line-block">

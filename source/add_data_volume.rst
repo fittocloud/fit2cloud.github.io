@@ -1,8 +1,8 @@
 设置数据盘
 ===========================
 
-这里我们仍然以在阿里云上建立一个wordpress网站为例, 为wordpress mysql配置一块大小为100G的普通数据盘，
-Raid0, Raid1, Raid10数据盘。
+这里我们仍然以在阿里云上建立一个wordpress网站为例, 为wordpress mysql分别配置一块大小为100G的普通数据盘，
+Raid0，Raid1，Raid10数据盘。
 
 
 一: 设置普通盘
@@ -10,13 +10,17 @@ Raid0, Raid1, Raid10数据盘。
 |    这里，我们给wordpress mysql配置大小为100G的普通数据盘:
 |
 |    第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterList.png
+
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
 |
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
-|
+
+.. image:: _static/010-volume-SelectActionsAndSetVolume.png
+
 |  第四步: 在数据盘设置页面 (如下图示)
 |  a) 数据盘状态选择 "有数据盘"
 |  b) 数据盘类型选择 "单个磁盘"
@@ -39,13 +43,17 @@ Raid0, Raid1, Raid10数据盘。
 | Raid0数据盘，需要两块50G的数据盘。
 |
 |    第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterList.png
+
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
 |
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
-|
+
+.. image:: _static/010-volume-SelectActionsAndSetVolume.png
+
 |  第四步: 在数据盘设置页面 (如下图示)
 |  a) 数据盘状态选择 "有数据盘"
 |  b) 数据盘类型选择 "磁盘阵列"
@@ -70,13 +78,17 @@ Raid0, Raid1, Raid10数据盘。
 | Raid1数据盘，需要两块100G的数据盘。
 |
 |    第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterList.png
+
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
 |
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
-|
+
+.. image:: _static/010-volume-SelectActionsAndSetVolume.png
+
 |  第四步: 在数据盘设置页面 (如下图示)
 |  a) 数据盘状态选择 "有数据盘"
 |  b) 数据盘类型选择 "磁盘阵列"
@@ -102,13 +114,17 @@ Raid0, Raid1, Raid10数据盘。
 | 的盘做成100G的Raid0, 之后把两块100G的Raid0盘做成一块100G的Raid10盘。
 |
 |    第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterList.png
+
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
 |
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
-|
+
+.. image:: _static/010-volume-SelectActionsAndSetVolume.png
+
 |  第四步: 在数据盘设置页面 (如下图示)
 |  a) 数据盘状态选择 "有数据盘"
 |  b) 数据盘类型选择 "磁盘阵列"
