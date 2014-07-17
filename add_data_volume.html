@@ -65,7 +65,8 @@
             
   <div class="section" id="id1">
 <h1>设置数据盘<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>这里我们仍然以在阿里云上建立一个wordpress网站为例, 为wordpress mysql配置一块大小为100G的Raid 0数据盘。</p>
+<p>这里我们仍然以在阿里云上建立一个wordpress网站为例, 为wordpress mysql配置一块大小为100G的普通数据盘，
+Raid0, Raid1, Raid10数据盘。</p>
 <div class="section" id="id2">
 <h2>一: 设置普通盘<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
@@ -74,7 +75,7 @@
 <div class="line"><br /></div>
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
 <div class="line"><br /></div>
-<div class="line">第二步: 在集群页面找到wordpress-dev集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
+<div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
 <div class="line"><br /></div>
@@ -90,7 +91,11 @@
 <div class="line">c) 单盘容量填写 &#8220;100&#8221;</div>
 <div class="line">d) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">e) 文件系统类型保持默认ext4,或者填写为ext3</div>
-<div class="line"><br /></div>
+</div>
+</div>
+<img alt="_images/010-volume-Common.png" src="_images/010-volume-Common.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第五步: 数据盘设置页面， 点击 &#8220;保存&#8221;</div>
 <div class="line"><br /></div>
 <div class="line">当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的数据盘</div>
@@ -111,7 +116,7 @@
 <div class="line-block">
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
 <div class="line"><br /></div>
-<div class="line">第二步: 在集群页面找到wordpress-dev集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
+<div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
 <div class="line"><br /></div>
@@ -128,7 +133,11 @@
 <div class="line">d) 单盘容量填写 &#8220;50&#8221;</div>
 <div class="line">e) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">f) 文件系统类型保持默认ext4,或者填写为ext3</div>
-<div class="line"><br /></div>
+</div>
+</div>
+<img alt="_images/010-volume-raid0.png" src="_images/010-volume-raid0.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第五步: 数据盘设置页面， 点击 &#8220;保存&#8221;</div>
 <div class="line"><br /></div>
 <div class="line">当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的Raid0</div>
@@ -149,7 +158,7 @@
 <div class="line-block">
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
 <div class="line"><br /></div>
-<div class="line">第二步: 在集群页面找到wordpress-dev集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
+<div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
 <div class="line"><br /></div>
@@ -166,7 +175,11 @@
 <div class="line">d) 单盘容量填写 &#8220;100&#8221;</div>
 <div class="line">e) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">f) 文件系统类型保持默认ext4,或者填写为ext3</div>
-<div class="line"><br /></div>
+</div>
+</div>
+<img alt="_images/010-volume-raid1.png" src="_images/010-volume-raid1.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第五步: 数据盘设置页面， 点击 &#8220;保存&#8221;</div>
 <div class="line"><br /></div>
 <div class="line">当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的Raid1</div>
@@ -188,7 +201,7 @@
 <div class="line-block">
 <div class="line">第一步: 首先在页面最上方一行点击 &#8220;集群&#8221; 进入集群列表页面;</div>
 <div class="line"><br /></div>
-<div class="line">第二步: 在集群页面找到wordpress-dev集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
+<div class="line">第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 &#8220;虚拟机组&#8221; 进入虚</div>
 </div>
 <div class="line">拟机组列表页面;</div>
 <div class="line"><br /></div>
@@ -205,7 +218,11 @@
 <div class="line">d) 单盘容量填写 &#8220;50&#8221;</div>
 <div class="line">e) 挂载点保持默认 &#8220;/mnt&#8221;</div>
 <div class="line">f) 文件系统类型保持默认ext4,或者填写为ext3</div>
-<div class="line"><br /></div>
+</div>
+</div>
+<img alt="_images/010-volume-raid10.png" src="_images/010-volume-raid10.png" />
+<div class="line-block">
+<div class="line-block">
 <div class="line">第五步: 数据盘设置页面， 点击 &#8220;保存&#8221;</div>
 <div class="line"><br /></div>
 <div class="line">当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的Raid10</div>
