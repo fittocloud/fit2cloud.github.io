@@ -57,8 +57,9 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 | **2) 点击"Github帐号登陆"后，会弹出Github登陆页面，要求输入Github用户名密码**
 |
 | **3) 输完用户名密码，点击登陆后，会到授权页面，选择 "授权" 即可, 之后就进入Fit2Cloud的开始页面**
-|
-|
+
+.. image:: _static/000-Login-Github-Authorize.png
+
 一: 绑定阿里云Access Key
 -------------------------------------
 
