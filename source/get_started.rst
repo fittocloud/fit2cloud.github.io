@@ -72,7 +72,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 | 
 第二步: 获取阿里云Access Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|
+
 |   如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;
 |   如果没有阿里云Access  Key需要先创建一个;
 |
