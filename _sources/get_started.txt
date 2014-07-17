@@ -48,7 +48,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |  
 | a> 打开 `Fit2Cloud For 阿里云 (aliyun.fit2cloud.com) <http://aliyun.fit2cloud.com/>`_ 
 |
-|    注1: 目前不支持IE,只支持FireFox和Goolge Chrome
+|    注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome
 |
 | b> 在Fit2Cloud首页点击 "Github帐号登陆", 如下图示:
 |
