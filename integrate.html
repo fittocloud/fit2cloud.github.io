@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>使用Fit2Cloud SDK(ToDo) &mdash; Fit2Cloud For 阿里云 1.0 文档</title>
+    <title>使用Fit2Cloud Java SDK &mdash; Fit2Cloud For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="./" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -63,13 +63,65 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="fit2cloud-sdk-todo">
-<h1>使用Fit2Cloud SDK(ToDo)<a class="headerlink" href="#fit2cloud-sdk-todo" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="fit2cloud-java-sdk">
+<h1>使用Fit2Cloud Java SDK<a class="headerlink" href="#fit2cloud-java-sdk" title="永久链接至标题">¶</a></h1>
+<div class="section" id="jar">
+<h2>第一步：引用Jar包<a class="headerlink" href="#jar" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
-<div class="line-block">
-<div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解如何使用SDK集成Fit2Cloud的服务，</div>
+<div class="line">方法1：使用Maven</div>
 </div>
-<div class="line">基于Fit2Cloud构建符合自身需要自身流程的DevOps系统管理应用生命周期。</div>
+<div class="code python highlight-python"><div class="highlight"><pre>&lt;!-- repository --&gt;
+&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;fit2cloud&lt;/id&gt;
+        &lt;url&gt;http://repository.fit2cloud.com/content/groups/public/&lt;/url&gt;
+        &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/releases&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+
+&lt;!-- dependency --&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;com.fit2cloud&lt;/groupId&gt;
+  &lt;artifactId&gt;fit2cloud-aliyun-java-sdk&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+&lt;/dependency&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">方法2：直接下载Jar包</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">下载地址是： <a class="reference external" href="http://repository.fit2cloud.com/service/local/repo_groups/public/content/com/fit2cloud/fit2cloud-aliyun-java-sdk/1.0/fit2cloud-aliyun-java-sdk-1.0-jar-with-dependencies.jar">http://repository.fit2cloud.com/service/local/repo_groups/public/content/com/fit2cloud/fit2cloud-aliyun-java-sdk/1.0/fit2cloud-aliyun-java-sdk-1.0-jar-with-dependencies.jar</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="fit2cloud-api">
+<h2>第二步：调用Fit2Cloud API<a class="headerlink" href="#fit2cloud-api" title="永久链接至标题">¶</a></h2>
+<div class="code python highlight-python"><div class="highlight"><pre>String apiKey = &quot;你的consumer key&quot;;
+String apiSecret = &quot;你的secret key&quot;;
+Fit2CloudClient client = new Fit2CloudClient(apiKey, apiSecret);
+System.out.println(&quot;List clusters.....&quot;);
+System.out.println(client.getClusters());
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">API列表：</div>
+<div class="line-block">
+<div class="line">获取集群列表</div>
+<div class="line">获取单个集群的信息</div>
+<div class="line">获取集群下面的虚机组列表</div>
+<div class="line">获取集群下面的虚机列表</div>
+<div class="line">向集群下面的所有虚机发送事件</div>
+<div class="line">向虚机组下面的所有虚机发送事件</div>
+<div class="line">向单个虚机发送事件</div>
+<div class="line">获取事件日志</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -78,7 +130,17 @@
         </div>
       </div>
       <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
+        <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">使用Fit2Cloud Java SDK</a><ul>
+<li><a class="reference internal" href="#jar">第一步：引用Jar包</a></li>
+<li><a class="reference internal" href="#fit2cloud-api">第二步：调用Fit2Cloud API</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div class="sphinxprev">
     <h4>Previous page</h4>
     <p class="topless"><a href="use_customized_image.html"
