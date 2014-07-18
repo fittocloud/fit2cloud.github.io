@@ -122,6 +122,88 @@ System.out.println(client.getClusters());
 <div class="line">获取事件日志</div>
 </div>
 </div>
+<div class="code python highlight-python"><div class="highlight"><pre>package com.fit2cloud.aliyun.sdk;
+
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.fit2cloud.aliyun.sdk.model.Cluster;
+import com.fit2cloud.aliyun.sdk.model.ClusterRole;
+import com.fit2cloud.aliyun.sdk.model.Logging;
+import com.fit2cloud.aliyun.sdk.model.Server;
+
+public class Fit2CloudClientTest {
+
+        private String apiKey;
+        private String apiSecret;
+        private Fit2CloudClient client;
+
+        @Before
+        public void setUp() throws Exception {
+            this.apiKey = &quot;put your key here&quot;;
+            this.apiSecret = &quot;put your secret here&quot;;
+            this.client = new Fit2CloudClient(apiKey, apiSecret);
+        }
+
+        @After
+        public void tearDown() throws Exception {
+        }
+
+        @Test
+        public void testGetClusters() throws Exception {
+            System.out.println(&quot;List clusters...&quot;);
+            List&lt;Cluster&gt; clusters = this.client.getClusters();
+            assert clusters!=null &amp;&amp; clusters.size()&gt;0;
+            System.out.println(clusters);
+        }
+
+        @Test
+        public void testGetClusterRoles() throws Exception {
+                System.out.println(&quot;List roles for cluster...&quot;);
+                List&lt;Cluster&gt; clusters = this.client.getClusters();
+                assert clusters!=null &amp;&amp; clusters.size()&gt;0;
+
+                List&lt;ClusterRole&gt; clusterRoles = client.getClusterRoles(clusters.get(0).getId());
+                assert clusterRoles!=null &amp;&amp; clusterRoles.size()&gt;0;
+                System.out.println(clusterRoles);
+        }
+
+        @Test
+        public void testGetClusterServers() throws Exception {
+                System.out.println(&quot;List servers for cluster 4...&quot;);
+                List&lt;Cluster&gt; clusters = this.client.getClusters();
+                assert clusters!=null &amp;&amp; clusters.size()&gt;0;
+                List&lt;Server&gt; servers = client.getClusterServers(clusters.get(0).getId());
+                assert servers!=null;
+                System.out.println(servers);
+        }
+
+        @Test
+        public void testExecuteScriptInServer() throws Exception {
+                long serverId = 316l;
+                StringBuilder sb = new StringBuilder();
+                sb.append(&quot;#!/bin/bash&quot;).append(&quot;\n&quot;);
+                sb.append(&quot;pwd&quot;).append(&quot;\n&quot;);
+                sb.append(&quot;ls -l&quot;).append(&quot;\n&quot;);
+                sb.append(&quot;date&quot;).append(&quot;\n&quot;);
+                String scriptContent = sb.toString();
+                long eventId = client.executeScriptInServer(serverId, scriptContent);
+                System.out.println(eventId);
+        }
+
+        @Test
+        public void testGetEventLogging() throws Exception {
+                long eventId = 1074;
+                List&lt;Logging&gt; loggings = client.getLoggingsByEventId(eventId);
+                System.out.println(loggings);
+        }
+
+}
+</pre></div>
+</div>
 </div>
 </div>
 
