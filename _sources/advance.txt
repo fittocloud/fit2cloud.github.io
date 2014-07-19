@@ -14,8 +14,6 @@ Fit2Cloud高级功能
    set_autoscale
    use_customized_image
    integrate
-   imp_oneclick_create_env_app
    imp_continuous_deployment
-   f2cadmin
    
 
