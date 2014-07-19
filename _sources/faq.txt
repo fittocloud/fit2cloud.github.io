@@ -106,18 +106,20 @@ FAQ
 | 从而把从环境的创建到组件的部署配置启动过程全部自动化, 中间不需要手工工作。  
 |
 |  举例, 比如一个wordpress网站, 我们定义其为一个集群wordpress-qingdao，由两个虚拟机组组成
-|  1) 一组是wordpress-web虚拟机组
+|
+|    1) 一组是wordpress-web虚拟机组
 |       虚拟机数量: 1个
 |       虚拟机配置大小类型: xsmall
 |       虚拟机数据中心: 青岛
 |       操作系统: CentOS6.5
 |       安装的软件及组件: apache, php和wordpress web
-|  2) 另一组是wordpress-mysql虚拟机组
-|   虚拟机数量: 1个
-|   虚拟机大小: xsmall
-|   虚拟机数据中心: 青岛
-|   操作系统: CentOS6.5
-|   安装的软件及组件: mysql, wordpress database, 用户名密码为root/fit2cloud
+|
+|    2) 另一组是wordpress-mysql虚拟机组
+|       虚拟机数量: 1个
+|       虚拟机大小: xsmall
+|       虚拟机数据中心: 青岛
+|       操作系统: CentOS6.5
+|       安装的软件及组件: mysql, wordpress database, 用户名密码为root/fit2cloud
 |
 |   当我们启动集群后，Fit2Cloud就会根据集群的定义和配置，在青岛数据中心启动两台xsmall的虚拟机，都装
 | CentOS6.5, 一台安装apache,php和wordpress web, 一台安装mysql及创建wordpress database。
