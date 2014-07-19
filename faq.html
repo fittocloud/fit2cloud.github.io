@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>FAQ(ToDo) &mdash; Fit2Cloud For 阿里云 1.0 文档</title>
+    <title>FAQ &mdash; Fit2Cloud For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="./" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -61,24 +61,245 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="faq-todo">
-<h1>FAQ(ToDo)<a class="headerlink" href="#faq-todo" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="faq">
+<h1>FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>一: 一般问题<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: 什么是Fit2Cloud?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud是一个建立在阿里云及AWS之上的云DevOps协作平台，通过提供全栈自动化及事件驱动</div>
+</div>
+<div class="line">可编程平台，帮助应用开发人员，测试人员以及运维人员实现自动创建环境，持续按需部署升级, 配置，</div>
+<div class="line">监控, 自动恢复, 自动伸缩, 自动备份， 打通从代码到服务的转化通道，从而实现应用的快速持续交付发布，</div>
+<div class="line">同时提升应用的可用性可靠性, 减低运营成本。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: Fit2Cloud能用来做什么?</strong></div>
+</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Fit2Cloud通过实现环境创建,管理及应用持续部署升级，运维的自动化，即全栈自动化，帮助</div>
+</div>
+<div class="line">应用研发及运维组织及其开发测试运维人员提升研发及运维效率，减少不必要重复且易于出错的手工劳动,</div>
+<div class="line">从而更快地响应业务的变化, 提升应用的可用性可靠性，并降低开发及运维运营成本。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: Fit2Cloud对谁有用?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">使用阿里云基础设施开发和运营维护业务应用系统的企业研发及运维组织，及组织内的开发人员,</div>
+</div>
+<div class="line">测试人员, 运维人员。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: Fit2Cloud能做哪些以前不能做的事情?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">1) 如果您使用的是阿里云， 阿里云不提供自动伸缩的功能， 但是基于Fit2Cloud, 可以让您在阿里云</div>
+</div>
+<div class="line">应用服务实现自动伸缩。</div>
+<div class="line-block">
+<div class="line">2) 通过使用Fit2Cloud可以实现应用服务的创建和管理的全栈自动化, 举个例子，目前大家使用阿里云，</div>
+</div>
+<div class="line">为了让服务运行起来，基本上除了创建应用的部署环境跟以前不同外，其他的操作，如安装应用，配置，启动还跟</div>
+<div class="line">原来一样, 但是通过Fit2Cloud,您可以定义一个集群的部署计划和监控运维计划, 将从创建环境到应用的部署</div>
+<div class="line">配置启动以及增减服务器全部都自动化，从而减少不必要乏味易出错的手工操作，提升开发运维各个过程的效率和质量。</div>
+<div class="line-block">
+<div class="line">3）对于大规模分布式系统的发布， 之前从搭建一套环境到安装应用服务到运行起来, 升级一个版本， 需要</div>
+</div>
+<div class="line">几小时一天甚至数天的时间，基于Fit2Cloud, 可以实现分钟级发布。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: Fit2Cloud支持哪些公有云？比如阿里云,青云,AWS,UCloud,Azure</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">对于国内的公有云，目前支持阿里云;</div>
+<div class="line">对于国外的公有云，目前支持AWS;</div>
+<div class="line">目前还不支持UCloud, 青云, Azure</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: Fit2Cloud支持私有云吗?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">目前不支持， 如果需要支持，Fit2Cloud可以根据私有云的IaaS做定制化开发， 比如您的私有云基于</div>
+</div>
+<div class="line">CloudStack或OpenStack, 我们可以为您的私有云内部安装一套基于CloudStack或OpenStack的Fit2Cloud服务。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: Fit2Cloud同类产品有哪些？国外有同类产品吗？国内有同类产品吗？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">目前，在国内还没有同类产品，国外的同类产品有AWS的Opsworks, CloudFormation, RightScale和Scalr。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 什么是全栈自动化？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">全栈自动化就是从创建环境，到应用运行时环境安装，应用组件的部署配置启动整个过程的自动化以及应用运行过程中监控,</div>
+</div>
+<div class="line">自动备份恢复, 自动伸缩的自动化。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="id2">
 <h2>二: 开始使用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
-<div class="line">Q1: 修改虚拟机组的安全规则后，会自动应用到所有属于该虚拟机组的虚拟机上吗?多长时间生效?</div>
+<div class="line"><strong>Q: 如何开始使用Fit2Cloud?如何登陆网站, 域名是?</strong></div>
 <div class="line"><br /></div>
-<div class="line">答: 是的，会自动应用到所有属于该虚拟机组的虚拟机, 一般3分钟内生效。</div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://aliyun.fit2cloud.com/">Fit2Cloud For 阿里云 (aliyun.fit2cloud.com)</a></div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 为什么使用Fit2Cloud要先绑定阿里云的API帐号？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">当您要求Fit2Cloud创建应用运行所需的环境及虚拟机时, 需要调用阿里云的API。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 什么是集群？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">集群就是我们通常所说的环境，我们把用于部署和运行某应用的一组虚拟机叫做一个集群。如果您用过AWS的Opsworks,</div>
+</div>
+<div class="line">等同于Opswork的Stack。</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">举例, 通常对于很多项目，一个应用或系统有不同用途的多个环境，如开发环境，测试环境，试运行环境以及产品环境，</div>
+</div>
+<div class="line">每一个环境就是一个集群，由一组虚拟机组成。</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">1个集群包含 0..n 个虚拟机组, 每个虚拟机组，包含 0..n 个虚拟机</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 什么是虚机组？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">把集群中相同类型的一组虚拟机叫做一个虚拟机组, 一个虚拟机组定义了虚拟组里虚拟机:</div>
+<div class="line">1) 数量</div>
+<div class="line">2) 在哪个数据中心启动 (北京 | 杭州 | 香港 | 青岛)</div>
+<div class="line">3) 硬件配置         (xsmall | ...)</div>
+<div class="line">4) 安装的操作系统版本 (Ubuntu1204 | CentOS5.8 | CentOS6.5)</div>
+<div class="line">5) 运行时环境安装配置脚本</div>
+<div class="line">6) 组件安装配置脚本</div>
+<div class="line">7) 集群里虚拟机启动或关闭时执行哪些脚本</div>
+<div class="line"><br /></div>
+<div class="line">Fit2Cloud会根据集群里的各个虚拟机组的定义或设置在指定的数据中心创建指定类型的虚拟机和执行指定的脚本,</div>
+</div>
+<div class="line">从而把从环境的创建到组件的部署配置启动过程全部自动化, 中间不需要手工工作。</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">举例, 比如一个wordpress网站, 我们定义其为一个集群wordpress-qingdao，由两个虚拟机组组成</div>
+<div class="line">1) 一组是wordpress-web虚拟机组</div>
+<div class="line-block">
+<div class="line">虚拟机数量: 1个</div>
+<div class="line">虚拟机配置大小类型: xsmall</div>
+<div class="line">虚拟机数据中心: 青岛</div>
+<div class="line">操作系统: CentOS6.5</div>
+<div class="line">安装的软件及组件: apache, php和wordpress web</div>
+</div>
+<div class="line">2) 另一组是wordpress-mysql虚拟机组</div>
+<div class="line-block">
+<div class="line">虚拟机数量: 1个</div>
+<div class="line">虚拟机大小: xsmall</div>
+<div class="line">虚拟机数据中心: 青岛</div>
+<div class="line">操作系统: CentOS6.5</div>
+<div class="line">安装的软件及组件: mysql, wordpress database, 用户名密码为root/fit2cloud</div>
+<div class="line"><br /></div>
+<div class="line">当我们启动集群后，Fit2Cloud就会根据集群的定义和配置，在青岛数据中心启动两台xsmall的虚拟机，都装</div>
+</div>
+</div>
+<div class="line">CentOS6.5, 一台安装apache,php和wordpress web, 一台安装mysql及创建wordpress database。</div>
+<div class="line">安装wordpress web那台虚拟机上的wordpress数据库配置文件会被自动配置好，用装mysql的虚拟机的IP,</div>
+<div class="line">及数据库用户名密码root/fit2cloud。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: 什么是事件处理脚本？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">我们不管是手工还是自动建立环境时，都需要启动虚拟机并在虚拟机上安装各种</div>
+</div>
+<div class="line">运行时需要的库包软件以及应用的组件, 为了自动化，Fit2Cloud把建立服务器的</div>
+<div class="line">过程分成了几个阶段，即ready, initialize, install, start这几个阶段:</div>
+<div class="line">1) ready代表虚拟机已经在云基础设施中启动起来，ready之后就会触发initialize事件</div>
+<div class="line">2) Fit2Cloud收到initialize事件后，就会在虚拟机上执行这个事件对应的处理</div>
+<div class="line">脚本，脚本执行结束后，就会触发install事件</div>
+<div class="line">3) Fit2Cloud收到install事件后, 就会在虚拟机上执行这个事件对应的处理</div>
+<div class="line">脚本，脚本执行结束后，就会触发start事件</div>
+<div class="line">4) Fit2Cloud收到start事件后,就会在虚拟机上执行这个事件对应的处理脚本</div>
+<div class="line"><br /></div>
+<div class="line">这几个事件的发生和处理是一个顺序同步的过程，一个发生并处理结束后，下一个发生。</div>
+<div class="line">通常我们在initialize事件的处理脚本中实现安装应用组件的各种依赖的库，包和</div>
+<div class="line">软件，在install事件的处理脚本中实现应用组件的部署配置，在start事件中实现</div>
+<div class="line">应用组件的启动。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: Fit2Cloud有什么限制？比如应用的类型？比如CloudFoundry只能管理Web类型的应用</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud可以部署和管理任何运行在虚拟机上的应用。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 修改虚拟机组的安全规则后，会自动应用到所有属于该虚拟机组的虚拟机上吗?多长时间生效?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">是的，会自动应用到所有属于该虚拟机组的虚拟机, 一般3分钟内生效。</div>
+</div>
 </div>
 </div>
 <div class="section" id="id3">
 <h2>三: 安全性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: Fit2Cloud的登陆用户名密码是否安全?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud登陆使用Github帐号，所以您的用户名妈妈都是是保存在Github中的,足够安全。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: Fit2Cloud的传输过程安全吗?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud中公网的数据传输以及服务端与虚拟机后台服务的数据传输均采用https。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: Fit2Cloud提供的Rest API安全吗?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud Rest API采用Oauth, 是安全的。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: Fit2Cloud存储的数据安全吗?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud对于关键的数据在存储过程中进行了加密，是安全的。</div>
+<div class="line"><br /></div>
+</div>
+</div>
 </div>
 <div class="section" id="id4">
 <h2>四: 价格及计费<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: Fit2Cloud是如何收费的吗?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud计费有多种套餐供您选择，对于管理的虚拟机数量小于10台的用户是免费的。</div>
+</div>
+<div class="line">如果您需要管理的虚拟机数量大于10台，请联系support&#64;fit2cloud.com。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: Fit2Cloud除SaaS服务外，是否提供企业版服务，如果提供如何收费?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud也提供企业版服务，可以专门为企业在企业内部或者指定的数据中心安装一套</div>
+</div>
+<div class="line">Fit2Cloud服务，并负责安装运维和支持服务，如有需要请联系support&#64;fit2cloud.com详谈。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: Fit2Cloud是否提供技术支持服务套餐以便能够保证支持的及时性，如果有如何收费?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud也有多种技术支持服务套餐，如有需要请联系support&#64;fit2cloud.com详谈。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -90,7 +311,7 @@
         <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
     <h3><a href="index.html">Page contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">FAQ(ToDo)</a><ul>
+<li><a class="reference internal" href="#">FAQ</a><ul>
 <li><a class="reference internal" href="#id1">一: 一般问题</a></li>
 <li><a class="reference internal" href="#id2">二: 开始使用</a></li>
 <li><a class="reference internal" href="#id3">三: 安全性</a></li>
