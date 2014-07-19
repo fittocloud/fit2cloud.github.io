@@ -58,6 +58,10 @@ FAQ
 |
 |    `Fit2Cloud For 阿里云 (aliyun.fit2cloud.com) <http://aliyun.fit2cloud.com/>`_
 |
+| **Q: 登陆Fit2Cloud需要注册用户吗? 可以使用微博或常见的社交帐号登陆Fit2Cloud吗?**
+|
+|    登陆Fit2Cloud不需要在Fit2Cloud注册用户，但是Fit2Cloud使用Github做SSO, 所以需要您有一个Github帐号，
+|
 | **Q: 为什么使用Fit2Cloud要先绑定阿里云的API帐号？**
 |
 |    当您要求Fit2Cloud创建应用运行所需的环境及虚拟机时, 需要调用阿里云的API。
