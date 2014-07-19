@@ -64,22 +64,7 @@
   <div class="section" id="id1">
 <h1>常见问题<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
-<div class="line"><strong>Q1. 为什么虚拟机启动失败?怎么知道失败原因?</strong></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><strong>Q2. 启动一台虚拟机大概得等多长时间?</strong></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><strong>Q3. 同一个集群里的各个虚拟机是否能互相访问?</strong></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><strong>Q4. 为什么访问不了虚拟机某端口?</strong></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><strong>Q5. 为什么启动集群后各个虚拟机没有心跳?多长时间能看到心跳?</strong></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><strong>Q6. 执行脚本的超时时间时多少?</strong></div>
+<div class="line"><strong>Q: 执行脚本的超时时间时多少?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">执行脚本的默认超时时间为20分钟，如果脚本执行超过20分钟，Fit2Cloud会把脚本执行进程杀掉，</div>
@@ -88,23 +73,84 @@
 <div class="line">操作，您最好处理下，以便能在一定时间内看到结果，fit2cloud提供了一个控制脚本超时的工具叫f2ctimout,</div>
 <div class="line">您可以在脚本中直接调用, 如 f2ctimeout -t 3 sleep 100 (设置超时时间为3秒，超过3秒就停掉)</div>
 <div class="line"><br /></div>
-<div class="line"><strong>Q7: 启动集群后，怎么一台虚拟机都没有起来?</strong></div>
+<div class="line"><strong>Q: 启动集群后，怎么一台虚拟机都没有起来?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">请检查集群的虚拟机组的设置，虚拟机数是否大于0, 一般每次在集群的虚拟机列表页面中，关闭一台虚拟机后，</div>
+<div class="line">情况一: 集群虚拟机组的虚拟机数量为0</div>
+<div class="line-block">
+<div class="line">请检查集群的虚拟机组的设置，虚拟机数是否大于0, 一般每次在集群的虚拟机列表页面中，关闭</div>
 </div>
-<div class="line">Fit2Cloud会把虚拟机组的虚拟机数量减1</div>
+</div>
+<div class="line">一台虚拟机后，Fit2Cloud会把虚拟机组的虚拟机数量减1</div>
 <div class="line"><br /></div>
-<div class="line"><strong>Q8: 登陆虚拟机时显示没有安全插件?</strong></div>
+<div class="line-block">
+<div class="line">情况二: 没有绑定阿里云Access Key</div>
+<div class="line"><br /></div>
+<div class="line">情况三: 阿里云Access Key的帐户余额小于100</div>
+<div class="line"><br /></div>
+<div class="line">情况四: 超过阿里云帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 登陆虚拟机时显示没有安全插件?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">这种情况，需要根据您的操作系统和浏览器类型安装相应的java插件jre。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line"><strong>Q9: 登陆虚拟机时显示找不到jar?</strong></div>
+<div class="line"><strong>Q: 登陆虚拟机时显示找不到jar?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">这种情况，请检查是否使用了代理服务器，把*.fit2cloud.com加到代理服务器例外设置里即可。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 为什么虚拟机启动失败?怎么知道失败原因?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud每个集群及虚拟机的操作下拉列表中都有一个&#8221;查询工作选项&#8221;, 通过这个功能可以查看</div>
+</div>
+<div class="line">到调用阿里云API启动虚拟机的日志和返回结果，从而知道启动失败的原因，比如选定的数据中心不支持</div>
+<div class="line">指定的虚拟机配置类型，或者帐户余额不足，或者超出帐户允许的最大虚拟机数量，默认是10个。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: 启动一台虚拟机大概得等多长时间?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">一般几分钟。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 同一个集群里的各个虚拟机是否能互相访问?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud做了处理，同一个集群里的虚拟机可以互相访问, 但是如果不添加安全组规则，则集群外部</div>
+</div>
+<div class="line">及公网只能访问ssh 22端口。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: 为什么访问不了虚拟机某端口?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况一: 安全组设置有问题。</div>
+<div class="line-block">
+<div class="line">请检查是否在虚拟机所属的虚拟机组安全组设置中打开了指定的端口。</div>
+</div>
+<div class="line">情况二: 本地的网络环境问题。</div>
+<div class="line-block">
+<div class="line">请确定本地的网络允许访问外网的除80外的端口, 或者本地的DNS等。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line"><strong>Q: 为什么启动集群后各个虚拟机没有心跳?多长时间能看到心跳?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况一: 虚拟机启动后，3分钟内是不显示心跳的，Fit2Cloud确认连续收到三个心跳才认为是正常。</div>
+<div class="line"><br /></div>
+<div class="line">情况二: 网络问题，虚拟机到Fit2Cloud主服务器之间的网络有问题。</div>
+<div class="line-block">
+<div class="line">这个可以通过查看Fit2Cloud在虚拟机上的代理服务日志知道。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">情况三: Fit2Cloud在虚拟机上的代理服务死掉。</div>
+<div class="line-block">
+<div class="line">请联系support&#64;fit2cloud.com, 或者登陆到虚拟机查看代理服务状态或日志。</div>
+</div>
 </div>
 </div>
 </div>
