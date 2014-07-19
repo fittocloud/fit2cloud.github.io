@@ -59,7 +59,7 @@ FAQ
 | **Q: 如何开始使用Fit2Cloud?如何登陆网站, 域名是?**
 |
 |    `Fit2Cloud For 阿里云 (aliyun.fit2cloud.com) <http://aliyun.fit2cloud.com/>`_
-| 入门文档请移步专门的章节, 您可以在目录中找到入门文档的入口。
+|    入门文档请移步专门的章节, 您可以在目录中找到入门文档的入口。
 |
 | **Q: 登陆Fit2Cloud需要注册用户吗? 可以使用微博或常见的社交帐号登陆Fit2Cloud吗?**
 |
