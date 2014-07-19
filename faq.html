@@ -246,17 +246,26 @@
 </div>
 <div class="line">运行时需要的库包软件以及应用的组件, 为了自动化，Fit2Cloud把建立服务器的</div>
 <div class="line">过程分成了几个阶段，即ready, initialize, install, start这几个阶段:</div>
+<div class="line"><br /></div>
+<div class="line-block">
 <div class="line">1) ready代表虚拟机已经在云基础设施中启动起来，ready之后就会触发initialize事件</div>
+<div class="line"><br /></div>
 <div class="line">2) Fit2Cloud收到initialize事件后，就会在虚拟机上执行这个事件对应的处理</div>
+</div>
 <div class="line">脚本，脚本执行结束后，就会触发install事件</div>
+<div class="line"><br /></div>
+<div class="line-block">
 <div class="line">3) Fit2Cloud收到install事件后, 就会在虚拟机上执行这个事件对应的处理</div>
+</div>
 <div class="line">脚本，脚本执行结束后，就会触发start事件</div>
+<div class="line"><br /></div>
+<div class="line-block">
 <div class="line">4) Fit2Cloud收到start事件后,就会在虚拟机上执行这个事件对应的处理脚本</div>
 <div class="line"><br /></div>
 <div class="line">这几个事件的发生和处理是一个顺序同步的过程，一个发生并处理结束后，下一个发生。</div>
-<div class="line">通常我们在initialize事件的处理脚本中实现安装应用组件的各种依赖的库，包和</div>
-<div class="line">软件，在install事件的处理脚本中实现应用组件的部署配置，在start事件中实现</div>
-<div class="line">应用组件的启动。</div>
+</div>
+<div class="line">通常我们在initialize事件的处理脚本中实现安装应用组件的各种依赖的库，包和软件，</div>
+<div class="line">在install事件的处理脚本中实现应用组件的部署配置，在start事件中实现应用组件的启动。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: Fit2Cloud有什么限制？比如应用的类型？比如CloudFoundry只能管理Web类型的应用</strong></div>
