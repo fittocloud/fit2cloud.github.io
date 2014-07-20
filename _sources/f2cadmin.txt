@@ -1,4 +1,4 @@
-f2cadmin命令行工具(ToDo)
+f2cadmin命令行工具
 ==================================
 
 |   f2cadmin是一个Fit2Cloud部署在虚拟机上的一个命令行工具，通过f2cadmin可以:

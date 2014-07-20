@@ -65,9 +65,11 @@
 <h1>Fit2Cloud介绍<a class="headerlink" href="#fit2cloud" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
 <div class="line-block">
-<div class="line">Fit2Cloud是一个云环境DevOps协作平台， 可以帮助使用云基础设施开发和管理应用的开发和运维人员</div>
+<div class="line">Fit2Cloud是一个事件驱动可编程的云环境DevOps协作平台，可以帮助使用云基础设施开发</div>
 </div>
-<div class="line">实现自动化创建和管理应用运行的环境以及应用的生命周期, 从而提高开发测试运营维护支持的效率和质量，以及降低成本。</div>
+<div class="line">和管理应用的开发和运维组织及人员持续交付复杂的原生云应用。开发和运维人员通过定义事件处理脚本</div>
+<div class="line">实现应用创建和管理的全栈自动化, 从而减少繁琐不必要易出错的手工操作，提高开发，测试和运维的效</div>
+<div class="line">率和质量。</div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">Fit2Cloud is an event-driven programmable Cloud DevOps platform for AWS.</div>
@@ -79,10 +81,10 @@
 <div class="line-block">
 <div class="line">目前Fit2Cloud支持的云环境包括AWS和阿里云。</div>
 <div class="line"><br /></div>
-<div class="line">作为开发和运维人员，在做项目的时候，总是不得不做很多重复的工作，装系统，挂存储，配IP，配防火墙，</div>
+<div class="line">作为开发和运维人员，在做项目的时候，总是不得不做很多重复的工作，装系统，挂存储，配IP，</div>
 </div>
-<div class="line">配负载均衡，装数据库，装依赖库，装Memcache各种中间件，安装各个组件，配置各个组件之间的连接参数，</div>
-<div class="line">添加Nagios，Cacti监控，场景包括:</div>
+<div class="line">配防火墙，配负载均衡，装数据库，装依赖库，装Memcache各种中间件，安装各个组件，配置各个组件之</div>
+<div class="line">间的连接参数，添加Nagios，Cacti监控，场景包括:</div>
 <div class="line-block">
 <div class="line">建演示环境</div>
 <div class="line">建内部测试环境</div>
@@ -93,12 +95,16 @@
 <div class="line">负载增长服务器不够用时,增加环境内服务器数量</div>
 <div class="line">负载下降时,减少环境内服务器数量</div>
 <div class="line">环境内服务器硬件出问题替换服务器</div>
-<div class="line">升级环境内系统或应用</div>
+<div class="line">升级各个环境的应用版本</div>
 <div class="line">等等...</div>
 <div class="line"><br /></div>
-<div class="line">通过Fit2Cloud, 能减少很多重复的工作，并且提高开发测试和运维的效率和质量，以下是使用Fit2Cloud的</div>
+<div class="line">Fit2Cloud主要提供以下三大功能:</div>
+<div class="line">1) 实现全栈自动化，即从环境创建到应用部署配置启动的自动化，实现一键创建及部署</div>
+<div class="line">2) 实现运维自动化，即自动备份恢复，自动伸缩，自动升级</div>
+<div class="line">3) 提供各种环境管理工具以方便开发测试运维支持工作，如同时在多个虚拟机上执行脚本</div>
+<div class="line"><br /></div>
+<div class="line">以下是使用Fit2Cloud的一些典型使用场景:</div>
 </div>
-<div class="line">一些典型使用场景:</div>
 </div>
 <div class="section" id="id1">
 <h2>场景1: 自动伸缩应对峰值<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
@@ -119,39 +125,40 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h2>场景2: 自动创建和管理环境<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>场景2: 定时启动关闭虚拟机并自动部署应用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line-block">
-<div class="line">当我们做开发测试和运行应用服务时，都需要创建环境。</div>
-<div class="line">比如我们需要建立一个wordpress应用网站用于发布和管理博客, 为了运行这个网站我们首先需要一些机器，在云</div>
+<div class="line">我们平时有一些虚拟机，其实晚上没必要开，服务白天负载较大，那就早上多起一些虚拟机，晚上负载变小，</div>
 </div>
-<div class="line">环境下就是一些虚拟机, 通过Fit2Cloud可以在阿里云里创建出这些虚拟机, 并且把这些虚拟机归到一个环境中，即集群。</div>
+<div class="line">就关闭一些虚拟机，通过Fit2Cloud可以很方便的实现定时启动虚拟机及安装应用组件的自动化。</div>
 <div class="line"><br /></div>
-<div class="line-block">
-<div class="line">由于Fit2Cloud通过集群管理虚拟机，那么在虚拟机很多，环境很多的时候， 不会像阿里云中分页全部列出来，</div>
-</div>
-<div class="line">而是只列出属于集群的虚拟机。我们找某台虚拟机时也比较好找，直接先找到集群，然后从集群虚拟机列表中找出</div>
-<div class="line">虚拟机，找到后，还可以直接从网页登录到虚拟机。</div>
 </div>
 </div>
 <div class="section" id="id3">
-<h2>场景3: 自动部署<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>场景3: 自动创建和管理环境<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line-block">
-<div class="line">当我们做开发测试和运维时, 都少不了部署升级, 通过Fit2Cloud, 我们可以定义一个应用的环境模板，即集群，</div>
+<div class="line">当我们做开发测试和运行应用服务时，都需要创建环境。</div>
+<div class="line">比如我们需要建立一个wordpress应用网站用于发布和管理博客, 为了运行这个网站我们首先需要一</div>
 </div>
-<div class="line">及集群里的虚拟机组，然后设置各虚拟机组的组件自动部署脚本，这样每次启动集群时，启动虚拟机的时候，可以将各个组件</div>
-<div class="line">自动部署到虚拟机上，而不是每次手动登陆或者手动运行脚本来部署。</div>
+<div class="line">些机器，在云环境下就是一些虚拟机, 通过Fit2Cloud可以在阿里云里创建出这些虚拟机, 并且把这些虚拟机</div>
+<div class="line">归到一个环境中，即集群。</div>
 <div class="line"><br /></div>
+<div class="line-block">
+<div class="line">由于Fit2Cloud通过集群管理虚拟机，那么在虚拟机很多，环境很多的时候， 不会像阿里云中分页全</div>
+</div>
+<div class="line">部列出来，而是只列出属于集群的虚拟机。我们找某台虚拟机时也比较好找，直接先找到集群，然后从集群虚</div>
+<div class="line">拟机列表中找出虚拟机，找到后，还可以直接从网页登录到虚拟机。</div>
 </div>
 </div>
 <div class="section" id="id4">
-<h2>场景4: 定时启动关闭虚拟机<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2>场景4: 自动部署<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line-block">
-<div class="line">我们平时有一些虚拟机，其实晚上没必要开，服务白天负载较大，那就早上多起一些虚拟机，</div>
+<div class="line">当我们做开发测试和运维时, 都少不了部署升级, 通过Fit2Cloud, 我们可以定义一个应用的环境模板，</div>
 </div>
-<div class="line">晚上负载变小，就关闭一些虚拟机, 通过Fit2Cloud可以很方便的设置和实现这一点。</div>
+<div class="line">即集群，及集群里的虚拟机组，然后设置各虚拟机组的组件自动部署脚本，这样每次启动集群时，启动虚拟机的</div>
+<div class="line">时候，可以将各个组件自动部署到虚拟机上，而不是每次手动登陆或者手动运行脚本来部署。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -160,10 +167,10 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">我们的项目有多个环境，平时开发测试运维都少不了登陆到虚拟机, 通过Fit2Cloud, 我们可以从Web页面上登陆到</div>
+<div class="line">我们的项目有多个环境，平时开发测试运维都少不了登陆到虚拟机, 通过Fit2Cloud, 我们可以从Web页</div>
 </div>
-<div class="line">选定的虚拟机上, 比在命令行里每次登陆虚拟机要方便; 而且在云计算环境下，虚拟机在非生产环境中可能会经常启动关闭，IP</div>
-<div class="line">经常变，所以用Fit2Cloud要远远比在命令行里每次拷贝输入IP地址要方便很多。</div>
+<div class="line">面上登陆到选定的虚拟机上, 比在命令行里每次登陆虚拟机要方便; 而且在云计算环境下，虚拟机在非生产环境</div>
+<div class="line">中可能会经常启动关闭，IP经常变，所以用Fit2Cloud要远远比在命令行里每次拷贝输入IP地址要方便很多。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -172,9 +179,9 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">我们建立环境时为了安全起间，需要配置各个虚拟机的防火墙，通过Fit2Cloud, 我们可以非常方便地从页面上设置。</div>
-<div class="line"><br /></div>
+<div class="line">我们建立环境时为了安全起间，需要配置各个虚拟机的防火墙，通过Fit2Cloud, 我们可以非常方便地</div>
 </div>
+<div class="line">从页面上设置。</div>
 </div>
 </div>
 <div class="section" id="id7">
@@ -182,9 +189,9 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">我们在平时的开发测试和运营维护支持过程中，经常需要在环境里的多个机器上执行同一个脚本，比如2014年发生的</div>
+<div class="line">我们在平时的开发测试和运营维护支持过程中，经常需要在环境里的多个机器上执行同一个脚本，比如2014</div>
 </div>
-<div class="line">openssh漏洞事件，我们需要给所有的虚拟机打补丁，通过Fit2Cloud执行脚本功能可以很方便地做到。</div>
+<div class="line">年发生的openssh漏洞事件，我们需要给所有的虚拟机打补丁，通过Fit2Cloud执行脚本功能可以很方便地做到。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -193,11 +200,11 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">我们在平时的开发测试和运营维护支持过程中，都少不了需要查看环境里机器的状态，比如CPU使用率，load average,</div>
+<div class="line">我们在平时的开发测试和运营维护支持过程中，都少不了需要查看环境里机器的状态，比如CPU使用率，</div>
 </div>
-<div class="line">内存，硬盘和网络的情况，特别是运营维护，测试和出问题时分析问题时，都需要，从前基本上是用Nagio,Cacti之类的，手动</div>
-<div class="line">在被监控端及监控页面上进行设置，通过Fit2Cloud不用这么麻烦了，什么都不需要做就可以看到各个虚拟机的这些基本的监控,</div>
-<div class="line">另外，做一些简单的设置就可以收到告警。</div>
+<div class="line">load average,内存，硬盘和网络的情况，特别是运营维护，测试和出问题时分析问题时，都需要，从前基本上是</div>
+<div class="line">用Nagio,Cacti之类的，手动在被监控端及监控页面上进行设置，通过Fit2Cloud不用这么麻烦了，什么都不需要</div>
+<div class="line">做就可以看到各个虚拟机的这些基本的监控，另外，做一些简单的设置就可以收到告警。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -206,10 +213,10 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">我们在平时的运营维护支持过程中，为了保证应用服务的可用性和灾难恢复，都少不了做备份和恢复，通过Fit2Cloud提供</div>
+<div class="line">我们在平时的运营维护支持过程中，为了保证应用服务的可用性和灾难恢复，都少不了做备份和恢复，通过</div>
 </div>
-<div class="line">的执行脚本功能，只要实现脚本即可，不需要再做一台管理服务器专门运行这些脚本了，Fit2Cloud可以作为管理服务器，只需要</div>
-<div class="line">告诉Fit2Cloud什么时候在哪些虚拟机上执行哪些脚本即可。</div>
+<div class="line">Fit2Cloud提供的执行脚本功能，只要实现脚本即可，不需要再做一台管理服务器专门运行这些脚本了，Fit2Cloud</div>
+<div class="line">可以作为管理服务器，只需要告诉Fit2Cloud什么时候在哪些虚拟机上执行哪些脚本即可。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -218,16 +225,16 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">现在开发和交付高效的研发团队都少不了持续部署升级和自动化测试，Fit2Cloud提供了Rest集成接口及SDK，可以方便与</div>
+<div class="line">现在开发和交付高效的研发团队都少不了持续部署升级和自动化测试，Fit2Cloud提供了Rest集成接口及SDK，</div>
 </div>
-<div class="line">团队的持续集成服务(如Jenkins)集成，实现持续部署升级，减少部署的重复体力劳动，提高部署质量，及开发测试运营维护支持的效率，</div>
-<div class="line">以及支持自动化测试以及持续交付。</div>
+<div class="line">可以方便与团队的持续集成服务(如Jenkins)集成，实现持续部署升级，减少部署的重复体力劳动，提高部署质量，及</div>
+<div class="line">开发测试运营维护支持的效率，以及支持自动化测试以及持续交付。</div>
 <div class="line-block">
-<div class="line">举个例子，我们有个项目，项目的组件的构建都由Jenkins管理，每个组件对应的代码库的分支都有个构建任务，每当组件代码</div>
+<div class="line">举个例子，我们有个项目，项目的组件的构建都由Jenkins管理，每个组件对应的代码库的分支都有个构建任务，</div>
 </div>
-<div class="line">有提交时，构建任务就会进行构建, 当构建任务结束后，就可以在任务中，通过集成调用Fit2Cloud的执行脚本Rest API, 把组件最</div>
-<div class="line">新的代码部署到指定的一个或多个环境中, 实现某些环境的持续部署和升级, 升级完后，构建任务触发自动化验收测试对指定的环境的应</div>
-<div class="line">用进行验收测试, 测试通过后，把环境中应用的Build标志为上线的候选版本。</div>
+<div class="line">每当组件代码有提交时，构建任务就会进行构建, 当构建任务结束后，就可以在任务中，通过集成调用Fit2Cloud的执行</div>
+<div class="line">脚本Rest API, 把组件最新的代码部署到指定的一个或多个环境中, 实现某些环境的持续部署和升级, 升级完后，构建</div>
+<div class="line">任务触发自动化验收测试对指定的环境的应用进行验收测试, 测试通过后，把环境中应用的Build标志为上线的候选版本。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -236,9 +243,9 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">持续交付是很多研发团队的目标，Fit2Cloud提供了Rest集成接口及SDK，可以方便地与团队的持续集成服务(如Jenkins)集成，</div>
+<div class="line">持续交付是很多研发团队的目标，Fit2Cloud提供了Rest集成接口及SDK，可以方便地与团队的持续集成服务</div>
 </div>
-<div class="line">通过实现对DTAP各个环境持续部署升级, 帮助团队实现持续交付。</div>
+<div class="line">(如Jenkins)集成，通过实现对DTAP各个环境持续部署升级, 帮助团队实现持续交付。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -254,9 +261,9 @@
     <ul>
 <li><a class="reference internal" href="#">Fit2Cloud介绍</a><ul>
 <li><a class="reference internal" href="#id1">场景1: 自动伸缩应对峰值</a></li>
-<li><a class="reference internal" href="#id2">场景2: 自动创建和管理环境</a></li>
-<li><a class="reference internal" href="#id3">场景3: 自动部署</a></li>
-<li><a class="reference internal" href="#id4">场景4: 定时启动关闭虚拟机</a></li>
+<li><a class="reference internal" href="#id2">场景2: 定时启动关闭虚拟机并自动部署应用</a></li>
+<li><a class="reference internal" href="#id3">场景3: 自动创建和管理环境</a></li>
+<li><a class="reference internal" href="#id4">场景4: 自动部署</a></li>
 <li><a class="reference internal" href="#id5">场景5: 登录虚拟机</a></li>
 <li><a class="reference internal" href="#id6">场景6: 设置安全组</a></li>
 <li><a class="reference internal" href="#id7">场景7: 同时在多个虚拟机执行脚本</a></li>
