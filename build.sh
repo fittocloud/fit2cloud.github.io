@@ -3,4 +3,4 @@
 make html
 cp -R build/html/* .
 cp _static/cloud.css.template _static/cloud.css
-python replace.py
+python makeChinese.py
