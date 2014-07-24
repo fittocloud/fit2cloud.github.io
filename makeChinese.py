@@ -9,6 +9,6 @@ cmd="sed -i \"s/Previous page/上一页/g\" *.html"
 output=commands.getoutput(cmd)
 cmd="sed -i \"s/阿里云 1.0/阿里云/g\" *.html"
 output=commands.getoutput(cmd)
-cmd="sed -i \"s/sidebar/目录/g\" *.html"
-output=commands.getoutput(cmd)
-print output
+#cmd="sed -i \"s/sidebar/目录/g\" *.html"
+#output=commands.getoutput(cmd)
+#print output
