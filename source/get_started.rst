@@ -261,7 +261,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 .. image:: _static/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png
 
-三: 创建集群
+三: 配置集群虚拟机创建启动计划
 --------------------------------------------
 
 第一步: 新建集群
@@ -274,7 +274,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 .. image:: _static/003-CreateCluster-2-CreateClusterAndSave.png
 
-第二步: 配置wordpress-mysql虚拟机启动计划
+第二步: 配置wordpress-mysql虚拟机创建启动计划
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 | **1) 集群页面，选择 "wordpress"集群 -> "0个虚拟机组"**
@@ -286,7 +286,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 .. image:: _static/003-CreateCluster-3-AddMysqlVMGroupToCluster.png
 
-第三步: 配置wordpress-web虚拟机启动计划
+第三步: 配置wordpress-web虚拟机创建启动计划
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 | **1) 集群页面选择 "wordpress"集群 -> "1个虚拟机组"**
@@ -298,8 +298,8 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 .. image:: _static/003-CreateCluster-5-AddWebVMGroupToCluster.png
 
-四: 启动集群
--------------------------------------
+四: 启动集群执行虚拟机创建和应用安装配置启动计划
+--------------------------------------------------------------------------
 
 | **1) 集群列表页面，选择"wordpress-qingdao" ->  选择"启动"**
 
