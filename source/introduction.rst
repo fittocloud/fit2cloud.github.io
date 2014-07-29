@@ -1,33 +1,14 @@
 Fit2Cloud介绍
 =====================================
 
-|       Fit2Cloud是一个事件驱动可编程的云环境DevOps协作平台，可以帮助使用云基础设施开发
-| 和管理应用的开发和运维组织及人员持续交付复杂的原生云应用。开发和运维人员通过定义事件处理脚本
-| 实现应用创建和管理的全栈自动化, 从而减少繁琐不必要易出错的手工操作，提高开发，测试和运维的效
-| 率和质量。
+|     Fit2Cloud是一个建立在阿里云及AWS之上的云DevOps协作平台，通过提供全栈自动化及事件驱动
+| 可编程平台，帮助应用开发人员，测试人员以及运维人员实现自动创建环境，自动部署升级，自动配置，监控，
+| 自动备份恢复，自动伸缩，打通从代码到服务的转化通道，是实现应用的快速迭代持续交付发布和自动化运维
+| 提升运维效率质量的基石。
+| 
+|     在AWS中，AWS提供了多种应用部署和管理工具，比如CloudFormation, Opsworks和Beanstalk,
+| 但是在阿里云中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
 |
-|       Fit2Cloud is an event-driven programmable Cloud DevOps platform for AWS. 
-| This platform aims to help organizations to continuous deliver complex Cloud-Native
-| App ontop of AWS Infra. It enables developers & Ops to achieve full-stack automation
-| by writing event handlers. 
-|
-|       目前Fit2Cloud支持的云环境包括AWS和阿里云。
-|
-|       作为开发和运维人员，在做项目的时候，总是不得不做很多重复的工作，装系统，挂存储，配IP，
-| 配防火墙，配负载均衡，装数据库，装依赖库，装Memcache各种中间件，安装各个组件，配置各个组件之
-| 间的连接参数，添加Nagios，Cacti监控，场景包括:
-|    建演示环境
-|    建内部测试环境
-|    建外部验收测试环境
-|    建发布环境
-|    建性能容量测试环境
-|    建可靠性测试环境
-|    负载增长服务器不够用时,增加环境内服务器数量
-|    负载下降时,减少环境内服务器数量
-|    环境内服务器硬件出问题替换服务器
-|    升级各个环境的应用版本
-|    等等...
-|    
 |    Fit2Cloud主要提供以下三大功能:
 |
 |    1) 实现全栈自动化功能
@@ -141,7 +122,3 @@ Fit2Cloud介绍
 |    持续交付是很多研发团队的目标，Fit2Cloud提供了Rest集成接口及SDK，可以方便地与团队的持续集成服务
 | (如Jenkins)集成，通过实现对DTAP各个环境持续部署升级, 与自动化测试集成，帮助团队实现持续交付。
 | 
-
-
-
-    
