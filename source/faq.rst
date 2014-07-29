@@ -245,6 +245,9 @@ FAQ
 |     情况二: 网络问题，虚拟机到Fit2Cloud主服务器之间的网络有问题。
 |            这个可以通过查看Fit2Cloud在虚拟机上的代理服务日志知道。
 |
-|     情况三: Fit2Cloud在虚拟机上的代理服务死掉。
-|            请联系support@fit2cloud.com, 或者登陆到虚拟机查看代理服务状态或日志。
+|     情况三: Fit2Cloud在虚拟机上的代理服务eventagent停了。
+|            1) 请联系support@fit2cloud.com;
+|            2) 登陆到虚拟机查看代理服务状态或日志
+|               a. ps aux | grep eventagent
+|               b. vim /var/log/eventagent.log
 | 
