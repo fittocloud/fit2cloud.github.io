@@ -230,7 +230,7 @@ div.sphinxsidebar p
 div.sphinxsidebar p.topless
 {
     margin: 5px 10px 10px 10px;
-    font-size: 80%
+    font-size: 100%
 }
 
 div.sphinxsidebar ul
@@ -299,7 +299,11 @@ div.sphinxglobaltoc
 
 div.sphinxlocaltoc ul a
 {
+   display: block;
+   padding: 0 .2em;
+   margin: 0 -.2em;
    font-size: 100%; 
+   white-space: nowrap;
 }
 div.sphinxglobaltoc ul a
 {
