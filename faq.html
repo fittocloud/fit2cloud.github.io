@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
     <link rel="top" title="Fit2Cloud For 阿里云 文档" href="index.html" />
-    <link rel="next" title="常见问题" href="problems.html" />
+    <link rel="next" title="DevOps相关参考资源" href="references.html" />
     <link rel="prev" title="实现持续部署升级" href="imp_continuous_deployment.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -44,7 +44,7 @@
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="problems.html" title="常见问题"
+          <a href="references.html" title="DevOps相关参考资源"
              accesskey="N">下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="imp_continuous_deployment.html" title="实现持续部署升级"
@@ -69,27 +69,23 @@
 <div class="line"><strong>Q: 什么是Fit2Cloud?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">Fit2Cloud是一个建立在阿里云及AWS之上的云DevOps协作平台，通过提供全栈自动化及事件驱动</div>
+<div class="line">Fit2Cloud是一个建立在IaaS之上的DevOps协作平台，帮助开发人员、测试人员以及运维人员实现应用全生命周期的</div>
 </div>
-<div class="line">可编程平台，帮助应用开发人员，测试人员以及运维人员实现自动创建环境，自动部署升级，自动配置，监控，</div>
-<div class="line">自动备份恢复，自动伸缩，打通从代码到服务的转化通道，是实现应用的快速迭代持续交付发布和自动化运维</div>
-<div class="line">提升运维效率质量的基石。</div>
+<div class="line">自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自动伸缩等。Fit2Cloud打通了从代码到服务的</div>
+<div class="line">转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运维的效率。</div>
 <div class="line-block">
-<div class="line">在AWS中，AWS提供了多种应用部署和管理工具，比如CloudFormation, Opsworks和Beanstalk,</div>
+<div class="line">在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、</div>
 </div>
-<div class="line">但是在阿里云中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。</div>
+<div class="line">Beanstalk、Rightscale、Scalr等，但是在阿里云生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。</div>
 </div>
 <div class="line-block">
 <div class="line"><strong>Q: Fit2Cloud能用来做什么?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">通过使用Fit2Cloud可以实现应用环境创建和管理及应用部署升级，运维管理的自动化，即全栈自动化，</div>
-</div>
-<div class="line">通过缩短创建环境及部署升级的时间，以及运维管理的自动化,帮助应用研发及运维组织及其开发测试运维人员:</div>
-<div class="line-block">
+<div class="line">通过使用Fit2Cloud可以实现全栈自动化，即应用环境创建和管理、应用部署升级和运维管理的自动化：</div>
 <div class="line">1) 减少不必要重复且易于出错的手工部署配置升级维护劳动</div>
 <div class="line">2) 提升研发及运维效率和应用服务质量，并降低开发及运维运营成本。</div>
-<div class="line">具体的功能及使用场景如下:</div>
+<div class="line">Fit2Cloud的常见使用场景有:</div>
 <div class="line-block">
 <div class="line">场景1: 自动伸缩应对峰值</div>
 <div class="line">场景2: 自动创建和管理环境</div>
@@ -133,18 +129,16 @@
 </div>
 <div class="line">和收到告警通知。</div>
 <div class="line"><br /></div>
-<div class="line"><strong>Q: Fit2Cloud支持哪些公有云？比如阿里云,青云,AWS,UCloud,Azure</strong></div>
+<div class="line"><strong>Q: Fit2Cloud支持哪些公有云？</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">对于国内的公有云，目前支持阿里云;</div>
-<div class="line">对于国外的公有云，目前支持AWS;</div>
-<div class="line">目前还不支持UCloud, 青云, Azure</div>
+<div class="line">我们目前支持阿里云和AWS; 我们会在年内支持UCloud。在未来，我们会支持更多的公有云。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line"><strong>Q: Fit2Cloud支持私有云吗?</strong></div>
+<div class="line"><strong>Q: Fit2Cloud支持私有云，比如Cloudstack/Openstack?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">目前不支持， 如果需要支持，Fit2Cloud可以根据私有云的IaaS做定制化开发， 比如您的私有云基于</div>
+<div class="line">目前不支持。但是我们计划支持，Fit2Cloud可以根据客户需求做定制化开发，比如您的私有云基于</div>
 </div>
 <div class="line">CloudStack或OpenStack, 我们可以为您的私有云内部安装一套基于CloudStack或OpenStack的Fit2Cloud服务。</div>
 <div class="line"><br /></div>
@@ -299,13 +293,13 @@
 <div class="line"><strong>Q: Fit2Cloud的传输过程安全吗?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">Fit2Cloud中公网的数据传输以及服务端与虚拟机后台服务的数据传输均采用https。</div>
+<div class="line">Fit2Cloud中的数据传输均采用SSL/HTTPS。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: Fit2Cloud提供的Rest API安全吗?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">Fit2Cloud Rest API采用Oauth, 是安全的。</div>
+<div class="line">Fit2Cloud REST API基于OAuth协议, 是安全的。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: Fit2Cloud存储的数据安全吗?</strong></div>
@@ -323,9 +317,8 @@
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">Fit2Cloud计费有多种套餐供您选择，对于管理的虚拟机数量小于10台的用户是免费的。</div>
-</div>
-<div class="line">如果您需要管理的虚拟机数量大于10台，请联系support&#64;fit2cloud.com。</div>
 <div class="line"><br /></div>
+</div>
 <div class="line"><strong>Q: Fit2Cloud除SaaS服务外，是否提供企业版服务，如果提供如何收费?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
@@ -336,10 +329,103 @@
 <div class="line"><strong>Q: Fit2Cloud是否提供技术支持服务套餐以便能够保证支持的及时性，如果有如何收费?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">Fit2Cloud也有多种技术支持服务套餐，如有需要请联系support&#64;fit2cloud.com详谈。</div>
+<div class="line">Fit2Cloud也有多种技术支持服务套餐，如有需要请联系support&#64;fit2cloud.com。</div>
 <div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>五: 使用过程常见问题<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: 执行脚本的超时时间时多少?</strong></div>
 <div class="line"><br /></div>
+<div class="line-block">
+<div class="line">执行脚本的默认超时时间为20分钟，如果脚本执行超过20分钟，Fit2Cloud会把脚本执行进程杀掉，</div>
+</div>
+<div class="line">所以如果脚本某些正常操作费时超过20分钟，请在脚本中将其放到后台执行，对于脚本中可能出现超时的</div>
+<div class="line">操作，您最好处理下，以便能在一定时间内看到结果，fit2cloud提供了一个控制脚本超时的工具叫f2ctimout,</div>
+<div class="line">您可以在脚本中直接调用, 如 f2ctimeout -t 3 sleep 100 (设置超时时间为3秒，超过3秒就停掉)</div>
 <div class="line"><br /></div>
+<div class="line"><strong>Q: 启动集群后，怎么一台虚拟机都没有起来?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况一: 集群虚拟机组的虚拟机数量为0</div>
+<div class="line-block">
+<div class="line">请检查集群的虚拟机组的设置，虚拟机数是否大于0, 一般每次在集群的虚拟机列表页面中，关闭</div>
+</div>
+</div>
+<div class="line">一台虚拟机后，Fit2Cloud会把虚拟机组的虚拟机数量减1</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况二: 没有绑定阿里云Access Key</div>
+<div class="line"><br /></div>
+<div class="line">情况三: 阿里云Access Key的帐户余额小于100</div>
+<div class="line"><br /></div>
+<div class="line">情况四: 超过阿里云帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 登陆虚拟机时显示没有安全插件?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">这种情况，需要根据您的操作系统和浏览器类型安装相应的java插件jre。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 登陆虚拟机时显示找不到jar?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">这种情况，请检查是否使用了代理服务器，把*.fit2cloud.com加到代理服务器例外设置里即可。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 为什么虚拟机启动失败?怎么知道失败原因?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud每个集群及虚拟机的操作下拉列表中都有一个&#8221;查询工作选项&#8221;, 通过这个功能可以查看</div>
+</div>
+<div class="line">到调用阿里云API启动虚拟机的日志和返回结果，从而知道启动失败的原因，比如选定的数据中心不支持</div>
+<div class="line">指定的虚拟机配置类型，或者帐户余额不足，或者超出帐户允许的最大虚拟机数量，默认是10个。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: 启动一台虚拟机大概得等多长时间?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">一般几分钟。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 同一个集群里的各个虚拟机是否能互相访问?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Fit2Cloud做了处理，同一个集群里的虚拟机可以互相访问, 但是如果不添加安全组规则，则集群外部</div>
+</div>
+<div class="line">及公网只能访问ssh 22端口。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: 为什么访问不了虚拟机某端口?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况一: 安全组设置有问题。</div>
+<div class="line-block">
+<div class="line">请检查是否在虚拟机所属的虚拟机组安全组设置中打开了指定的端口。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">情况二: 本地的网络环境问题。</div>
+<div class="line-block">
+<div class="line">请确定本地的网络允许访问外网的除80外的端口, 或者本地的DNS等。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line"><strong>Q: 为什么启动集群后各个虚拟机没有心跳?多长时间能看到心跳?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况一: 虚拟机启动后，3分钟内是不显示心跳的，Fit2Cloud确认连续收到三个心跳才认为是正常。</div>
+<div class="line"><br /></div>
+<div class="line">情况二: 网络问题，虚拟机到Fit2Cloud主服务器之间的网络有问题。</div>
+<div class="line-block">
+<div class="line">这个可以通过查看Fit2Cloud在虚拟机上的代理服务日志知道。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">情况三: Fit2Cloud在虚拟机上的代理服务死掉。</div>
+<div class="line-block">
+<div class="line">请联系support&#64;fit2cloud.com, 或者登陆到虚拟机查看代理服务状态或日志。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 </div>
@@ -358,6 +444,7 @@
 <li><a class="reference internal" href="#id2">二: 开始使用</a></li>
 <li><a class="reference internal" href="#id3">三: 安全性</a></li>
 <li><a class="reference internal" href="#id4">四: 价格及计费</a></li>
+<li><a class="reference internal" href="#id5">五: 使用过程常见问题</a></li>
 </ul>
 </li>
 </ul>
@@ -370,8 +457,8 @@
   </div>
   <div class="sphinxnext">
     <h4>下一页</h4>
-    <p class="topless"><a href="problems.html"
-                          title="下一页">&rarr; 常见问题</a></p>
+    <p class="topless"><a href="references.html"
+                          title="下一页">&rarr; DevOps相关参考资源</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
@@ -404,7 +491,7 @@
           <a href="genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
-          <a href="problems.html" title="常见问题"
+          <a href="references.html" title="DevOps相关参考资源"
              >下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="imp_continuous_deployment.html" title="实现持续部署升级"

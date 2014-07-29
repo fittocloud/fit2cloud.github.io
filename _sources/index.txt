@@ -6,8 +6,6 @@
 欢迎使用Fit2Cloud For 阿里云!
 =====================================
 
-内容:
-
 .. toctree::
    :maxdepth: 2
    
@@ -16,7 +14,6 @@
    concepts
    advance
    faq
-   problems
    references
    
 
