@@ -162,19 +162,19 @@ FAQ
 --------------------------------
 | **Q: Fit2Cloud的登陆用户名密码是否安全?**
 |
-|     Fit2Cloud登陆使用Github帐号，所以您的用户名妈妈都是是保存在Github中的,足够安全。
+|     安全，Fit2Cloud登陆使用Github帐号，所以您的用户名密码都是是保存在Github中的,足够安全。
 | 
 | **Q: Fit2Cloud的传输过程安全吗?**
 |
-|     Fit2Cloud中的数据传输均采用SSL/HTTPS。
+|     安全，Fit2Cloud中的数据传输均采用SSL/HTTPS。
 |
 | **Q: Fit2Cloud提供的Rest API安全吗?**
 |
-|     Fit2Cloud REST API基于OAuth协议, 是安全的。
+|     安全，Fit2Cloud REST API基于OAuth协议, 是安全的。
 |
 | **Q: Fit2Cloud存储的数据安全吗?**
 |
-|     Fit2Cloud对于关键的数据在存储过程中进行了加密，是安全的。
+|     安全，Fit2Cloud对于关键的数据在存储过程中进行了加密，是安全的。
 |
 
 四: 价格及计费
