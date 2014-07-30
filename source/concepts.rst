@@ -5,7 +5,7 @@ Fit2Cloud概念及术语
 -------------------------------------
 1) Fit2Cloud用来做什么?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|    Fit2Cloud用来在云基础设施中创建和管理运行应用所需的运行环境以及部署和管理应用, 并将这个过程自动化,
+|    Fit2Cloud用来在IaaS中创建和管理运行应用所需的运行环境以及部署和管理应用, 并将这个过程自动化,
 | 帮助研发和运维团队实现持续部署，持续交付和自动化运维。
 |
 |    举个例子，假设我们想要建一个wordpress网站, 需要在阿里云里启动两台虚拟机，一台跑wordpress web，
@@ -27,7 +27,7 @@ Fit2Cloud概念及术语
 -------------------------------------
 
 |    集群就是我们通常所说的环境，我们把用于部署和运行某应用的一组虚拟机叫做一个集群。如果您用过AWS的Opsworks, 
-| 等同于Opswork的Stack。
+| 等同于OpsWork的Stack。
 |
 |    举例, 通常对于很多项目，一个应用或系统有不同用途的多个环境，如开发环境，测试环境，试运行环境以及产品环境，
 | 每一个环境就是一个集群，由一组虚拟机组成。
@@ -38,8 +38,8 @@ Fit2Cloud概念及术语
 |    把集群中相同类型的一组虚拟机叫做一个虚拟机组, 一个虚拟机组定义了虚拟组里虚拟机的:
 |    1) 虚拟机数量
 |    2) 在哪个数据中心启动 (北京 | 杭州 | 香港 | 青岛)
-|    3) 硬件配置         (xsmall | ...)
-|    4) 安装的操作系统版本 (Ubuntu1204 | CentOS5.8 | CentOS6.5)
+|    3) 虚机类型         (xsmall | ...)
+|    4) 镜像类型 (Ubuntu1204 | CentOS5.8 | CentOS6.5)
 |    5) 运行时环境安装配置脚本
 |    6) 组件安装配置脚本
 |    7) 集群里虚拟机启动或关闭时执行哪些脚本
@@ -50,18 +50,18 @@ Fit2Cloud概念及术语
 |  举例, 比如一个wordpress网站, 我们定义其为一个集群wordpress-dev，由两个虚拟机组组成
 |  1) 一组是wordpress-web虚拟机组
 |       虚拟机数量: 1个
-|       虚拟机配置大小类型: xsmall
+|       虚机类型: 1核1G
 |       虚拟机数据中心: 青岛
-|       操作系统: CentOS6.5
+|       镜像: CentOS6.5
 |       安装的软件及组件: apache, php和wordpress web
 |  2) 另一组是wordpress-mysql虚拟机组
 |   虚拟机数量: 1个
-|   虚拟机大小: xsmall
+|   虚机类型: 1核1G
 |   虚拟机数据中心: 青岛
-|   操作系统: CentOS6.5
+|   镜像: CentOS6.5
 |   安装的软件及组件: mysql, wordpress database, 用户名密码为root/fit2cloud
 |
-|   当我们启动集群后，Fit2Cloud就会根据集群的定义和配置，在青岛数据中心启动两台xsmall的虚拟机，都装
+|   当我们启动集群后，Fit2Cloud就会根据集群的定义和配置，在青岛数据中心启动两台1核1G的虚拟机，都装
 | CentOS6.5, 一台安装apache,php和wordpress web, 一台安装mysql及创建wordpress database。
 | 安装wordpress web那台虚拟机上的wordpress数据库配置文件会被自动配置好，用装mysql的虚拟机的IP,
 | 及数据库用户名密码root/fit2cloud。
@@ -85,7 +85,7 @@ Fit2Cloud概念及术语
 |   就是防火墙端口规则设置, 用于设定虚拟机组中的虚拟机的防火墙，对外开放哪些端口。 
 |
 |   举例, 为了使外部用户可以用浏览器访问wordpress网站, 我们设置集群里wordpress web类型虚拟机的安
-| 全组，对公网打开tcp 80端口。 
+| 全组，对公网打开TCO 80端口。 
 
 六: 虚拟机生命周期事件及事件处理
 -------------------------------------
@@ -100,12 +100,5 @@ Fit2Cloud概念及术语
 |   Fit2Cloud定义的虚拟机生命周期事件包括ready, initialize, install, start, rebootComplete,
 | postReboot，虚拟机启动后Fit2Cloud会发出虚拟机本机的ready事件，之后会触发虚拟机本机的initialize事件,
 | initialize事件对应的脚本在虚拟机上执行结束后，Fit2Cloud会触发install事件，initialize事件对应的
-| 脚本在虚拟机上执行结束后, Fit2Cloud会触发start事件，然后start事件对应的脚本在虚拟机上执行。如下图示:
-|
-
-
-
-
-
-
-
+| 脚本在虚拟机上执行结束后, Fit2Cloud会触发start事件，然后start事件对应的脚本在虚拟机上执行。
+| 虚机启动后的Lifecycle流程如下: ready->initialize->install->start。
