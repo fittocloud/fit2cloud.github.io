@@ -290,7 +290,7 @@ pdf_documents = [
 
 
 # A comma-separated list of custom stylesheets. Example:
-pdf_stylesheets = ['sphinx','kerning','a4']
+pdf_stylesheets = ['chinese','a4']
 
 
 # A list of folders to search for stylesheets. Example:
@@ -304,11 +304,11 @@ pdf_style_path = ['.', '_styles']
 
 
 # A colon-separated list of folders to search for fonts. Example:
-# pdf_font_path = ['/usr/share/fonts', '/usr/share/texmf-dist/fonts/']
+#pdf_font_path = ['/usr/share/fonts', '/usr/share/texmf-dist/fonts/']
 
 
 # Language to be used for hyphenation support
-#pdf_language = "en_US"
+pdf_language = "zh_CN"
 
 
 # Mode for literal blocks wider than the frame. Can be
