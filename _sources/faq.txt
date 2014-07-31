@@ -262,3 +262,11 @@ FAQ
 |               a. ps aux | grep eventagent
 |               b. vim /var/log/eventagent.log
 | 
+| **Q: 如果已经绑定了阿里云的AccessKey, 并且已经用这个Key启动了多台虚拟机，多个虚拟机正在运行，这时能否更改AccessKey?**
+|
+|     是可以更改的，只要更改为同一个阿里云账户下的AccessKey，那么就没什么问题。
+|     但是，如果更改为另外一个阿里云账户下的AccessKey, 那么用旧的AccessKey启动的虚拟机就无法从Fit2Cloud控制台关闭了。
+|     这个需要注意。
+|
+|
+|
