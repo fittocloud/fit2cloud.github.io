@@ -51,19 +51,23 @@ FAQ
 |
 |    我们目前支持阿里云和AWS; 我们会在年内支持UCloud。在未来，我们会支持更多的公有云。
 |
-| **Q: Fit2Cloud支持私有云，比如Cloudstack/Openstack?**
+| **Q: Fit2Cloud支持私有云吗? 比如Cloudstack/Openstack?**
 |
 |    目前不支持。但是我们计划支持，Fit2Cloud可以根据客户需求做定制化开发，比如您的私有云基于
-| CloudStack或OpenStack, 我们可以为您的私有云内部安装一套基于CloudStack或OpenStack的Fit2Cloud服务。 
+| CloudStack或OpenStack, 我们可以为您在您的私有云内部安装一套基于CloudStack或OpenStack的Fit2Cloud服务。 
 |
 | **Q: Fit2Cloud同类产品有哪些？国外有同类产品吗？国内有同类产品吗？**
 |
-|    目前，在国内还没有同类产品，国外的同类产品有AWS的Opsworks, CloudFormation, RightScale和Scalr。
+|    目前，在国内还没有同类产品，国外的同类产品有AWS的Opsworks, CloudFormation, 以及RightScale和Scalr。
 |
 | **Q: 什么是全栈自动化？**
 |
 |    全栈自动化就是从创建环境，到应用运行时环境安装，应用组件的部署配置启动整个过程的自动化以及应用运行过程中监控, 
-| 备份恢复, 按需伸缩的自动化。
+| 备份恢复, 按需伸缩的自动化, 以及各个中间过程衔接的自动化。
+|    现在很多应用的安装，在IaaS中启动虚拟机后，还需要人工获取IP地址，并把IP地址配置到某文件，然后运行自动化脚本，
+| 这种方式下，环境创建和应用的部署之间的衔接不是自动化的，仍需人工手工操作。即使自动化，也是需要自行编写程序来实现，
+| 如果使用Fit2Cloud, 这个衔接部分Fit2Cloud都给您做了，您只需要在Web控制台配置集群虚拟机组的虚拟机类型和启动后
+| 要运行的安装脚本即可。 这样就将应用的管理工作进一步自动化了，又消除了一个影响效率的地方。
 |
 二: 开始使用
 --------------------------------
