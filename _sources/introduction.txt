@@ -6,7 +6,9 @@ Fit2Cloud介绍
 |
 |     在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、 
 | Beanstalk、Rightscale、Scalr等，但是在阿里云生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
-
+|
+|     `Fit2Cloud详细介绍PPT <http://wenku.baidu.com/view/5c5b895ade80d4d8d15a4f66.html>`_
+|
 |    Fit2Cloud主要提供以下三大功能:
 |
 |    1) 实现全栈自动化功能
