@@ -15,7 +15,9 @@ Raid0，Raid1，Raid10数据盘。
 
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterRoleList.png
+
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
 
@@ -26,7 +28,7 @@ Raid0，Raid1，Raid10数据盘。
 |  b) 数据盘类型选择 "单个磁盘"
 |  c) 单盘容量填写 "100"
 |  d) 挂载点保持默认 "/mnt"
-|  e) 文件系统类型保持默认ext4,或者填写为ext3
+|  e) 文件系统类型保持默认ext4,或者选择ext3
 
 .. image:: _static/010-volume-Common.png
 
@@ -48,7 +50,9 @@ Raid0，Raid1，Raid10数据盘。
 
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterRoleList.png
+
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
 
@@ -60,7 +64,7 @@ Raid0，Raid1，Raid10数据盘。
 |  c) 磁盘阵列类型选择 "Raid0"
 |  d) 单盘容量填写 "50"
 |  e) 挂载点保持默认 "/mnt"
-|  f) 文件系统类型保持默认ext4,或者填写为ext3
+|  f) 文件系统类型保持默认ext4,或者选择ext3
 
 .. image:: _static/010-volume-raid0.png
 
@@ -83,7 +87,9 @@ Raid0，Raid1，Raid10数据盘。
 
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterRoleList.png
+
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
 
@@ -95,7 +101,7 @@ Raid0，Raid1，Raid10数据盘。
 |  c) 磁盘阵列类型选择 "Raid1"
 |  d) 单盘容量填写 "100"
 |  e) 挂载点保持默认 "/mnt"
-|  f) 文件系统类型保持默认ext4,或者填写为ext3
+|  f) 文件系统类型保持默认ext4,或者选择ext3
 
 .. image:: _static/010-volume-raid1.png
 
@@ -119,7 +125,9 @@ Raid0，Raid1，Raid10数据盘。
 
 |    第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
 | 拟机组列表页面;
-|
+
+.. image:: _static/010-volume-GoToClusterRoleList.png
+
 |    第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
 | 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "数据盘设置" 进入数据盘设置页面;
 
@@ -131,7 +139,7 @@ Raid0，Raid1，Raid10数据盘。
 |  c) 磁盘阵列类型选择 "Raid10"
 |  d) 单盘容量填写 "50"
 |  e) 挂载点保持默认 "/mnt"
-|  f) 文件系统类型保持默认ext4,或者填写为ext3
+|  f) 文件系统类型保持默认ext4,或者选择ext3
 
 .. image:: _static/010-volume-raid10.png
 
