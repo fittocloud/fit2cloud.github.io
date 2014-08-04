@@ -14,6 +14,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |    下面我们看在Fit2Cloud中如何做，在Fit2Cloud中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我
 | 们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让Fit2Cloud执行这个集群的部署计划，先调用
 | 阿里云的API创建出集群部署计划定义的虚拟机，然后在虚拟机启动后根据计划部署配置和启动wordpress的各个组件。
+| 观看视频请打开 `Fit2Cloud For 阿里云 十分钟部署Wordpress演示视频 <http://downloads.fit2cloud.com/aliyun/demo.mov>`_  
 
 .. code:: python
 
