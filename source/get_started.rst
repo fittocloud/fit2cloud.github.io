@@ -228,6 +228,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 	sed -i "s/database_name_here/wordpress/g" /var/www/html/wordpress/wp-config.php
 	sed -i "s/username_here/root/g" /var/www/html/wordpress/wp-config.php
 	sed -i "s/password_here/fit2cloud/g" /var/www/html/wordpress/wp-config.php
+        sed -i "s/fonts.googleapis.com/fonts.useso.com/g" `grep fonts.googleapis.com -rl /var/www/html/wordpress`
 	
 	service httpd restart
 	
