@@ -111,7 +111,7 @@ FAQ
 |
 |    `Fit2Cloud For AWS (aws.fit2cloud.com) <http://aws.fit2cloud.com/>`_
 |
-|    入门文档请移步`此处 <http://docs.fit2cloud.com/get_started.html/>`_。
+|    入门文档请移步`此处 <http://docs.fit2cloud.com/get_started.html/>`_
 |
 | **Q: 登陆Fit2Cloud需要注册用户吗? 可以使用微博或常见的社交帐号登陆Fit2Cloud吗?**
 |
