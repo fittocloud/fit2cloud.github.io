@@ -49,16 +49,20 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 |    罗嗦了半天，现在，让我们开始Fit2Cloud的破冰之旅吧:)
 
-登录Fit2Cloud For 阿里云
+登录Fit2Cloud For 阿里云|AWS
 -------------------------------------
 
-| **1) 打开Fit2Cloud For 阿里云首页**
+| **1) 打开Fit2Cloud首页**
 |  
-| a> 打开 `Fit2Cloud For 阿里云 (aliyun.fit2cloud.com) <http://aliyun.fit2cloud.com/>`_ 
+| a> 打开 `Fit2Cloud (www.fit2cloud.com) <http://www.fit2cloud.com/>`_ 
 |
 |    注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome
 |
-| b> 在Fit2Cloud首页点击 "Github帐号登陆", 如下图示:
+| b> 如果IaaS使用的是阿里云，在Fit2Cloud首页选择 "Fit2Cloud For 阿里云(Github帐号登陆)", 如下图示:
+
+.. image:: _static/000-Fit2Cloud-Website.png
+
+|    如果IaaS使用的是AWS, 在Fit2Cloud首页选择 "Fit2Cloud For AWS(Github帐号登陆)", 如下图示:
 
 .. image:: _static/000-Fit2Cloud-Website.png
 
@@ -68,10 +72,14 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 .. image:: _static/000-Login-Github-Authorize.png
 
-一: 绑定阿里云Access Key
+一: 绑定Access Key
 -------------------------------------
 
-第一步: 登录阿里云(www.aliyun.com)
+第一步: 获取Access Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+| 如果使用的是阿里云:
+|
+| **1) 登录阿里云(www.aliyun.com)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |    点击 `到阿里云(www.aliyun.com)点这里 <http://www.aliyun.com/>`_
@@ -80,39 +88,70 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 | 注2: 阿里云开通按量付费的云服务器需要实名认证，如果没有需要先做实名认证。
 | 注3: 如果阿里云帐号现金账户余额小于100, 需要先用支付宝充值(阿里云开通按量付费的云服务器，现金账户余额需要至少100.00元)
 
-第二步: 获取阿里云Access Key
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 |   如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;
 |   如果没有阿里云Access  Key需要先创建一个;
 |
-| **1) 在阿里云首页, 右上角, 选择进入 "用户中心"**
+| **2) 在阿里云首页, 右上角, 选择进入 "用户中心"**
 
 .. image:: _static/001-BindKey-1-AliyunHome.png
 
-| **2) 在阿里云用户中心页面, 右上角, 点击 "账户管理"**
+| **3) 在阿里云用户中心页面, 右上角, 点击 "账户管理"**
 
 .. image:: _static/001-BindKey-1-AliyunUserHome.png
 
-| **3) 在阿里云账户管理页面, 页面最上方, 点击用户名后会出现一个下拉菜单，然后点击 "管理控制台"**
+| **4) 在阿里云账户管理页面, 页面最上方, 点击用户名后会出现一个下拉菜单，然后点击 "管理控制台"**
 
 .. image:: _static/001-BindKey-2-TopUp.png
 
-| **4) 在阿里云管理控制台页面, 点击页面右上角的钥匙图标以进入阿里云"Access Key"页面**
+| **5) 在阿里云管理控制台页面, 点击页面右上角的钥匙图标以进入阿里云"Access Key"页面**
 
 .. image:: _static/001-BindKey-3-ClickKey.png
 
-| **5) 在阿里云Access Key页面, 点击 "创建Access Key" 按钮**
+| **6) 在阿里云Access Key页面, 点击 "创建Access Key" 按钮**
 
 .. image:: _static/001-BindKey-4-RequestCreateAccessKey.png
 
-| **6) 在阿里云Access Key页面, 点击 "显示" 按钮查看阿里云Access Key**
+| **7) 在阿里云Access Key页面, 点击 "显示" 按钮查看阿里云Access Key**
 
 .. image:: _static/001-BindKey-5-ViewAccessKey.png
 
-| 将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，第三步在Fit2Cloud中绑定阿里云Access Key时会用到.
+| 将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，下一步在Fit2Cloud中绑定阿里云Access Key时会用到.
+|
+|
+|
+| 如果使用的是AWS, 如果您的帐号是2013年12月前创建的:
+|
+| **1) 登录AWS(aws.amazon.com)**
+|
+| **2) 点击右上角My Account|Console, 在下拉列表中点击"Security Credentials" 进入 "Security Credentials"页面**
+|
+| **3) 找到Access Credentails部分，获取AccessKey ID and Secret.**
+|
+|
+| 如果使用的是AWS, 如果您的帐号是2013年12月之后创建的:
+|
+| **1) 登录AWS(aws.amazon.com)**
+|
+| **2) 选择进入IAM**
+|
+| **3) 在IAM中选择使用"Power User Policy"创建User Group**
+|
+| **4) 在设置权限页面点击"Continue"**
+|
+| **5) 在创建确认页面点击"CreateGroup"**
+|
+| **6) IAM中选择创建User**
+|
+| **7) 输入用户名后，点击"Create"**
+|
+| **8) 在创建完成页面点击"Show User Security Credentials"**
+|
+| **9) 在"Show User Security Credentials"页面查看AccessKey**
+|
+| **10) 打开IAM Access开关**
 
-第三步: 绑定阿里云Access  Key
+
+第二步: 绑定Access  Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 | **1) Fit2Cloud开始页，选择"绑定阿里云Access Key"**
