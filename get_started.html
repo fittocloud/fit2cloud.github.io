@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Fit2Cloud快速入门: 十分钟部署Wordpress应用 &mdash; Fit2Cloud For  文档</title>
+    <title>Fit2Cloud快速入门: 十分钟部署Wordpress应用 &mdash; Fit2Cloud  文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="Fit2Cloud For  文档" href="index.html" />
+    <link rel="top" title="Fit2Cloud  文档" href="index.html" />
     <link rel="next" title="Fit2Cloud概念及术语" href="concepts.html" />
     <link rel="prev" title="Fit2Cloud介绍" href="introduction.html" /> 
 <script type="text/javascript">
@@ -57,7 +57,7 @@
         <li class="right" >
           <a href="introduction.html" title="Fit2Cloud介绍"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud For  文档</a> &raquo;</li>
+    <li><a href="index.html">Fit2Cloud  文档</a> &raquo;</li>
  
       </ul>
     </div>
@@ -133,18 +133,22 @@
 <div class="line-block">
 <div class="line">罗嗦了半天，现在，让我们开始Fit2Cloud的破冰之旅吧:)</div>
 </div>
-<div class="section" id="fit2cloud-for">
-<h2>登录Fit2Cloud For 阿里云<a class="headerlink" href="#fit2cloud-for" title="永久链接至标题">¶</a></h2>
+<div class="section" id="fit2cloud-for-aws">
+<h2>登录Fit2Cloud For 阿里云|AWS<a class="headerlink" href="#fit2cloud-for-aws" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
-<div class="line"><strong>1) 打开Fit2Cloud For 阿里云首页</strong></div>
+<div class="line"><strong>1) 打开Fit2Cloud首页</strong></div>
 <div class="line"><br /></div>
-<div class="line">a&gt; 打开 <a class="reference external" href="http://aliyun.fit2cloud.com/">Fit2Cloud For 阿里云 (aliyun.fit2cloud.com)</a></div>
+<div class="line">a&gt; 打开 <a class="reference external" href="http://www.fit2cloud.com/">Fit2Cloud (www.fit2cloud.com)</a></div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome</div>
 <div class="line"><br /></div>
 </div>
-<div class="line">b&gt; 在Fit2Cloud首页点击 &#8220;Github帐号登陆&#8221;, 如下图示:</div>
+<div class="line">b&gt; 如果IaaS使用的是阿里云，在Fit2Cloud首页选择 &#8220;Fit2Cloud For 阿里云(Github帐号登陆)&#8221;, 如下图示:</div>
+</div>
+<img alt="_images/000-Fit2Cloud-Website.png" src="_images/000-Fit2Cloud-Website.png" />
+<div class="line-block">
+<div class="line">如果IaaS使用的是AWS, 在Fit2Cloud首页选择 &#8220;Fit2Cloud For AWS(Github帐号登陆)&#8221;, 如下图示:</div>
 </div>
 <img alt="_images/000-Fit2Cloud-Website.png" src="_images/000-Fit2Cloud-Website.png" />
 <div class="line-block">
@@ -155,9 +159,17 @@
 <img alt="_images/000-Login-Github-Authorize.png" src="_images/000-Login-Github-Authorize.png" />
 </div>
 <div class="section" id="access-key">
-<h2>一: 绑定阿里云Access Key<a class="headerlink" href="#access-key" title="永久链接至标题">¶</a></h2>
-<div class="section" id="www-aliyun-com">
-<h3>第一步: 登录阿里云(www.aliyun.com)<a class="headerlink" href="#www-aliyun-com" title="永久链接至标题">¶</a></h3>
+<h2>一: 绑定Access Key<a class="headerlink" href="#access-key" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id1">
+<h3>第一步: 获取Access Key<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id2">
+<h3><strong>如果使用的是阿里云</strong><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>1) 登录阿里云(www.aliyun.com)</strong></div>
+</div>
+<hr class="docutils" />
 <div class="line-block">
 <div class="line-block">
 <div class="line">点击 <a class="reference external" href="http://www.aliyun.com/">到阿里云(www.aliyun.com)点这里</a></div>
@@ -167,44 +179,103 @@
 <div class="line">注2: 阿里云开通按量付费的云服务器需要实名认证，如果没有需要先做实名认证。</div>
 <div class="line">注3: 如果阿里云帐号现金账户余额小于100, 需要先用支付宝充值(阿里云开通按量付费的云服务器，现金账户余额需要至少100.00元)</div>
 </div>
-</div>
-<div class="section" id="id2">
-<h3>第二步: 获取阿里云Access Key<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line-block">
 <div class="line">如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;</div>
 <div class="line">如果没有阿里云Access  Key需要先创建一个;</div>
 <div class="line"><br /></div>
 </div>
-<div class="line"><strong>1) 在阿里云首页, 右上角, 选择进入 &#8220;用户中心&#8221;</strong></div>
+<div class="line"><strong>2) 在阿里云首页, 右上角, 选择进入 &#8220;用户中心&#8221;</strong></div>
 </div>
 <img alt="_images/001-BindKey-1-AliyunHome.png" src="_images/001-BindKey-1-AliyunHome.png" />
 <div class="line-block">
-<div class="line"><strong>2) 在阿里云用户中心页面, 右上角, 点击 &#8220;账户管理&#8221;</strong></div>
+<div class="line"><strong>3) 在阿里云用户中心页面, 右上角, 点击 &#8220;账户管理&#8221;</strong></div>
 </div>
 <img alt="_images/001-BindKey-1-AliyunUserHome.png" src="_images/001-BindKey-1-AliyunUserHome.png" />
 <div class="line-block">
-<div class="line"><strong>3) 在阿里云账户管理页面, 页面最上方, 点击用户名后会出现一个下拉菜单，然后点击 &#8220;管理控制台&#8221;</strong></div>
+<div class="line"><strong>4) 在阿里云账户管理页面, 页面最上方, 点击用户名后会出现一个下拉菜单，然后点击 &#8220;管理控制台&#8221;</strong></div>
 </div>
 <img alt="_images/001-BindKey-2-TopUp.png" src="_images/001-BindKey-2-TopUp.png" />
 <div class="line-block">
-<div class="line"><strong>4) 在阿里云管理控制台页面, 点击页面右上角的钥匙图标以进入阿里云&#8221;Access Key&#8221;页面</strong></div>
+<div class="line"><strong>5) 在阿里云管理控制台页面, 点击页面右上角的钥匙图标以进入阿里云&#8221;Access Key&#8221;页面</strong></div>
 </div>
 <img alt="_images/001-BindKey-3-ClickKey.png" src="_images/001-BindKey-3-ClickKey.png" />
 <div class="line-block">
-<div class="line"><strong>5) 在阿里云Access Key页面, 点击 &#8220;创建Access Key&#8221; 按钮</strong></div>
+<div class="line"><strong>6) 在阿里云Access Key页面, 点击 &#8220;创建Access Key&#8221; 按钮</strong></div>
 </div>
 <img alt="_images/001-BindKey-4-RequestCreateAccessKey.png" src="_images/001-BindKey-4-RequestCreateAccessKey.png" />
 <div class="line-block">
-<div class="line"><strong>6) 在阿里云Access Key页面, 点击 &#8220;显示&#8221; 按钮查看阿里云Access Key</strong></div>
+<div class="line"><strong>7) 在阿里云Access Key页面, 点击 &#8220;显示&#8221; 按钮查看阿里云Access Key</strong></div>
 </div>
 <img alt="_images/001-BindKey-5-ViewAccessKey.png" src="_images/001-BindKey-5-ViewAccessKey.png" />
 <div class="line-block">
-<div class="line">将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，第三步在Fit2Cloud中绑定阿里云Access Key时会用到.</div>
+<div class="line">将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，下一步在Fit2Cloud中绑定阿里云Access Key时会用到.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="aws-201312">
+<h3><strong>如果使用的是AWS, 帐号是2013年12月前创建的</strong><a class="headerlink" href="#aws-201312" title="永久链接至标题">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>1) 登录AWS(aws.amazon.com)</strong></div>
+<div class="line"><br /></div>
+<div class="line"><strong>2) 点击右上角My Account|Console, 在下拉列表中点击&#8221;Security Credentials&#8221; 进入 &#8220;Security Credentials&#8221;页面</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-1-SelectSecurityCredential.png" src="_images/001-BindKey-AWS-1-SelectSecurityCredential.png" />
+<div class="line-block">
+<div class="line"><strong>3) 找到Access Credentails部分，获取AccessKey ID and Secret.</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-2-ViewSecurityCredential.png" src="_images/001-BindKey-AWS-2-ViewSecurityCredential.png" />
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="id3">
-<h3>第三步: 绑定阿里云Access  Key<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<h3><strong>如果使用的是AWS, 帐号是2013年12月之后创建的</strong><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>1) 登录AWS(aws.amazon.com)</strong></div>
+<div class="line"><br /></div>
+<div class="line"><strong>2) 选择进入IAM</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-3-SelectIAM.png" src="_images/001-BindKey-AWS-3-SelectIAM.png" />
+<div class="line-block">
+<div class="line"><strong>3) 在IAM中选择使用&#8221;Power User Policy&#8221;创建User Group</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-4-CreateUserGroup.png" src="_images/001-BindKey-AWS-4-CreateUserGroup.png" />
+<div class="line-block">
+<div class="line"><strong>4) 在设置权限页面点击&#8221;Continue&#8221;</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-5-ViewGroupPermission.png" src="_images/001-BindKey-AWS-5-ViewGroupPermission.png" />
+<div class="line-block">
+<div class="line"><strong>5) 在创建确认页面点击&#8221;CreateGroup&#8221;</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-6-ConfirmCreateGroup.png" src="_images/001-BindKey-AWS-6-ConfirmCreateGroup.png" />
+<div class="line-block">
+<div class="line"><strong>6) IAM中选择创建User</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-7-SelectCreateUser.png" src="_images/001-BindKey-AWS-7-SelectCreateUser.png" />
+<div class="line-block">
+<div class="line"><strong>7) 输入用户名后，点击&#8221;Create&#8221;</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-8-FillUserInfo.png" src="_images/001-BindKey-AWS-8-FillUserInfo.png" />
+<div class="line-block">
+<div class="line"><strong>8) 在创建完成页面点击&#8221;Show User Security Credentials&#8221;</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-9-UserCreatedConfirmPage.png" src="_images/001-BindKey-AWS-9-UserCreatedConfirmPage.png" />
+<div class="line-block">
+<div class="line"><strong>9) 在&#8221;Show User Security Credentials&#8221;页面查看AccessKey</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-10-ViewUserSecurityCredential.png" src="_images/001-BindKey-AWS-10-ViewUserSecurityCredential.png" />
+<div class="line-block">
+<div class="line"><strong>10) 打开IAM Access开关</strong></div>
+</div>
+<img alt="_images/001-BindKey-AWS-11-EnableIAMAccess.png" src="_images/001-BindKey-AWS-11-EnableIAMAccess.png" />
+</div>
+<div class="section" id="id4">
+<h3>第二步: 绑定Access  Key<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>1) Fit2Cloud开始页，选择&#8221;绑定阿里云Access Key&#8221;</strong></div>
@@ -220,8 +291,8 @@
 <img alt="_images/001-BindKey-8-FillKeyAndSave.png" src="_images/001-BindKey-8-FillKeyAndSave.png" />
 </div>
 </div>
-<div class="section" id="id4">
-<h2>二: 创建虚拟机组<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h2>二: 创建虚拟机组<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <div class="section" id="wordpress-mysql">
 <h3>第一步: 创建wordpress-mysql虚拟机组<a class="headerlink" href="#wordpress-mysql" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
@@ -357,10 +428,10 @@ fi
 <img alt="_images/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png" src="_images/002-CreateVMGroup-10-EditWebVMGroupSecurityGroup.png" />
 </div>
 </div>
-<div class="section" id="id5">
-<h2>三: 新建集群及添加虚拟机组<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id6">
-<h3>第一步: 新建集群<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h2>三: 新建集群及添加虚拟机组<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id7">
+<h3>第一步: 新建集群<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><strong>1) Fit2Cloud页面中选择&#8221;集群&#8221;</strong></div>
 </div>
@@ -370,8 +441,8 @@ fi
 </div>
 <img alt="_images/003-CreateCluster-2-CreateClusterAndSave.png" src="_images/003-CreateCluster-2-CreateClusterAndSave.png" />
 </div>
-<div class="section" id="id7">
-<h3>第二步: 添加wordpress-mysql虚拟机组<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id8">
+<h3>第二步: 添加wordpress-mysql虚拟机组<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>1) 集群页面，选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;0个虚拟机组&#8221;</strong></div>
@@ -383,8 +454,8 @@ fi
 </div>
 <img alt="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" src="_images/003-CreateCluster-3-AddMysqlVMGroupToCluster.png" />
 </div>
-<div class="section" id="id8">
-<h3>第三步: 添加wordpress-mysql虚拟机组<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id9">
+<h3>第三步: 添加wordpress-mysql虚拟机组<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>1) 集群页面选择 &#8220;wordpress&#8221;集群 -&gt; &#8220;1个虚拟机组&#8221;</strong></div>
@@ -397,8 +468,8 @@ fi
 <img alt="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" src="_images/003-CreateCluster-5-AddWebVMGroupToCluster.png" />
 </div>
 </div>
-<div class="section" id="id9">
-<h2>四: 启动集群<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id10">
+<h2>四: 启动集群<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>1) 集群列表页面，选择&#8221;wordpress-qingdao&#8221; -&gt;  选择&#8221;启动&#8221;</strong></div>
 </div>
@@ -421,8 +492,8 @@ fi
 <img alt="_images/004-LaunchCluster-5-GetWebIP.png" src="_images/004-LaunchCluster-5-GetWebIP.png" />
 <img alt="_images/004-LaunchCluster-6-ViewWordpressWeb.png" src="_images/004-LaunchCluster-6-ViewWordpressWeb.png" />
 </div>
-<div class="section" id="id10">
-<h2>五: 登录虚拟机<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id11">
+<h2>五: 登录虚拟机<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>集群虚拟机列表页面，点击某个虚拟机所在行选定要登录的虚拟机 -&gt; 点击行最右边一列显示的 &#8220;操作&#8221; -&gt; 在下拉列表中选择 &#8220;登录虚机&#8221;</strong></div>
 </div>
@@ -452,7 +523,7 @@ fi
 <div class="line">缩等等,对于这些功能，详细介绍请移步到相应的文档，您可以在文档首页找到各个文档的入口链接，如有需求或碰到</div>
 <div class="line">问题，请联系support&#64;fit2cloud.com。</div>
 </div>
-<div class="code python highlight-python"><div class="highlight"><pre>注: 到文档目录请点击页面左上角或左下角的目录链接: &quot;Fit2Cloud For  文档&quot;。
+<div class="code python highlight-python"><div class="highlight"><pre>注: 到文档目录请点击页面左上角或左下角的目录链接: &quot;Fit2Cloud  文档&quot;。
 </pre></div>
 </div>
 </div>
@@ -467,26 +538,28 @@ fi
     <h3><a href="index.html">内容</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Fit2Cloud快速入门: 十分钟部署Wordpress应用</a><ul>
-<li><a class="reference internal" href="#fit2cloud-for">登录Fit2Cloud For 阿里云</a></li>
-<li><a class="reference internal" href="#access-key">一: 绑定阿里云Access Key</a><ul>
-<li><a class="reference internal" href="#www-aliyun-com">第一步: 登录阿里云(www.aliyun.com)</a></li>
-<li><a class="reference internal" href="#id2">第二步: 获取阿里云Access Key</a></li>
-<li><a class="reference internal" href="#id3">第三步: 绑定阿里云Access  Key</a></li>
+<li><a class="reference internal" href="#fit2cloud-for-aws">登录Fit2Cloud For 阿里云|AWS</a></li>
+<li><a class="reference internal" href="#access-key">一: 绑定Access Key</a><ul>
+<li><a class="reference internal" href="#id1">第一步: 获取Access Key</a></li>
+<li><a class="reference internal" href="#id2"><strong>如果使用的是阿里云</strong></a></li>
+<li><a class="reference internal" href="#aws-201312"><strong>如果使用的是AWS, 帐号是2013年12月前创建的</strong></a></li>
+<li><a class="reference internal" href="#id3"><strong>如果使用的是AWS, 帐号是2013年12月之后创建的</strong></a></li>
+<li><a class="reference internal" href="#id4">第二步: 绑定Access  Key</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id4">二: 创建虚拟机组</a><ul>
+<li><a class="reference internal" href="#id5">二: 创建虚拟机组</a><ul>
 <li><a class="reference internal" href="#wordpress-mysql">第一步: 创建wordpress-mysql虚拟机组</a></li>
 <li><a class="reference internal" href="#wordpress-web">第二步: 创建wordpress-web虚拟机组</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">三: 新建集群及添加虚拟机组</a><ul>
-<li><a class="reference internal" href="#id6">第一步: 新建集群</a></li>
-<li><a class="reference internal" href="#id7">第二步: 添加wordpress-mysql虚拟机组</a></li>
-<li><a class="reference internal" href="#id8">第三步: 添加wordpress-mysql虚拟机组</a></li>
+<li><a class="reference internal" href="#id6">三: 新建集群及添加虚拟机组</a><ul>
+<li><a class="reference internal" href="#id7">第一步: 新建集群</a></li>
+<li><a class="reference internal" href="#id8">第二步: 添加wordpress-mysql虚拟机组</a></li>
+<li><a class="reference internal" href="#id9">第三步: 添加wordpress-mysql虚拟机组</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">四: 启动集群</a></li>
-<li><a class="reference internal" href="#id10">五: 登录虚拟机</a></li>
+<li><a class="reference internal" href="#id10">四: 启动集群</a></li>
+<li><a class="reference internal" href="#id11">五: 登录虚拟机</a></li>
 </ul>
 </li>
 </ul>
@@ -538,7 +611,7 @@ fi
         <li class="right" >
           <a href="introduction.html" title="Fit2Cloud介绍"
              >上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud For  文档</a> &raquo;</li>
+    <li><a href="index.html">Fit2Cloud  文档</a> &raquo;</li>
  
       </ul>
     </div>

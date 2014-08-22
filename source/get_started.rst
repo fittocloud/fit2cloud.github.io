@@ -77,10 +77,11 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 第一步: 获取Access Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 如果使用的是阿里云:
+**如果使用的是阿里云**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **1) 登录阿里云(www.aliyun.com)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+| **1) 登录阿里云(www.aliyun.com)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |    点击 `到阿里云(www.aliyun.com)点这里 <http://www.aliyun.com/>`_
 |
@@ -119,36 +120,60 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |
 |
 |
-| 如果使用的是AWS, 如果您的帐号是2013年12月前创建的:
+**如果使用的是AWS, 帐号是2013年12月前创建的**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 | **1) 登录AWS(aws.amazon.com)**
 |
 | **2) 点击右上角My Account|Console, 在下拉列表中点击"Security Credentials" 进入 "Security Credentials"页面**
-|
+
+.. image:: _static/001-BindKey-AWS-1-SelectSecurityCredential.png
+
 | **3) 找到Access Credentails部分，获取AccessKey ID and Secret.**
+
+.. image:: _static/001-BindKey-AWS-2-ViewSecurityCredential.png
+
 |
-|
-| 如果使用的是AWS, 如果您的帐号是2013年12月之后创建的:
+**如果使用的是AWS, 帐号是2013年12月之后创建的**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
 | **1) 登录AWS(aws.amazon.com)**
 |
 | **2) 选择进入IAM**
-|
+
+.. image:: _static/001-BindKey-AWS-3-SelectIAM.png
+
 | **3) 在IAM中选择使用"Power User Policy"创建User Group**
-|
+
+.. image:: _static/001-BindKey-AWS-4-CreateUserGroup.png
+
 | **4) 在设置权限页面点击"Continue"**
-|
+
+.. image:: _static/001-BindKey-AWS-5-ViewGroupPermission.png
+
 | **5) 在创建确认页面点击"CreateGroup"**
-|
+
+.. image:: _static/001-BindKey-AWS-6-ConfirmCreateGroup.png
+
 | **6) IAM中选择创建User**
-|
+
+.. image:: _static/001-BindKey-AWS-7-SelectCreateUser.png
+
 | **7) 输入用户名后，点击"Create"**
-|
+
+.. image:: _static/001-BindKey-AWS-8-FillUserInfo.png
+
 | **8) 在创建完成页面点击"Show User Security Credentials"**
-|
+
+.. image:: _static/001-BindKey-AWS-9-UserCreatedConfirmPage.png
+
 | **9) 在"Show User Security Credentials"页面查看AccessKey**
-|
+
+.. image:: _static/001-BindKey-AWS-10-ViewUserSecurityCredential.png
+
 | **10) 打开IAM Access开关**
+
+.. image:: _static/001-BindKey-AWS-11-EnableIAMAccess.png
 
 
 第二步: 绑定Access  Key
