@@ -60,11 +60,11 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |
 | b> 如果IaaS使用的是阿里云，在Fit2Cloud首页选择 "Fit2Cloud For 阿里云(Github帐号登陆)", 如下图示:
 
-.. image:: _static/000-Fit2Cloud-Website.png
+.. image:: _static/000-Login-Fit2CloudForAliyun.png
 
 |    如果IaaS使用的是AWS, 在Fit2Cloud首页选择 "Fit2Cloud For AWS(Github帐号登陆)", 如下图示:
 
-.. image:: _static/000-Fit2Cloud-Website.png
+.. image:: _static/000-Login-Fit2CloudForAWS.png
 
 | **2) 点击"Github帐号登陆"后，会弹出Github登陆页面，要求输入Github用户名密码**
 |
