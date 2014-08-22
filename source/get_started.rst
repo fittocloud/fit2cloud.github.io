@@ -420,7 +420,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 .. code:: python    
 
-       注: 到文档目录请点击页面左上角或左下角的目录链接: "Fit2Cloud For 阿里云 1.0 文档"。
+       注: 到文档目录请点击页面左上角或左下角的目录链接: "Fit2Cloud文档"。
 
 
 
