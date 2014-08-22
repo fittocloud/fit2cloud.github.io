@@ -357,8 +357,7 @@ mysql -u root -pfit2cloud -e &quot;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;
 <div class="line">wordpress-web初始化运行时环境安装脚本</div>
 </div>
 <div class="code python highlight-python"><div class="highlight"><pre>#!/bin/bash
-yum -y install httpd mysql-server php php-mysql wget
-#chkconfig mysqld on
+yum -y install httpd php php-mysql wget
 chkconfig httpd on
 </pre></div>
 </div>

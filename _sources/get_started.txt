@@ -259,8 +259,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 .. code:: python
 
 	#!/bin/bash
-	yum -y install httpd mysql-server php php-mysql wget
-	#chkconfig mysqld on
+	yum -y install httpd php php-mysql wget
 	chkconfig httpd on
 
 .. image:: _static/002-CreateVMGroup-7-EditWebinitializeEventHandler.png

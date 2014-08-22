@@ -40,6 +40,18 @@ FAQ
 |       场景2: 从Web控制台同时在多个虚拟机执行脚本
 |       场景3: 查看应用集群虚拟机监控及告警
 |
+|     Fit2Cloud特别适合需要频繁升级发布，快速迭代的组织，非常适合管理大规模分布式的平台和应用，
+|   从组织层面非常适合
+|     1) 提供大规模平台服务，企业应用的系统集成商, 代维护运营商
+|     2) 需要快速发布的移动互联网公司
+|     3) 开发和运营大规模平台及应用的组织
+|     4) 对成本敏感，需要减少运维人力成本的组织
+|   从最终用户层面，适合于
+|     1) 开发大规模分布式系统，需要快速方便自动化搭建升级集成测试环境的开发人员，测试人员
+|     2) 日常开发测试使用AWS,阿里云的开发人员, 测试人员
+|     3) 维护运行在AWS,阿里云的系统的维护人员
+|
+|
 | **Q: Fit2Cloud对谁有用?**
 |
 |    使用阿里云基础设施开发和管理业务应用系统的企业研发及运维组织，以及组织内的开发人员, 
@@ -73,25 +85,25 @@ FAQ
 |
 | **Q: Fit2Cloud与AWS的Opsworks有什么区别？**
 |
-|   1.OpsWorks与Chef绑定紧密：OpsWorks与Chef绑定,这导致只能用Chef;而Fit2Cloud的EventHandler可以用任何
-|     脚本语言实现，不仅可以使用Shell, python, Ruby, 还可以在脚本中可以调用Chef/Puppet。
+|   1) OpsWorks与Chef绑定紧密：OpsWorks与Chef绑定,这导致只能用Chef;而Fit2Cloud的EventHandler可以用任何
+|      脚本语言实现，不仅可以使用Shell, python, Ruby, 还可以在脚本中可以调用Chef/Puppet。
 |
-|   2.OpsWorks不支持On-Premise部署和定制化修改：对于大型企业来说，会有自己的特定需求，On-premise部署和可定
-|     制性非常重要。
+|   2) OpsWorks不支持On-Premise部署和定制化修改：对于大型企业来说，会有自己的特定需求，On-premise部署和可定
+|      制性非常重要。
 |
-|   3.OpsWorks不支持其他公有云：OpsWorks只支持AWS,不支持其他的IaaS, 不支持混合云, Fit2Cloud将来可以支持其
-|     他的IaaS。
+|   3) OpsWorks不支持其他公有云：OpsWorks只支持AWS,不支持其他的IaaS, 不支持混合云, Fit2Cloud将来可以支持其
+|      他的IaaS。
 |
-|   4.OpsWorks暂时不支持BeijingRegion：AWS北京区域不提供OpsWorks 服务。而Fit2Cloud会抽象掉Beijing 
-|     Region和其他Global regions之间的差异。用户可以在Cluster中使用所有Region的资源。
+|   4) OpsWorks暂时不支持BeijingRegion：AWS北京区域不提供OpsWorks 服务。而Fit2Cloud会抽象掉Beijing 
+|      Region和其他Global regions之间的差异。用户可以在Cluster中使用所有Region的资源。
 |
-|   5.OpsWorks单个Stack的资源局限在一个Region内：受限于底层实现(CloudWatch＆ AutoScaling Group)，
-|     OpsWorks一个Stack内的所有资源都是位于一个Region之内。
+|   5) OpsWorks单个Stack的资源局限在一个Region内：受限于底层实现(CloudWatch＆ AutoScaling Group)，
+|      OpsWorks一个Stack内的所有资源都是位于一个Region之内。
 |
-|   6.OpsWorks不能处理不同VM之间的事件(Orchestration)：举例而言,当启动一台新的mysql后， 我们想自动把mysql
-|     的地址配置到Webapp的配置文件中，在OpsWorks中，按照例子，需要先手动启动mysql, 然后等mysql启动后，人用肉
-|     眼获得MySQL的IP, 然后手动配置到chef的Cookebook里，从VM的启动到自动的配置，这之间需要人手工干预，无法实
-|     现环境VM自动化到配置自动化之前衔接的自动化。
+|   6) OpsWorks不能处理不同VM之间的事件(Orchestration)：举例而言,当启动一台新的mysql后， 我们想自动把mysql
+|      的地址配置到Webapp的配置文件中，在OpsWorks中，按照例子，需要先手动启动mysql, 然后等mysql启动后，人用肉
+|      眼获得MySQL的IP, 然后手动配置到chef的Cookebook里，从VM的启动到自动的配置，这之间需要人手工干预，无法实
+|      现环境VM自动化到配置自动化之前衔接的自动化。
 |
 | **Q: 什么是全栈自动化？**
 |
@@ -111,7 +123,7 @@ FAQ
 |
 |    `Fit2Cloud For AWS (aws.fit2cloud.com) <http://aws.fit2cloud.com/>`_
 |
-|    入门文档请移步`此处 <http://docs.fit2cloud.com/get_started.html/>`_
+|    入门文档请移步 `此处 <http://docs.fit2cloud.com/get_started.html/>`_
 |
 | **Q: 登陆Fit2Cloud需要注册用户吗? 可以使用微博或常见的社交帐号登陆Fit2Cloud吗?**
 |
@@ -126,7 +138,7 @@ FAQ
 |
 |    当您要求Fit2Cloud创建应用运行所需的环境即虚拟机及存储时, 需要调用AWS的API。
 | 
-| **Q: 为什么Fit2Cloud创建的虚拟机是按量付费的？**
+| **Q: 为什么Fit2Cloud For 阿里云创建的虚拟机是按量付费的？**
 |
 |    如果使用阿里云运行应用的话，Fit2Cloud是通过调用阿里云的ECS API创建虚机的，通过ECS API创建的虚机都是按量
 | 付费类型的。如果您的虚机是临时使用的(从几分钟到几天)，比如用来搭建QA测试环境等，那么按量付费是非常合适的。如果您
@@ -147,7 +159,7 @@ FAQ
 |
 |    把集群中相同类型的一组虚拟机叫做一个虚拟机组, 一个虚拟机组定义了虚拟组里虚拟机:
 |    1) 数量
-|    2) 在哪个数据中心启动 (北京 | 杭州 | 香港 | 青岛)
+|    2) 在哪个数据中心启动 (如阿里云的北京,杭州,香港,青岛数据中心)
 |    3) 硬件配置         (xsmall | ...)
 |    4) 安装的操作系统版本 (Ubuntu1204 | CentOS5.8 | CentOS6.5)
 |    5) 运行时环境安装配置脚本
@@ -207,19 +219,19 @@ FAQ
 --------------------------------
 | **Q: Fit2Cloud的登陆用户名密码是否安全?**
 |
-|     安全，Fit2Cloud登陆使用Github帐号，所以您的用户名密码都是是保存在Github中的,足够安全。
+|     是安全的，Fit2Cloud登陆使用Github帐号，所以您的用户名密码都是是保存在Github中的,足够安全。
 | 
 | **Q: Fit2Cloud的传输过程安全吗?**
 |
-|     安全，Fit2Cloud中的数据传输均采用SSL/HTTPS。
+|     是安全的，Fit2Cloud中的数据传输均采用SSL/HTTPS。
 |
 | **Q: Fit2Cloud提供的Rest API安全吗?**
 |
-|     安全，Fit2Cloud REST API基于OAuth协议, 是安全的。
+|     是安全的，Fit2Cloud REST API基于OAuth协议, 是安全的。
 |
 | **Q: Fit2Cloud存储的数据安全吗?**
 |
-|     安全，Fit2Cloud对于关键的数据在存储过程中进行了加密，是安全的。
+|     是安全的，Fit2Cloud对于关键的数据在存储过程中进行了加密，是安全的。
 |
 
 四: 价格及计费
@@ -231,12 +243,16 @@ FAQ
 | **Q: Fit2Cloud除SaaS服务外，是否提供企业版服务，如果提供如何收费?**
 | 
 |   Fit2Cloud也提供企业版服务，可以专门为企业在企业内部或者指定的数据中心安装一套
-| Fit2Cloud服务，并负责安装运维和支持服务，如有需要请联系support@fit2cloud.com详谈。
+| Fit2Cloud服务，并负责安装运维和支持服务，如有需要请联系support@fit2cloud.com。
 |
 | **Q: Fit2Cloud是否提供技术支持服务套餐以便能够保证支持的及时性，如果有如何收费?**
 |
 |     Fit2Cloud也有多种技术支持服务套餐，如有需要请联系support@fit2cloud.com。
 |
+| **Q: Fit2Cloud是否提供全栈自动化实施服务，即针对客户具体系统，实现应用自动化部署升级运维?**
+|
+|     提供，如有需要请联系support@fit2cloud.com。
+
 
 五: 使用过程常见问题
 --------------------------------
@@ -253,11 +269,11 @@ FAQ
 |        请检查集群的虚拟机组的设置，虚拟机数是否大于0, 一般每次在集群的虚拟机列表页面中，关闭
 | 一台虚拟机后，Fit2Cloud会把虚拟机组的虚拟机数量减1
 |
-|     情况二: 没有绑定阿里云Access Key
+|     情况二: 没有绑定阿里云或AWS的Access Key
 |
 |     情况三: 阿里云Access Key的帐户余额小于100
 |
-|     情况四: 超过阿里云帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。
+|     情况四: 超过阿里云或AWS帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。
 |
 | **Q: 登陆虚拟机时显示没有安全插件?**
 |     
@@ -269,9 +285,9 @@ FAQ
 |
 | **Q: 为什么虚拟机启动失败?怎么知道失败原因?**
 |
-|     Fit2Cloud每个集群及虚拟机的操作下拉列表中都有一个"查询工作选项", 通过这个功能可以查看
-| 到调用阿里云API启动虚拟机的日志和返回结果，从而知道启动失败的原因，比如选定的数据中心不支持
-| 指定的虚拟机配置类型，或者帐户余额不足，或者超出帐户允许的最大虚拟机数量，默认是10个。
+|     Fit2Cloud每个集群的虚拟机列表页面中都有一个"状态"列, 如果失败，这列会显示失败和一个问号图标，
+| 将鼠标移到问号图标上就能看到启动失败的原因，比如选定的数据中心不支持指定的虚拟机配置类型，没有可用
+| 的类型的虚拟机，或者帐户余额不足，或者超出帐户允许的最大虚拟机数量。
 |
 | **Q: 启动一台虚拟机大概得等多长时间?**
 |
@@ -303,10 +319,10 @@ FAQ
 |               a. ps aux | grep eventagent
 |               b. vim /var/log/eventagent.log
 | 
-| **Q: 如果已经绑定了阿里云的AccessKey, 并且已经用这个Key启动了多台虚拟机，多个虚拟机正在运行，这时能否更改AccessKey?**
+| **Q: 如果已经绑定了阿里云或AWS的AccessKey, 并且已经用这个Key启动了多台虚拟机，多个虚拟机正在运行，这时能否更改AccessKey?**
 |
-|     是可以更改的，只要更改为同一个阿里云账户下的AccessKey，那么就没什么问题。
-|     但是，如果更改为另外一个阿里云账户下的AccessKey, 那么用旧的AccessKey启动的虚拟机就无法从Fit2Cloud控制台关闭了。
+|     是可以更改的，只要更改为同一个账户下的AccessKey，那么就没什么问题。
+|     但是，如果更改为另外一个账户下的AccessKey, 那么用旧的AccessKey启动的虚拟机就无法从Fit2Cloud控制台关闭了。
 |     这个需要注意。
 |
 |

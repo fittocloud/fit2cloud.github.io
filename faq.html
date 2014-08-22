@@ -93,6 +93,7 @@
 <div class="line"><strong>Q: Fit2Cloud能用来做什么?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
+<div class="line-block">
 <div class="line">通过使用Fit2Cloud可以实现全栈自动化，即应用环境创建和管理、应用部署升级和运维管理的自动化：</div>
 <div class="line">1) 减少不必要重复且易于出错的手工部署配置升级维护劳动</div>
 <div class="line">2) 提升研发及运维效率和应用服务质量，并降低开发及运维运营成本。</div>
@@ -123,6 +124,23 @@
 <div class="line">场景1: 从Web控制台登录虚拟机</div>
 <div class="line">场景2: 从Web控制台同时在多个虚拟机执行脚本</div>
 <div class="line">场景3: 查看应用集群虚拟机监控及告警</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Fit2Cloud特别适合需要频繁升级发布，快速迭代的组织，非常适合管理大规模分布式的平台和应用，</div>
+</div>
+<div class="line">从组织层面非常适合</div>
+<div class="line-block">
+<div class="line">1) 提供大规模平台服务，企业应用的系统集成商, 代维护运营商</div>
+<div class="line">2) 需要快速发布的移动互联网公司</div>
+<div class="line">3) 开发和运营大规模平台及应用的组织</div>
+<div class="line">4) 对成本敏感，需要减少运维人力成本的组织</div>
+</div>
+<div class="line">从最终用户层面，适合于</div>
+<div class="line-block">
+<div class="line">1) 开发大规模分布式系统，需要快速方便自动化搭建升级集成测试环境的开发人员，测试人员</div>
+<div class="line">2) 日常开发测试使用AWS,阿里云的开发人员, 测试人员</div>
+<div class="line">3) 维护运行在AWS,阿里云的系统的维护人员</div>
+<div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -176,32 +194,32 @@
 <div class="line"><strong>Q: Fit2Cloud与AWS的Opsworks有什么区别？</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">1.OpsWorks与Chef绑定紧密：OpsWorks与Chef绑定,这导致只能用Chef;而Fit2Cloud的EventHandler可以用任何</div>
+<div class="line">1) OpsWorks与Chef绑定紧密：OpsWorks与Chef绑定,这导致只能用Chef;而Fit2Cloud的EventHandler可以用任何</div>
 <div class="line-block">
 <div class="line">脚本语言实现，不仅可以使用Shell, python, Ruby, 还可以在脚本中可以调用Chef/Puppet。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line">2.OpsWorks不支持On-Premise部署和定制化修改：对于大型企业来说，会有自己的特定需求，On-premise部署和可定</div>
+<div class="line">2) OpsWorks不支持On-Premise部署和定制化修改：对于大型企业来说，会有自己的特定需求，On-premise部署和可定</div>
 <div class="line-block">
 <div class="line">制性非常重要。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line">3.OpsWorks不支持其他公有云：OpsWorks只支持AWS,不支持其他的IaaS, 不支持混合云, Fit2Cloud将来可以支持其</div>
+<div class="line">3) OpsWorks不支持其他公有云：OpsWorks只支持AWS,不支持其他的IaaS, 不支持混合云, Fit2Cloud将来可以支持其</div>
 <div class="line-block">
 <div class="line">他的IaaS。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line">4.OpsWorks暂时不支持BeijingRegion：AWS北京区域不提供OpsWorks 服务。而Fit2Cloud会抽象掉Beijing</div>
+<div class="line">4) OpsWorks暂时不支持BeijingRegion：AWS北京区域不提供OpsWorks 服务。而Fit2Cloud会抽象掉Beijing</div>
 <div class="line-block">
 <div class="line">Region和其他Global regions之间的差异。用户可以在Cluster中使用所有Region的资源。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line">5.OpsWorks单个Stack的资源局限在一个Region内：受限于底层实现(CloudWatch＆ AutoScaling Group)，</div>
+<div class="line">5) OpsWorks单个Stack的资源局限在一个Region内：受限于底层实现(CloudWatch＆ AutoScaling Group)，</div>
 <div class="line-block">
 <div class="line">OpsWorks一个Stack内的所有资源都是位于一个Region之内。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line">6.OpsWorks不能处理不同VM之间的事件(Orchestration)：举例而言,当启动一台新的mysql后， 我们想自动把mysql</div>
+<div class="line">6) OpsWorks不能处理不同VM之间的事件(Orchestration)：举例而言,当启动一台新的mysql后， 我们想自动把mysql</div>
 <div class="line-block">
 <div class="line">的地址配置到Webapp的配置文件中，在OpsWorks中，按照例子，需要先手动启动mysql, 然后等mysql启动后，人用肉</div>
 <div class="line">眼获得MySQL的IP, 然后手动配置到chef的Cookebook里，从VM的启动到自动的配置，这之间需要人手工干预，无法实</div>
@@ -235,7 +253,7 @@
 <div class="line"><br /></div>
 <div class="line"><a class="reference external" href="http://aws.fit2cloud.com/">Fit2Cloud For AWS (aws.fit2cloud.com)</a></div>
 <div class="line"><br /></div>
-<div class="line">入门文档请移步`此处 &lt;<a class="reference external" href="http://docs.fit2cloud.com/get_started.html/">http://docs.fit2cloud.com/get_started.html/</a>&gt;`_</div>
+<div class="line">入门文档请移步 <a class="reference external" href="http://docs.fit2cloud.com/get_started.html/">此处</a></div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: 登陆Fit2Cloud需要注册用户吗? 可以使用微博或常见的社交帐号登陆Fit2Cloud吗?</strong></div>
@@ -257,7 +275,7 @@
 <div class="line">当您要求Fit2Cloud创建应用运行所需的环境即虚拟机及存储时, 需要调用AWS的API。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line"><strong>Q: 为什么Fit2Cloud创建的虚拟机是按量付费的？</strong></div>
+<div class="line"><strong>Q: 为什么Fit2Cloud For 阿里云创建的虚拟机是按量付费的？</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">如果使用阿里云运行应用的话，Fit2Cloud是通过调用阿里云的ECS API创建虚机的，通过ECS API创建的虚机都是按量</div>
@@ -287,7 +305,7 @@
 <div class="line-block">
 <div class="line">把集群中相同类型的一组虚拟机叫做一个虚拟机组, 一个虚拟机组定义了虚拟组里虚拟机:</div>
 <div class="line">1) 数量</div>
-<div class="line">2) 在哪个数据中心启动 (北京 | 杭州 | 香港 | 青岛)</div>
+<div class="line">2) 在哪个数据中心启动 (如阿里云的北京,杭州,香港,青岛数据中心)</div>
 <div class="line">3) 硬件配置         (xsmall | ...)</div>
 <div class="line">4) 安装的操作系统版本 (Ubuntu1204 | CentOS5.8 | CentOS6.5)</div>
 <div class="line">5) 运行时环境安装配置脚本</div>
@@ -367,37 +385,37 @@
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>三: 安全性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h2>三: 安全性<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Q: Fit2Cloud的登陆用户名密码是否安全?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">安全，Fit2Cloud登陆使用Github帐号，所以您的用户名密码都是是保存在Github中的,足够安全。</div>
+<div class="line">是安全的，Fit2Cloud登陆使用Github帐号，所以您的用户名密码都是是保存在Github中的,足够安全。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: Fit2Cloud的传输过程安全吗?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">安全，Fit2Cloud中的数据传输均采用SSL/HTTPS。</div>
+<div class="line">是安全的，Fit2Cloud中的数据传输均采用SSL/HTTPS。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: Fit2Cloud提供的Rest API安全吗?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">安全，Fit2Cloud REST API基于OAuth协议, 是安全的。</div>
+<div class="line">是安全的，Fit2Cloud REST API基于OAuth协议, 是安全的。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: Fit2Cloud存储的数据安全吗?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">安全，Fit2Cloud对于关键的数据在存储过程中进行了加密，是安全的。</div>
+<div class="line">是安全的，Fit2Cloud对于关键的数据在存储过程中进行了加密，是安全的。</div>
 <div class="line"><br /></div>
 </div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>四: 价格及计费<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h2>四: 价格及计费<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Q: Fit2Cloud是如何收费的吗?</strong></div>
 <div class="line"><br /></div>
@@ -410,7 +428,7 @@
 <div class="line-block">
 <div class="line">Fit2Cloud也提供企业版服务，可以专门为企业在企业内部或者指定的数据中心安装一套</div>
 </div>
-<div class="line">Fit2Cloud服务，并负责安装运维和支持服务，如有需要请联系support&#64;fit2cloud.com详谈。</div>
+<div class="line">Fit2Cloud服务，并负责安装运维和支持服务，如有需要请联系support&#64;fit2cloud.com。</div>
 <div class="line"><br /></div>
 <div class="line"><strong>Q: Fit2Cloud是否提供技术支持服务套餐以便能够保证支持的及时性，如果有如何收费?</strong></div>
 <div class="line"><br /></div>
@@ -418,10 +436,15 @@
 <div class="line">Fit2Cloud也有多种技术支持服务套餐，如有需要请联系support&#64;fit2cloud.com。</div>
 <div class="line"><br /></div>
 </div>
+<div class="line"><strong>Q: Fit2Cloud是否提供全栈自动化实施服务，即针对客户具体系统，实现应用自动化部署升级运维?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">提供，如有需要请联系support&#64;fit2cloud.com。</div>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>五: 使用过程常见问题<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id6">
+<h2>五: 使用过程常见问题<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Q: 执行脚本的超时时间是多少?</strong></div>
 <div class="line"><br /></div>
@@ -443,11 +466,11 @@
 <div class="line">一台虚拟机后，Fit2Cloud会把虚拟机组的虚拟机数量减1</div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">情况二: 没有绑定阿里云Access Key</div>
+<div class="line">情况二: 没有绑定阿里云或AWS的Access Key</div>
 <div class="line"><br /></div>
 <div class="line">情况三: 阿里云Access Key的帐户余额小于100</div>
 <div class="line"><br /></div>
-<div class="line">情况四: 超过阿里云帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。</div>
+<div class="line">情况四: 超过阿里云或AWS帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: 登陆虚拟机时显示没有安全插件?</strong></div>
@@ -465,10 +488,10 @@
 <div class="line"><strong>Q: 为什么虚拟机启动失败?怎么知道失败原因?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">Fit2Cloud每个集群及虚拟机的操作下拉列表中都有一个&#8221;查询工作选项&#8221;, 通过这个功能可以查看</div>
+<div class="line">Fit2Cloud每个集群的虚拟机列表页面中都有一个&#8221;状态&#8221;列, 如果失败，这列会显示失败和一个问号图标，</div>
 </div>
-<div class="line">到调用阿里云API启动虚拟机的日志和返回结果，从而知道启动失败的原因，比如选定的数据中心不支持</div>
-<div class="line">指定的虚拟机配置类型，或者帐户余额不足，或者超出帐户允许的最大虚拟机数量，默认是10个。</div>
+<div class="line">将鼠标移到问号图标上就能看到启动失败的原因，比如选定的数据中心不支持指定的虚拟机配置类型，没有可用</div>
+<div class="line">的类型的虚拟机，或者帐户余额不足，或者超出帐户允许的最大虚拟机数量。</div>
 <div class="line"><br /></div>
 <div class="line"><strong>Q: 启动一台虚拟机大概得等多长时间?</strong></div>
 <div class="line"><br /></div>
@@ -518,11 +541,11 @@
 </div>
 </div>
 </div>
-<div class="line"><strong>Q: 如果已经绑定了阿里云的AccessKey, 并且已经用这个Key启动了多台虚拟机，多个虚拟机正在运行，这时能否更改AccessKey?</strong></div>
+<div class="line"><strong>Q: 如果已经绑定了阿里云或AWS的AccessKey, 并且已经用这个Key启动了多台虚拟机，多个虚拟机正在运行，这时能否更改AccessKey?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">是可以更改的，只要更改为同一个阿里云账户下的AccessKey，那么就没什么问题。</div>
-<div class="line">但是，如果更改为另外一个阿里云账户下的AccessKey, 那么用旧的AccessKey启动的虚拟机就无法从Fit2Cloud控制台关闭了。</div>
+<div class="line">是可以更改的，只要更改为同一个账户下的AccessKey，那么就没什么问题。</div>
+<div class="line">但是，如果更改为另外一个账户下的AccessKey, 那么用旧的AccessKey启动的虚拟机就无法从Fit2Cloud控制台关闭了。</div>
 <div class="line">这个需要注意。</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
@@ -543,9 +566,9 @@
 <li><a class="reference internal" href="#">FAQ</a><ul>
 <li><a class="reference internal" href="#id1">一: 一般问题</a></li>
 <li><a class="reference internal" href="#id2">二: 开始使用</a></li>
-<li><a class="reference internal" href="#id3">三: 安全性</a></li>
-<li><a class="reference internal" href="#id4">四: 价格及计费</a></li>
-<li><a class="reference internal" href="#id5">五: 使用过程常见问题</a></li>
+<li><a class="reference internal" href="#id4">三: 安全性</a></li>
+<li><a class="reference internal" href="#id5">四: 价格及计费</a></li>
+<li><a class="reference internal" href="#id6">五: 使用过程常见问题</a></li>
 </ul>
 </li>
 </ul>
