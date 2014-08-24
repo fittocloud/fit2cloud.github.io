@@ -13,6 +13,7 @@ FAQ
 | Beanstalk、Rightscale、Scalr等，但是在阿里云生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
 |
 |     同时，由于亚马逊AWS中国区目前不提供Opsworks, 可以说Fit2Cloud填补了亚马逊AWS中国服务中Opsworks的空白。
+|
 |     未来，Fit2Cloud将支持更多的公有云(如UCloud/青云)和私有云(如Openstack/Cloudstack), 打造中国版Rightscale。
 | Fit2Cloud将致力于解决跨平台云管理问题，让企业能够轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基
 | 础设施和应用提供了配置、监控、自动化和管理服务。
