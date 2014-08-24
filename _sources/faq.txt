@@ -8,10 +8,17 @@ FAQ
 |     Fit2Cloud是一个建立在IaaS之上的DevOps协作平台，帮助开发人员、测试人员以及运维人员实现应用全生命周期的
 | 自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自动伸缩等。Fit2Cloud打通了从代码到服务的
 | 转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运维的效率。
+|
 |     在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、 
 | Beanstalk、Rightscale、Scalr等，但是在阿里云生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
+|
 |     同时，由于亚马逊AWS中国区目前不提供Opsworks, 可以说Fit2Cloud填补了亚马逊AWS中国服务中Opsworks的空白。
-
+|     未来，Fit2Cloud将支持更多的公有云(如UCloud/青云)和私有云(如Openstack/Cloudstack), 打造中国版Rightscale。
+| Fit2Cloud将致力于解决跨平台云管理问题，让企业能够轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基
+| 础设施和应用提供了配置、监控、自动化和管理服务。
+|
+|     `Fit2Cloud详细介绍PPT <http://wenku.baidu.com/view/5c5b895ade80d4d8d15a4f66.html>`_
+|
 | **Q: Fit2Cloud能用来做什么?**
 |
 |     通过使用Fit2Cloud可以实现全栈自动化，即应用环境创建和管理、应用部署升级和运维管理的自动化：
