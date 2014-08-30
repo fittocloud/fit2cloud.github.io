@@ -1,7 +1,7 @@
 设置数据盘(RAID)
 ===========================
 
-这里我们仍然以在阿里云上建立一个wordpress网站为例, 为wordpress mysql分别配置一块大小为100G的普通数据盘，
+这里我们仍然以在阿里云上建立一个wordpress网站为例，为wordpress mysql分别配置一块大小为100G的普通数据盘，
 Raid0，Raid1，Raid10数据盘。
 
 
