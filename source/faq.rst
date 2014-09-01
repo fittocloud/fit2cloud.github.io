@@ -157,7 +157,7 @@ FAQ
 | **Q: Fit2Cloud支持EC2-Classic吗？**
 |
 |      不支持。Fit2Cloud目前只支持EC2-VPC Platform, 且Fit2Cloud启动的虚机都在Default VPC 和Default subnet中，
-|      用户如果删除DefaultVPC, 那么将会无法启动徐机。
+|      用户如果删除DefaultVPC, 那么将会无法启动虚拟机。
 |
 | **Q: 什么是集群？**
 |
