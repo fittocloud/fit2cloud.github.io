@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Fit2Cloud帮助用户更好地使用IaaS &mdash; Fit2Cloud用户指南 | 云管理及DevOps协作平台</title>
+    
+    <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="_static/cloud.js"></script>
+    <link rel="top" title="Fit2Cloud用户指南 | 云管理及DevOps协作平台" href="index.html" />
+    <link rel="next" title="Fit2Cloud快速入门: 十分钟部署Wordpress应用" href="get_started.html" />
+    <link rel="prev" title="Fit2Cloud介绍" href="introduction.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="description"
+content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员和运维人员实现对应用全生命周期的自动化管理。">
+        <meta http-equiv="keywords" content="云应用, DevOps, 应用生命周期管理, 云管理平台,
+全栈自动化，AWS，阿里云,全栈自动化" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  </head>
+  <body>
+    <div class="relbar-top">
+        
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="get_started.html" title="Fit2Cloud快速入门: 十分钟部署Wordpress应用"
+             accesskey="N">下一页</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="introduction.html" title="Fit2Cloud介绍"
+             accesskey="P">上一页</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="fit2cloudiaas">
+<h1>Fit2Cloud帮助用户更好地使用IaaS<a class="headerlink" href="#fit2cloudiaas" title="永久链接至标题">¶</a></h1>
+<div class="line-block">
+<div class="line-block">
+<div class="line">CMMI即软件能力成熟度集成模型，是国际上衡量软件企业工程开发能力的一个重要标准。CMMI分为5级，分别为初始级、可管理级、</div>
+</div>
+<div class="line">已定义级、量化管理级和优化管理级。在过去几年里，随着云计算的兴起，越来越多的企业已经开始使用IaaS，但是这些用户对IaaS的</div>
+<div class="line">使用成熟度差别很大。在这里，我们也对照CMMI成熟度模型把IaaS云服务使用成熟度分为5级：</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><strong>第一级：只是通过IaaS快速创建资源(provision resources);</strong></div>
+<div class="line"><strong>第二级：实现服务器自动化(Server Automation);</strong></div>
+<div class="line"><strong>第三级：实现混合云的统一管理(Multi-Cloud);</strong></div>
+<div class="line"><strong>第四级：实现应用自动化(Application Automation);</strong></div>
+<div class="line"><strong>第五级：实现持续交付(Continuous Devlivery);</strong></div>
+</div>
+</div>
+<img alt="_images/080-improve-maturity.jpg" src="_images/080-improve-maturity.jpg" />
+<div class="line-block">
+<div class="line-block">
+<div class="line">目前，大多数的用户，使用IaaS服务，基本上只是使用IaaS快速地创建资源，即虚拟机，存储等， 使用IaaS云服务的成熟度为第</div>
+</div>
+<div class="line">一级，成熟度的提升上有很大的空间, 一些用户使用Chef, puppet实现了服务器搭建配置的自动化。 通过使用Fit2Cloud, 能够帮助</div>
+<div class="line">用户更好地使用IaaS，提升云使用成熟度, 从而更好地让IaaS为企业的业务服务，提升研发和运维的效率，同时按需使用以节约成本。</div>
+</div>
+<div class="section" id="fit2cloud-provision-resources">
+<h2>第一级: 基于Fit2Cloud，快速地创建资源(Provision Resources)<a class="headerlink" href="#fit2cloud-provision-resources" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">当做开发测试和运行应用服务时，都需要创建环境, 即获取主机，安装操作系统，配置存储和网络。通过Fit2Cloud， 用户可以快速地</div>
+</div>
+<div class="line">在IaaS里创建出需要的虚拟机。 对于创建虚拟机，如果应用集群比较简单，集群内虚拟机数量和类型较少时，手工通过IaaS的Web控制台是</div>
+<div class="line">可以接受的，但是一旦虚拟机类型和数量很多时，就要通过API的方式自动创建了，这方面典型的工具比如AWS的CloudFormation, 使用</div>
+<div class="line">Fit2Cloud, 用户可以事先定义好集群的虚拟机创建计划，然后Fit2Cloud就会根据计划自动快速创建出需要的大量各种不同类型的虚拟机。</div>
+<div class="line">除了快速创建资源外，Fit2Cloud还将这些虚拟机以集群和虚拟机组的单位进行了归类，从而管理上也比IaaS的Web控制台方便许多, 不像在</div>
+<div class="line">IaaS的Web控制台中，当虚拟机数量很多时，需要人手工根据标签来查找虚拟机。</div>
+</div>
+</div>
+<div class="section" id="fit2cloud-server-automation">
+<h2>第二级: 基于Fit2Cloud，实现服务器自动化(Server Automation)<a class="headerlink" href="#fit2cloud-server-automation" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">当创建完环境后，即获得了应用运行需要的虚拟机, 存储，网络后，需要在各个虚拟机上安装应用运行时需要的软件包和库，即运行时环境，</div>
+</div>
+<div class="line">通过Fit2Cloud, 用户可以设定虚拟机启动后要运行的软件包安装脚本， 当虚拟机启动后， Fit2Cloud就会指定的脚本安装应用运行时需要</div>
+<div class="line">的软件包库等, 从而实现服务器搭建配置的自动化。 当服务器的应用运行时环境需要更改时，如打补丁时，可以使用Fit2Cloud的执行脚本功</div>
+<div class="line">能，在指定的多个虚拟机上执行，进行运行时环境的配置更改。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="fit2cloud-multi-cloud">
+<h2>第三级: 基于Fit2Cloud，实现混合云的统一管理(Multi-Cloud)<a class="headerlink" href="#fit2cloud-multi-cloud" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">对于很多企业用户而言，基于当前的限制和某些方面的长远考虑，如</div>
+<div class="line-block">
+<div class="line">* 当前内部资源不可用，暂时使用公有云</div>
+<div class="line">* 不想将应用服务锁定在某一个特定的公有云中</div>
+<div class="line">* 减少服务可用性风险</div>
+<div class="line">* 基于备份，安全方面考虑</div>
+<div class="line">* 使用现成的云服务备份数据</div>
+</div>
+<div class="line">基于以上考虑，用户往往会将应用, 数据部署在多个不同的公有云或私有云中，比如AWS中一套， 阿里云一套，当故障发生时，</div>
+</div>
+<div class="line">可以进行方便快速地切换和恢复。通过使用Fit2Cloud, 用户可以通过统一的用户接口，概念，将应用部署到不同的公有云和私有云</div>
+<div class="line">中并管理。</div>
+</div>
+</div>
+<div class="section" id="fit2cloud-application-automation">
+<h2>第四级: 基于Fit2Cloud，实现应用自动化(Application Automation)<a class="headerlink" href="#fit2cloud-application-automation" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">当我们做开发测试和运维时, 都少不了部署升级, 扩容和新建应用服务， 通过Fit2Cloud, 我们可以定义一个应用的环境模板，即集群，</div>
+</div>
+<div class="line">及集群里的虚拟机组，然后设置各虚拟机组的组件自动部署脚本，这样每次启动集群时，启动虚拟机的时候，可以将各个组件自动部署到虚拟机上，</div>
+<div class="line">而不是每次手动登陆或者手动运行脚本来部署。 当需要扩容增加某种类型的虚拟机服务器时，只需要修改虚拟机组的最小虚拟机数目，Fit2Cloud</div>
+<div class="line">就会自动启动指定类型的虚拟机，并在虚拟机启动后，自动安装配置启动组件。当需要建立新的应用服务器，直接从应用的环境模板启动即可。</div>
+</div>
+</div>
+<div class="section" id="fit2cloud-continuous-devlivery">
+<h2>第五级: 基于Fit2Cloud，实现持续交付(Continuous Devlivery)<a class="headerlink" href="#fit2cloud-continuous-devlivery" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">持续交付是很多研发组织的目标，Fit2Cloud提供了REST集成接口及SDK，可以方便地与团队的配置管理和持续集成服务器(如Jenkins)集成，</div>
+</div>
+<div class="line">通过实现对DTAP各个环境持续部署升级, 与自动化测试集成，帮助团队实现持续交付。</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
+    <h3><a href="index.html">内容</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Fit2Cloud帮助用户更好地使用IaaS</a><ul>
+<li><a class="reference internal" href="#fit2cloud-provision-resources">第一级: 基于Fit2Cloud，快速地创建资源(Provision Resources)</a></li>
+<li><a class="reference internal" href="#fit2cloud-server-automation">第二级: 基于Fit2Cloud，实现服务器自动化(Server Automation)</a></li>
+<li><a class="reference internal" href="#fit2cloud-multi-cloud">第三级: 基于Fit2Cloud，实现混合云的统一管理(Multi-Cloud)</a></li>
+<li><a class="reference internal" href="#fit2cloud-application-automation">第四级: 基于Fit2Cloud，实现应用自动化(Application Automation)</a></li>
+<li><a class="reference internal" href="#fit2cloud-continuous-devlivery">第五级: 基于Fit2Cloud，实现持续交付(Continuous Devlivery)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class="sphinxprev">
+    <h4>上一页</h4>
+    <p class="topless"><a href="introduction.html"
+                          title="上一页">&larr; Fit2Cloud介绍</a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>下一页</h4>
+    <p class="topless"><a href="get_started.html"
+                          title="下一页">&rarr; Fit2Cloud快速入门: 十分钟部署Wordpress应用</a></p>
+  </div>
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/improvematuriy.txt"
+           rel="nofollow">显示源代码</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>快速搜索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    输入相关的术语，模块，类或者函数名称进行搜索
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="get_started.html" title="Fit2Cloud快速入门: 十分钟部署Wordpress应用"
+             >下一页</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="introduction.html" title="Fit2Cloud介绍"
+             >上一页</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer">
+        &copy; 版权所有 2014, Fit2Cloud.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>
