@@ -60,7 +60,7 @@ Fit2Cloud: 帮助用户更好地使用IaaS
 | 会自动启动指定类型的虚拟机，并在虚拟机启动后，自动安装配置启动组件。当需要建立新的应用服务器，直
 | 接从应用的环境模板启动即可。
 
-                                 .. image:: _static/080-Improvemautiry-ApplicationAutomation.png
+.. image:: _static/080-Improvemautiry-ApplicationAutomation.png
 
 第五级: 实现持续交付(Continuous Delivery)
 --------------------------------------------------------------------------
@@ -68,4 +68,6 @@ Fit2Cloud: 帮助用户更好地使用IaaS
 | 持续集成服务器(如Jenkins)集成，通过实现对DTAP各个环境持续部署升级, 与自动化测试集成，帮助团队实现
 | 部署流水线和持续交付。
 
-                                 .. image:: _static/080-ImproveMaturity-DTAP.png
+.. image:: _static/080-ImproveMaturity-DTAP.png
+
+.. image:: _static/080-ImproveMaturity-ContinuousDelivery.png
