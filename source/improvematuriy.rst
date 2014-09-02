@@ -60,7 +60,7 @@ Fit2Cloud: 帮助用户更好地使用IaaS
 | 接从应用的环境模板启动即可。
 | To Do: Add full stack automation pic
 
-第五级: 实现持续交付(Continuous Devlivery)
+第五级: 实现持续交付(Continuous Delivery)
 --------------------------------------------------------------------------
 |     持续交付是很多研发组织的目标，Fit2Cloud提供了REST集成接口及SDK，可以方便地与团队的配置管理和
 | 持续集成服务器(如Jenkins)集成，通过实现对DTAP各个环境持续部署升级, 与自动化测试集成，帮助团队实现
