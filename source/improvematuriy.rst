@@ -10,7 +10,7 @@ Fit2Cloud: 帮助用户更好地使用IaaS
 |     **第二级：实现服务器自动化(Server Automation);**
 |     **第三级：实现混合云的统一管理(Multi-Cloud);**
 |     **第四级：实现应用自动化(Application Automation);**
-|     **第五级：实现持续交付(Continuous Devlivery);**
+|     **第五级：实现持续交付(Continuous Delivery);**
 
 .. image:: _static/080-improve-maturity.jpg
 
