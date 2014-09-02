@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -386,7 +386,7 @@ cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-confi
 sed -i &quot;s/database_name_here/wordpress/g&quot; /var/www/html/wordpress/wp-config.php
 sed -i &quot;s/username_here/root/g&quot; /var/www/html/wordpress/wp-config.php
 sed -i &quot;s/password_here/fit2cloud/g&quot; /var/www/html/wordpress/wp-config.php
-sed -i &quot;s/fonts.googleapis.com/fonts.useso.com/g&quot; `grep fonts.googleapis.com -rl /var/www/html/wordpress`
+sed -i &quot;s/fonts.useso.com/fonts.useso.com/g&quot; `grep fonts.useso.com -rl /var/www/html/wordpress`
 
 service httpd restart
 
@@ -619,7 +619,7 @@ fi
 
     <div class="footer">
         &copy; 版权所有 2014, Fit2Cloud.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>
