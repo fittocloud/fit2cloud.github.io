@@ -59,11 +59,13 @@ Fit2Cloud: 帮助用户更好地使用IaaS
 | 来部署。 当需要扩容增加某种类型的虚拟机服务器时，只需要修改虚拟机组的最小虚拟机数目，Fit2Cloud就
 | 会自动启动指定类型的虚拟机，并在虚拟机启动后，自动安装配置启动组件。当需要建立新的应用服务器，直
 | 接从应用的环境模板启动即可。
-| To Do: Add full stack automation pic
+
+                                 .. image:: _static/080-Improvemautiry-ApplicationAutomation.png
 
 第五级: 实现持续交付(Continuous Delivery)
 --------------------------------------------------------------------------
 |     持续交付是很多研发组织的目标，Fit2Cloud提供了REST集成接口及SDK，可以方便地与团队的配置管理和
 | 持续集成服务器(如Jenkins)集成，通过实现对DTAP各个环境持续部署升级, 与自动化测试集成，帮助团队实现
-| 持续交付。
-| To Do: Add DTAP Pic
+| 部署流水线和持续交付。
+
+                                 .. image:: _static/080-ImproveMaturity-DTAP.png
