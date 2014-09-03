@@ -12,7 +12,7 @@ Fit2Cloud: 帮助用户更好地使用IaaS
 |     **第四级：实现应用自动化(Application Automation);**
 |     **第五级：实现持续交付(Continuous Delivery);**
 
-.. image:: _static/080-improve-maturity.jpg
+.. image:: _static/080-improve-maturity.png
 
 |	 目前，大多数的用户，使用IaaS服务，基本上只是使用IaaS快速地创建资源，即虚拟机，存储等， 使用
 | IaaS云服务的成熟度为第一级，还有一些用户使用Chef, puppet实现了服务器自动化(Server Automation)，
