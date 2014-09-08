@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Fit2Cloud快速入门: 十分钟部署Wordpress应用 &mdash; Fit2Cloud用户指南 | 云管理及DevOps协作平台</title>
+    <title>Fit2Cloud快速入门: 十分钟部署Wordpress应用 &mdash; Fit2Cloud For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="Fit2Cloud用户指南 | 云管理及DevOps协作平台" href="index.html" />
+    <link rel="top" title="Fit2Cloud For 阿里云 1.0 文档" href="index.html" />
     <link rel="next" title="Fit2Cloud概念及术语" href="concepts.html" />
     <link rel="prev" title="Fit2Cloud: 帮助用户更好地使用IaaS" href="improvematuriy.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +54,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
         <li class="right" >
           <a href="improvematuriy.html" title="Fit2Cloud: 帮助用户更好地使用IaaS"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">Fit2Cloud For 阿里云 1.0 文档</a> &raquo;</li>
  
       </ul>
     </div>
@@ -386,7 +386,7 @@ cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-confi
 sed -i &quot;s/database_name_here/wordpress/g&quot; /var/www/html/wordpress/wp-config.php
 sed -i &quot;s/username_here/root/g&quot; /var/www/html/wordpress/wp-config.php
 sed -i &quot;s/password_here/fit2cloud/g&quot; /var/www/html/wordpress/wp-config.php
-sed -i &quot;s/fonts.useso.com/fonts.useso.com/g&quot; `grep fonts.useso.com -rl /var/www/html/wordpress`
+sed -i &quot;s/fonts.googleapis.com/fonts.useso.com/g&quot; `grep fonts.googleapis.com -rl /var/www/html/wordpress`
 
 service httpd restart
 
@@ -535,7 +535,7 @@ fi
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
-    <h3><a href="index.html">内容</a></h3>
+    <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Fit2Cloud快速入门: 十分钟部署Wordpress应用</a><ul>
 <li><a class="reference internal" href="#fit2cloud-for-aws">登录Fit2Cloud For 阿里云|AWS</a></li>
@@ -566,14 +566,14 @@ fi
 
   </div>
   <div class="sphinxprev">
-    <h4>上一页</h4>
+    <h4>Previous page</h4>
     <p class="topless"><a href="improvematuriy.html"
-                          title="上一页">&larr; Fit2Cloud: 帮助用户更好地使用IaaS</a></p>
+                          title="Previous page">&larr; Fit2Cloud: 帮助用户更好地使用IaaS</a></p>
   </div>
   <div class="sphinxnext">
-    <h4>下一页</h4>
+    <h4>Next page</h4>
     <p class="topless"><a href="concepts.html"
-                          title="下一页">&rarr; Fit2Cloud概念及术语</a></p>
+                          title="Next page">&rarr; Fit2Cloud概念及术语</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
@@ -611,7 +611,7 @@ fi
         <li class="right" >
           <a href="improvematuriy.html" title="Fit2Cloud: 帮助用户更好地使用IaaS"
              >上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">Fit2Cloud For 阿里云 1.0 文档</a> &raquo;</li>
  
       </ul>
     </div>
@@ -619,7 +619,7 @@ fi
 
     <div class="footer">
         &copy; 版权所有 2014, Fit2Cloud.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

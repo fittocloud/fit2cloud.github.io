@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>FAQ &mdash; Fit2Cloud用户指南 | 云管理及DevOps协作平台</title>
+    <title>FAQ &mdash; Fit2Cloud For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="Fit2Cloud用户指南 | 云管理及DevOps协作平台" href="index.html" />
+    <link rel="top" title="Fit2Cloud For 阿里云 1.0 文档" href="index.html" />
     <link rel="next" title="Fit2Cloud功能截屏" href="screenshots.html" />
     <link rel="prev" title="实现持续部署升级" href="imp_continuous_deployment.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +54,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
         <li class="right" >
           <a href="imp_continuous_deployment.html" title="实现持续部署升级"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">Fit2Cloud For 阿里云 1.0 文档</a> &raquo;</li>
  
       </ul>
     </div>
@@ -74,10 +74,11 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line"><strong>Q: 什么是Fit2Cloud?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">Fit2Cloud是一个建立在IaaS之上的云管理及DevOps协作平台，帮助开发人员、测试人员以及运维人员实现应用全生命周期的</div>
+<div class="line">Fit2Cloud是一个建立在IaaS之上的云管理及DevOps协作平台，云应用生命周期管理平台，它能够帮助开发人员、</div>
 </div>
-<div class="line">自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自动伸缩等。Fit2Cloud打通了从代码到服务的</div>
-<div class="line">转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运维的效率。</div>
+<div class="line">测试人员以及运维人员实现应用全生命周期的自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自</div>
+<div class="line">动伸缩等。Fit2Cloud打通了从代码到服务的转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运</div>
+<div class="line">维的效率。</div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、</div>
@@ -100,9 +101,12 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">通过使用Fit2Cloud可以实现全栈自动化，即应用环境创建和管理、应用部署升级和运维管理的自动化：</div>
-<div class="line">1) 减少不必要重复且易于出错的手工部署配置升级维护劳动</div>
-<div class="line">2) 提升研发及运维效率和应用服务质量，并降低开发及运维运营成本。</div>
+<div class="line">1) 提升IaaS使用成熟度，使得IaaS更好地为企业服务，支持敏捷开发过程，快速开发迭代持续交付的过程</div>
+<div class="line">2) 提升研发及运维效率和应用服务质量，并降低开发及运维运营成本, 减少不必要重复且易于出错的手工部署配置升级维</div>
+</div>
+<div class="line">护劳动。</div>
 <div class="line"><br /></div>
+<div class="line-block">
 <div class="line">Fit2Cloud的常见使用场景有:</div>
 <div class="line"><br /></div>
 <div class="line">1) 开发测试运维支持过程中的自动化部署升级场景:</div>
@@ -122,6 +126,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">场景3: 自动升级应用</div>
 <div class="line">场景4: 查看应用集群虚拟机监控及告警</div>
 <div class="line">场景5: 自动备份恢复</div>
+<div class="line">场景6: 配置应用运行时环境</div>
 <div class="line"><br /></div>
 </div>
 <div class="line">3) 开发测试运维支持过程中日常工具场景:</div>
@@ -135,7 +140,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line"><strong>Q: Fit2Cloud对谁有用?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">使用阿里云,AWS等IaaS服务开发和管理业务应用系统的企业研发及运维组织，以及组织内的开发人员,</div>
+<div class="line">使用阿里云,AWS, 青云等IaaS服务开发和管理业务应用系统的企业研发及运维组织，以及组织内的开发人员,</div>
 </div>
 <div class="line">测试人员, 运维人员。</div>
 <div class="line"><br /></div>
@@ -150,11 +155,11 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">4) 对成本敏感，需要减少运维人力成本的组织</div>
 <div class="line"><br /></div>
 </div>
-<div class="line"><strong>从最终用户层面，适合</strong></div>
+<div class="line"><strong>从最终用户层面适合</strong></div>
 <div class="line-block">
 <div class="line">1) 开发大规模分布式系统，需要快速方便自动化搭建升级集成测试环境的开发人员，测试人员</div>
-<div class="line">2) 日常开发测试使用AWS,阿里云的开发人员, 测试人员</div>
-<div class="line">3) 维护运行在AWS,阿里云的系统的维护人员</div>
+<div class="line">2) 日常开发测试使用AWS，阿里云的开发人员，测试人员</div>
+<div class="line">3) 维护运行在AWS，阿里云的系统的维护人员</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -182,7 +187,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line"><strong>Q: Fit2Cloud支持哪些公有云？</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">我们目前支持阿里云和AWS; 我们会在年内支持UCloud。在未来，我们会支持更多的公有云。</div>
+<div class="line">我们目前支持阿里云,AWS; 我们会在年内支持青云。在未来，我们会支持更多的公有云以及私有云。</div>
 <div class="line"><br /></div>
 </div>
 <div class="line"><strong>Q: Fit2Cloud支持私有云吗? 比如Cloudstack/Openstack?</strong></div>
@@ -216,7 +221,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">他的IaaS。</div>
 <div class="line"><br /></div>
 </div>
-<div class="line">4) OpsWorks暂时不支持BeijingRegion：AWS北京区域不提供OpsWorks 服务。而Fit2Cloud会抽象掉Beijing</div>
+<div class="line">4) OpsWorks暂时不支持Beijing Region：AWS北京区域不提供OpsWorks 服务。而Fit2Cloud会抽象掉Beijing</div>
 <div class="line-block">
 <div class="line">Region和其他Global regions之间的差异。用户可以在Cluster中使用所有Region的资源。</div>
 <div class="line"><br /></div>
@@ -260,6 +265,8 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line"><br /></div>
 <div class="line"><a class="reference external" href="http://aws.fit2cloud.com">Fit2Cloud For AWS (aws.fit2cloud.com)</a></div>
 <div class="line"><br /></div>
+<div class="line"><a class="reference external" href="http://qingcloud.fit2cloud.com">Fit2Cloud For 青云 (qingcloud.fit2cloud.com)</a></div>
+<div class="line"><br /></div>
 <div class="line">入门文档请移步 <a class="reference external" href="http://docs.fit2cloud.com/get_started.html">此处</a></div>
 <div class="line"><br /></div>
 </div>
@@ -270,34 +277,6 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 </div>
 <div class="line">目前只支持使用Github帐号登陆。</div>
 <div class="line"><br /></div>
-<div class="line"><strong>Q: 为什么使用Fit2Cloud要先绑定阿里云的Access Key？</strong></div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">当您要求Fit2Cloud创建应用运行所需的环境即虚拟机及存储时, 需要调用阿里云的API。</div>
-<div class="line"><br /></div>
-</div>
-<div class="line"><strong>Q: 为什么使用Fit2Cloud要先绑定AWS的Access Key？</strong></div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">当您要求Fit2Cloud创建应用运行所需的环境即虚拟机及存储时, 需要调用AWS的API。</div>
-<div class="line"><br /></div>
-</div>
-<div class="line"><strong>Q: 为什么Fit2Cloud For 阿里云创建的虚拟机是按量付费的？</strong></div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">如果使用阿里云运行应用的话，Fit2Cloud是通过调用阿里云的ECS API创建虚机的，通过ECS API创建的虚机都是按量</div>
-</div>
-<div class="line">付费类型的。如果您的虚机是临时使用的(从几分钟到几天)，比如用来搭建QA测试环境等，那么按量付费是非常合适的。如果您</div>
-<div class="line">是虚拟机需要长时间运行（1个月以上），那么按量付费的虚机会比包月的虚机贵不少。我们相信阿里云在不久的将来会大幅降低</div>
-<div class="line">按量付费的价格。另一方面，Fit2Cloud后续也会支持导入包年包月的虚拟机进行管理。</div>
-<div class="line"><br /></div>
-<div class="line"><strong>Q: Fit2Cloud支持EC2-Classic吗？</strong></div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">不支持。Fit2Cloud目前只支持EC2-VPC Platform, 且Fit2Cloud启动的虚机都在Default VPC 和Default subnet中，</div>
-<div class="line">用户如果删除DefaultVPC, 那么将会无法启动虚拟机。</div>
-<div class="line"><br /></div>
-</div>
 <div class="line"><strong>Q: 什么是集群？</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
@@ -469,24 +448,6 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">操作，您最好处理下，以便能在一定时间内看到结果，fit2cloud提供了一个控制脚本超时的工具叫f2ctimout,</div>
 <div class="line">您可以在脚本中直接调用, 如 f2ctimeout -t 3 sleep 100 (设置超时时间为3秒，超过3秒就停掉)</div>
 <div class="line"><br /></div>
-<div class="line"><strong>Q: 启动集群后，怎么一台虚拟机都没有起来?</strong></div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">情况一: 集群虚拟机组的虚拟机数量为0</div>
-<div class="line-block">
-<div class="line">请检查集群的虚拟机组的设置，虚拟机数是否大于0, 一般每次在集群的虚拟机列表页面中，关闭</div>
-</div>
-</div>
-<div class="line">一台虚拟机后，Fit2Cloud会把虚拟机组的虚拟机数量减1</div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">情况二: 没有绑定阿里云或AWS的Access Key</div>
-<div class="line"><br /></div>
-<div class="line">情况三: 阿里云Access Key的帐户余额小于100</div>
-<div class="line"><br /></div>
-<div class="line">情况四: 超过阿里云或AWS帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。</div>
-<div class="line"><br /></div>
-</div>
 <div class="line"><strong>Q: 登陆虚拟机时显示没有安全插件?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
@@ -555,6 +516,29 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="fit2cloud-for">
+<h2>六: Fit2Cloud For 阿里云 常见问题<a class="headerlink" href="#fit2cloud-for" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: 启动集群后，怎么一台虚拟机都没有起来?</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况一: 集群虚拟机组的虚拟机数量为0</div>
+<div class="line-block">
+<div class="line">请检查集群的虚拟机组的设置，虚拟机数是否大于0, 一般每次在集群的虚拟机列表页面中，关闭</div>
+</div>
+</div>
+<div class="line">一台虚拟机后，Fit2Cloud会把虚拟机组的虚拟机数量减1</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">情况二: 没有绑定阿里云或AWS的Access Key</div>
+<div class="line"><br /></div>
+<div class="line">情况三: 阿里云Access Key的帐户余额小于100</div>
+<div class="line"><br /></div>
+<div class="line">情况四: 超过阿里云或AWS帐号允许启动的虚拟机限额。阿里云默认帐户最多能启动10个虚拟机。</div>
+<div class="line"><br /></div>
+</div>
 <div class="line"><strong>Q: 如果已经绑定了阿里云或AWS的AccessKey, 并且已经用这个Key启动了多台虚拟机，多个虚拟机正在运行，这时能否更改AccessKey?</strong></div>
 <div class="line"><br /></div>
 <div class="line-block">
@@ -562,7 +546,49 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">但是，如果更改为另外一个账户下的AccessKey, 那么用旧的AccessKey启动的虚拟机就无法从Fit2Cloud控制台关闭了。</div>
 <div class="line">这个需要注意。</div>
 <div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 为什么Fit2Cloud For 阿里云 创建的虚拟机是按量付费的？</strong></div>
 <div class="line"><br /></div>
+<div class="line-block">
+<div class="line">如果使用阿里云运行应用的话，Fit2Cloud是通过调用阿里云的ECS API创建虚机的，通过ECS API创建的虚机都是按量</div>
+</div>
+<div class="line">付费类型的。如果您的虚机是临时使用的(从几分钟到几天)，比如用来搭建QA测试环境等，那么按量付费是非常合适的。如果您</div>
+<div class="line">是虚拟机需要长时间运行（1个月以上），那么按量付费的虚机会比包月的虚机贵不少。我们相信阿里云在不久的将来会大幅降低</div>
+<div class="line">按量付费的价格。另一方面，Fit2Cloud后续也会支持导入包年包月的虚拟机进行管理。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Q: 为什么使用Fit2Cloud要先绑定阿里云的Access Key？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">当您要求Fit2Cloud创建应用运行所需的环境即虚拟机及存储时, 需要调用阿里云的API。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="fit2cloud-for-aws">
+<h2>七: Fit2Cloud For 亚马逊AWS 常见问题<a class="headerlink" href="#fit2cloud-for-aws" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: Fit2Cloud支持EC2-Classic吗？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">不支持。Fit2Cloud目前只支持EC2-VPC Platform, 且Fit2Cloud启动的虚机都在Default VPC 和Default subnet中，</div>
+<div class="line">用户如果删除DefaultVPC, 那么将会无法启动虚拟机。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Q: 为什么使用Fit2Cloud要先绑定AWS的Access Key？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">当您要求Fit2Cloud创建应用运行所需的环境即虚拟机及存储时, 需要调用AWS的API。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>八: Fit2Cloud For 青云 常见问题<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: Fit2Cloud支持青云的虚拟私有网络吗？</strong></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">支持。Fit2Cloud不仅支持，而且可以简化对青云虚拟私有网络的使用。</div>
 <div class="line"><br /></div>
 </div>
 </div>
@@ -575,7 +601,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
-    <h3><a href="index.html">内容</a></h3>
+    <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">FAQ</a><ul>
 <li><a class="reference internal" href="#id1">一: 一般问题</a></li>
@@ -583,20 +609,23 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <li><a class="reference internal" href="#id4">三: 安全性</a></li>
 <li><a class="reference internal" href="#id5">四: 价格及计费</a></li>
 <li><a class="reference internal" href="#id6">五: 使用过程常见问题</a></li>
+<li><a class="reference internal" href="#fit2cloud-for">六: Fit2Cloud For 阿里云 常见问题</a></li>
+<li><a class="reference internal" href="#fit2cloud-for-aws">七: Fit2Cloud For 亚马逊AWS 常见问题</a></li>
+<li><a class="reference internal" href="#id7">八: Fit2Cloud For 青云 常见问题</a></li>
 </ul>
 </li>
 </ul>
 
   </div>
   <div class="sphinxprev">
-    <h4>上一页</h4>
+    <h4>Previous page</h4>
     <p class="topless"><a href="imp_continuous_deployment.html"
-                          title="上一页">&larr; 实现持续部署升级</a></p>
+                          title="Previous page">&larr; 实现持续部署升级</a></p>
   </div>
   <div class="sphinxnext">
-    <h4>下一页</h4>
+    <h4>Next page</h4>
     <p class="topless"><a href="screenshots.html"
-                          title="下一页">&rarr; Fit2Cloud功能截屏</a></p>
+                          title="Next page">&rarr; Fit2Cloud功能截屏</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
@@ -634,7 +663,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
         <li class="right" >
           <a href="imp_continuous_deployment.html" title="实现持续部署升级"
              >上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">Fit2Cloud For 阿里云 1.0 文档</a> &raquo;</li>
  
       </ul>
     </div>
@@ -642,7 +671,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 
     <div class="footer">
         &copy; 版权所有 2014, Fit2Cloud.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>
