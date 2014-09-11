@@ -21,6 +21,7 @@ FAQ
 | 自动化和管理服务。
 |
 |     `Fit2Cloud详细介绍PPT <http://wenku.baidu.com/view/5c5b895ade80d4d8d15a4f66.html>`_
+|     `Fit2Cloud介绍视频 <http://v.youku.com/v_show/id_XNzc3NjA1NjEy.html>`_
 |
 | **Q: Fit2Cloud能用来做什么?**
 |
