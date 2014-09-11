@@ -141,7 +141,7 @@ FAQ
 --------------------------------
 | **Q: 如何开始使用Fit2Cloud?如何登陆网站, 域名是?**
 |
-|    `Fit2Cloud <http://fit2cloud.com>`_
+|    `http://fit2cloud.com <http://fit2cloud.com>`_
 |
 |    入门文档请移步 `此处 <http://docs.fit2cloud.com/get_started.html>`_
 |
