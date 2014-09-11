@@ -15,9 +15,10 @@ FAQ
 |
 |     同时，由于亚马逊AWS中国区目前不提供Opsworks, 可以说Fit2Cloud填补了亚马逊AWS中国服务中Opsworks的空白。
 |
-|     未来，Fit2Cloud将支持更多的公有云(如UCloud/青云)和私有云(如Openstack/Cloudstack), 打造中国版Rightscale。
-| Fit2Cloud将致力于解决跨平台云管理问题，让企业能够轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基
-| 础设施和应用提供了配置、监控、自动化和管理服务。
+|     目前Fit2Cloud支持亚马逊AWS、阿里云和青云QingCloud。未来，Fit2Cloud将支持更多的公有云(如UCloud)
+| 和私有云(如Openstack/Cloudstack), 打造中国版Rightscale。Fit2Cloud将致力于解决跨平台云管理问题，
+| 让企业能够轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基础设施和应用提供了配置、监控、
+| 自动化和管理服务。
 |
 |     `Fit2Cloud详细介绍PPT <http://wenku.baidu.com/view/5c5b895ade80d4d8d15a4f66.html>`_
 |
@@ -84,7 +85,7 @@ FAQ
 | 
 | **Q: Fit2Cloud支持哪些公有云？**
 |
-|    我们目前支持阿里云,AWS; 我们会在年内支持青云。在未来，我们会支持更多的公有云以及私有云。
+|    我们目前支持阿里云,AWS和青云QingCloud。在未来，我们会支持更多的公有云以及私有云。
 |
 | **Q: Fit2Cloud支持私有云吗? 比如Cloudstack/Openstack?**
 |
@@ -129,10 +130,10 @@ FAQ
 |
 | **Q: 现在Docker很火，Fit2Cloud跟Docker有什么区别？**
 |    
-|    请参考IaaS使用成熟度模型, Fit2Cloud和Docker解决的不是一个层面的东西，Fit2Cloud的功能涵盖创建资源，
-| 服务器自动化，混合云管理及应用自动化，持续交付, 而Docker解决只是应用自动化，持续交付这两块，所以我们在使用
-| Fit2Cloud实现应用自动化，持续交付时，既可以选择采用自己的方案和实现，也可以采用Docker来实现。
-| 
+|    请参考IaaS使用成熟度模型, Fit2Cloud和Docker所要解决的问题范畴不同。Fit2Cloud的功能涵盖创建资源、
+| 服务器自动化、混合云管理、应用自动化和持续交付, 而Docker更多专注于应用自动化，持续交付这两块。所以用户在使用
+| Fit2Cloud实现应用自动化和持续交付时，有多种方案可以选择，既可以选择采用自己的方案和实现(比如自定义脚本或者集成Chef)，
+| 也可以采用Docker来实现。
 
 .. image:: _static/080-improve-maturity.png
 
@@ -140,11 +141,7 @@ FAQ
 --------------------------------
 | **Q: 如何开始使用Fit2Cloud?如何登陆网站, 域名是?**
 |
-|    `Fit2Cloud For 阿里云 (aliyun.fit2cloud.com) <http://aliyun.fit2cloud.com>`_
-|
-|    `Fit2Cloud For AWS (aws.fit2cloud.com) <http://aws.fit2cloud.com>`_
-|
-|    `Fit2Cloud For 青云 (qingcloud.fit2cloud.com) <http://qingcloud.fit2cloud.com>`_
+|    `Fit2Cloud <http://fit2cloud.com>`_
 |
 |    入门文档请移步 `此处 <http://docs.fit2cloud.com/get_started.html>`_
 |
@@ -363,16 +360,6 @@ FAQ
 -----------------------------------------------------
 | **Q: Fit2Cloud支持青云的虚拟私有网络吗？**
 |
-|      支持。Fit2Cloud不仅支持，而且可以简化对青云虚拟私有网络的使用。
+|      支持。Fit2Cloud不仅支持，而且可以简化对青云虚拟私有网络的使用。基于青云私有网络，
+| 用户可以实现管理流(基于路由器上面绑定的公有IP)和业务流(基于负载均衡器)的分离，非常安全，推荐在生产系统上使用。
 |
-
-
-
-
-
-
-
-
-
-
-
