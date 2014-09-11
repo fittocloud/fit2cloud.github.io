@@ -133,7 +133,7 @@ FAQ
 |    请参考IaaS使用成熟度模型, Fit2Cloud和Docker所要解决的问题范畴不同。Fit2Cloud的功能涵盖创建资源、
 | 服务器自动化、混合云管理、应用自动化和持续交付, 而Docker更多专注于应用自动化，持续交付这两块。所以用户在使用
 | Fit2Cloud实现应用自动化和持续交付时，有多种方案可以选择，既可以选择采用自己的方案和实现(比如自定义脚本或者集成Chef)，
-| 也可以采用Docker来实现。
+| 也可以采用Docker来实现。未来，Fit2Cloud将深度集成Docker，让用户更加方便的使用Docker来实现应用自动化和持续交付。
 
 .. image:: _static/080-improve-maturity.png
 
