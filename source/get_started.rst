@@ -50,7 +50,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 |    罗嗦了半天，现在，让我们开始Fit2Cloud的破冰之旅吧:)
 
-登录Fit2Cloud For 阿里云|AWS
+登录Fit2Cloud
 -------------------------------------
 
 | **1) 打开Fit2Cloud首页**
