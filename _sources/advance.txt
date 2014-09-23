@@ -15,6 +15,7 @@ Fit2Cloud高级功能
    imp_oneclick_create_env_app
    f2cadmin
    imp_continuous_deployment
+   qingcloud_private_network
    
    
 
