@@ -20,7 +20,7 @@ FAQ
 | 让企业能够轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基础设施和应用提供了配置、监控、
 | 自动化和管理服务。
 |
-|     `Fit2Cloud详细介绍PPT <http://wenku.baidu.com/view/5c5b895ade80d4d8d15a4f66.html>`_
+|     `Fit2Cloud详细介绍PPT <http://fit2cloud.com/introduction.html>`_
 |     `Fit2Cloud介绍视频 <http://v.youku.com/v_show/id_XNzc3NjA1NjEy.html>`_
 |
 | **Q: Fit2Cloud能用来做什么?**
