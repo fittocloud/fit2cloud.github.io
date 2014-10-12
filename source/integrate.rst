@@ -1,4 +1,4 @@
-使用Fit2Cloud Java SDK
+使用FIT2CLOUD Java SDK
 ================================================
 
 第一步：引用Jar包
@@ -33,14 +33,14 @@
 |
 |        下载地址是： http://repository.fit2cloud.com/service/local/repo_groups/public/content/com/fit2cloud/fit2cloud-aliyun-java-sdk/1.0/fit2cloud-aliyun-java-sdk-1.0-jar-with-dependencies.jar
 
-第二步：调用Fit2Cloud API
+第二步：调用FIT2CLOUD API
 -----------------------------------------------
 
 .. code:: python
 
         String apiKey = "你的consumer key";
         String apiSecret = "你的secret key";
-        Fit2CloudClient client = new Fit2CloudClient(apiKey, apiSecret);
+        FIT2CLOUDClient client = new FIT2CLOUDClient(apiKey, apiSecret);
         System.out.println("List clusters.....");
         System.out.println(client.getClusters());
 
@@ -69,17 +69,17 @@
 	import com.fit2cloud.aliyun.sdk.model.Logging;
 	import com.fit2cloud.aliyun.sdk.model.Server;
 	
-	public class Fit2CloudClientTest {
+	public class FIT2CLOUDClientTest {
 	
 		private String apiKey;
 		private String apiSecret;
-		private Fit2CloudClient client;
+		private FIT2CLOUDClient client;
 		
 		@Before
 		public void setUp() throws Exception {
 		    this.apiKey = "put your key here";
 		    this.apiSecret = "put your secret here";
-		    this.client = new Fit2CloudClient(apiKey, apiSecret);
+		    this.client = new FIT2CLOUDClient(apiKey, apiSecret);
 		}
 		
 		@After

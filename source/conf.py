@@ -47,8 +47,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Fit2Cloud For 阿里云'
-copyright = u'2014, Fit2Cloud'
+project = u'FIT2CLOUD For 阿里云'
+copyright = u'2014, FIT2CLOUD'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -200,7 +200,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'fit2cloud.tex', u'Fit2Cloud DevOps协作平台',
+  ('index', 'fit2cloud.tex', u'FIT2CLOUD DevOps协作平台',
    u'fit2cloud', 'manual'),
 ]
 
@@ -230,8 +230,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'Fit2Cloud', u'Fit2Cloud DevOps协作平台',
-     [u'Fit2Cloud'], 1)
+    ('index', 'FIT2CLOUD', u'FIT2CLOUD DevOps协作平台',
+     [u'FIT2CLOUD'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -244,8 +244,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Fit2Cloud', u'Fit2Cloud DevOps协作平台',
-   u'Fit2Cloud', 'Fit2Cloud', 'One line description of project.',
+  ('index', 'FIT2CLOUD', u'FIT2CLOUD DevOps协作平台',
+   u'FIT2CLOUD', 'FIT2CLOUD', 'One line description of project.',
    'Miscellaneous'),
 ]
 
