@@ -5,20 +5,16 @@ FAQ
 --------------------------------
 | **Q: 什么是Fit2Cloud?**
 |
-|     Fit2Cloud是一个建立在IaaS之上的云管理及DevOps协作平台，云应用生命周期管理平台，它能够帮助开发人员、
-| 测试人员以及运维人员实现应用全生命周期的自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自
-| 动伸缩等。Fit2Cloud打通了从代码到服务的转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运
-| 维的效率。
-|
-|     在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、 
-| Beanstalk、Rightscale、Scalr等，但是在阿里云生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
-|
-|     同时，由于亚马逊AWS中国区目前不提供Opsworks, 可以说Fit2Cloud填补了亚马逊AWS中国服务中Opsworks的空白。
-|
-|     目前Fit2Cloud支持亚马逊AWS、阿里云和青云QingCloud。未来，Fit2Cloud将支持更多的公有云(如UCloud)
-| 和私有云(如Openstack/Cloudstack), 打造中国版Rightscale。Fit2Cloud将致力于解决跨平台云管理问题，
-| 让企业能够轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基础设施和应用提供了配置、监控、
-| 自动化和管理服务。
+|     FIT2CLOUD是一个建立在IaaS之上的云管理及DevOps协作平台，帮助企业提高云成熟度，实现云资源创建自动化、
+| 服务器自动化、混合云管理、应用部署升级自动化和持续交付。基于FIT2CLOUD，企业可以实现应用全生命周期的自动化管理，
+| 打通从代码到服务的转化通道，实现云应用的持续交付和自动化运维。
+|     
+|     FIT2CLOUD目前支持亚马逊AWS、阿里云和青云QingCloud。未来，FIT2CLOUD将支持更多的公有云和私有云
+| (如Openstack/Cloudstack), 打造中国版RightScale。FIT2CLOUD将致力于解决跨平台云管理问题，让企业能够
+| 轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基础设施和应用提供配置、监控、自动化和管理服务。
+|     
+|     FIT2CLOUD的产品和解决方案包括：Hosted服务、企业版和SaaS化解决方案。FIT2CLOUD企业版部署在企业自己的云账户中，
+| 完全由企业自主控制。FIT2CLOUD SaaS化解决方案帮助ISV自动化管理云中的成千上万个虚机，转型SaaS服务提供商。
 |
 |     `Fit2Cloud详细介绍PPT <http://fit2cloud.com/introduction.html>`_
 |     `Fit2Cloud介绍视频 <http://v.youku.com/v_show/id_XNzc3NjA1NjEy.html>`_
