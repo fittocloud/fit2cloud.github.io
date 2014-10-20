@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>实现一键创建环境及应用 &mdash; Fit2Cloud用户指南 | 云管理及DevOps协作平台</title>
+    <title>实现一键创建环境及应用 &mdash; FIT2CLOUD For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -29,10 +29,10 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="Fit2Cloud用户指南 | 云管理及DevOps协作平台" href="index.html" />
-    <link rel="up" title="Fit2Cloud高级功能" href="advance.html" />
+    <link rel="top" title="FIT2CLOUD For 阿里云 1.0 文档" href="index.html" />
+    <link rel="up" title="FIT2CLOUD高级功能" href="advance.html" />
     <link rel="next" title="f2cadmin命令行工具" href="f2cadmin.html" />
-    <link rel="prev" title="使用Fit2Cloud Java SDK" href="integrate.html" /> 
+    <link rel="prev" title="使用FIT2CLOUD Java SDK" href="integrate.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="description"
 content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员和运维人员实现对应用全生命周期的自动化管理。">
@@ -53,11 +53,11 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
           <a href="f2cadmin.html" title="f2cadmin命令行工具"
              accesskey="N">下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
-          <a href="integrate.html" title="使用Fit2Cloud Java SDK"
+          <a href="integrate.html" title="使用FIT2CLOUD Java SDK"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" accesskey="U">Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" accesskey="U">FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
@@ -72,7 +72,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <h1>实现一键创建环境及应用<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
 <div class="line-block">
-<div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud</div>
+<div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD</div>
 </div>
 <div class="line">在阿里云上部署和建立一个wordpress网站, 并且把创建虚拟机和安装运行时环境及组件的工作自动化。</div>
 <div class="line"><br /></div>
@@ -88,9 +88,9 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">库用户名密码到wordpress web虚拟机的数据库连接配置文件里;</div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">下面我们看在Fit2Cloud中如何做，在Fit2Cloud中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我</div>
+<div class="line">下面我们看在FIT2CLOUD中如何做，在FIT2CLOUD中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我</div>
 </div>
-<div class="line">们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让Fit2Cloud执行这个集群的部署计划，先调用</div>
+<div class="line">们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让FIT2CLOUD执行这个集群的部署计划，先调用</div>
 <div class="line">阿里云的API创建出集群部署计划定义的虚拟机，然后在虚拟机启动后根据计划部署配置和启动wordpress的各个组件。</div>
 </div>
 <div class="code python highlight-python"><div class="highlight"><pre>  注1: 集群部署计划会定义在哪个数据中心启动哪种配置的虚拟机，安装哪种操作系统, 虚拟机启动后如何部署配置
@@ -104,12 +104,12 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 是wordpress-mysql虚拟机组，里面有一台虚拟机, 不同类型的虚拟组里的虚拟机安装该组相应的运行时环境及组件。
 对于一个特定的虚拟机组，我们可以定义组内包括几台虚拟机，启动在阿里云的哪个数据中心，北京杭州香港还是青岛，
 每台虚拟机启动后装哪种操作系统，运行什么脚本, 装哪些软件，组件，如何配置数据库连接文件。这样，我们只要先定
-义好集群的部署计划，剩下就是Fit2Cloud执行计划了, 执行完后就可以访问集群里部署的应用服务了。
+义好集群的部署计划，剩下就是FIT2CLOUD执行计划了, 执行完后就可以访问集群里部署的应用服务了。
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line-block">
-<div class="line">所以接下来我们具体要做的就是，定义一个集群部署计划，告诉Fit2Cloud如何创建一个集群, 然后让Fit2Cloud执</div>
+<div class="line">所以接下来我们具体要做的就是，定义一个集群部署计划，告诉FIT2CLOUD如何创建一个集群, 然后让FIT2CLOUD执</div>
 </div>
 <div class="line">行计划:</div>
 <div class="line-block">
@@ -293,7 +293,7 @@ fi
 <div class="section" id="id4">
 <h3>第一步: 新建集群<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
-<div class="line"><strong>1) Fit2Cloud页面中选择&#8221;集群&#8221;</strong></div>
+<div class="line"><strong>1) FIT2CLOUD页面中选择&#8221;集群&#8221;</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-1-SelectGoToClusterPage.png" src="_images/003-CreateCluster-1-SelectGoToClusterPage.png" />
@@ -394,7 +394,7 @@ fi
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
-    <h3><a href="index.html">内容</a></h3>
+    <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">实现一键创建环境及应用</a><ul>
 <li><a class="reference internal" href="#id2">一: 创建虚拟机组</a><ul>
@@ -415,26 +415,25 @@ fi
 
   </div>
   <div class="sphinxprev">
-    <h4>上一页</h4>
+    <h4>Previous page</h4>
     <p class="topless"><a href="integrate.html"
-                          title="上一页">&larr; 使用Fit2Cloud Java SDK</a></p>
+                          title="Previous page">&larr; 使用FIT2CLOUD Java SDK</a></p>
   </div>
   <div class="sphinxnext">
-    <h4>下一页</h4>
+    <h4>Next page</h4>
     <p class="topless"><a href="f2cadmin.html"
-                          title="下一页">&rarr; f2cadmin命令行工具</a></p>
+                          title="Next page">&rarr; f2cadmin命令行工具</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/imp_oneclick_create_env_app.txt"
            rel="nofollow">显示源代码</a></li>
   </ul>
-<!-- 
 <div id="searchbox" style="display: none">
   <h3>快速搜索</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="转向" /> 
+      <input type="submit" value="转向" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -442,7 +441,6 @@ fi
     输入相关的术语，模块，类或者函数名称进行搜索
     </p>
 </div>
--->
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
@@ -460,18 +458,18 @@ fi
           <a href="f2cadmin.html" title="f2cadmin命令行工具"
              >下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
-          <a href="integrate.html" title="使用Fit2Cloud Java SDK"
+          <a href="integrate.html" title="使用FIT2CLOUD Java SDK"
              >上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" >Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" >FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
 
     <div class="footer">
-        &copy; 版权所有 2014, Fit2Cloud.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+        &copy; 版权所有 2014, FIT2CLOUD.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

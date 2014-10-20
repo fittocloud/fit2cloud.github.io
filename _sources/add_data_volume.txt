@@ -34,14 +34,14 @@ Raid0，Raid1，Raid10数据盘。
 
 |  第五步: 数据盘设置页面， 点击 "保存"
 |  
-|  当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的数据盘
+|  当wordpress-mysql虚拟机组的虚拟机启动后，FIT2CLOUD就会自动做一个100G大小的数据盘
 | 然后格式化成指定的文件系统类型，挂载到指定的挂载点。
 
 二: 设置Raid0
 -----------------
 |    这里，我们给wordpress mysql配置大小为100G的Raid0数据盘:
 |
-|    在Fit2Cloud中，为简化，我们做Raid0和Raid1都使用两块数据盘来做，所以配置100G的
+|    在FIT2CLOUD中，为简化，我们做Raid0和Raid1都使用两块数据盘来做，所以配置100G的
 | Raid0数据盘，需要两块50G的数据盘。
 |
 |    第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
@@ -70,7 +70,7 @@ Raid0，Raid1，Raid10数据盘。
 
 |  第五步: 数据盘设置页面， 点击 "保存"
 |  
-|  当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的Raid0
+|  当wordpress-mysql虚拟机组的虚拟机启动后，FIT2CLOUD就会自动做一个100G大小的Raid0
 | 数据盘，然后格式化成指定的文件系统类型，挂载到指定的挂载点。
 
 三: 设置Raid1
@@ -78,7 +78,7 @@ Raid0，Raid1，Raid10数据盘。
 
 |    这里，我们给wordpress mysql配置大小为100G的Raid1数据盘:
 |
-|    在Fit2Cloud中，为简化，我们做Raid0和Raid1都使用两块数据盘来做，所以配置100G的
+|    在FIT2CLOUD中，为简化，我们做Raid0和Raid1都使用两块数据盘来做，所以配置100G的
 | Raid1数据盘，需要两块100G的数据盘。
 |
 |    第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
@@ -107,7 +107,7 @@ Raid0，Raid1，Raid10数据盘。
 
 |  第五步: 数据盘设置页面， 点击 "保存"
 |  
-|  当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的Raid1
+|  当wordpress-mysql虚拟机组的虚拟机启动后，FIT2CLOUD就会自动做一个100G大小的Raid1
 | 数据盘，然后格式化成指定的文件系统类型，挂载到指定的挂载点。
 
 四: 设置Raid10
@@ -115,7 +115,7 @@ Raid0，Raid1，Raid10数据盘。
 
 |    这里，我们给wordpress mysql配置大小为100G的Raid10数据盘:
 |
-|    在Fit2Cloud中，为简化，我们做Raid0和Raid1都使用两块数据盘来做，所以配置100G的
+|    在FIT2CLOUD中，为简化，我们做Raid0和Raid1都使用两块数据盘来做，所以配置100G的
 | Raid10数据盘，需要4块50G的数据盘, 先用其中两块50G的盘做成100G的Raid0,再把剩下两块50G
 | 的盘做成100G的Raid0, 之后把两块100G的Raid0盘做成一块100G的Raid10盘。
 |
@@ -145,7 +145,7 @@ Raid0，Raid1，Raid10数据盘。
 
 |  第五步: 数据盘设置页面， 点击 "保存"
 |  
-|  当wordpress-mysql虚拟机组的虚拟机启动后，Fit2Cloud就会自动做一个100G大小的Raid10
+|  当wordpress-mysql虚拟机组的虚拟机启动后，FIT2CLOUD就会自动做一个100G大小的Raid10
 | 数据盘，然后格式化成指定的文件系统类型，挂载到指定的挂载点。
 
 

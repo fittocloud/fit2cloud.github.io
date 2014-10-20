@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>软件安装和应用部署 &mdash; Fit2Cloud用户指南 | 云管理及DevOps协作平台</title>
+    <title>软件安装和应用部署 &mdash; FIT2CLOUD For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -29,8 +29,8 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="Fit2Cloud用户指南 | 云管理及DevOps协作平台" href="index.html" />
-    <link rel="up" title="Fit2Cloud高级功能" href="advance.html" />
+    <link rel="top" title="FIT2CLOUD For 阿里云 1.0 文档" href="index.html" />
+    <link rel="up" title="FIT2CLOUD高级功能" href="advance.html" />
     <link rel="next" title="设置集群监控告警" href="add_cluster_monitoring.html" />
     <link rel="prev" title="设置安全组" href="set_security_group.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,9 +55,9 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
         <li class="right" >
           <a href="set_security_group.html" title="设置安全组"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" accesskey="U">Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" accesskey="U">FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
@@ -73,7 +73,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">通过Fit2Cloud可以实现虚拟机启动后自动安装应用组件及其运行所需的运行时库,包,中间件等。</div>
+<div class="line">通过FIT2CLOUD可以实现虚拟机启动后自动安装应用组件及其运行所需的运行时库,包,中间件等。</div>
 <div class="line"><br /></div>
 <div class="line">如果我们手工做这件事时，比如要建一个wordpress网站，步骤如下:</div>
 <div class="line">1) 启动2台虚拟机;</div>
@@ -87,9 +87,9 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">设置用户名密码。</div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">下面我们看在Fit2Cloud中如何做，在Fit2Cloud中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我</div>
+<div class="line">下面我们看在FIT2CLOUD中如何做，在FIT2CLOUD中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我</div>
 </div>
-<div class="line">们首先根据上面的部署计划在Web控制台上创建一个集群部署计划, 然后让Fit2Cloud执行这个集群的部署计划，先调用</div>
+<div class="line">们首先根据上面的部署计划在Web控制台上创建一个集群部署计划, 然后让FIT2CLOUD执行这个集群的部署计划，先调用</div>
 <div class="line">阿里云的API启动集群部署计划定义的虚拟机，然后在虚拟机启动后根据计划部署配置和启动wordpress的各个组件。</div>
 </div>
 <div class="code python highlight-python"><div class="highlight"><pre>  注1: 集群部署计划会定义在哪个数据中心启动哪种配置的虚拟机，安装哪种操作系统, 虚拟机启动后如何部署配置
@@ -103,14 +103,14 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 是wordpress-mysql虚拟机组，里面也有一台虚拟机, 不同类型的虚拟组里的虚拟机安装该组相应的运行时环境及组件。
 对于一个特定的虚拟机组，我们可以定义组内包括几台虚拟机，启动在阿里云的哪个数据中心，北京杭州香港还是青岛，
 每台虚拟机启动后装哪种操作系统，运行什么脚本, 装哪些软件，组件，如何配置数据库连接文件。这样，我们只要先定
-义好集群的部署计划，剩下就是Fit2Cloud执行计划了, 执行完后就可以访问集群里部署的应用服务了。
+义好集群的部署计划，剩下就是FIT2CLOUD执行计划了, 执行完后就可以访问集群里部署的应用服务了。
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line-block">
-<div class="line">所以接下来我们具体要做的就是，定义一个集群部署计划，告诉Fit2Cloud如何创建一个集群, 如何在各个虚拟机上</div>
+<div class="line">所以接下来我们具体要做的就是，定义一个集群部署计划，告诉FIT2CLOUD如何创建一个集群, 如何在各个虚拟机上</div>
 </div>
-<div class="line">安装应用组件及其运行时环境，然后启动集群让Fit2Cloud执行这个计划:</div>
+<div class="line">安装应用组件及其运行时环境，然后启动集群让FIT2CLOUD执行这个计划:</div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">1) 定义应用组件的运行时软件安装和组件部署计划.</div>
@@ -299,7 +299,7 @@ fi
 <div class="section" id="id4">
 <h3>第一步: 新建集群<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <div class="line-block">
-<div class="line"><strong>1) Fit2Cloud页面中选择&#8221;集群&#8221;</strong></div>
+<div class="line"><strong>1) FIT2CLOUD页面中选择&#8221;集群&#8221;</strong></div>
 <div class="line"><br /></div>
 </div>
 <img alt="_images/003-CreateCluster-1-SelectGoToClusterPage.png" src="_images/003-CreateCluster-1-SelectGoToClusterPage.png" />
@@ -396,11 +396,11 @@ fi
 <div class="line">注1: 软件安装和应用部署主要通过设置虚拟机组的事件处理脚本实现, 在实现某虚拟机上组件自动配置时，通常需要</div>
 </div>
 <div class="line">获取集群内的虚拟机的IP地址信息，比如上面例子中在wordpress web虚拟机上自动配置数据库连接时需要知道mysql</div>
-<div class="line">虚拟机的IP地址，Fit2Cloud提供了一个CLI工具f2cadmin可以获取到集群内所有虚拟机的信息，对于f2cadmin的具</div>
-<div class="line">体使用方法，请移步 Fit2Cloud高级功能 -&gt; f2cadmin命令行工具</div>
+<div class="line">虚拟机的IP地址，FIT2CLOUD提供了一个CLI工具f2cadmin可以获取到集群内所有虚拟机的信息，对于f2cadmin的具</div>
+<div class="line">体使用方法，请移步 FIT2CLOUD高级功能 -&gt; f2cadmin命令行工具</div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">注2: 直接在Fit2Cloud Web控制台编辑保存的脚本是没有版本控制的，在实际的项目过程中，这些事件处理脚本也需</div>
+<div class="line">注2: 直接在FIT2CLOUD Web控制台编辑保存的脚本是没有版本控制的，在实际的项目过程中，这些事件处理脚本也需</div>
 </div>
 <div class="line">要版本控制，比如不同应用环境使用不同版本的事件处理脚本，以防止在开发过程中对脚本的改动影响到试运行以及产品环</div>
 <div class="line">境，所以您可以在控制台编辑保存的脚本中可以先调用f2cadmin获取集群信息，然后根据集群信息从您的事件处理脚本库</div>
@@ -419,7 +419,7 @@ fi
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
-    <h3><a href="index.html">内容</a></h3>
+    <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">软件安装和应用部署</a><ul>
 <li><a class="reference internal" href="#id2">一: 创建虚拟机组</a><ul>
@@ -440,26 +440,25 @@ fi
 
   </div>
   <div class="sphinxprev">
-    <h4>上一页</h4>
+    <h4>Previous page</h4>
     <p class="topless"><a href="set_security_group.html"
-                          title="上一页">&larr; 设置安全组</a></p>
+                          title="Previous page">&larr; 设置安全组</a></p>
   </div>
   <div class="sphinxnext">
-    <h4>下一页</h4>
+    <h4>Next page</h4>
     <p class="topless"><a href="add_cluster_monitoring.html"
-                          title="下一页">&rarr; 设置集群监控告警</a></p>
+                          title="Next page">&rarr; 设置集群监控告警</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/install_runtimes_app.txt"
            rel="nofollow">显示源代码</a></li>
   </ul>
-<!-- 
 <div id="searchbox" style="display: none">
   <h3>快速搜索</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="转向" /> 
+      <input type="submit" value="转向" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -467,7 +466,6 @@ fi
     输入相关的术语，模块，类或者函数名称进行搜索
     </p>
 </div>
--->
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
@@ -487,16 +485,16 @@ fi
         <li class="right" >
           <a href="set_security_group.html" title="设置安全组"
              >上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" >Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" >FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
 
     <div class="footer">
-        &copy; 版权所有 2014, Fit2Cloud.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+        &copy; 版权所有 2014, FIT2CLOUD.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

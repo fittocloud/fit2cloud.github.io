@@ -1,7 +1,7 @@
-Fit2Cloud快速入门: 十分钟部署Wordpress应用
+FIT2CLOUD快速入门: 十分钟部署Wordpress应用
 ====================================================
 
-|    这里我们以在阿里云上建立一个wordpress网站为例, 了解Fit2Cloud的基本功能，看看如何通过Fit2Cloud
+|    这里我们以在阿里云上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD
 | 在阿里云上部署和建立一个wordpress网站, 并且把创建虚拟机和安装运行时环境及组件的工作自动化。如果您用的
 | 是AWS, 在AWS建立wordpress网站的步骤与在阿里云上是一样的。
 |
@@ -12,10 +12,10 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 |    3) 在另一台虚拟机上安装wordpress web及需要的各种运行时库和apache, 并配置数据库虚拟机的IP及数据
 | 库用户名密码到wordpress web虚拟机的数据库连接配置文件里;
 |
-|    下面我们看在Fit2Cloud中如何做，在Fit2Cloud中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我
-| 们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让Fit2Cloud执行这个集群的部署计划，先调用
+|    下面我们看在FIT2CLOUD中如何做，在FIT2CLOUD中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我
+| 们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让FIT2CLOUD执行这个集群的部署计划，先调用
 | 阿里云的API创建出集群部署计划定义的虚拟机，然后在虚拟机启动后根据计划部署配置和启动wordpress的各个组件。
-| 观看视频请打开 `Fit2Cloud For 阿里云 十分钟部署Wordpress演示视频 <http://downloads.fit2cloud.com/aliyun/demo.mov>`_  
+| 观看视频请打开 `FIT2CLOUD For 阿里云 十分钟部署Wordpress演示视频 <http://downloads.fit2cloud.com/aliyun/demo.mov>`_  
 
 .. code:: python
 
@@ -31,9 +31,9 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
    是wordpress-mysql虚拟机组，里面有一台虚拟机, 不同类型的虚拟组里的虚拟机安装该组相应的运行时环境及组件。
    对于一个特定的虚拟机组，我们可以定义组内包括几台虚拟机，启动在阿里云的哪个数据中心，北京杭州香港还是青岛，
    每台虚拟机启动后装哪种操作系统，运行什么脚本, 装哪些软件，组件，如何配置数据库连接文件。这样，我们只要先定
-   义好集群的部署计划，剩下就是Fit2Cloud执行计划了, 执行完后就可以访问集群里部署的应用服务了。
+   义好集群的部署计划，剩下就是FIT2CLOUD执行计划了, 执行完后就可以访问集群里部署的应用服务了。
 
-|    所以接下来我们具体要做的就是，定义一个集群部署计划，告诉Fit2Cloud如何创建一个集群, 然后让Fit2Cloud执
+|    所以接下来我们具体要做的就是，定义一个集群部署计划，告诉FIT2CLOUD如何创建一个集群, 然后让FIT2CLOUD执
 | 行计划:
 |
 |    1) 创建一个集群，定义该集群包含两组虚拟机，一组为wordpress-mysql虚拟机, 一组为wordpress-web虚拟机
@@ -48,28 +48,28 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
      
      注3: 第一次用时需要绑定阿里云的Access Key，可能麻烦些，但是绑定后创建集群就不需要这一步了。
 
-|    罗嗦了半天，现在，让我们开始Fit2Cloud的破冰之旅吧:)
+|    罗嗦了半天，现在，让我们开始FIT2CLOUD的破冰之旅吧:)
 
-登录Fit2Cloud
+登录FIT2CLOUD
 -------------------------------------
 
-| **1) 打开Fit2Cloud首页**
+| **1) 打开FIT2CLOUD首页**
 |  
-| a> 打开 `Fit2Cloud (www.fit2cloud.com) <http://www.fit2cloud.com/>`_ 
+| a> 打开 `FIT2CLOUD (www.fit2cloud.com) <http://www.fit2cloud.com/>`_ 
 |
 |    注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome
 |
-| b> 如果IaaS使用的是阿里云，在Fit2Cloud首页选择 "Fit2Cloud For 阿里云(Github帐号登陆)", 如下图示:
+| b> 如果IaaS使用的是阿里云，在FIT2CLOUD首页选择 "FIT2CLOUD For 阿里云(Github帐号登陆)", 如下图示:
 
-.. image:: _static/000-Login-Fit2CloudForAliyun.png
+.. image:: _static/000-Login-FIT2CLOUDForAliyun.png
 
-|    如果IaaS使用的是AWS, 在Fit2Cloud首页选择 "Fit2Cloud For AWS(Github帐号登陆)", 如下图示:
+|    如果IaaS使用的是AWS, 在FIT2CLOUD首页选择 "FIT2CLOUD For AWS(Github帐号登陆)", 如下图示:
 
-.. image:: _static/000-Login-Fit2CloudForAWS.png
+.. image:: _static/000-Login-FIT2CLOUDForAWS.png
 
 | **2) 点击"Github帐号登陆"后，会弹出Github登陆页面，要求输入Github用户名密码**
 |
-| **3) 输完用户名密码，点击登陆后，会到授权页面，选择 "授权" 即可, 之后就进入Fit2Cloud的开始页面**
+| **3) 输完用户名密码，点击登陆后，会到授权页面，选择 "授权" 即可, 之后就进入FIT2CLOUD的开始页面**
 
 .. image:: _static/000-Login-Github-Authorize.png
 
@@ -117,7 +117,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 .. image:: _static/001-BindKey-5-ViewAccessKey.png
 
-| 将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，下一步在Fit2Cloud中绑定阿里云Access Key时会用到.
+| 将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，下一步在FIT2CLOUD中绑定阿里云Access Key时会用到.
 |
 |
 |
@@ -180,11 +180,11 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 第二步: 绑定Access  Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **1) Fit2Cloud开始页，选择"绑定阿里云Access Key"**
+| **1) FIT2CLOUD开始页，选择"绑定阿里云Access Key"**
 
 .. image:: _static/001-BindKey-6-ClickBindKey.png
 
-| **2) Fit2Cloud Key管理页，选择default key并点击"修改"按钮**
+| **2) FIT2CLOUD Key管理页，选择default key并点击"修改"按钮**
 
 .. image:: _static/001-BindKey-7-EditDefaultKey.png
 
@@ -333,7 +333,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
 第一步: 新建集群
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| **1) Fit2Cloud页面中选择"集群"**
+| **1) FIT2CLOUD页面中选择"集群"**
 
 .. image:: _static/003-CreateCluster-1-SelectGoToClusterPage.png
 
@@ -409,11 +409,11 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 | 2) Linux下安装Java(TM)插件:    http://java.com/en/download/help/linux_install.xml
 | 3) Windows下安装Java(TM)插件: http://java.com/en/download/help/windows_manual_download.xml
 | 
-|    顺便提及使用Fit2Cloud方式建立集群有一个好处，就是可以将启动虚拟机和安装运行时环境及组件的工作全部
+|    顺便提及使用FIT2CLOUD方式建立集群有一个好处，就是可以将启动虚拟机和安装运行时环境及组件的工作全部
 | 自动化，真正实现一键创建集群和部署应用。您可以把集群关闭后，再启动起来，不需要手工到阿里云里启动虚拟机，
 | 也不需要手工登到虚拟机运行脚本，也不需要找到虚拟机的IP然后配置到某脚本中让脚本自动登陆安装。
 |
-|    最后, 这篇入门文档，简单介绍了Fit2Cloud的一些基本功能，由于主题和篇幅的限制，还有很多非常有用的功
+|    最后, 这篇入门文档，简单介绍了FIT2CLOUD的一些基本功能，由于主题和篇幅的限制，还有很多非常有用的功
 | 能以及一些高级功能没有介绍，比如查看集群的监控，费用，同时在集群内的多个虚拟机上执行脚本，将应用的部署
 | 自动化，将应用的升级自动化，让集群内虚拟机按顺序启动，与持续集成系统集成实现持续部署, 自动恢复, 自动伸
 | 缩等等,对于这些功能，详细介绍请移步到相应的文档，您可以在文档首页找到各个文档的入口链接，如有需求或碰到
@@ -423,7 +423,7 @@ Fit2Cloud快速入门: 十分钟部署Wordpress应用
 
        注: 到文档目录请点击下面的链接或页面左上角，左下角的文档目录链接。
 
-|  `Fit2Cloud在线文档 | 云管理及DevOps协作平台 <http://docs.fit2cloud.com/>`_
+|  `FIT2CLOUD在线文档 | 云管理及DevOps协作平台 <http://docs.fit2cloud.com/>`_
 
 
 

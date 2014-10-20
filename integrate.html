@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>使用Fit2Cloud Java SDK &mdash; Fit2Cloud用户指南 | 云管理及DevOps协作平台</title>
+    <title>使用FIT2CLOUD Java SDK &mdash; FIT2CLOUD For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -29,8 +29,8 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="Fit2Cloud用户指南 | 云管理及DevOps协作平台" href="index.html" />
-    <link rel="up" title="Fit2Cloud高级功能" href="advance.html" />
+    <link rel="top" title="FIT2CLOUD For 阿里云 1.0 文档" href="index.html" />
+    <link rel="up" title="FIT2CLOUD高级功能" href="advance.html" />
     <link rel="next" title="实现一键创建环境及应用" href="imp_oneclick_create_env_app.html" />
     <link rel="prev" title="使用自定义镜像" href="use_customized_image.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,9 +55,9 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
         <li class="right" >
           <a href="use_customized_image.html" title="使用自定义镜像"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" accesskey="U">Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" accesskey="U">FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
@@ -69,7 +69,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
           <div class="body">
             
   <div class="section" id="fit2cloud-java-sdk">
-<h1>使用Fit2Cloud Java SDK<a class="headerlink" href="#fit2cloud-java-sdk" title="永久链接至标题">¶</a></h1>
+<h1>使用FIT2CLOUD Java SDK<a class="headerlink" href="#fit2cloud-java-sdk" title="永久链接至标题">¶</a></h1>
 <div class="section" id="jar">
 <h2>第一步：引用Jar包<a class="headerlink" href="#jar" title="永久链接至标题">¶</a></h2>
 <div class="line-block">
@@ -106,10 +106,10 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 </div>
 </div>
 <div class="section" id="fit2cloud-api">
-<h2>第二步：调用Fit2Cloud API<a class="headerlink" href="#fit2cloud-api" title="永久链接至标题">¶</a></h2>
+<h2>第二步：调用FIT2CLOUD API<a class="headerlink" href="#fit2cloud-api" title="永久链接至标题">¶</a></h2>
 <div class="code python highlight-python"><div class="highlight"><pre>String apiKey = &quot;你的consumer key&quot;;
 String apiSecret = &quot;你的secret key&quot;;
-Fit2CloudClient client = new Fit2CloudClient(apiKey, apiSecret);
+FIT2CLOUDClient client = new FIT2CLOUDClient(apiKey, apiSecret);
 System.out.println(&quot;List clusters.....&quot;);
 System.out.println(client.getClusters());
 </pre></div>
@@ -140,17 +140,17 @@ import com.fit2cloud.aliyun.sdk.model.ClusterRole;
 import com.fit2cloud.aliyun.sdk.model.Logging;
 import com.fit2cloud.aliyun.sdk.model.Server;
 
-public class Fit2CloudClientTest {
+public class FIT2CLOUDClientTest {
 
         private String apiKey;
         private String apiSecret;
-        private Fit2CloudClient client;
+        private FIT2CLOUDClient client;
 
         @Before
         public void setUp() throws Exception {
             this.apiKey = &quot;put your key here&quot;;
             this.apiSecret = &quot;put your secret here&quot;;
-            this.client = new Fit2CloudClient(apiKey, apiSecret);
+            this.client = new FIT2CLOUDClient(apiKey, apiSecret);
         }
 
         @After
@@ -218,37 +218,36 @@ public class Fit2CloudClientTest {
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><div class="sphinxlocaltoc">
-    <h3><a href="index.html">内容</a></h3>
+    <h3><a href="index.html">Page contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">使用Fit2Cloud Java SDK</a><ul>
+<li><a class="reference internal" href="#">使用FIT2CLOUD Java SDK</a><ul>
 <li><a class="reference internal" href="#jar">第一步：引用Jar包</a></li>
-<li><a class="reference internal" href="#fit2cloud-api">第二步：调用Fit2Cloud API</a></li>
+<li><a class="reference internal" href="#fit2cloud-api">第二步：调用FIT2CLOUD API</a></li>
 </ul>
 </li>
 </ul>
 
   </div>
   <div class="sphinxprev">
-    <h4>上一页</h4>
+    <h4>Previous page</h4>
     <p class="topless"><a href="use_customized_image.html"
-                          title="上一页">&larr; 使用自定义镜像</a></p>
+                          title="Previous page">&larr; 使用自定义镜像</a></p>
   </div>
   <div class="sphinxnext">
-    <h4>下一页</h4>
+    <h4>Next page</h4>
     <p class="topless"><a href="imp_oneclick_create_env_app.html"
-                          title="下一页">&rarr; 实现一键创建环境及应用</a></p>
+                          title="Next page">&rarr; 实现一键创建环境及应用</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/integrate.txt"
            rel="nofollow">显示源代码</a></li>
   </ul>
-<!-- 
 <div id="searchbox" style="display: none">
   <h3>快速搜索</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="转向" /> 
+      <input type="submit" value="转向" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -256,7 +255,6 @@ public class Fit2CloudClientTest {
     输入相关的术语，模块，类或者函数名称进行搜索
     </p>
 </div>
--->
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
@@ -276,16 +274,16 @@ public class Fit2CloudClientTest {
         <li class="right" >
           <a href="use_customized_image.html" title="使用自定义镜像"
              >上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" >Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" >FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
 
     <div class="footer">
-        &copy; 版权所有 2014, Fit2Cloud.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+        &copy; 版权所有 2014, FIT2CLOUD.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

@@ -8,11 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>实现持续部署升级 &mdash; Fit2Cloud用户指南 | 云管理及DevOps协作平台</title>
+    <title>实现持续部署升级 &mdash; FIT2CLOUD For 阿里云 1.0 文档</title>
     
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -29,8 +29,8 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="Fit2Cloud用户指南 | 云管理及DevOps协作平台" href="index.html" />
-    <link rel="up" title="Fit2Cloud高级功能" href="advance.html" />
+    <link rel="top" title="FIT2CLOUD For 阿里云 1.0 文档" href="index.html" />
+    <link rel="up" title="FIT2CLOUD高级功能" href="advance.html" />
     <link rel="next" title="青云基础网络与私有网络" href="qingcloud_private_network.html" />
     <link rel="prev" title="f2cadmin命令行工具" href="f2cadmin.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,9 +55,9 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
         <li class="right" >
           <a href="f2cadmin.html" title="f2cadmin命令行工具"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" accesskey="U">Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" accesskey="U">FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
@@ -72,14 +72,14 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <h1>实现持续部署升级<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解如何使用Fit2Cloud实现应用的持续部署升级。</div>
+<div class="line">这里我们以在阿里云上建立一个wordpress网站为例, 了解如何使用FIT2CLOUD实现应用的持续部署升级。</div>
 <div class="line"><br /></div>
 <div class="line">第一步: 创建Jenkins CI Job</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 <div class="line">第二步: 配置Jenkins CI Job</div>
 <div class="line-block">
-<div class="line">调用Fit2Cloud SDK在集群内所有虚拟机上执行CodeUpdate脚本</div>
+<div class="line">调用FIT2CLOUD SDK在集群内所有虚拟机上执行CodeUpdate脚本</div>
 <div class="line">CodeUpdate脚本:</div>
 <div class="line">1) 获取集群名字</div>
 <div class="line">2) 根据集群名字下载集群对应的最新的wordpress部署包信息</div>
@@ -96,26 +96,25 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <div class="sphinxprev">
-    <h4>上一页</h4>
+    <h4>Previous page</h4>
     <p class="topless"><a href="f2cadmin.html"
-                          title="上一页">&larr; f2cadmin命令行工具</a></p>
+                          title="Previous page">&larr; f2cadmin命令行工具</a></p>
   </div>
   <div class="sphinxnext">
-    <h4>下一页</h4>
+    <h4>Next page</h4>
     <p class="topless"><a href="qingcloud_private_network.html"
-                          title="下一页">&rarr; 青云基础网络与私有网络</a></p>
+                          title="Next page">&rarr; 青云基础网络与私有网络</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/imp_continuous_deployment.txt"
            rel="nofollow">显示源代码</a></li>
   </ul>
-<!-- 
 <div id="searchbox" style="display: none">
   <h3>快速搜索</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="转向" /> 
+      <input type="submit" value="转向" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -123,7 +122,6 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
     输入相关的术语，模块，类或者函数名称进行搜索
     </p>
 </div>
--->
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
@@ -143,16 +141,16 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
         <li class="right" >
           <a href="f2cadmin.html" title="f2cadmin命令行工具"
              >上一页</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">Fit2Cloud用户指南 | 云管理及DevOps协作平台</a> &raquo;</li>
+    <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
 
-          <li><a href="advance.html" >Fit2Cloud高级功能</a> &raquo;</li> 
+          <li><a href="advance.html" >FIT2CLOUD高级功能</a> &raquo;</li> 
       </ul>
     </div>
     </div>
 
     <div class="footer">
-        &copy; 版权所有 2014, Fit2Cloud.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+        &copy; 版权所有 2014, FIT2CLOUD.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2 创建。
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

@@ -1,11 +1,11 @@
-Fit2Cloud概念及术语
+FIT2CLOUD概念及术语
 =====================================
 
 一: 概述
 -------------------------------------
-1) Fit2Cloud用来做什么?
+1) FIT2CLOUD用来做什么?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|    Fit2Cloud用来在IaaS中创建和管理运行应用所需的运行环境以及部署和管理应用, 并将这个过程自动化,
+|    FIT2CLOUD用来在IaaS中创建和管理运行应用所需的运行环境以及部署和管理应用, 并将这个过程自动化,
 | 帮助研发和运维团队实现持续部署，持续交付和自动化运维。
 |
 |    举个例子，假设我们想要建一个wordpress网站, 需要在阿里云里启动两台虚拟机，一台跑wordpress web，
@@ -18,9 +18,9 @@ Fit2Cloud概念及术语
 |    但是放到项目中，要根据需要创建开发,测试,试运行,以及产品环境，也要根据需要升级各个环境里的应用，当应用
 | 比较复杂有很多组件时，组件分布在多个虚拟机上时，纯手工以及半自动化方式就不转了，这时我们就需要实现自动化部署，
 | 升级和运维。
-2) Fit2Cloud的基本原理?
+2) FIT2CLOUD的基本原理?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|    Fit2Cloud的原理就是提供一个平台工具，使得可以定义集群环境的部署计划，通过集群的部署计划可以让Fit2Cloud
+|    FIT2CLOUD的原理就是提供一个平台工具，使得可以定义集群环境的部署计划，通过集群的部署计划可以让FIT2CLOUD
 | 知道该如何创建一个集群，创建几个虚拟机组，每组包含几个虚拟机，每台虚拟机启动在哪个数据中心，使用哪种硬件
 | 配置，装什么操作系统, 以及启动后什么时候执行哪些脚本来安装运行时环境，配置部署启动组件。
 
@@ -45,7 +45,7 @@ Fit2Cloud概念及术语
 |    6) 组件安装配置脚本
 |    7) 集群里虚拟机启动或关闭时执行哪些脚本
 |
-|    Fit2Cloud会根据集群里的各个虚拟机组的定义或设置在指定的数据中心创建指定类型的虚拟机和执行指定的脚本,
+|    FIT2CLOUD会根据集群里的各个虚拟机组的定义或设置在指定的数据中心创建指定类型的虚拟机和执行指定的脚本,
 | 从而把从环境的创建到组件的部署配置启动过程全部自动化, 中间不需要手工工作。  
 |
 |  举例, 比如一个wordpress网站, 我们定义其为一个集群wordpress-dev，由两个虚拟机组组成
@@ -62,7 +62,7 @@ Fit2Cloud概念及术语
 |   镜像: CentOS6.5
 |   安装的软件及组件: mysql, wordpress database, 用户名密码为root/fit2cloud
 |
-|   当我们启动集群后，Fit2Cloud就会根据集群的定义和配置，在青岛数据中心启动两台1核1G的虚拟机，都装
+|   当我们启动集群后，FIT2CLOUD就会根据集群的定义和配置，在青岛数据中心启动两台1核1G的虚拟机，都装
 | CentOS6.5, 一台安装apache,php和wordpress web, 一台安装mysql及创建wordpress database。
 | 安装wordpress web那台虚拟机上的wordpress数据库配置文件会被自动配置好，用装mysql的虚拟机的IP,
 | 及数据库用户名密码root/fit2cloud。
@@ -71,10 +71,10 @@ Fit2Cloud概念及术语
 -------------------------------------
 
 |    镜像组是某种类型操作系统在各个不同数据中心镜像的集合。镜像组用来设置虚拟机组使用的操作系统镜像，当
-| 我们设置虚拟机组内虚拟机的地区及操作系统类型后，创建虚拟机的镜像就会被确定, Fit2Cloud就知道创建虚拟
+| 我们设置虚拟机组内虚拟机的地区及操作系统类型后，创建虚拟机的镜像就会被确定, FIT2CLOUD就知道创建虚拟
 | 机时用阿里云的哪个虚拟机镜像启动虚拟机。
 |
-|    举例，Fit2Cloud中提供4个默认的镜像组，其中一个是ubuntu-1204-64bit, ubuntu-1204-64bit由
+|    举例，FIT2CLOUD中提供4个默认的镜像组，其中一个是ubuntu-1204-64bit, ubuntu-1204-64bit由
 | 北京的Ubuntu1204虚拟机镜像，杭州的Ubuntu1204虚拟机镜像,青岛的Ubuntu1204虚拟机镜像,香港的
 | Ubuntu1204虚拟机镜像组成。当我们设定虚拟机组的地区为青岛，操作系统为Ubuntu-1204时，就指定了启动
 | 虚拟机时使用青岛的Ubuntu1204虚拟机镜像。
@@ -95,10 +95,10 @@ Fit2Cloud概念及术语
 |
 |   举例，我们定义wordpress-mysql虚拟组install事件在虚拟机本机执行的脚本为mysql的安装脚本,该脚本
 | 安装mysql并设定密码，创建wordpress database, 当wordpress-mysql虚拟机组的虚拟机启动后, 当虚拟机
-| 的install事件发生后，Fit2Cloud就会在虚拟机上执行上述的mysql的安装脚本。
+| 的install事件发生后，FIT2CLOUD就会在虚拟机上执行上述的mysql的安装脚本。
 |
-|   Fit2Cloud定义的虚拟机生命周期事件包括ready, initialize, install, start, rebootComplete,
-| postReboot，虚拟机启动后Fit2Cloud会发出虚拟机本机的ready事件，之后会触发虚拟机本机的initialize事件,
-| initialize事件对应的脚本在虚拟机上执行结束后，Fit2Cloud会触发install事件，initialize事件对应的
-| 脚本在虚拟机上执行结束后, Fit2Cloud会触发start事件，然后start事件对应的脚本在虚拟机上执行。
+|   FIT2CLOUD定义的虚拟机生命周期事件包括ready, initialize, install, start, rebootComplete,
+| postReboot，虚拟机启动后FIT2CLOUD会发出虚拟机本机的ready事件，之后会触发虚拟机本机的initialize事件,
+| initialize事件对应的脚本在虚拟机上执行结束后，FIT2CLOUD会触发install事件，initialize事件对应的
+| 脚本在虚拟机上执行结束后, FIT2CLOUD会触发start事件，然后start事件对应的脚本在虚拟机上执行。
 | 虚机启动后的Lifecycle流程如下: ready->initialize->install->start。
