@@ -309,6 +309,38 @@ FAQ
 |               a. ps aux | grep eventagent
 |               b. vim /var/log/eventagent.log
 |
+| **Q: 为什么无法Ping通虚机?**
+|     虚机组默认的安全组规则只打开SSH 22端口，为了安全起见，其他端口都是关闭了。如果想Ping通，你需要在安全组中增加ICMP规则，如下图所示。
+
+.. image:: _static/111-openping.png
+
+| **Q: 为什么无法通过内网访问已有包月虚机?怎么才能访问**
+|     问题原因：通过FIT2CLOUD启动的按量付费机器没有加入包月机器默认安全组。FIT2CLOUD为了安全起见，只开放用户在安全组中开通的端口。
+|     解决办法：如果用户想让FIT2CLOUD中启动的虚机通过内网访问包月机器，那么需要在安全组中增加ALL规则，如下图所示。
+
+.. image:: _static/111-accessMonthPackageVM.png
+
+| **Q: SDK有Python版本吗?**
+|     有，请访问https://github.com/jason-f2c/fit2cloud-python-sdk.git获取。
+|     您可以以命令行方式使用，也可以将其引入应用程序使用。
+
+.. code:: python
+    
+    命令行方式使用:
+    ./f2cs.py config --endpoint=<endpoint> --id=<access key id> --secret=<access key secret>
+    ./f2cs.py listClusters --cluster-name=<cluster name>
+    ./f2cs.py listClusterRoles --cluster-name=<cluster name>
+    ./f2cs.py listClusterServers --cluster-name=<cluster name>
+    ./f2cs.py listClusterVMGroupServers --cluster-name=<cluster name> --cluster-vmgroup-name=<cluster vmgroup name>
+    ./f2cs.py executeScript --cluster-name=<cluster name> --cluster-vmgroup-name=<cluster vmgroup> --cluster-server-id=<cluster server id> --script-file=<script file path> 
+    ./f2cs.py getScriptLog --execution-id=<execution id>
+    ./f2cs.py -h | --help
+    ./f2cs.py -v | --version
+
+| **Q: HostName可以自定义?**
+|    不可以现在，现在的HostName为虚拟机组名称+内网IP地址,如wordpress-web-10_19_2_139
+|
+
 六: FIT2CLOUD For 阿里云 常见问题
 -----------------------------------------------------
 | **Q: 启动集群后，怎么一台虚拟机都没有起来?** 
