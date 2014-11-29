@@ -104,7 +104,7 @@ f2cadmin命令行工具
 	10.165.63.61
 
 |   3) 等待虚拟机组内虚拟机启动
-|   f2cadmin waitUntilServerUp <VM Group Name> <Wait Timeout Seconds>
+|   f2cadmin waitUntilServerUp <虚拟机组名称> <等待超时时间(单位秒)>
 |     
 |   例子: 等待wordpress-mysql虚拟机组虚拟机启动，等待120秒
 |        f2cadmin waitUntilServerUp wordpress-mysql 120
