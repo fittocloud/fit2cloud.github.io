@@ -115,7 +115,46 @@ f2cadmin命令行工具
 	> f2cadmin waitUntilServerUp wordpress-mysql 120
 	to locate clusterrole wordpress-mysql servers..... @ 2014-11-29 15:29:36
 	clusterrole wordpress-mysql #12154 vm is up, localIP:10.165.63.61 remoteIP:121.42.56.146
+	
+|   4) 获取虚拟机本机信息
+|   f2cadmin get local_server_info [<column>]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]
+|
+|   例子: 获取虚拟机本机信息
+|         f2cadmin get local_server_info
+|   输出: 
 
+.. code:: python
+
+	> f2cadmin get local_server_info
+	{
+	  "clusterName": "wordpress-qingdao",
+	  "name": "wordpress-qingdao->wordpress-mysql->297",
+	  "vmId": "",
+	  "clusterRoleId": 52,
+	  "clusterRoleName": "wordpress-mysql",
+	  "serverRoleId": 24,
+	  "cloudId": 10,
+	  "clusterId": 14,
+	  "clusterType": "default",
+	  "groupId": 34,
+	  "localIP": "",
+	  "remoteIP": "",
+	  "region": "cn-qingdao",
+	  "rabbitmqQueue": "queue_down_14_297_d166bb98",
+	  "id": 297
+	}
+
+|   5) 获取虚拟机本机的某些字段信息
+|   f2cadmin get local_server_info [<column>]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]
+|
+|   例子: 获取本机虚拟机信息
+|         f2cadmin get local_server_info localIP
+|   输出: 
+
+.. code:: python
+
+	> f2cadmin get local_server_info localIP
+	10.163.100.108
 
 
 
