@@ -2,9 +2,11 @@ f2cadmin命令行工具
 ==================================
 
 | f2cadmin是一个FIT2CLOUD部署在虚拟机上的一个命令行工具，通过f2cadmin可以:
-| 1) 获取集群内所有虚拟机的信息
-| 2) 获取集群内某个虚拟机组内虚拟机的信息
-| 3) 等待集群内某虚拟机组虚拟机启动
+| 1) 获取集群虚拟组内虚拟机
+| 2) 获取集群虚拟组内虚拟机IP信息
+| 3) 等待虚拟机组内虚拟机启动
+| 4) 获取虚拟机本机信息
+| 5) 获取虚拟机本机的某些字段信息
 |  
 | 所以f2cadmin在实现根据集群内虚拟机信息自动配置组件配置文件时很有用，比如在快速入门
 | 例子中，我们在wordpress-web的启动脚本中使用f2cadmin获取wordpress-mysql虚拟机组
@@ -137,8 +139,8 @@ f2cadmin命令行工具
 	  "clusterId": 14,
 	  "clusterType": "default",
 	  "groupId": 34,
-	  "localIP": "",
-	  "remoteIP": "",
+	  "localIP": "10.163.100.108",
+	  "remoteIP": "120.27.40.251",
 	  "region": "cn-qingdao",
 	  "rabbitmqQueue": "queue_down_14_297_d166bb98",
 	  "id": 297
