@@ -338,7 +338,7 @@ FAQ
     ./f2cs.py -v | --version
 
 | **Q: HostName可以自定义?**
-|    不可以现在，现在的HostName为虚拟机组名称+内网IP地址,如wordpress-web-10_19_2_139
+|    不可以现在，现在的HostName为虚拟机组名称+内网IP地址,如wordpress-all-in-one-10_19_2_139
 |
 
 六: FIT2CLOUD For 阿里云 常见问题
