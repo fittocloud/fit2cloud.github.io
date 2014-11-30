@@ -321,7 +321,7 @@ FAQ
 .. image:: _static/111-accessMonthPackageVM.png
 
 | **Q: SDK有Python版本吗?**
-|     有，请访问https://github.com/jason-f2c/fit2cloud-python-sdk.git获取。
+|     有，请访问git@github.com:fit2cloud/fit2cloud-python-sdk.git获取。
 |     您可以以命令行方式使用，也可以将其引入应用程序使用。
 
 .. code:: python
