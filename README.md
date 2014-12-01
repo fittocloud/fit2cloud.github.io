@@ -5,18 +5,20 @@ Installation
 =================================
 
 1. Install sphinx
+=================================
 '''
 wget --no-check-certificate https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 easy_install sphinx
 '''
 
 2. Install cloud_sptheme
+=================================
 '''
 easy_install cloud_sptheme
 '''
 
 3. Copy customized layout.html
-
+=================================
 '''
 /usr/lib/python2.6/site-packages/cloud_sptheme-1.6-py2.6.egg
 /usr/lib/python2.6/site-packages/Sphinx-1.3b1-py2.6.egg
@@ -26,6 +28,7 @@ cp _static/layout.html /usr/lib/python2.6/site-packages/cloud_sptheme-1.6-py2.6.
 '''
 
 4. Install AWS Cli
+=================================
 '''
 wget https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.zip
 unzip setuptools-7.0.zip
@@ -42,5 +45,7 @@ python setup.py install
 '''
 
 5. configure aws cli
-
+=================================
+'''
 aws configure
+'''
