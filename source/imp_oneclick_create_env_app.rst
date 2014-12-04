@@ -122,7 +122,7 @@
 
 	#!/bin/bash
 	cd /tmp
-	wget http://wordpress.org/latest.tar.gz
+	wget http://repository-proxy.fit2cloud.com:8080/content/repositories/releases/com/tidakada/wordpress/4.0.1/wordpress-4.0.1-wordpress.gz
 	mkdir -p /var/www/html
 	tar -xvzf latest.tar.gz -C /var/www/html
 	
