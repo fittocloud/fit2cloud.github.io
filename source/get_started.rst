@@ -275,7 +275,7 @@ FIT2CLOUD快速入门: 十分钟部署Wordpress应用
 	cd /tmp
 	wget http://repository-proxy.fit2cloud.com:8080/content/repositories/releases/com/tidakada/wordpress/4.0.1/wordpress-4.0.1-wordpress.gz
 	mkdir -p /var/www/html
-	tar -xvzf latest.tar.gz -C /var/www/html
+	tar -xvzf wordpress-4.0.1-wordpress.gz -C /var/www/html
 	
 	#configure apache2 file for wordpress
 	cat << EOF >> /etc/httpd/conf/httpd.conf
