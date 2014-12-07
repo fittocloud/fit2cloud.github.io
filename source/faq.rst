@@ -415,6 +415,9 @@ FAQ
 | **Q: Azure使用的是负载均衡，它和其他云的安全组有什么区别？**
 | **A**: 通过FIT2CLOUD启动的集群，属于一个Azure Cloud Service，一个CloudService只有一个PublicIP，需要通过负载均衡的方式将内部端口暴露给PublicIP:Port。
 
+| **Q: Azure负载均衡，有什么限制？**
+| **A**: 由于微软会自动给集群中的虚机添加内部端口转发到PublicIP 60000+端口，所以不建议设置转发外部60000+以上端口。
+
 | **Q: FIT2CLOUD支持Azure下的Raid吗？**
 | **A**: 由于微软Azure的限制，目前不支持Raid设置。
 
@@ -423,5 +426,3 @@ FAQ
 
 | **Q: FIT2CLOUD创建Azure虚机的磁盘如何设置？**
 | **A**: FIT2CLOUD创建的磁盘全部都在Azure云的Storage下，默认名称是"fit2cloud<用户ID><地缘组>"
-
-
