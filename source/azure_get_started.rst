@@ -77,15 +77,15 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 
 | 首先你需要注册一个Azure账号,访问 www.windowsazure.cn, 按Azure引导注册使用。
 
-..image:: _static/azure/try.png
+.. image:: _static/azure/azure_try.png
 
 | 当开通Azure之后，访问我的账户->管理，并在设置中找到订阅
 
-..image:: _static/azure/azure_controll.png
+.. image:: _static/azure/azure_controll.png
 
 | 在订阅中选择我们的订阅，由于本次测试账号使用的预付费账号，所以选择"Standard Pay-in-Advance Offer"
 
-..image:: _static/azure/azure_sub.png
+.. image:: _static/azure/azure_sub.png
 
 | 
 | 之后，FIT2CLOUD 将这一步变得十分简捷，只需要简单的下载安全证书，导入证书即可。
