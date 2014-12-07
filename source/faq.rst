@@ -395,4 +395,33 @@ FAQ
 
 九: FIT2CLOUD For 微软Azure 常见问题
 -----------------------------------------------------
-|
+| **Q: FIT2CLOUD支持启动windows机器吗？
+| **A: 目前不支持，支持Ubuntu和CentOS机器。
+
+| **Q: 支持Azure国外的数据中心吗？
+| **A: 不支持。目前只支持世纪互联运营的中国数据中心。
+
+| **Q: FIT2CLOUD支持地缘组吗？
+| **A: 支持。通过FIT2CLOUD管理同一个集群都在同一个地缘组。
+
+.. image:: _static/azure/new_cluster.png
+
+| **Q: FIT2CLOUD支持虚拟网络吗？
+| **A: 目前不支持。
+
+| **Q: 通过FIT2CLOUD可以起多少台虚机？
+| **A: 微软Azure的限制，单个账号默认可以启动20个CPU core，如果使用最小的1个core cpu机器，可以启动20台。
+
+| **Q: Azure使用的是负载均衡，它和其他云的安全组有什么区别？
+| **A: 通过FIT2CLOUD启动的集群，属于一个Azure Cloud Service，一个CloudService只有一个PublicIP，需要通过负载均衡的方式将内部端口暴露给PublicIP:Port。
+
+| **Q: FIT2CLOUD支持Azure下的Raid吗？
+| **A: 由于微软Azure的限制，目前不支持Raid设置。
+
+| **Q: FIT2CLOUD启动Azure虚机耗时很长？
+| **A: 由于微软Azure安全性的限制，启动机器不能并发，所以会有些慢，但却能100%保证正确启动。
+
+| **Q: FIT2CLOUD创建Azure虚机的磁盘如何设置？
+| **A: FIT2CLOUD创建的磁盘全部都在Azure云的Storage下，默认名称是"fit2cloud<用户ID><地缘组>"
+
+

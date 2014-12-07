@@ -68,7 +68,7 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 
 .. image:: _static/azure/github_auth.png
 
-| **4) 之后会跳转回FIT2CLOUD，填入个人信息
+| **4) 之后会跳转回FIT2CLOUD，填入个人信息**
 
 .. image:: _static/azure/user_info.png
 
@@ -111,8 +111,6 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 .. image:: _static/azure/new_mysql.png
  
 | **3) 编辑wordpress-mysql虚拟机组事件处理脚本**
-
-.. image:: _static/azure/create_script.png
 
 | **> 选择编辑事件处理脚本**
 
