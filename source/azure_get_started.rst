@@ -74,7 +74,21 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 
 一: 绑定Azure 账号
 -------------------------------------
-| FIT2CLOUD 将这一步变得十分简捷，只需要简单的下载订阅证书，导入订阅证书即可。
+
+| 首先你需要注册一个Azure账号,访问 www.windowsazure.cn, 按Azure引导注册使用。
+
+..image:: _static/azure/try.png
+
+| 当开通Azure之后，访问我的账户->管理，并在设置中找到订阅
+
+..image:: _static/azure/azure_controll.png
+
+| 在订阅中选择我们的订阅，由于本次测试账号使用的预付费账号，所以选择"Standard Pay-in-Advance Offer"
+
+..image:: _static/azure/azure_sub.png
+
+| 
+| 之后，FIT2CLOUD 将这一步变得十分简捷，只需要简单的下载安全证书，导入证书即可。
 | **1) FIT2CLOUD开始页，选择“绑定Azure 账号”**
 
 .. image:: _static/auzre/bind_key.png
@@ -169,6 +183,9 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 
 | **> 选择编辑本机install事件本机处理脚本, 编辑并保存**
 |
+
+.. image:: _static/azure/web_install_script.png
+
 | wordpress-web安装脚本
 
 .. code:: python
@@ -242,6 +259,8 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 | **2) 集群列表页面，选择"新建"; 新建集群页面中，填写集群名称并保存**
 
 .. image:: _static/azure/new_cluster.png
+
+| 注意，FIT2CLOUD会自动创建管理中国北部和中国东部两个地缘组。
 
 第二步: 添加wordpress-mysql虚拟机组
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
