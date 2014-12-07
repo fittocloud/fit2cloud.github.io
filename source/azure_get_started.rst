@@ -91,7 +91,7 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 | 之后，FIT2CLOUD 将这一步变得十分简捷，只需要简单的下载安全证书，导入证书即可。
 | **1) FIT2CLOUD开始页，选择“绑定Azure 账号”**
 
-.. image:: _static/auzre/bind_key.png
+.. image:: _static/azure/bind_key.png
 
 
 | **2) 在弹出页点击下载链接**
