@@ -11,7 +11,9 @@ FIT2CLOUD用户指南
    
    improvematuriy
    introduction
-   get_started
+   aliyun_get_started
+   aws_get_started
+   azure_get_started
    concepts
    advance
    faq
