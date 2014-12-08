@@ -164,10 +164,6 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
     
 | **3) 编辑wordpress-web虚拟机组事件处理脚本**
 
-.. image:: _static/azure/create_script.png
-
-| **> 选择编辑wordpress-web虚拟机组事件处理脚本**
-
 .. image:: _static/002-CreateVMGroup-6-SelectEditWebVMGroupEventHandlers.png
 
 | **> 选择编辑本机initialize事件本机处理脚本, 编辑并保存**
@@ -278,9 +274,8 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 第三步: 添加wordpress-web虚拟机组
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **1) 同上，集群页面选择 "wordpress"集群 -> "1个虚拟机组"**
-| **2) 集群虚拟机组页面选择 "新建" 虚拟机组**
-| **3) 新建集群虚拟机组页面配置wordpress-web虚拟机组并保存， 注意web是两台虚拟机**
+| **1) 在第二步的集群虚拟机组页面选择 "新建" 虚拟机组**
+| **2) 新建集群虚拟机组页面,配置wordpress-web虚拟机组并保存， 注意web是两台虚拟机**
 
 .. image:: _static/azure/add_role_web.png
 
