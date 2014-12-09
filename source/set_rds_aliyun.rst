@@ -31,7 +31,8 @@
 
 .. image:: _static/aliyun_rds_list.png
 
-| 8) 当集群的虚拟机成功启动后,FIT2CLOUD会自动的将这些关联了RDS实例的虚拟机添加到对应的白名单中
+| 8) 当集群的虚拟机成功启动后,FIT2CLOUD会根据关联的RDS实例的类型(公网或私网),
+自动选择将虚拟机的IP(公网或私网)添加到对应的白名单中
 
 .. image:: _static/aliyun_rds_whitelist.png
 
