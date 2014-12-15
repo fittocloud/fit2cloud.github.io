@@ -407,7 +407,7 @@ FAQ
 .. image:: _static/azure/new_cluster.png
 
 | **Q: FIT2CLOUD支持虚拟网络吗？**
-| **A**: 目前不支持。
+| **A**: 支持。用户在创建集群的时候,可以在部署方式中选择虚拟网络和子网。
 
 | **Q: 通过FIT2CLOUD可以起多少台虚机？**
 | **A**: 微软Azure的限制，单个账号默认可以启动20个CPU core，如果使用最小的1个core cpu机器，可以启动20台。
