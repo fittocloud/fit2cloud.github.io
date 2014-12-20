@@ -16,7 +16,7 @@ FIT2CLOUD高级功能
    f2cadmin
    imp_continuous_deployment
    qingcloud_private_network
-   set_slb
-   
+   set_slb_aliyun
+   set_rds_aliyun
    
 

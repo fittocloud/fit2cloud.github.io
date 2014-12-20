@@ -9,7 +9,7 @@ FAQ
 | 服务器自动化、混合云管理、应用部署升级自动化和持续交付。基于FIT2CLOUD，企业可以实现应用全生命周期的自动化管理，
 | 打通从代码到服务的转化通道，实现云应用的持续交付和自动化运维。
 |     
-|     FIT2CLOUD目前支持亚马逊AWS、阿里云和青云QingCloud。未来，FIT2CLOUD将支持更多的公有云和私有云
+|     FIT2CLOUD目前支持阿里云、微软Azure、亚马逊AWS和青云QingCloud。未来，FIT2CLOUD将支持更多的公有云和私有云
 | (如Openstack/Cloudstack), 打造中国版RightScale。FIT2CLOUD将致力于解决跨平台云管理问题，让企业能够
 | 轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基础设施和应用提供配置、监控、自动化和管理服务。
 |     
@@ -407,7 +407,7 @@ FAQ
 .. image:: _static/azure/new_cluster.png
 
 | **Q: FIT2CLOUD支持虚拟网络吗？**
-| **A**: 目前不支持。
+| **A**: 支持。用户在创建集群的时候,可以在部署方式中选择虚拟网络和子网。
 
 | **Q: 通过FIT2CLOUD可以起多少台虚机？**
 | **A**: 微软Azure的限制，单个账号默认可以启动20个CPU core，如果使用最小的1个core cpu机器，可以启动20台。
