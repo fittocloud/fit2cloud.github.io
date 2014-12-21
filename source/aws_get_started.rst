@@ -15,7 +15,6 @@ FIT2CLOUD快速入门: 在AWS上十分钟部署Wordpress应用
 |    下面我们看在FIT2CLOUD中如何做，在FIT2CLOUD中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我
 | 们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让FIT2CLOUD执行这个集群的部署计划，先调用
 | 阿里云的API创建出集群部署计划定义的虚拟机，然后在虚拟机启动后根据计划部署配置和启动wordpress的各个组件。
-| 观看视频请打开 `FIT2CLOUD For 阿里云 十分钟部署Wordpress演示视频 <http://downloads.fit2cloud.com/aliyun/demo.mov>`_  
 
 .. code:: python
 
@@ -59,11 +58,7 @@ FIT2CLOUD快速入门: 在AWS上十分钟部署Wordpress应用
 |
 |    注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome
 |
-| b> 如果IaaS使用的是阿里云，在FIT2CLOUD首页选择 "FIT2CLOUD For 阿里云(Github帐号登陆)", 如下图示:
-
-.. image:: _static/000-Login-Fit2CloudForAliyun.png
-
-|    如果IaaS使用的是AWS, 在FIT2CLOUD首页选择 "FIT2CLOUD For AWS(Github帐号登陆)", 如下图示:
+| b> 在FIT2CLOUD首页选择 "FIT2CLOUD For AWS(Github帐号登陆)", 如下图示:
 
 .. image:: _static/000-Login-Fit2CloudForAWS.png
 
@@ -78,49 +73,6 @@ FIT2CLOUD快速入门: 在AWS上十分钟部署Wordpress应用
 
 第一步: 获取Access Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-**如果使用的是阿里云**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|
-| **1) 登录阿里云(www.aliyun.com)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|    点击 `到阿里云(www.aliyun.com)点这里 <http://www.aliyun.com/>`_
-|
-| 注1: 如果没有阿里云帐号, 需要先创建一个
-| 注2: 阿里云开通按量付费的云服务器需要实名认证，如果没有需要先做实名认证。
-| 注3: 如果阿里云帐号现金账户余额小于100, 需要先用支付宝充值(阿里云开通按量付费的云服务器，现金账户余额需要至少100.00元)
-
-|   如果已创建过阿里云Access  Key，请直接到阿里云Access  Key页面;
-|   如果没有阿里云Access  Key需要先创建一个;
-|
-| **2) 在阿里云首页, 右上角, 选择进入 "用户中心"**
-
-.. image:: _static/001-BindKey-1-AliyunHome.png
-
-| **3) 在阿里云用户中心页面, 右上角, 点击 "账户管理"**
-
-.. image:: _static/001-BindKey-1-AliyunUserHome.png
-
-| **4) 在阿里云账户管理页面, 页面最上方, 点击用户名后会出现一个下拉菜单，然后点击 "管理控制台"**
-
-.. image:: _static/001-BindKey-2-TopUp.png
-
-| **5) 在阿里云管理控制台页面, 点击页面右上角的钥匙图标以进入阿里云"Access Key"页面**
-
-.. image:: _static/001-BindKey-3-ClickKey.png
-
-| **6) 在阿里云Access Key页面, 点击 "创建Access Key" 按钮**
-
-.. image:: _static/001-BindKey-4-RequestCreateAccessKey.png
-
-| **7) 在阿里云Access Key页面, 点击 "显示" 按钮查看阿里云Access Key**
-
-.. image:: _static/001-BindKey-5-ViewAccessKey.png
-
-| 将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，下一步在FIT2CLOUD中绑定阿里云Access Key时会用到.
-|
-|
-|
 **如果使用的是AWS, 帐号是2013年12月前创建的**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
@@ -180,7 +132,7 @@ FIT2CLOUD快速入门: 在AWS上十分钟部署Wordpress应用
 第二步: 绑定Access  Key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |
-| **1) FIT2CLOUD开始页，选择"绑定阿里云Access Key"**
+| **1) FIT2CLOUD开始页，选择"绑定AWS Access Key"**
 
 .. image:: _static/001-BindKey-6-ClickBindKey.png
 
@@ -188,7 +140,7 @@ FIT2CLOUD快速入门: 在AWS上十分钟部署Wordpress应用
 
 .. image:: _static/001-BindKey-7-EditDefaultKey.png
 
-| **3) Access Key绑定页，将第二步获得的阿里云Access Key填写到相应输入框里并保存**
+| **3) Access Key绑定页，将第二步获得的AWS Access Key填写到相应输入框里并保存**
 
 .. image:: _static/001-BindKey-8-FillKeyAndSave.png
 
@@ -410,7 +362,7 @@ FIT2CLOUD快速入门: 在AWS上十分钟部署Wordpress应用
 | 3) Windows下安装Java(TM)插件: http://java.com/en/download/help/windows_manual_download.xml
 | 
 |    顺便提及使用FIT2CLOUD方式建立集群有一个好处，就是可以将启动虚拟机和安装运行时环境及组件的工作全部
-| 自动化，真正实现一键创建集群和部署应用。您可以把集群关闭后，再启动起来，不需要手工到阿里云里启动虚拟机，
+| 自动化，真正实现一键创建集群和部署应用。您可以把集群关闭后，再启动起来，不需要手工到AWS里启动虚拟机，
 | 也不需要手工登到虚拟机运行脚本，也不需要找到虚拟机的IP然后配置到某脚本中让脚本自动登陆安装。
 |
 |    最后, 这篇入门文档，简单介绍了FIT2CLOUD的一些基本功能，由于主题和篇幅的限制，还有很多非常有用的功

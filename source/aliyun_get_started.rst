@@ -2,8 +2,7 @@ FIT2CLOUD快速入门: 十分钟在Aliyun部署Wordpress应用
 ====================================================
 
 |    这里我们以在阿里云上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD
-| 在阿里云上部署和建立一个wordpress网站, 并且把创建虚拟机和安装运行时环境及组件的工作自动化。如果您用的
-| 是AWS, 在AWS建立wordpress网站的步骤与在阿里云上是一样的。
+| 在阿里云上部署和建立一个wordpress网站, 并且把创建虚拟机和安装运行时环境及组件的工作自动化。
 |
 |    我们将要创建的wordpress网站需要在阿里云里启动两台虚拟机，一台跑wordpress web，一台跑wordpress 
 | mysql, 装wordpress web的虚拟机需要对外开放80端口, 以便能从公网访问。 部署计划即:
@@ -59,13 +58,9 @@ FIT2CLOUD快速入门: 十分钟在Aliyun部署Wordpress应用
 |
 |    注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome
 |
-| b> 如果IaaS使用的是阿里云，在FIT2CLOUD首页选择 "FIT2CLOUD For 阿里云(Github帐号登陆)", 如下图示:
+| b> 在FIT2CLOUD首页选择 "FIT2CLOUD For 阿里云(Github帐号登陆)", 如下图示:
 
 .. image:: _static/000-Login-Fit2CloudForAliyun.png
-
-|    如果IaaS使用的是AWS, 在FIT2CLOUD首页选择 "FIT2CLOUD For AWS(Github帐号登陆)", 如下图示:
-
-.. image:: _static/000-Login-Fit2CloudForAWS.png
 
 | **2) 点击"Github帐号登陆"后，会弹出Github登陆页面，要求输入Github用户名密码**
 |
@@ -118,63 +113,6 @@ FIT2CLOUD快速入门: 十分钟在Aliyun部署Wordpress应用
 .. image:: _static/001-BindKey-5-ViewAccessKey.png
 
 | 将阿里云显示的Access Key ID 和 Secret拷贝到某文本文件，下一步在FIT2CLOUD中绑定阿里云Access Key时会用到.
-|
-|
-|
-**如果使用的是AWS, 帐号是2013年12月前创建的**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|
-| **1) 登录AWS(aws.amazon.com)**
-|
-| **2) 点击右上角My Account|Console, 在下拉列表中点击"Security Credentials" 进入 "Security Credentials"页面**
-
-.. image:: _static/001-BindKey-AWS-1-SelectSecurityCredential.png
-
-| **3) 找到Access Credentails部分，获取AccessKey ID and Secret.**
-
-.. image:: _static/001-BindKey-AWS-2-ViewSecurityCredential.png
-
-|
-**如果使用的是AWS, 帐号是2013年12月之后创建的**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|
-| **1) 登录AWS(aws.amazon.com)**
-|
-| **2) 选择进入IAM**
-
-.. image:: _static/001-BindKey-AWS-3-SelectIAM.png
-
-| **3) 在IAM中选择使用"Power User Policy"创建User Group**
-
-.. image:: _static/001-BindKey-AWS-4-CreateUserGroup.png
-
-| **4) 在设置权限页面点击"Continue"**
-
-.. image:: _static/001-BindKey-AWS-5-ViewGroupPermission.png
-
-| **5) 在创建确认页面点击"CreateGroup"**
-
-.. image:: _static/001-BindKey-AWS-6-ConfirmCreateGroup.png
-
-| **6) IAM中选择创建User**
-
-.. image:: _static/001-BindKey-AWS-7-SelectCreateUser.png
-
-| **7) 输入用户名后，点击"Create"**
-
-.. image:: _static/001-BindKey-AWS-8-FillUserInfo.png
-
-| **8) 在创建完成页面点击"Show User Security Credentials"**
-
-.. image:: _static/001-BindKey-AWS-9-UserCreatedConfirmPage.png
-
-| **9) 在"Show User Security Credentials"页面查看AccessKey**
-
-.. image:: _static/001-BindKey-AWS-10-ViewUserSecurityCredential.png
-
-| **10) 打开IAM Access开关**
-
-.. image:: _static/001-BindKey-AWS-11-EnableIAMAccess.png
 
 
 第二步: 绑定Access  Key
