@@ -1,7 +1,7 @@
 FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 ====================================================
 
-|    这里我们以在阿里云上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD
+|    这里我们以在Azure上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD
 | 在微软Azure云上部署和建立一个wordpress网站, 并且把创建虚拟机和安装运行时环境及组件的工作自动化。
 |
 |    我们将要创建的wordpress网站需要在Azure云上启动三台虚拟机，两台跑wordpress web并做负载均衡，一台跑wordpress 
@@ -28,7 +28,7 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
      2) 虚拟机组: 把集群中相同类型的一组虚拟机叫做一个虚拟机组
      比如wordpress网站的虚拟机有两个虚拟机组，一组是wordpress-web虚拟机组，里面有一台虚拟机, 另一组
    是wordpress-mysql虚拟机组，里面有一台虚拟机, 不同类型的虚拟组里的虚拟机安装该组相应的运行时环境及组件。
-   对于一个特定的虚拟机组，我们可以定义组内包括几台虚拟机，启动在阿里云的哪个数据中心，北京杭州香港还是青岛，
+   对于一个特定的虚拟机组，我们可以定义组内包括几台虚拟机，启动在Azure的哪个数据中心，东部还是北部，
    每台虚拟机启动后装哪种操作系统，运行什么脚本, 装哪些软件，组件，如何配置数据库连接文件。这样，我们只要先定
    义好集群的部署计划，剩下就是FIT2CLOUD执行计划了, 执行完后就可以访问集群里部署的应用服务了。
 
@@ -58,7 +58,7 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 |
 |    注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome
 |
-| b> 如果IaaS使用的是阿里云，在FIT2CLOUD首页选择 "FIT2CLOUD For Azure(Github帐号登陆)", 如下图示:
+| b> 在FIT2CLOUD首页选择 "FIT2CLOUD For Azure(Github帐号登陆)", 如下图示:
 
 .. image:: _static/azure/azure_login.png
 
@@ -324,7 +324,7 @@ FIT2CLOUD快速入门: 十分钟在Azure部署Wordpress应用
 | 3) Windows下安装Java(TM)插件: http://java.com/en/download/help/windows_manual_download.xml
 | 
 |    顺便提及使用FIT2CLOUD方式建立集群有一个好处，就是可以将启动虚拟机和安装运行时环境及组件的工作全部
-| 自动化，真正实现一键创建集群和部署应用。您可以把集群关闭后，再启动起来，不需要手工到阿里云里启动虚拟机，
+| 自动化，真正实现一键创建集群和部署应用。您可以把集群关闭后，再启动起来，不需要手工到Azure里启动虚拟机，
 | 也不需要手工登到虚拟机运行脚本，也不需要找到虚拟机的IP然后配置到某脚本中让脚本自动登陆安装。
 |
 |    最后, 这篇入门文档，简单介绍了FIT2CLOUD的一些基本功能，由于主题和篇幅的限制，还有很多非常有用的功
