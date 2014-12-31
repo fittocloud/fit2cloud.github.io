@@ -71,14 +71,14 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
   <div class="section" id="f2cadmin">
 <h1>f2cadmin命令行工具<a class="headerlink" href="#f2cadmin" title="永久链接至标题">¶</a></h1>
 <div class="line-block">
-<div class="line-block">
 <div class="line">f2cadmin是一个FIT2CLOUD部署在虚拟机上的一个命令行工具，通过f2cadmin可以:</div>
-<div class="line">1) 获取集群内所有虚拟机的信息</div>
-<div class="line">2) 获取集群内某个虚拟机组内虚拟机的信息</div>
-<div class="line">3) 等待集群内某虚拟机组虚拟机启动</div>
+<div class="line">1) 获取集群虚拟组内虚拟机</div>
+<div class="line">2) 获取集群虚拟组内虚拟机IP信息</div>
+<div class="line">3) 等待虚拟机组内虚拟机启动</div>
+<div class="line">4) 获取虚拟机本机信息</div>
+<div class="line">5) 获取虚拟机本机的某些字段信息</div>
 <div class="line"><br /></div>
 <div class="line">所以f2cadmin在实现根据集群内虚拟机信息自动配置组件配置文件时很有用，比如在快速入门</div>
-</div>
 <div class="line">例子中，我们在wordpress-web的启动脚本中使用f2cadmin获取wordpress-mysql虚拟机组</div>
 <div class="line">内虚拟机的IP地址，以配置到wordpress web的数据连接配置文件中。实现根据集群内虚拟机信息</div>
 <div class="line">自动配置相关组件配置文件。</div>
@@ -108,22 +108,135 @@ fi
 <div class="line-block">
 <div class="line">以下是f2cadmin的用法和示例:</div>
 <div class="line"><br /></div>
-<div class="line">1) 获取集群虚拟组内虚拟机IP信息</div>
-<div class="line-block">
-<div class="line">f2cadmin get clusterrole_servers_info &lt;VM Group Name&gt; localIP | head -1</div>
+<div class="line">1) 获取集群虚拟组内虚拟机</div>
+<div class="line">f2cadmin get clusterrole_servers_info &lt;虚拟机组名称&gt;</div>
 <div class="line"><br /></div>
-<div class="line">Example:</div>
+<div class="line">例子: 获取wordpress-mysql虚拟机组虚拟机信息</div>
+<div class="line-block">
+<div class="line">f2cadmin get clusterrole_servers_info wordpress-mysql</div>
+</div>
+<div class="line">输出:</div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>&gt; f2cadmin get clusterrole_servers_info wordpress-mysql
+    [
+      {
+        &quot;backendCreated&quot;: false,
+        &quot;serverRoleId&quot;: 24,
+        &quot;vmId&quot;: &quot;i-28mixti7m&quot;,
+        &quot;imageId&quot;: &quot;centos6u5_64_20G_aliaegis_20140926.vhd&quot;,
+        &quot;vmType&quot;: &quot;ecs.t1.xsmall&quot;,
+        &quot;rabbitmqQueue&quot;: &quot;queue_down_14_12154_637fdea6&quot;,
+        &quot;id&quot;: 12154,
+        &quot;alertType&quot;: null,
+        &quot;zone&quot;: &quot;cn-qingdao-b&quot;,
+        &quot;cloudName&quot;: &quot;default-dev&quot;,
+        &quot;backendCreating&quot;: false,
+        &quot;failedCause&quot;: null,
+        &quot;clusterRoleName&quot;: &quot;wordpress-mysql&quot;,
+        &quot;clusterType&quot;: &quot;default&quot;,
+        &quot;workId&quot;: 24287,
+        &quot;localIP&quot;: &quot;10.165.63.61&quot;,
+        &quot;imageName&quot;: &quot;centos6u5-20140926&quot;,
+        &quot;heartbeatStatus&quot;: &quot;ONLINE&quot;,
+        &quot;image&quot;: 15,
+        &quot;internetBandwidth&quot;: 100,
+        &quot;status&quot;: &quot;initializeResponse&quot;,
+        &quot;description&quot;: null,
+        &quot;clusterName&quot;: &quot;wordpress-qingdao&quot;,
+        &quot;clusterId&quot;: 14,
+        &quot;price&quot;: 0.18809999999999999,
+        &quot;internetType&quot;: &quot;PayByTraffic&quot;,
+        &quot;excludeVmStatus&quot;: null,
+        &quot;runningTime&quot;: null,
+        &quot;remoteIP&quot;: &quot;121.42.56.146&quot;,
+        &quot;password&quot;: null,
+        &quot;groupId&quot;: 34,
+        &quot;name&quot;: &quot;wordpress-qingdao--wordpress-mysql--12154&quot;,
+        &quot;agentRetried&quot;: 0,
+        &quot;vmStatus&quot;: &quot;Running&quot;,
+        &quot;terminateFlag&quot;: false,
+        &quot;created&quot;: 1417244439000,
+        &quot;clusterRoleId&quot;: 52,
+        &quot;region&quot;: &quot;cn-qingdao&quot;,
+        &quot;cloudId&quot;: 10,
+        &quot;deleted&quot;: null
+      }
+    ]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">2) 获取集群虚拟组内虚拟机IP信息</div>
+<div class="line">f2cadmin get clusterrole_servers_info &lt;虚拟机组名称&gt; localIP | head -1</div>
+<div class="line"><br /></div>
+<div class="line">例子: 获取wordpress-mysql虚拟机组虚拟机内网IP</div>
 <div class="line-block">
 <div class="line">f2cadmin get clusterrole_servers_info wordpress-mysql localIP | head -1</div>
 <div class="line"><br /></div>
 </div>
+<div class="line">输出:</div>
 </div>
-<div class="line">2) 等待虚拟机组内虚拟机启动</div>
+<div class="code python highlight-python"><div class="highlight"><pre>&gt; f2cadmin get clusterrole_servers_info wordpress-mysql localIP
+10.165.63.61
+</pre></div>
+</div>
 <div class="line-block">
-<div class="line">f2cadmin waitUntilServerUp &lt;VM Group Name&gt; &lt;Wait Timeout Seconds&gt;</div>
+<div class="line">3) 等待虚拟机组内虚拟机启动</div>
+<div class="line">f2cadmin waitUntilServerUp &lt;虚拟机组名称&gt; &lt;等待超时时间(单位秒)&gt;</div>
 <div class="line"><br /></div>
-<div class="line">Example:   f2cadmin waitUntilServerUp wordpress-mysql 120</div>
+<div class="line">例子: 等待wordpress-mysql虚拟机组虚拟机启动，等待120秒</div>
+<div class="line-block">
+<div class="line">f2cadmin waitUntilServerUp wordpress-mysql 120</div>
 </div>
+<div class="line">输出:</div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>&gt; f2cadmin waitUntilServerUp wordpress-mysql 120
+to locate clusterrole wordpress-mysql servers..... @ 2014-11-29 15:29:36
+clusterrole wordpress-mysql #12154 vm is up, localIP:10.165.63.61 remoteIP:121.42.56.146
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">4) 获取虚拟机本机信息</div>
+<div class="line">f2cadmin get local_server_info [&lt;column&gt;]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]</div>
+<div class="line"><br /></div>
+<div class="line">例子: 获取虚拟机本机信息</div>
+<div class="line-block">
+<div class="line">f2cadmin get local_server_info</div>
+</div>
+<div class="line">输出:</div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>&gt; f2cadmin get local_server_info
+{
+  &quot;clusterName&quot;: &quot;wordpress-qingdao&quot;,
+  &quot;name&quot;: &quot;wordpress-qingdao-&gt;wordpress-mysql-&gt;297&quot;,
+  &quot;vmId&quot;: &quot;&quot;,
+  &quot;clusterRoleId&quot;: 52,
+  &quot;clusterRoleName&quot;: &quot;wordpress-mysql&quot;,
+  &quot;serverRoleId&quot;: 24,
+  &quot;cloudId&quot;: 10,
+  &quot;clusterId&quot;: 14,
+  &quot;clusterType&quot;: &quot;default&quot;,
+  &quot;groupId&quot;: 34,
+  &quot;localIP&quot;: &quot;10.163.100.108&quot;,
+  &quot;remoteIP&quot;: &quot;120.27.40.251&quot;,
+  &quot;region&quot;: &quot;cn-qingdao&quot;,
+  &quot;rabbitmqQueue&quot;: &quot;queue_down_14_297_d166bb98&quot;,
+  &quot;id&quot;: 297
+}
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">5) 获取虚拟机本机的某些字段信息</div>
+<div class="line">f2cadmin get local_server_info [&lt;column&gt;]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]</div>
+<div class="line"><br /></div>
+<div class="line">例子: 获取本机虚拟机信息</div>
+<div class="line-block">
+<div class="line">f2cadmin get local_server_info localIP</div>
+</div>
+<div class="line">输出:</div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>&gt; f2cadmin get local_server_info localIP
+10.163.100.108
+</pre></div>
 </div>
 </div>
 

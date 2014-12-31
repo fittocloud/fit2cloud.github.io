@@ -31,7 +31,7 @@
     <script type="text/javascript" src="_static/cloud.js"></script>
     <link rel="top" title="FIT2CLOUD For 阿里云 1.0 文档" href="index.html" />
     <link rel="next" title="FIT2CLOUD功能截屏" href="screenshots.html" />
-    <link rel="prev" title="设置负载均衡" href="set_slb.html" /> 
+    <link rel="prev" title="关联RDS(阿里云)" href="set_rds_aliyun.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="description"
 content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员和运维人员实现对应用全生命周期的自动化管理。">
@@ -52,7 +52,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
           <a href="screenshots.html" title="FIT2CLOUD功能截屏"
              accesskey="N">下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
-          <a href="set_slb.html" title="设置负载均衡"
+          <a href="set_rds_aliyun.html" title="关联RDS(阿里云)"
              accesskey="P">上一页</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
  
@@ -565,6 +565,45 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line">当您要求FIT2CLOUD创建应用运行所需的环境即虚拟机及存储时, 需要调用阿里云的API。</div>
 <div class="line"><br /></div>
 </div>
+<div class="line"><strong>Q: 为什么无法Ping通虚机?</strong></div>
+<div class="line-block">
+<div class="line">虚机组默认的安全组规则只打开SSH 22端口，为了安全起见，其他端口都是关闭了。如果想Ping通，你需要在安全组中增加ICMP规则，如下图所示。</div>
+</div>
+</div>
+<img alt="_static/111-openping.png" src="_static/111-openping.png" />
+<div class="line-block">
+<div class="line"><strong>Q: 为什么无法通过内网访问已有包月虚机?怎么才能访问</strong></div>
+<div class="line-block">
+<div class="line">问题原因：通过FIT2CLOUD启动的按量付费机器没有加入包月机器默认安全组。FIT2CLOUD为了安全起见，只开放用户在安全组中开通的端口。</div>
+<div class="line">解决办法：如果用户想让FIT2CLOUD中启动的虚机通过内网访问包月机器，那么需要在安全组中增加ALL规则，如下图所示。</div>
+</div>
+</div>
+<img alt="_static/111-accessMonthPackageVM.png" src="_static/111-accessMonthPackageVM.png" />
+<div class="line-block">
+<div class="line"><strong>Q: SDK有Python版本吗?</strong></div>
+<div class="line-block">
+<div class="line">有，请访问git&#64;github.com:fit2cloud/fit2cloud-python-sdk.git获取。</div>
+<div class="line">您可以以命令行方式使用，也可以将其引入应用程序使用。</div>
+</div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre>命令行方式使用:
+./f2cs.py config --endpoint=&lt;endpoint&gt; --id=&lt;access key id&gt; --secret=&lt;access key secret&gt;
+./f2cs.py listClusters --cluster-name=&lt;cluster name&gt;
+./f2cs.py listClusterRoles --cluster-name=&lt;cluster name&gt;
+./f2cs.py listClusterServers --cluster-name=&lt;cluster name&gt;
+./f2cs.py listClusterVMGroupServers --cluster-name=&lt;cluster name&gt; --cluster-vmgroup-name=&lt;cluster vmgroup name&gt;
+./f2cs.py executeScript --cluster-name=&lt;cluster name&gt; --cluster-vmgroup-name=&lt;cluster vmgroup&gt; --cluster-server-id=&lt;cluster server id&gt; --script-file=&lt;script file path&gt;
+./f2cs.py getScriptLog --execution-id=&lt;execution id&gt;
+./f2cs.py -h | --help
+./f2cs.py -v | --version
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: HostName可以自定义?</strong></div>
+<div class="line-block">
+<div class="line">可以。FIT2CLOUD支持三种方式的hostname命名规则：默认（不更改）；采用虚机组名称+内网IP；自定义前缀+序号。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 <div class="section" id="fit2cloud-for-aws">
@@ -597,6 +636,58 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <div class="line"><br /></div>
 </div>
 </div>
+<div class="section" id="fit2cloud-for-azure">
+<h2>九: FIT2CLOUD For 微软Azure 常见问题<a class="headerlink" href="#fit2cloud-for-azure" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Q: FIT2CLOUD支持启动windows机器吗？</strong></div>
+<div class="line"><strong>A</strong>: 目前不支持，支持Ubuntu和CentOS机器。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: 支持Azure国外的数据中心吗？</strong></div>
+<div class="line"><strong>A</strong>: 不支持。目前只支持世纪互联运营的中国数据中心。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: FIT2CLOUD支持地缘组吗？</strong></div>
+<div class="line"><strong>A</strong>: 支持。通过FIT2CLOUD管理同一个集群都在同一个地缘组。</div>
+</div>
+<img alt="_images/new_cluster.png" src="_images/new_cluster.png" />
+<div class="line-block">
+<div class="line"><strong>Q: FIT2CLOUD支持虚拟网络吗？</strong></div>
+<div class="line"><strong>A</strong>: 支持。用户在创建集群的时候,可以在部署方式中选择虚拟网络和子网。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: 通过FIT2CLOUD可以起多少台虚机？</strong></div>
+<div class="line"><strong>A</strong>: 微软Azure的限制，单个账号默认可以启动20个CPU core，如果使用最小的1个core cpu机器，可以启动20台。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: Azure使用的是负载均衡，它和其他云的安全组有什么区别？</strong></div>
+<div class="line"><strong>A</strong>: 通过FIT2CLOUD启动的集群，属于一个Azure Cloud Service，一个CloudService只有一个PublicIP，需要通过负载均衡的方式将内部端口暴露给PublicIP:Port。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: Azure负载均衡，有什么限制？</strong></div>
+<div class="line"><strong>A</strong>: 由于微软会自动给集群中的虚机添加内部端口转发到PublicIP 60000+端口，所以不建议设置转发外部60000+以上端口。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: FIT2CLOUD支持Azure下的Raid吗？</strong></div>
+<div class="line"><strong>A</strong>: 由于微软Azure的限制，目前不支持Raid设置。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: FIT2CLOUD启动Azure虚机耗时很长？</strong></div>
+<div class="line"><strong>A</strong>: 由于微软Azure安全性的限制，启动机器不能并发，所以会有些慢，但却能100%保证正确启动。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: FIT2CLOUD创建Azure虚机的磁盘如何设置？</strong></div>
+<div class="line"><strong>A</strong>: FIT2CLOUD创建的磁盘全部都在Azure云的Storage下，默认名称是&#8221;fit2cloud&lt;用户ID&gt;&lt;地缘组&gt;&#8221;</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Q: 虚机组绑定负载均衡，提示某端口已经被占用？</strong></div>
+<div class="line"><strong>A</strong>: 有可能虚机组的集群类型下已经有别的虚机组绑定了该端口，微软限制同一集群下同一端口的重复绑定，您可以新建或者切换一下虚机组的集群类型。</div>
+</div>
+<div class="line-block">
+<div class="line"><a href="#id8"><span class="problematic" id="id9">**</span></a>Q: CentOS的SELinux状态是什么？</div>
+<div class="line"><strong>A</strong>: 微软的限制CentOS的SELinux状态为forced，我们在保证网络服务可用的前提下，设置SELinux状态为permissive。如果有需要，执行setenforce 1恢复默认forced设置，但这有可能导致部分服务异常，httpd等。</div>
+</div>
+</div>
 </div>
 
 
@@ -616,6 +707,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <li><a class="reference internal" href="#fit2cloud-for">六: FIT2CLOUD For 阿里云 常见问题</a></li>
 <li><a class="reference internal" href="#fit2cloud-for-aws">七: FIT2CLOUD For 亚马逊AWS 常见问题</a></li>
 <li><a class="reference internal" href="#id7">八: FIT2CLOUD For 青云 常见问题</a></li>
+<li><a class="reference internal" href="#fit2cloud-for-azure">九: FIT2CLOUD For 微软Azure 常见问题</a></li>
 </ul>
 </li>
 </ul>
@@ -623,8 +715,8 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
   </div>
   <div class="sphinxprev">
     <h4>Previous page</h4>
-    <p class="topless"><a href="set_slb.html"
-                          title="Previous page">&larr; 设置负载均衡</a></p>
+    <p class="topless"><a href="set_rds_aliyun.html"
+                          title="Previous page">&larr; 关联RDS(阿里云)</a></p>
   </div>
   <div class="sphinxnext">
     <h4>Next page</h4>
@@ -665,7 +757,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
           <a href="screenshots.html" title="FIT2CLOUD功能截屏"
              >下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
-          <a href="set_slb.html" title="设置负载均衡"
+          <a href="set_rds_aliyun.html" title="关联RDS(阿里云)"
              >上一页</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">FIT2CLOUD For 阿里云 1.0 文档</a> &raquo;</li>
  

@@ -9,13 +9,10 @@ FIT2CLOUD用户指南
 .. toctree::
    :maxdepth: 2
    
-   improvematuriy
    introduction
-   aliyun_get_started
-   aws_get_started
-   azure_get_started
    concepts
-   advance
+   get_started
+   advanced_features_index
    faq
    screenshots
    references

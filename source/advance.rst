@@ -1,10 +1,9 @@
 FIT2CLOUD高级功能
-=====================================
+--------------------------------------
 
 .. toctree::
    :maxdepth: 2
    
-   add_data_volume
    set_security_group
    install_runtimes_app
    add_cluster_monitoring

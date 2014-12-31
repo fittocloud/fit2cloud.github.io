@@ -1,4 +1,4 @@
-FIT2CLOUD快速入门: 十分钟在Aliyun部署Wordpress应用
+十分钟在Aliyun部署Wordpress
 ====================================================
 
 |    这里我们以在阿里云上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD
