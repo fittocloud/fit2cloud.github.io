@@ -11,8 +11,6 @@ FIT2CLOUD高级功能
    use_customized_image
    integrate
    f2cadmin
-   qingcloud_private_network
-   set_slb_aliyun
-   set_rds_aliyun
+   
    
 

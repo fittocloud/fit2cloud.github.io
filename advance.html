@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/jquery.cookie.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
     <link rel="top" title="FIT2CLOUD For 阿里云 1.0 文档" href="index.html" />
-    <link rel="next" title="设置安全组" href="set_security_group.html" />
+    <link rel="next" title="执行脚本" href="execute_script.html" />
     <link rel="prev" title="十分钟在Azure部署Wordpress" href="azure_get_started.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="description"
@@ -49,7 +49,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="set_security_group.html" title="设置安全组"
+          <a href="execute_script.html" title="执行脚本"
              accesskey="N">下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="azure_get_started.html" title="十分钟在Azure部署Wordpress"
@@ -70,14 +70,6 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <h1>FIT2CLOUD高级功能<a class="headerlink" href="#fit2cloud" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="set_security_group.html">设置安全组</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_runtimes_app.html">软件安装和应用部署</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install_runtimes_app.html#id2">一: 创建虚拟机组</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_runtimes_app.html#id3">二: 创建集群</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_runtimes_app.html#id7">三: 启动集群</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="add_cluster_monitoring.html">设置集群监控告警</a></li>
 <li class="toctree-l1"><a class="reference internal" href="execute_script.html">执行脚本</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="execute_script.html#id2">一: 在集群中所有虚拟机上执行脚本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="execute_script.html#id3">二: 在集群中某虚拟机组内所有虚拟机上执行脚本</a></li>
@@ -85,33 +77,20 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
 <li class="toctree-l2"><a class="reference internal" href="execute_script.html#id5">四: 执行脚本超时处理</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="set_autoscale.html">设置自动伸缩</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="set_autoscale.html">自动伸缩</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="set_autoscale.html#id2">一: 基于时间的自动伸缩</a></li>
 <li class="toctree-l2"><a class="reference internal" href="set_autoscale.html#id3">二: 基于监控指标的自动伸缩</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="set_security_group.html">设置安全组</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_cluster_monitoring.html">设置集群监控告警</a></li>
 <li class="toctree-l1"><a class="reference internal" href="use_customized_image.html">使用自定义镜像</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integrate.html">使用FIT2CLOUD Java SDK</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="integrate.html#jar">第一步：引用Jar包</a></li>
 <li class="toctree-l2"><a class="reference internal" href="integrate.html#fit2cloud-api">第二步：调用FIT2CLOUD API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="imp_oneclick_create_env_app.html">实现一键创建环境及应用</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="imp_oneclick_create_env_app.html#id2">一: 创建虚拟机组</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imp_oneclick_create_env_app.html#id3">二: 创建集群</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imp_oneclick_create_env_app.html#id7">三: 启动集群</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="f2cadmin.html">f2cadmin命令行工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="imp_continuous_deployment.html">实现持续部署升级</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qingcloud_private_network.html">青云基础网络与私有网络</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qingcloud_private_network.html#id2">一: 青云基础网络与私有网络的区别?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qingcloud_private_network.html#id3">二: 什么时候使用私有网络？什么时候使用基础网络？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qingcloud_private_network.html#fit2cloud">三: FIT2CLOUD对青云基础网络和私有网络的支持</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="set_slb_aliyun.html">设置负载均衡(阿里云)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="set_rds_aliyun.html">关联RDS(阿里云)</a></li>
 </ul>
 </div>
 </div>
@@ -129,8 +108,8 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
   </div>
   <div class="sphinxnext">
     <h4>Next page</h4>
-    <p class="topless"><a href="set_security_group.html"
-                          title="Next page">&rarr; 设置安全组</a></p>
+    <p class="topless"><a href="execute_script.html"
+                          title="Next page">&rarr; 执行脚本</a></p>
   </div>
   <h3>本页</h3>
   <ul class="this-page-menu">
@@ -163,7 +142,7 @@ content="Fit2Cloud是一个云管理及DevOps协作平台，帮助开发人员�
           <a href="genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
-          <a href="set_security_group.html" title="设置安全组"
+          <a href="execute_script.html" title="执行脚本"
              >下一页</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="azure_get_started.html" title="十分钟在Azure部署Wordpress"
