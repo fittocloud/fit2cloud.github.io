@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-FIT2CLOUD用户指南
+FIT2CLOUD在线文档
 =====================================
 
 .. toctree::
