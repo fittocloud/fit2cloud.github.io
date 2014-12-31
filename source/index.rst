@@ -7,12 +7,11 @@ FIT2CLOUD用户指南
 =====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    introduction
-   concepts
    get_started
-   advanced_features_index
+   advance
    faq
    screenshots
    references
