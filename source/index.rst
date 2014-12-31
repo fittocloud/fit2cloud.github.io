@@ -7,7 +7,7 @@ FIT2CLOUD在线文档
 =====================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    introduction
    get_started
