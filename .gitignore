@@ -3,6 +3,10 @@ target
 .project
 .settings
 .classpath
+_images
+_sources
+.DS_Store
+build
 *~
 *.log
 *.out
