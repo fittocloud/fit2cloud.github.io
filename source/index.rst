@@ -10,9 +10,7 @@ FIT2CLOUD在线文档
    :maxdepth: 2
    
    introduction
-   aliyun_get_started
-   azure_get_started
-   aws_get_started
+   get_started
    advance
    faq
    enterprise
@@ -25,4 +23,3 @@ FIT2CLOUD在线文档
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
