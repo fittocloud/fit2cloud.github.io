@@ -10,7 +10,9 @@ FIT2CLOUD在线文档
    :maxdepth: 2
    
    introduction
-   get_started
+   aliyun_get_started
+   azure_get_started
+   aws_get_started
    advance
    faq
    enterprise

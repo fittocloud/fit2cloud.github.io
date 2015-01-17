@@ -10,6 +10,7 @@ FIT2CLOUD高级功能
    add_cluster_monitoring
    use_customized_image
    integrate
+   importedvm
    f2cadmin
    
    
