@@ -1,4 +1,4 @@
-十分钟在Azure部署Wordpress
+微软Azure：十分钟部署Wordpress
 ====================================================
 
 |    这里我们以在Azure上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD

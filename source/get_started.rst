@@ -6,5 +6,6 @@ FIT2CLOUD快速入门指南
    
    concepts
    aliyun_get_started
+   aliyun_importedvm
    aws_get_started
    azure_get_started

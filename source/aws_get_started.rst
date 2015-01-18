@@ -1,4 +1,4 @@
-十分钟在AWS部署Wordpress
+亚马逊AWS：十分钟部署Wordpress
 ====================================================
 
 |    这里我们以在AWS上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD
