@@ -1,4 +1,4 @@
-FIT2CLOUD快速入门指南
+FIT2CLOUD快速入门
 =====================================
 
 .. toctree::
@@ -7,5 +7,6 @@ FIT2CLOUD快速入门指南
    concepts
    aliyun_get_started
    aliyun_importedvm
+   aliyun_codedeploy
    aws_get_started
    azure_get_started
