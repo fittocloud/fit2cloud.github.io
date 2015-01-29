@@ -11,6 +11,7 @@ FIT2CLOUD高级功能
    use_customized_image
    integrate
    f2cadmin
+   code_deploy
    
    
 
