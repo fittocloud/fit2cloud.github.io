@@ -11,7 +11,6 @@ FIT2CLOUD使用指南
    use_customized_image
    integrate
    f2cadmin
-   code_deploy
    
    
 
