@@ -13,7 +13,6 @@ FIT2CLOUD在线文档
    get_started
    advance
    faq
-   enterprise
    references
    
 
@@ -23,4 +22,3 @@ FIT2CLOUD在线文档
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

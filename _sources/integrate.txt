@@ -1,8 +1,10 @@
-使用FIT2CLOUD Java SDK
+使用FIT2CLOUD SDK
 ================================================
 
-第一步：引用Jar包
+1. 使用FIT2CLOUD Java SDK
 -----------------------------------------------
+
+第一步：引用Jar包
 
 |  方法1：使用Maven
 
@@ -34,7 +36,6 @@
 |        下载地址是： http://repository.fit2cloud.com/service/local/repo_groups/public/content/com/fit2cloud/fit2cloud-aliyun-java-sdk/1.0/fit2cloud-aliyun-java-sdk-1.0-jar-with-dependencies.jar
 
 第二步：调用FIT2CLOUD API
------------------------------------------------
 
 .. code:: python
 
@@ -136,3 +137,13 @@
 		}
 	
 	}
+
+
+
+2. 使用FIT2CLOUD Python SDK
+-----------------------------------------------
+
+打开 `fit2cloud-python-sdk on Github <https://github.com/fit2cloud/fit2cloud-python-sdk/>`_ 
+
+
+

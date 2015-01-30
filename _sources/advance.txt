@@ -1,4 +1,4 @@
-FIT2CLOUD高级功能
+FIT2CLOUD使用指南
 --------------------------------------
 
 .. toctree::
@@ -8,9 +8,9 @@ FIT2CLOUD高级功能
    set_autoscale
    set_security_group
    add_cluster_monitoring
+   set_rds_aliyun
+   set_slb_aliyun
    use_customized_image
    integrate
    f2cadmin
-   
-   
-
+   enterprise
