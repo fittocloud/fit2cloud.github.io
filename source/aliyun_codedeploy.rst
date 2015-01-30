@@ -8,8 +8,8 @@
 |
 | **1) 应用代码和部署脚本是一体的。**
 |
-| 如下图所示，应用artifact zip包中除了包括带部署的WordPress应用代码外，还包括appspec.yml和scripts目录，
-| appspec.yml文件定义了这个应用是如何进行部署的。部署中要执行的脚本全部放在scripts目录下面。
+| 如下图所示，应用artifact zip包中除了包括WordPress应用代码外，还包括appspec.yml和scripts目录。
+| appspec.yml文件定义了这个应用是如何进行部署的，部署中要执行的脚本则放在scripts目录下面。
 |
 .. image:: _static/code_deploy_artifact_spec.png
 |
