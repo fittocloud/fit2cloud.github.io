@@ -5,7 +5,9 @@
 | 所定义的应用Artifact格式。 
 |
 | 和传统部署方式相比：FIT2CLOUD和AWS代码部署的特点是：
+|
 | **1) 应用代码和部署脚本是一体的。**
+|
 | 如下图所示，应用artifact zip包中除了包括带部署的WordPress应用代码外，还包括appspec.yml和scripts目录，
 | appspec.yml文件定义了这个应用是如何进行部署的。部署中要执行的脚本全部放在scripts目录下面。
 |
@@ -13,19 +15,22 @@
 |
 | **2) 应用架构采用SOA/微服务，支持各个应用组件的局部独立部署。**
 |
-| 这里, 我们仍然以快速入门里的wordpress网站为例, 介绍如何使用FIT2CLOUD代码部署服务来部署WordPress应用。
+| 这里, 我们仍然以wordpress网站为例, 介绍如何使用FIT2CLOUD代码部署服务来部署WordPress应用。
 
 一: 应用打包、并上传到仓库中
 -------------------------------------
 |
 | 请参考我们在GitHub上面的示例WordPress工程： `WordPress <https://github.com/fit2cloud/WordPress>`_
+|
 | 这个工程中新增中文件包括：
+|
 | 1) pom.xml/assembly.xml: 我们使用maven来打包应用artifact，并发布到Nexus仓库中去。
 | 2) appspec.yml: 这个文件定义了应用部署中各个hooks所绑定的脚本。
 | 3) scripts/change_permissions.sh等: 这个目录中包括WordPress部署时需要执行的脚本。
 |
 | 除了上传到Nexus仓库外，FIT2CLOUD还支持用阿里云OSS来存储Artifact。我们提供了Jenkins插件，用户可以非常方便的在
 | Jenkins构建后将artifact上传到阿里云OSS中。具体请参考：
+|
 | `在Jenkins持续集成方案中使用阿里云OSS作为Artifacts仓库 <http://blog.fit2cloud.com/2015/01/20/aliyun-oss-jenkins-plugin.html>`_
 |
 二: 创建代码仓库
@@ -85,6 +90,7 @@ http://repository-proxy.fit2cloud.com:8080/content/repositories/releases/com/fit
 
 五: 部署应用
 -------------------------------------
+| 注意：部署之前，请预先启动好一个集群，这个集群中有正在运行中的CentOS 6虚机。
 |
 | **1) 在应用程序版本列表里，点击应用版本对应的"部署"，填写应用版本的相关信息并保存**
 |
@@ -95,6 +101,7 @@ http://repository-proxy.fit2cloud.com:8080/content/repositories/releases/com/fit
 |  > 全部同时部署
 |  > 半数分批部署
 |  > 单台依次部署
+|
 |  当您选择“保存”后，FIT2CLOUD后台将会开始进行代码部署的工作。
 |
 六: 查看部署过程和结果
