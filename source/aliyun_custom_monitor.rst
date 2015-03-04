@@ -9,11 +9,11 @@
 -------------------------------------
 |  **1) 选择需要监控的虚机**
 
-.. image:: _static/custom_monitoring/monitor-config.png
+.. image:: _static/custom-monitoring/monitor-config.png
 
 |  **2) 在虚机菜单中添加自定义监控脚本**
 
-.. image:: _static/custom_monitoring/new-monitor-plan.png
+.. image:: _static/custom-monitoring/new-monitor-plan.png
 
 |
 |  监控脚本举例：
@@ -30,11 +30,11 @@
 | 一旦设置好自定义监控规则，FIT2CLOUD系统就会自动地在相应的虚机上执行指定命令，每隔1分钟同步一次执行结果，在虚机列表页面也可以
 | 容易地查看自定义监控结果。
 
-.. image:: _static/custom_monitoring/view-metric.png
+.. image:: _static/custom-monitoring/view-metric.png
 |
 | 自定义监控和系统默认监控指标在同一个窗口中呈现，下拉菜单可以选择不同的自定义监控指标：
 |
-.. image:: _static/custom_monitoring/custom_metrics.png
+.. image:: _static/custom-monitoring/custom-metrics.png
 
 
 三： FAQ
