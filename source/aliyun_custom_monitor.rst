@@ -9,11 +9,11 @@
 -------------------------------------
 |  **1) 选择需要监控的虚机**
 
-.. image:: _static/custom_monitoring/monitor-config.png
+.. image:: ../_static/custom_monitoring/monitor-config.png
 
 |  **2) 在虚机菜单中添加自定义监控脚本**
 
-.. image:: _static/custom_monitoring/new-monitor-plan.png
+.. image:: ../_static/custom_monitoring/new-monitor-plan.png
 
 |
 |  监控脚本举例：
@@ -30,11 +30,11 @@
 | 一旦设置好自定义监控规则，FIT2CLOUD系统就会自动地在相应的虚机上执行指定命令，每隔1分钟同步一次执行结果，在虚机列表页面也可以
 | 容易地查看自定义监控结果。
 
-.. image:: _static/custom_monitoring/view-metric.png
+.. image:: ../_static/custom_monitoring/view-metric.png
 |
 | 自定义监控和系统默认监控指标在同一个窗口中呈现，下拉菜单可以选择不同的自定义监控指标：
 |
-.. image:: _static/custom_monitoring/custom_metrics.png
+.. image:: ../_static/custom_monitoring/custom_metrics.png
 
 
 三： FAQ
@@ -47,14 +47,16 @@
 | **Q)** 自定义监控脚本有什么范例？
 | **A)** 首要一定确保自定义监控脚本返回数值型变量，否则无效。
 | 前面文档中有一些例子，下面在补充几个：
-|  
-| 0. ps aux | awk 'NR!=1{a[$1]+=$6;} END { for(i in a) print i" "a[i] }' | grep ${USER} | awk '{print $2}'  # 查看某一用户占用内存
-| 1. ping -c 5 baidu.com |grep 'received'|awk 'BEGIN {FS=","} {print $2}'|awk '{print $1}'   # 如若返回0则表明网络不通
-| 2. curl -m 10 -o /dev/null -s -w %{http_code} ${URL}     # 返回值为网站当前状态
-| 3. ifconfig -a | grep eth | wc -l    # 查看当前系统attached网卡数量
-| 4. mpstat | grep all | awk '{print$11}'    # 查看CPU空闲率
-| 5. mpstat | grep all | awk '{print$3}'     # 查看CPU使用率
-| 6. free -m | grep buffers/cache | awk '{print$3}'   # 查看内存已使用多少
-| 7. df -Pm | grep / | awk '{print$3}'  # 查看磁盘占用容量
-| 8. netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq | wc -l    # 查看当前客户端IP链接
-| 9. ls -l  *.log *.out *.swp | awk '{sum+=$5} END {print sum}'  # 查看log文件大小
+
+1. who | wc -l                                                                            # 当前用户数量
+2. curl -m 10 -o /dev/null -s -w %{http_code} ${URL}                                      # 返回值为网站当前状态
+3. ifconfig -a | grep eth | wc -l                                                         # 查看当前系统attached网卡数量
+4. mpstat | grep all | awk '{print$11}'                                                   # 查看CPU空闲率
+5. mpstat | grep all | awk '{print$3}'                                                    # 查看CPU使用率
+6. free -m | grep buffers/cache | awk '{print$3}'                                         # 查看内存已使用多少
+7. df -Pm | grep / | awk '{print$3}'                                                      # 查看磁盘占用容量
+8. netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq | wc -l                    # 查看当前客户端IP链接
+9. ls -l  *.log *.out *.swp | awk '{sum+=$5} END {print sum}'                             # 查看log文件大小
+10. ps aux | awk 'NR!=1{a[$1]+=$6;} END { for(i in a) print i" "a[i] }' | grep ${USER} | awk '{print $2}'  # 查看某一用户占用内存
+11. netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}' | grep ESTABLISHED | awk '{print $2}  #查看http的并发请求数
+12. ping -c 5 baidu.com |grep 'received'|awk 'BEGIN {FS=","} {print $2}'|awk '{print $1}' # 如若返回0则表明网络不通
