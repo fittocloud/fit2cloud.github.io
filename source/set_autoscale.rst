@@ -4,22 +4,23 @@
 
 一: 基于时间的自动伸缩
 -------------------------------------------
-|
-|  第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
+
+第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
 
 .. image:: _static/010-volume-GoToClusterList.png
 
-|  第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
-| 拟机组列表页面;
+  第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
+ 拟机组列表页面;
 
 .. image:: _static/010-volume-GoToClusterRoleList.png
 
-|  第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
-| 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "自动伸缩设置" 进入自动伸缩设置页面;
+  第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
+ 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "自动伸缩设置" 进入自动伸缩设置页面;
 
 .. image:: _static/060-autoscale-SelectActionsAndSetAutoscale.png
 
-|  第四步: 在自动伸缩设置页面 (如下图示)
+  第四步: 在自动伸缩设置页面 (如下图示)
+  
 | a) 打开自动伸缩开关，在自动伸缩开关列表中选择"开启"
 | b) 伸缩方式选择 "定时伸缩"
 | c) Scale Out定时器 选择 "每天任务", 时间选择 "08:00"
@@ -29,26 +30,24 @@
 
 .. image:: _static/060-autoscale-CronCommon.png
 
-|  第五步: 在自动伸缩设置页面， 点击 "保存"
+  第五步: 在自动伸缩设置页面， 点击 "保存"
 
 二: 基于监控指标的自动伸缩
 -------------------------------------------
-|
-|  第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
+
+第一步: 首先在页面最上方一行点击 "集群" 进入集群列表页面;
 
 .. image:: _static/010-volume-GoToClusterList.png
 
-|  第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚
-| 拟机组列表页面;
+第二步: 在集群页面找到wordpress-qingdao集群,然后点击集群所在行的 "虚拟机组" 进入虚拟机组列表页面;
 
 .. image:: _static/010-volume-GoToClusterRoleList.png
 
-|  第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的
-| 所在行最右边一列的 "操作", 在操作的下来菜单中点击 "自动伸缩设置" 进入自动伸缩设置页面;
+第三步: 在集群虚拟机组页面中找到wordpress-mysql虚拟机组，并点击这个虚拟机组的所在行最右边一列的 "操作", 在操作的下来菜单中点击 "自动伸缩设置" 进入自动伸缩设置页面;
 
 .. image:: _static/060-autoscale-SelectActionsAndSetAutoscale.png
 
-|  第四步: 在自动伸缩设置页面 (如下图示)
+第四步: 在自动伸缩设置页面 (如下图示)
 
 .. image:: _static/060-autoscale-MetricCommon.png
 
@@ -77,11 +76,10 @@
 .. image:: _static/060-autoscale-SetDecreaseVMCondition.png
 
 | g) 伸缩间隔时间 填写 "5"
-|
-|  第五步: 在自动伸缩设置页面， 点击 "保存"
+
+第五步: 在自动伸缩设置页面， 点击 "保存"
 
 .. image:: _static/060-autoscale-MetricCommonComplete.png
-
 
 .. code:: python    
 

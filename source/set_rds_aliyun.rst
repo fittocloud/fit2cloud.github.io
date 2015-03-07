@@ -8,46 +8,24 @@
 为虚拟机组关联RDS实例的步骤如下:
 
 | 1) 进入集群列表页面
-|
 | 2) 在集群列表页面，点击某集群的"虚拟机组按钮"进入其虚拟机组列表页面
-|
 | 3) 在集群的虚拟机组列表页面，选择"新建"
-|
 | 4) 在新建虚拟机组对话框中注意选择与要关联的RDS相同的"区域", 其他设置请按需选择
-|
 | 5) 选择新建虚拟机组"操作"按钮,在下拉列表中选择"关联RDS"，进入RDS关联页面
 
 .. image:: _static/aliyun_rds_menu.png
 
-|
 | 6) 在RDS关联页面, 选择需要关联的RDS(可多选), 点击"保存关联"按钮进行保存
 
 .. image:: _static/aliyun_rds_add.png
 
-|
 | 7) 可以在RDS查询页面查看RDS相关信息
 
 .. image:: _static/aliyun_rds_query.png
 
 .. image:: _static/aliyun_rds_list.png
 
-| 8) 当集群的虚拟机成功启动后,FIT2CLOUD会根据关联的RDS实例的类型(公网或私网),
-自动选择将虚拟机的IP(公网或私网)添加到对应的白名单中
+| 8) 当集群的虚拟机成功启动后,FIT2CLOUD会根据关联的RDS实例的类型(公网或私网), 自动选择将虚拟机的IP(公网或私网)添加到对应的白名单中
 
 .. image:: _static/aliyun_rds_whitelist.png
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

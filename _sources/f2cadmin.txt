@@ -1,18 +1,19 @@
 f2cadmin命令行工具
 ==================================
 
-| f2cadmin是一个FIT2CLOUD部署在虚拟机上的一个命令行工具，通过f2cadmin可以:
+f2cadmin是一个FIT2CLOUD部署在虚拟机上的一个命令行工具，通过f2cadmin可以:
+
 | 1) 获取集群虚拟组内虚拟机
 | 2) 获取集群虚拟组内虚拟机IP信息
 | 3) 等待虚拟机组内虚拟机启动
 | 4) 获取虚拟机本机信息
 | 5) 获取虚拟机本机的某些字段信息
-|  
-| 所以f2cadmin在实现根据集群内虚拟机信息自动配置组件配置文件时很有用，比如在快速入门
-| 例子中，我们在wordpress-web的启动脚本中使用f2cadmin获取wordpress-mysql虚拟机组
-| 内虚拟机的IP地址，以配置到wordpress web的数据连接配置文件中。实现根据集群内虚拟机信息
-| 自动配置相关组件配置文件。
-|
+
+所以f2cadmin在实现根据集群内虚拟机信息自动配置组件配置文件时很有用，比如在快速入门
+例子中，我们在wordpress-web的启动脚本中使用f2cadmin获取wordpress-mysql虚拟机组
+内虚拟机的IP地址，以配置到wordpress web的数据连接配置文件中。实现根据集群内虚拟机信息
+自动配置相关组件配置文件。
+
 .. code:: python
 
 	#get mysql role server ip address
@@ -35,14 +36,17 @@ f2cadmin命令行工具
 	   echo $waitOutput
 	fi
 	
-|   以下是f2cadmin的用法和示例:
-|
-|   1) 获取集群虚拟组内虚拟机
-|   f2cadmin get clusterrole_servers_info <虚拟机组名称>
-|
-|   例子: 获取wordpress-mysql虚拟机组虚拟机信息
-|         f2cadmin get clusterrole_servers_info wordpress-mysql
-|   输出: 
+   以下是f2cadmin的用法和示例:
+
+   1) 获取集群虚拟组内虚拟机
+   
+   f2cadmin get clusterrole_servers_info <虚拟机组名称>
+
+   例子: 获取wordpress-mysql虚拟机组虚拟机信息
+   
+         f2cadmin get clusterrole_servers_info wordpress-mysql
+   
+   输出: 
 
 .. code:: python
 
@@ -92,25 +96,30 @@ f2cadmin命令行工具
 	  }
 	]
 
-|   2) 获取集群虚拟组内虚拟机IP信息
-|   f2cadmin get clusterrole_servers_info <虚拟机组名称> localIP | head -1
-|      
-|   例子: 获取wordpress-mysql虚拟机组虚拟机内网IP
-|       f2cadmin get clusterrole_servers_info wordpress-mysql localIP | head -1  
-|
-|   输出:
+   2) 获取集群虚拟组内虚拟机IP信息
+
+   f2cadmin get clusterrole_servers_info <虚拟机组名称> localIP | head -1
+      
+   例子: 获取wordpress-mysql虚拟机组虚拟机内网IP
+
+       f2cadmin get clusterrole_servers_info wordpress-mysql localIP | head -1  
+
+   输出:
 
 .. code:: python
 
 	> f2cadmin get clusterrole_servers_info wordpress-mysql localIP
 	10.165.63.61
 
-|   3) 等待虚拟机组内虚拟机启动
-|   f2cadmin waitUntilServerUp <虚拟机组名称> <等待超时时间(单位秒)>
-|     
-|   例子: 等待wordpress-mysql虚拟机组虚拟机启动，等待120秒
-|        f2cadmin waitUntilServerUp wordpress-mysql 120
-|   输出:
+   3) 等待虚拟机组内虚拟机启动
+
+   f2cadmin waitUntilServerUp <虚拟机组名称> <等待超时时间(单位秒)>
+     
+   例子: 等待wordpress-mysql虚拟机组虚拟机启动，等待120秒
+
+        f2cadmin waitUntilServerUp wordpress-mysql 120
+
+   输出:
 
 .. code:: python
 
@@ -118,12 +127,15 @@ f2cadmin命令行工具
 	to locate clusterrole wordpress-mysql servers..... @ 2014-11-29 15:29:36
 	clusterrole wordpress-mysql #12154 vm is up, localIP:10.165.63.61 remoteIP:121.42.56.146
 	
-|   4) 获取虚拟机本机信息
-|   f2cadmin get local_server_info [<column>]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]
-|
-|   例子: 获取虚拟机本机信息
-|         f2cadmin get local_server_info
-|   输出: 
+   4) 获取虚拟机本机信息
+
+   f2cadmin get local_server_info [<column>]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]
+
+   例子: 获取虚拟机本机信息
+   
+         f2cadmin get local_server_info
+   
+   输出: 
 
 .. code:: python
 
@@ -146,12 +158,14 @@ f2cadmin命令行工具
 	  "id": 297
 	}
 
-|   5) 获取虚拟机本机的某些字段信息
-|   f2cadmin get local_server_info [<column>]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]
-|
-|   例子: 获取本机虚拟机信息
-|         f2cadmin get local_server_info localIP
-|   输出: 
+   5) 获取虚拟机本机的某些字段信息
+   f2cadmin get local_server_info [<column>]  #column in [localIP, remoteIP, clusterRoleId, serverRoleId]
+
+   例子: 获取本机虚拟机信息
+   
+         f2cadmin get local_server_info localIP
+
+   输出: 
 
 .. code:: python
 
