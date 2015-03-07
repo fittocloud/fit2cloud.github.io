@@ -9,7 +9,7 @@ FIT2CLOUD目前支持阿里云、微软Azure、亚马逊AWS和青云QingCloud。
 (如Openstack/Cloudstack), 打造中国版RightScale。FIT2CLOUD将致力于解决跨平台云管理问题，让企业能够
 轻松部署和管理跨公有云、私有云和混合云的重要商业应用，为云基础设施和应用提供配置、监控、自动化和管理服务。
 
-FIT2CLOUD的产品和解决方案包括：Hosted服务、企业版和SaaS化解决方案。FIT2CLOUD企业版部署在企业自己的云账户中，
+FIT2CLOUD的产品和解决方案包括：Hosted在线服务、企业版和SaaS化解决方案。FIT2CLOUD企业版部署在企业的云账户中，
 完全由企业自主控制。FIT2CLOUD SaaS化解决方案帮助ISV自动化管理云中的成千上万个虚机，转型SaaS服务提供商。
 
 |     `FIT2CLOUD详细介绍PPT <http://fit2cloud.com/introduction.html>`_
