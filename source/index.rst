@@ -13,6 +13,7 @@ FIT2CLOUD在线文档
    get_started
    advance
    faq
+   others
    references
    
 
