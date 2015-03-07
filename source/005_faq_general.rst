@@ -77,19 +77,31 @@
 | 几小时一天甚至数天的时间，基于FIT2CLOUD, 可以实现分钟级发布。
 |    4) 通过FIT2CLOUD启动和管理虚拟机，不需要自己安装配置额外的监控系统就能够查看主机的基本监控及设置
 | 和收到告警通知。
-| 
-| **Q: FIT2CLOUD支持哪些公有云？**
+
+| **Q: FIT2CLOUD安全吗?
 |
-|    我们目前支持阿里云,AWS和青云QingCloud。在未来，我们会支持更多的公有云以及私有云。
+|    1) FIT2CLOUD登陆使用Github帐号，所以您的用户名密码都是是保存在Github中;
+|    2) FIT2CLOUD中的数据传输均采用SSL/HTTPS;
+|    3) FIT2CLOUD REST API基于OAuth协议;
+|    4) FIT2CLOUD对于关键的数据在存储过程中进行了加密;
+|    5) FIT2CLOUD企业版部署在您自己的虚拟机环境中，完全由企业自己控制。
 |
-| **Q: FIT2CLOUD支持私有云吗? 比如Cloudstack/Openstack?**
+| **Q: FIT2CLOUD(在线版)支持哪些公有云？**
+|
+|    目前支持阿里云, AWS, Azure和青云QingCloud, 其中FIT2CLOUD(阿里云版)为V2.0版，功能最为完善，其他云版本为V1.0版，我们会尽快升级到V2.0版。
+|
+| **Q: FIT2CLOUD(企业版)支持哪些公有云？**
+|
+|    目前仅支持阿里云, 通过镜像方式交付，镜像以上架阿里云官方镜像市场。
+|
+| **Q: FIT2CLOUD支持私有云吗? 比如Cloudstack/Openstack/vSphere?**
 |
 |    目前不支持。但是我们计划支持，FIT2CLOUD可以根据客户需求做定制化开发，比如您的私有云基于
-| CloudStack或OpenStack, 我们可以为您在您的私有云内部安装一套基于CloudStack或OpenStack的FIT2CLOUD服务。 
+| CloudStack/OpenStack/vSphere, 我们可以为您在您的私有云内部安装一套基于CloudStack/OpenStack/vSphere的FIT2CLOUD服务。 
 |
 | **Q: FIT2CLOUD同类产品有哪些？国外有同类产品吗？国内有同类产品吗？**
 |
-|    目前，在国内还没有同类产品，国外的同类产品有AWS的Opsworks, CloudFormation, 以及RightScale和Scalr。
+|    目前，在国内还没有同类产品，国外的同类产品有AWS的Opsworks/CloudFormation/CodeDeploy, 以及RightScale和Scalr。
 |
 | **Q: FIT2CLOUD与AWS的Opsworks有什么区别？**
 |
@@ -113,6 +125,12 @@
 |      眼获得MySQL的IP, 然后手动配置到chef的Cookebook里，从VM的启动到自动的配置，这之间需要人手工干预，无法实
 |      现环境VM自动化到配置自动化之前衔接的自动化。
 |
+| **Q: FIT2CLOUD与AWS的CodeDeploy有什么区别？**
+|   
+|   1) FIT2CLOUD兼容AWS CodeDeploy Appspec规范，功能上基本一致;
+|   2) AWS CodeDeploy与S3紧密结合，但FIT2CLOUD artifact仓库支持阿里云OSS和Nexus;
+|   3) AWS CodeDeploy支持Windows，FIT2CLOUD不支持;
+|
 | **Q: 什么是全栈自动化？**
 |
 |    全栈自动化就是从创建环境，到应用运行时环境安装，应用组件的部署配置启动整个过程的自动化以及应用运行过程中监控, 
@@ -128,6 +146,4 @@
 |    请参考IaaS使用成熟度模型, FIT2CLOUD和Docker所要解决的问题范畴不同。FIT2CLOUD的功能涵盖创建资源、
 | 服务器自动化、混合云管理、应用自动化和持续交付, 而Docker更多专注于应用自动化，持续交付这两块。所以用户在使用
 | FIT2CLOUD实现应用自动化和持续交付时，有多种方案可以选择，既可以选择采用自己的方案和实现(比如自定义脚本或者集成Chef)，
-| 也可以采用Docker来实现。未来，FIT2CLOUD将深度集成Docker，让用户更加方便的使用Docker来实现应用自动化和持续交付。
-
-.. image:: _static/080-improve-maturity.png
+| 也可以采用Docker来实现。未来，FIT2CLOUD将深度集成Docker & Kubernetes，让用户更加方便的使用Docker来实现应用自动化和持续交付。

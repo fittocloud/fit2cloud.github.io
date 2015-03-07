@@ -14,7 +14,7 @@
 |    下面我们看在FIT2CLOUD中如何做，在FIT2CLOUD中, 把用于部署和运行某应用的一组虚拟机叫做一个集群, 我
 | 们首先根据上面的部署计划在Web页面上创建一个集群部署计划, 然后让FIT2CLOUD执行这个集群的部署计划，先调用
 | 阿里云的API创建出集群部署计划定义的虚拟机，然后在虚拟机启动后根据计划部署配置和启动wordpress的各个组件。
-| 观看视频请打开 `FIT2CLOUD For 阿里云 十分钟部署Wordpress演示视频 <http://downloads.fit2cloud.com/aliyun/demo.mov>`_  
+| 观看视频请打开 `FIT2CLOUD(阿里云版) 十分钟部署Wordpress演示视频 <http://downloads.fit2cloud.com/aliyun/demo.mov>`_  
 
 .. code:: python
 
@@ -58,7 +58,7 @@
 |
 |    注1: 目前不支持IE，推荐使用FireFox 或 Goolge Chrome
 |
-| b> 在FIT2CLOUD首页选择 "FIT2CLOUD For 阿里云(Github帐号登陆)", 如下图示:
+| b> 在FIT2CLOUD首页选择 "FIT2CLOUD(阿里云版)(Github帐号登陆)", 如下图示:
 
 .. image:: _static/000-Login-Fit2CloudForAliyun.png
 

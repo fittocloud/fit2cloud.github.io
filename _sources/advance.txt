@@ -1,4 +1,4 @@
-FIT2CLOUD使用指南
+FIT2CLOUD(阿里云版)使用指南
 --------------------------------------
 
 .. toctree::
@@ -13,4 +13,3 @@ FIT2CLOUD使用指南
    use_customized_image
    integrate
    f2cadmin
-   enterprise
