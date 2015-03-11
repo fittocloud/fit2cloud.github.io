@@ -17,7 +17,7 @@ FIT2CLOUD阿里云企业版于2015年3月上线阿里云官方镜像市场（ `F
 | 4. 数据安全可控: 整个FIT2CLOUD的数据都保存在用户的虚拟机上，FIT2CLOUD不会上传任何用户业务数据。
 
 | 备注：FIT2CLOUD阿里云企业版在镜像市场上线初期为免费，用户只需支付ECS使用费即可使用镜像部署FIT2CLOUD企业版，
-| 详情请查看`这里 <http://help.aliyun.com/knowledge_detail.htm?knowledgeId=5974158>`_ 。
+| 详情请查看 `这里 <http://help.aliyun.com/knowledge_detail.htm?knowledgeId=5974158>`_
 | 如有你对FIT2CLOUD企业版有兴趣，请咨询support@fit2cloud.com。
 
 **FIT2CLOUD阿里云企业版的部署和使用文档**
