@@ -3,7 +3,7 @@
 
 **FIT2CLOUD阿里云企业版介绍**
 
-FIT2CLOUD阿里云企业版于2015年3月上线阿里云官方镜像市场（`FIT2CLOUD应用交付及运维管理平台[Centos 6.5 64位] <http://fit2cloud.com/introduction.html>`_)；
+FIT2CLOUD阿里云企业版于2015年3月上线阿里云官方镜像市场（ `FIT2CLOUD应用交付及运维管理平台[Centos 6.5 64位] <http://fit2cloud.com/introduction.html>`_ )；
 是专为阿里云用户打造的一站式运维及持续交付平台，帮助用户打通从代码到服务的通道，其功能涵盖云资源管理、服务器自动化、应用代码管理、
 应用部署、监控告警等，如下图所示：
 
@@ -17,7 +17,7 @@ FIT2CLOUD阿里云企业版于2015年3月上线阿里云官方镜像市场（`FI
 | 4. 数据安全可控: 整个FIT2CLOUD的数据都保存在用户的虚拟机上，FIT2CLOUD不会上传任何用户业务数据。
 
 | 备注：FIT2CLOUD阿里云企业版在镜像市场上线初期为免费，用户只需支付ECS使用费即可使用镜像部署FIT2CLOUD企业版，
-| 详情请查看`这里 <http://help.aliyun.com/knowledge_detail.htm?knowledgeId=5974158>`_。
+| 详情请查看`这里 <http://help.aliyun.com/knowledge_detail.htm?knowledgeId=5974158>`_ 。
 | 如有你对FIT2CLOUD企业版有兴趣，请咨询support@fit2cloud.com。
 
 **FIT2CLOUD阿里云企业版的部署和使用文档**
