@@ -1,9 +1,9 @@
-FIT2CLOUD Docs & BLOG
+FIT2CLOUD DOCS & BLOG
 ============
 
 这里是FIT2CLOUD文档和博客代码，采用基于Ruby的middleman（类似jekyll）搭建。
 
-网站的配置文件在`config.erb`，文档/博客语法为Markdown，source/layouts和source/styles文件夹中存放
+网站的配置文件在`config.rb`，文档/博客语法为`Markdown`，`source/layouts`和`source/styles`文件夹中存放
 网站的布局和样式文件，如非必要，可不用修改。
 
 * * *
@@ -25,7 +25,7 @@ FIT2CLOUD Docs & BLOG
 写文档
 --------
 
-文档目录在source/docs下，可以参考写好的例子。
+文档目录在`source/docs`下，可以参考写好的例子。
 
 注意在每个文档开头写入alias，代表通过.md文件渲染成.html文件的文件名。
 
@@ -37,12 +37,12 @@ alias: test
 在其他md文件或者html文件中，就可以用 test.html
 ```
 
-严格按照文档.md在source/docs目录，图片在source/images的原则。
+严格按照文档.md在`source/docs`目录，图片在`source/images`的原则。
 
 在线部署
 -------
 
-* `middleman build` 生成网站的静态文件，存入build/
-* 生成的静态文件按需放在gh-pages或者Host上
+* `middleman build` 生成网站的静态文件，存入`build`
+* 生成的静态文件按需放在gh-pages或各种Host上
 * middleman支持s3 sync，已经配置了build完成后同步到S3
 
