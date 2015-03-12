@@ -74,6 +74,14 @@ FIT2CLOUD(阿里云版) 常见问题
 
 可以，请点击 `配置阿里云负载均衡 <set_slb_aliyun.html>`_
 
+**Q: 如何卸载FIT2CLOUD agent?**
+
+运行如下命令:
+
+.. code:: python
+
+    cd /tmp;wget http://f2c-tools.oss-cn-hangzhou.aliyuncs.com/importvms/uninstallAgent.sh;bash /tmp/uninstallAgent.sh
+
 
 
    
