@@ -12,3 +12,4 @@ build
 *.out
 *.dump
 _static
+*.html
