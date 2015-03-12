@@ -104,16 +104,41 @@ FIT2CLOUD就会按照定义执行相应的脚本实现应用的自动化部署�
 当wordpress-mysql虚拟机组的虚拟机启动后，当虚拟机的install事件发生后，FIT2CLOUD就会在虚拟机上执行上述的mysql的安装脚本，
 安装mysql，设置密码，并且创建database.
 
-FIT2CLOUD定义的虚拟机生命周期事件包括initialize， install， start， reboot， rebootComplete。虚拟机启动后:
-1) 虚拟机本机的initialize事件触发
-2) FIT2CLOUD执行initialize事件对应的事件处理脚本
-3) initialize事件处理脚本处理结束后，虚拟机本机的install事件触发
-4) FIT2CLOUD执行install事件对应的的事件处理脚本
-5) install事件处理脚本处理结束后，虚拟机本机的start事件触发
-6) FIT2CLOUD执行start事件对应的的事件处理脚本
+FIT2CLOUD定义的虚拟机生命周期事件包括initialize， install， start， reboot， rebootComplete, terminate。
+以下为虚拟机各个场景下的事件及事件处理过程描述：
+
+**启动虚拟机场景**
+
+虚拟机启动后各个事件的发生顺序为initialize -> install -> start, 启动虚拟机的事件处理过程为:
+
+| 1) 虚拟机本机的initialize事件触发
+| 2) FIT2CLOUD在虚拟机上执行initialize事件对应的事件处理脚本
+| 3) initialize事件处理脚本处理结束后，虚拟机本机的install事件触发
+| 4) FIT2CLOUD在虚拟机上执行install事件对应的的事件处理脚本
+| 5) install事件处理脚本处理结束后，虚拟机本机的start事件触发
+| 6) FIT2CLOUD在虚拟机上执行start事件对应的的事件处理脚本
+
+**重启虚拟机场景**
+
+重启虚拟机的事件发生顺序为reboot -> rebootComplete，重启虚拟机的事件处理过程为：
+
+| 1) 提交重启虚拟机操作
+| 2) 虚拟机本机的reboot事件触发
+| 3) FIT2CLOUD在虚拟机上执行reboot事件对应的事件处理脚本
+| 4) FIT2CLOUD调用IaaS API重启虚拟机
+| 5) 虚拟机重启完成后，虚拟机本机的rebootComplete事件触发
+| 6) FIT2CLOUD在虚拟机上执行reboot事件对应的事件处理脚本
+
+**关闭虚拟机场景**
+
+关闭虚拟机的事件处理过程：
+
+| 1) 提交关闭虚拟机操作
+| 2) 虚拟机本机的terminate事件触发
+| 3) FIT2CLOUD在虚拟机上执行terminate事件对应的事件处理脚本
 
 .. code:: python 
 
-    目前，这些事件对应的脚本默认的超时时间是20分钟，即如果脚本中间由于某种原因，如脚本要求人为输入某个指令
-yes/no， 或者由于网络原因卡住，那么20分钟时，脚本执行就会被强制停止。
+    目前，这些事件对应的脚本执行的默认超时时间是20分钟，即如果脚本中间由于某种原因，如脚本要求人为输入某个指令yes/no， 
+    或者由于网络原因卡住，那么执行超过20分钟时，脚本执行就会被强制停止。
 
