@@ -96,16 +96,24 @@ FIT2CLOUD就会按照定义执行相应的脚本实现应用的自动化部署�
 .. image:: _static/006-Concepts-EventHandle.png
 
 举例,我们定义wordpress-mysql虚拟组install事件的处理脚本为mysql的安装脚本,该脚本会:
-1) 安装mysql
-2) 设定密码
-3) 创建wordpress-database
+
+| 1) 安装mysql
+| 2) 设定密码
+| 3) 创建wordpress-database
+
 当wordpress-mysql虚拟机组的虚拟机启动后,当虚拟机的install事件发生后,FIT2CLOUD就会在虚拟机上执行上述的mysql的安装脚本,
 安装mysql,设置密码，并且创建database.
 
-FIT2CLOUD定义的虚拟机生命周期事件包括initialize, install, start, reboot, rebootComplete，虚拟机启动后FIT2CLOUD会发出虚拟机本机的ready事件，之后会触发虚拟机本机的initialize事件,
-initialize事件对应的脚本在虚拟机上执行结束后，FIT2CLOUD会触发install事件，initialize事件对应的
-脚本在虚拟机上执行结束后, FIT2CLOUD会触发start事件，然后start事件对应的脚本在虚拟机上执行。
-虚机启动后的Lifecycle流程如下: ready->initialize->install->start。
+FIT2CLOUD定义的虚拟机生命周期事件包括initialize, install, start, reboot, rebootComplete。虚拟机启动后:
+1) 虚拟机本机的initialize事件触发
+2) FIT2CLOUD执行initialize事件对应的事件处理脚本
+3) initialize事件处理脚本处理结束后，虚拟机本机的install事件触发
+4) FIT2CLOUD执行install事件对应的的事件处理脚本
+5) install事件处理脚本处理结束后，虚拟机本机的start事件触发
+6) FIT2CLOUD执行start事件对应的的事件处理脚本
 
-目前，这些事件对应的脚本默认的超时时间是20分钟，即如果脚本中间由于某种原因，如脚本要求人为输入某个指令
+.. code:: python 
+
+    目前，这些事件对应的脚本默认的超时时间是20分钟，即如果脚本中间由于某种原因，如脚本要求人为输入某个指令
 yes/no, 或者由于网络原因卡住，那么20分钟时，脚本执行就会被强制停止。
+
