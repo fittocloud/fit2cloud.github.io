@@ -1,0 +1,212 @@
+@import url("//fonts.googleapis.com/css?family=PT+Sans:400,700")
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700")
+
+@import "vendor/normalize"
+@import "vendor/foundation"
+
+@import "bourbon/bourbon"
+@import "neat/neat"
+@import "bitters/bitters"
+
+@import "modules/variables"
+@import "modules/docs"
+@import "modules/highlighting"
+@import "modules/navigation"
+@import "modules/hero"
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Proxima Nova W02"
+  font-weight: 400
+  -webkit-font-smoothing: antialiased
+
+#docs
+  h1, h2, h3, h4, h5, h6
+    font-family: "Proxima Nova W02"
+    -webkit-font-smoothing: antialiased
+
+  h1 > a
+    font-weight: 700
+
+#docs, article, body.jobs
+  ul, ol
+    margin-left: 1em
+    padding-bottom: 1em
+
+    li
+      list-style-type: disc
+      font-weight: 300
+  ol
+    margin-left: 2em
+    li
+      list-style-type: decimal
+
+h1
+  color: #0090BA
+  font-weight: 700
+  margin-top: 20px
+
+h2
+  font-size: 32px
+  font-weight: 700
+  color: #0090BA
+
+h2, h3, h4, h5, h6
+  color: #0090BA
+
+h3
+  font-weight: 600
+
+pre.highlight
+  font-size: 15px
+
+ul.title-area
+  li.name
+    img
+      margin: 10px 0 0 20px
+
+section.nav
+  background-color: #333333
+  nav.top-bar
+    background-color: #333333
+
+section#social
+  height: 64px
+  background-color: $white-blue
+  text-align: center
+  padding-top: 16px
+  iframe#twitter-widget-0
+    position: relative
+    top: -1px
+
+section#cta
+  height: 128px
+  background-color: darken($white-blue, 20)
+  text-align: center
+  padding-top: 16px
+  h4
+    color: $dark-blue
+
+main
+  section
+    .columns.block
+      height: 333px
+      padding: 20px
+      text-align: center
+      border-left: 1px solid #f1f1f1
+      &:last-child
+        border-right: 1px solid #f1f1f1
+
+      i.bordered
+        font-size: 50px
+        height: 100px
+        width: 100px
+        overflow: hidden
+        vertical-align: baseline
+        padding: 20px 18px
+        border: 5px solid #f1f1f1
+        background-position: center
+
+section.newsletter
+  padding: 80px 0
+  background-color: $grey-blue
+  text-align: center
+
+  h3
+    color: white
+    margin-bottom: 1em
+
+
+.splitter
+  background-position: center bottom
+  padding: 3px
+  margin-bottom: 20px 15px
+  background-repeat: no-repeat
+  background-color: #698395
+
+body
+  background-color: white
+
+  p, a
+    font-weight: 300
+
+  h2 > a
+    font-weight: 500
+
+section#main
+  margin-top: 40px
+
+pre
+  background-color: #c0c0c0
+  padding: 10px
+  margin-bottom: 20px
+  code
+    color: #333
+    font-weight: 100
+
+
+.padding-top-medium
+  padding-top: 20px
+.padding-bottom-medium
+  padding-bottom: 20px
+
+.padding-bottom-large
+  padding-bottom: 40px
+
+body.community
+  h2
+    margin-top: 0.5em
+  #community-icons
+    .row
+      p
+        font-size: 1em
+        font-weight: 700
+        line-height: 2.25em
+
+body.hosting
+  section.plans
+    .block
+      height: 480px
+    h3
+      color: #BA5C00
+    h4
+      font-family: "PT Sans", sans-serif
+      font-weight: 700
+      font-size: 48px
+      color: #333333
+      margin-bottom: 0
+    h5
+      font-size: 16px
+      color: #666666
+      margin-top: -1rem
+      margin-bottom: 1rem
+
+.panel
+  p
+    &:last-child
+      margin-bottom: 0
+
+
+body.index
+  h3
+    font-size: 24px
+
+  button.tiny, .button.tiny
+    font-size: 0.833rem
+
+
+body.blog
+  section
+    h2
+      line-height: 1.2em
+      margin-bottom: 0
+    h4.subheader
+
+    p#twitter
+      margin-top: 4px
+      text-align: right
+
+    ul
+      margin-left: 20px
+  article
+    p
+      margin-bottom: 1.2em

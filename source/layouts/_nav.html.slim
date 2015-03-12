@@ -1,0 +1,25 @@
+section.nav
+  .row
+    nav.top-bar.hide-for-small
+      ul.title-area
+        li.name
+          a href="/"
+            =image_tag "f2c-header.png"
+      li.toggle-topbar.menu-icon
+        a href="#"
+          span Menu
+
+      section.top-bar-section
+        ul.right
+
+          li= link_to "Blog", "/blog"
+
+          li.divider
+
+          li= link_to "Docs", "/docs/#{docs_version}/introduction/overview.html"
+
+          li.divider
+
+          li= link_to "Play", "http://fit2cloud.com", target: "_"
+
+          li.divider

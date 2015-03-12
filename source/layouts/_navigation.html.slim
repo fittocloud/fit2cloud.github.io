@@ -1,0 +1,20 @@
+header.navigation
+  .menu-wrapper
+    a.logo href="/"
+      = image_tag "f2c-header.png"
+    p#js-mobile-menu.navigation-menu-button
+      | MENU
+    .nav
+      ul#navigation-menu
+        li.divider
+        li.divider
+        li.divider
+        li.divider
+        li.divider
+        li.nav-link= link_to "Docs", "/docs/#{latest_docs_version}/overview/what-is-fit2cloud.html"
+
+        li.divider
+        li.nav-link= link_to "Blog", "/blog"
+
+        li.divider
+        li.nav-link= link_to "Try!", "http://play.influxdb.org", target: :blank

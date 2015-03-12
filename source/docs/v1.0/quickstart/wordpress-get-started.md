@@ -1,0 +1,3 @@
+---
+alias: wordpress-get-started
+---
