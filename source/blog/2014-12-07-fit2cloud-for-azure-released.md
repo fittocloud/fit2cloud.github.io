@@ -1,10 +1,6 @@
 ---
-layout: post
 title: FIT2CLOUD正式支持微软Azure云，帮助企业部署和管理基于Linux/开源技术栈的应用
 ---
-
-{{ page.title }}
-================
 
 <p class="meta">2014/12/07 - 北京 By 阮志敏</p>
 
@@ -49,7 +45,7 @@ Azure先做PaaS，之后提供IaaS服务，因此其IaaS服务(Azure Virtual Mac
 
 Fit2Cloud提倡的IaaS(Azure Virtual Machine)+DevOps(FIT2CLOUD)开发模式可以充分利用IaaS的可编程特性，实现应用自动化部署和运维。我们提供适用于Linux/开源技术栈的一体化PaaS服务，帮助用户自动化部署和运维基于Linux/开源技术栈的应用，如下图所示。
 
-![FIT2CLOUD一体化PaaS解决方案](/images/fit2cloud-azure-solution.jpg =600x)
+![FIT2CLOUD一体化PaaS解决方案](/images/blog/fit2cloud-azure-solution.jpg =600x)
 
 这个相当于于Azure为微软技术栈提供的PaaS服务，包括如下功能：
 
@@ -77,4 +73,4 @@ FIT2CLOUD还支持国内其他主流公有云，比如阿里云等，基于FIT2C
 
 我们下一步将帮助用户在Azure上部署容器管理服务，类似GCE上面的Google Container Engine容器管理服务。基于FIT2CLOUD，企业可以通过在Azure上一键部署Kubernetes集群，并实现对这个集群的自动化运维和管理，如监控、监控检查及自动伸缩等。企业方的开发人员可以在Kubernetes上部署Docker container应用，如下图所示：
 
-![FIT2CLOUD和Docker](/images/fit2cloud-docker.jpg =600x)
+![FIT2CLOUD和Docker](/images/blog/fit2cloud-docker.jpg =600x)

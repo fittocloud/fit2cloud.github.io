@@ -1,10 +1,6 @@
 ---
-layout: post
 title: FIT2CLOUD企业版上架阿里云镜像市场，给阿里云用户带来了什么？
 ---
-
-{{ page.title }}
-================
 
 <p class="meta">2015/03/11 - 杭州 By Simon</p>
 
@@ -44,7 +40,7 @@ IaaS会是新常态，将成为互联网和企业的基础设施。云IT和传�
 
 针对以上过程中实际的需求，FIT2CLOUD提供一站式的应用交付及运维管理工具，同时还提供方法论来帮助企业打通从代码到服务的通道，提升持续交付能力。
 
-![打通从代码到服务的通道](/images/from-code-to-service.png =600x)
+![打通从代码到服务的通道](/images/blog/from-code-to-service.png =600x)
 
 针对阿里云用户，FIT2CLOUD基于阿里云的服务帮助阿里云用户无缝衔接这三条主线：
 
@@ -62,11 +58,11 @@ FIT2CLOUD阿里云企业版完全基于阿里云的API，这是FIT2CLOUD传统IT
  * 简化项目过程的管理及沟通成本，提高效率，让项目开发测试运维人员可以自助创建环境和变更环境，而不依赖于特定的人。
  * 为阿里云用户提供一站式应用交付及运维管理平台，如下图所示：
  
- ![应用交付及运维管理平台](/images/app-delivery-ops-platform.png =600x)
+ ![应用交付及运维管理平台](/images/blog/app-delivery-ops-platform.png =600x)
 
 相比较IaaS领域的领头羊AWS，FIT2CLOUD企业版给阿里云带来了大量AWS产品体系内拥有的服务，让国内用户在享受阿里云优秀的基础设施服务同时，也同样可以使用到非常丰富的运维、管理和部署服务（如下图），从而提升云上效率。
 
-![阿里云AWS部署服务对比](/images/aws-aliyun-deploy-management-service.png =600x)
+![阿里云AWS部署服务对比](/images/blog/aws-aliyun-deploy-management-service.png =600x)
 
 <h3>3.3 云账号及资源的集中安全管理</h3>
 

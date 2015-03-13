@@ -1,6 +1,5 @@
 ---
 title: 什么是IaaS+DevOps的开发模式？
-meta:2014/10/03 - 北京
 ---
 
 <h2>如何在竞争激烈的市场中取胜？</h2>
@@ -15,13 +14,13 @@ meta:2014/10/03 - 北京
 包以德循环理论同样能够应用于残酷的商战。这也是IaaS服务能够快速发展的原因。和传统开发模式相比，基于IaaS的开发模式可以
 快速创建资源，避免审批、采购和安装所需要花费的大量时间，极大的加快了企业行动的速度。
 
-![传统开发模式 Vs IaaS开发模式](/images/traditional-iaas.png =450x)
+![传统开发模式 Vs IaaS开发模式](/images/blog/traditional-iaas.png =450x)
 
 <h2>基于PaaS的开发模式</h2>
 
 有些人会说，基于PaaS的开发模式能更进一步，企业可以只需要专注于应用开发本身，其他事情PaaS都帮企业解决了(noOps)。
 
-![PaaS开发模式](/images/paas.png =450x)
+![PaaS开发模式](/images/blog/paas.png =450x)
 
 但是，为什么PaaS没有普及起来？原因是，基于PaaS的开发模式，用户得到了速度，但是失去了可控性。
 
@@ -37,10 +36,10 @@ IaaS+DevOps的开发模式，可以让用户可以在速度和可控性之间取
 能够帮助开发人员、测试人员以及运维人员实现应用全生命周期的自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自动伸缩等，
 打通从代码到服务的转化通道，实现了云应用的持续交付和自动化运维。
 
-![PaaS开发模式](/images/iaas-devops.png =450x)
+![PaaS开发模式](/images/blog/iaas-devops.png =450x)
 
 在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、Rightscale、Scalr等。
 
 但是在国内，阿里云和青云生态圈中目前还没有这样的工具，可以说Fit2Cloud的出现填补了这个空白
 
-![PaaS开发模式](/images/iaas-devops-options.png =540x)
+![PaaS开发模式](/images/blog/iaas-devops-options.png =540x)
