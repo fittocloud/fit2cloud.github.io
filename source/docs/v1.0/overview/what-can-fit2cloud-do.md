@@ -1,8 +1,7 @@
----
-alias: what-can-fit2cloud-do
----
-
+&nbsp;
 ##FIT2CLOUD能做什么?
+&nbsp;
+&nbsp;
 
 FIT2CLOUD能帮助用户更好地使用IaaS，帮助企业提高云成熟度，实现云资源创建自动化、服务器自动化、混合云管理、
 应用部署升级自动化和持续交付，基于FIT2CLOUD，企业可以实现应用全生命周期的自动化管理，打通从代码到服务的转化通道，实现云应用的持续交付和自动化运维。
@@ -18,7 +17,7 @@ CMMI即软件能力成熟度集成模型，是国际上衡量软件企业工程�
 * 第四级：实现应用自动化(Application Automation);
 * 第五级：实现持续交付(Continuous Delivery);
 
-![alt](/images/docs/overview/080-ImproveMaturity-ContinuousDelivery.png)
+![alt](/images/docs/overview/080-improve-maturity.png)
 
 目前，大多数的用户，使用IaaS服务，基本上只是使用IaaS快速地创建资源，即虚拟机，存储等，
 使用 IaaS云服务的成熟度为第一级，还有一些用户使用Chef,
@@ -93,6 +92,7 @@ FIT2CLOUD 就会指定的脚本安装应用运行时需要的软件包库等,
 会自动启动指定类型的虚拟机，并在虚拟机启动后，自动安装配置启动组件。当需要建立新的应用服务器，直
 接从应用的环境模板启动即可。
 
+![alt](/images/docs/overview/080-Improvemautiry-ApplicationAutomation.png)
 
 ###第五级: 实现持续交付(Continuous Delivery)
 
@@ -102,6 +102,9 @@ API及SDK，可以方便地与团队的配置管理和
 对DTAP各个环境持续按需自动化部署升级及升级后的 自动化测试,
 服务监控，从而最终实现持续交付。
 
+![alt](/images/docs/overview/080-ImproveMaturity-DTAP.png)
+&nbsp;
+![alt](/images/docs/overview/080-ImproveMaturity-ContinuousDelivery.png)
 
 从项目产品服务的阶段场景方面，FIT2CLOUD能够:
 
