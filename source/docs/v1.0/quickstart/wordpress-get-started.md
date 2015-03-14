@@ -1,4 +1,7 @@
+&nbsp;
 ##十分钟部署Wordpress
+&nbsp;
+&nbsp;
 
 这里我们以在阿里云上建立一个wordpress网站为例, 了解FIT2CLOUD的基本功能，看看如何通过FIT2CLOUD
 在阿里云上部署和建立一个wordpress网站, 并且把创建虚拟机和安装运行时环境及组件的工作自动化。
