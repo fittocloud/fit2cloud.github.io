@@ -24,7 +24,7 @@ html
           .sidebar
             nav
               ul.side-nav
-                li.heading Overview
+                li.heading 介绍
                 li= link_to "FIT2CLOUD 是什么?", "/docs/#{@version}/overview/what-is-fit2cloud.html"
                 li= link_to "FIT2CLOUD 能做什么？", "/docs/#{@version}/overview/what-can-fit2cloud-do.html"
                 li= link_to "FIT2CLOUD 典型应用场景", "/docs/#{@version}/overview/fit2cloud-usecases.html"
@@ -32,17 +32,17 @@ html
 
                 li.divider
 
-                li.heading Quick Start(for 阿里云)
+                li.heading 快速入门(阿里云版)
                 li= link_to "FIT2CLOUD 概念及术语", "/docs/#{@version}/quickstart/concepts-and-terminology.html"
                 li= link_to "十分钟部署 Wordpress", "/docs/#{@version}/quickstart/wordpress-get-started.html"
                 li= link_to "导入已有虚机", "/docs/#{@version}/quickstart/import-vms.html"
                 li= link_to "代码部署功能指南", "/docs/#{@version}/quickstart/codedeploy.html"
                 li= link_to "自定义监控功能指南", "/docs/#{@version}/quickstart/custom-monitor.html"
-                li= link_to "阿里云企业版部署和管理指南", "/docs/#{@version}/quickstart/enterprise-guide.html"
+                li= link_to "企业版部署和管理指南", "/docs/#{@version}/quickstart/enterprise-guide.html"
 
                 li.divider
 
-                li.heading Use Guide(for 阿里云)
+                li.heading 使用指南(阿里云版)
                 li= link_to "执行脚本", "/docs/#{@version}/ui/built_in_admin_and_explorer.html"
                 li= link_to "自动伸缩", "http://grafana.org/"
                 li= link_to "设置安全组", "https://github.com/hakobera/influga"
@@ -50,38 +50,33 @@ html
                 li= link_to "关联阿里云RDS", "https://github.com/hakobera/influga"
                 li= link_to "关联阿里云SLB", "https://github.com/hakobera/influga"
                 li= link_to "使用自定义镜像", "https://github.com/hakobera/influga"
-                li= link_to "使用 FIT2CLOUD SDK", "https://github.com/hakobera/influga"
-                li= link_to "f2cadmin 命令行工具", "https://github.com/hakobera/influga"
+                li= link_to "使用FIT2CLOUD SDK", "https://github.com/hakobera/influga"
+                li= link_to "f2cadmin命令行工具", "https://github.com/hakobera/influga"
 
                 li.divider
 
-                li.heading FAQ
+                li.heading 常见问题
                 li= link_to "一般问题", "/docs/#{@version}/advanced_topics/sharding_and_storage.html"
                 li= link_to "价格及计费", "/docs/#{@version}/advanced_topics/configuration_options.html"
                 li= link_to "使用过程常见问题", "/docs/#{@version}/advanced_topics/schema_design.html"
-                li= link_to "FIT2CLOUD(阿里云版)常见问题", "/docs/#{@version}/advanced_topics/upgrading.html"
+                li= link_to "阿里云版常见问题", "/docs/#{@version}/advanced_topics/upgrading.html"
 
                 li.divider
 
-                li.heading Others
-                li= link_to "FIT2CLOUD(AWS版) 十分钟部署Wordpress", "/docs/#{@version}/clustering/design.html"
-                li= link_to "FIT2CLOUD(AWS版) 常见问题", "/docs/#{@version}/clustering/setup.html"
-                li= link_to "FIT2CLOUD(Azure版) 十分钟部署Wordpress", "/docs/#{@version}/clustering/setup.html"
-                li= link_to "FIT2CLOUD(Azure版) 常见问题", "/docs/#{@version}/clustering/setup.html"
-                li= link_to "FIT2CLOUD(青云版) 常见问题", "/docs/#{@version}/clustering/setup.html"
+                li.heading SDK和工具
+                li= link_to "FIT2CLOUD SDK (Python)", "https://github.com/fit2cloud/fit2cloud-python-sdk"
+                li= link_to "FIT2CLOUD SDK (Java)", "https://github.com/fit2cloud/fit2cloud-java-sdk"
+                li= link_to "FIT2CLOUD Jenkins插件", "https://github.com/fit2cloud/aliyun-oss-plugin"
+                li= link_to "阿里云API Java封装库", "https://github.com/fit2cloud/aliyun-api-java-wrapper"
 
                 li.divider
 
-                li.heading References
-                li= link_to "Links", "http://fit2cloud.com"
-
-                li.divider
-
-                li.heading Other Libraries and Tools
-                li= link_to "CLI (Python)", "https://github.com/Dieterbe/influx-cli"
-                li= link_to "Aliyun API Java Wrapper", "https://github.com/FGRibreau/influxdb-cli"
-
-                = partial "/layouts/versions"
+                li.heading 其他
+                li= link_to "AWS版十分钟部署Wordpress", "/docs/#{@version}/clustering/design.html"
+                li= link_to "AWS版常见问题", "/docs/#{@version}/clustering/setup.html"
+                li= link_to "Azure版十分钟部署Wordpress", "/docs/#{@version}/clustering/setup.html"
+                li= link_to "Azure版常见问题", "/docs/#{@version}/clustering/setup.html"
+                li= link_to "青云版常见问题", "/docs/#{@version}/clustering/setup.html"
 
         .large-8.medium-8.columns#docs
           == yield

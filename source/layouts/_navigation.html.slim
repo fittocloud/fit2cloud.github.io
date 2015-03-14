@@ -1,9 +1,9 @@
 header.navigation
   .menu-wrapper
-    a.logo href="/"
+    a.logo href="http://docs.fit2cloud.com"
       = image_tag "f2c-header.png"
     p#js-mobile-menu.navigation-menu-button
-      | MENU
+      | 菜单
     .nav
       ul#navigation-menu
         li.divider
@@ -11,10 +11,9 @@ header.navigation
         li.divider
         li.divider
         li.divider
-        li.nav-link= link_to "Docs", "/docs/#{latest_docs_version}/overview/what-is-fit2cloud.html"
 
         li.divider
-        li.nav-link= link_to "Blog", "/blog"
+        li.nav-link= link_to "官方博客", "http://blog.fit2cloud.com"
 
         li.divider
-        li.nav-link= link_to "Try!", "http://fit2cloud.com", target: :blank
+        li.nav-link= link_to "返回主页", "http://fit2cloud.com"
