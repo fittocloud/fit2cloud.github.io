@@ -62,12 +62,12 @@
 **Q: 可以关联阿里云RDS吗?**
 
 	可以。
-[请点击 关联阿里云RDS](../userguide/set-rds-aliyun.html)
+[请点击 关联阿里云RDS](../userguide/link-aliyun-rds.html)
 
 **Q: 如何配置阿里云负载均衡?**
 
 	可以。
-[请点击 配置阿里云负载均衡](../userguide/set-slb-aliyun.html)
+[请点击 关联阿里云SLB](../userguide/link-aliyun-slb.html)
 
 **Q: 如何卸载FIT2CLOUD agent?**
 
