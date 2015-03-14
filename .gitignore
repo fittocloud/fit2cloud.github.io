@@ -13,3 +13,5 @@ build
 *.dump
 _static
 build
+.pydevproject
+*.swp
