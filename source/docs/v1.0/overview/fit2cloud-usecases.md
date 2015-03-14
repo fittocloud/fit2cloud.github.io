@@ -1,9 +1,7 @@
----
-alias: fit2cloud-usecases
----
-
+&nbsp;
 ##FIT2CLOUD的典型使用场景?
-
+&nbsp;
+&nbsp;
 
 ###场景1: 自动伸缩
 

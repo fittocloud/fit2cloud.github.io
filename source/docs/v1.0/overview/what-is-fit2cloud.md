@@ -1,8 +1,7 @@
----
-alias: what-is-fit2cloud
----
-
+&nbsp;
 ##Overview
+&nbsp;
+&nbsp;
 
 FIT2CLOUD是一个建立在IaaS之上的云管理及DevOps协作平台，帮助企业更好地使用云来加速业务创新，实现云资源创建自动化、
 服务器配置安装自动化、混合云管理、应用部署升级自动化、持续交付。基于FIT2CLOUD，企业可以实现应用全生命周期的
