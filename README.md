@@ -1,7 +1,7 @@
-FIT2CLOUD DOCS & BLOG
+FIT2CLOUD在线文档
 ============
 
-这里是FIT2CLOUD文档和博客代码，采用基于Ruby的middleman（类似jekyll）搭建。
+这里是FIT2CLOUD文档代码，采用基于Ruby的middleman（类似jekyll）搭建。
 
 网站的配置文件在`config.rb`，文档/博客语法为`Markdown`，`source/layouts`和`source/styles`文件夹中存放
 网站的布局和样式文件，如非必要，可不用修改。
