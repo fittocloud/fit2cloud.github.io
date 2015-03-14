@@ -14,3 +14,4 @@ build
 _static
 build
 .pydevproject
+*.swp
